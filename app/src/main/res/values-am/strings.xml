@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">የክርስቲያን ጸሎት ሰዓቶች</string>
+    <string name="nav_home">መነሻ</string>
+    <string name="nav_prayers">ጸሎቶች</string>
+    <string name="nav_rosary">መቁጠሪያ</string>
+    <string name="nav_saints">ቅዱሳን</string>
+    <string name="nav_calendar">ቀን መቁጠሪያ</string>
+    <string name="nav_settings">ቅንብሮች</string>
+    <string name="liturgical_season">የቤተ ክርስቲያን ዘመን</string>
+    <string name="next_hour">ቀጣዩ ሰዓት</string>
+    <string name="canonical_hours">የቀን ጸሎቶች</string>
+    <string name="saint_of_day">የዛሬው ቅዱስ</string>
+    <string name="rosary_title">ቅዱስ መቁጠሪያ</string>
+    <string name="prayers_title">ጸሎቶች</string>
+    <string name="settings_title">ቅንብሮች</string>
+    <string name="dark_mode">ጨለማ ሁነታ</string>
+    <string name="notifications">የጸሎት ማሳሰቢያዎች</string>
+    <string name="next_bead">ቀጣይ</string>
+    <string name="loading">በመጫን ላይ…</string>
+</resources>

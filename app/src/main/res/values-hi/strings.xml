@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">ईसाई प्रार्थना के समय</string>
+    <string name="nav_home">होम</string>
+    <string name="nav_prayers">प्रार्थनाएं</string>
+    <string name="nav_rosary">माला</string>
+    <string name="nav_saints">संत</string>
+    <string name="nav_calendar">पंचांग</string>
+    <string name="nav_settings">सेटिंग्स</string>
+    <string name="liturgical_season">धार्मिक मौसम</string>
+    <string name="next_hour">अगला घंटा</string>
+    <string name="canonical_hours">घंटों की प्रार्थना</string>
+    <string name="saint_of_day">आज के संत</string>
+    <string name="rosary_title">पवित्र माला</string>
+    <string name="prayers_title">प्रार्थनाएं</string>
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="dark_mode">डार्क मोड</string>
+    <string name="notifications">प्रार्थना स्मरण</string>
+    <string name="next_bead">आगे</string>
+    <string name="loading">लोड हो रहा है…</string>
+</resources>

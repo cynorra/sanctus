@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Katolik Dua Vakitleri</string>
+    <string name="nav_home">Ana Sayfa</string>
+    <string name="nav_prayers">Dualar</string>
+    <string name="nav_rosary">Tespih</string>
+    <string name="nav_saints">Azizler</string>
+    <string name="nav_calendar">Takvim</string>
+    <string name="nav_settings">Ayarlar</string>
+    <string name="liturgical_season">Liturjik Dönem</string>
+    <string name="next_hour">Sonraki İbadet</string>
+    <string name="canonical_hours">Kanonik Saatler</string>
+    <string name="saint_of_day">Günün Azizi</string>
+    <string name="verse_of_day">Günün Ayeti</string>
+    <string name="prayers_title">Dualar</string>
+    <string name="rosary_title">Kutsal Tespih</string>
+    <string name="settings_title">Ayarlar</string>
+    <string name="dark_mode">Karanlık Mod</string>
+    <string name="notifications">Dua Bildirimleri</string>
+    <string name="language">Dil</string>
+    <string name="text_size">Yazı Boyutu</string>
+    <string name="next_bead">İleri</string>
+</resources>

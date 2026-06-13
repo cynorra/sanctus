@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Keresztény imaórák</string>
+    <string name="nav_home">Főoldal</string>
+    <string name="nav_prayers">Imák</string>
+    <string name="nav_rosary">Rózsafüzér</string>
+    <string name="nav_saints">Szentek</string>
+    <string name="nav_calendar">Naptár</string>
+    <string name="nav_settings">Beállítások</string>
+    <string name="liturgical_season">Liturgikus időszak</string>
+    <string name="next_hour">Következő imaóra</string>
+    <string name="saint_of_day">A nap szentje</string>
+    <string name="rosary_title">Szent Rózsafüzér</string>
+    <string name="prayers_title">Imák</string>
+    <string name="settings_title">Beállítások</string>
+    <string name="dark_mode">Sötét mód</string>
+    <string name="notifications">Imaemlékeztetők</string>
+    <string name="next_bead">Következő</string>
+    <string name="loading">Betöltés…</string>
+</resources>

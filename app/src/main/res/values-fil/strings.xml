@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Mga Oras ng Panalangin</string>
+    <string name="nav_home">Tahanan</string>
+    <string name="nav_prayers">Mga Panalangin</string>
+    <string name="nav_rosary">Rosaryo</string>
+    <string name="nav_saints">Mga Santo</string>
+    <string name="nav_calendar">Kalendaryo</string>
+    <string name="nav_settings">Mga Setting</string>
+    <string name="liturgical_season">Liturgikal na Panahon</string>
+    <string name="next_hour">Susunod na Oras</string>
+    <string name="canonical_hours">Liturgy ng mga Oras</string>
+    <string name="saint_of_day">Santo ng Araw</string>
+    <string name="rosary_title">Banal na Rosaryo</string>
+    <string name="prayers_title">Mga Panalangin</string>
+    <string name="settings_title">Mga Setting</string>
+    <string name="dark_mode">Madilim na Mode</string>
+    <string name="notifications">Mga Paalala ng Panalangin</string>
+    <string name="next_bead">Susunod</string>
+    <string name="category_morning">Umaga</string>
+    <string name="category_evening">Gabi</string>
+    <string name="loading">Naglo-load…</string>
+</resources>

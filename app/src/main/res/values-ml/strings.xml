@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">ക്രൈസ്തവ പ്രാർഥനാ സമയങ്ങൾ</string>
+    <string name="nav_home">ഹോം</string>
+    <string name="nav_prayers">പ്രാർഥനകൾ</string>
+    <string name="nav_rosary">ജപമാല</string>
+    <string name="nav_saints">വിശുദ്ധർ</string>
+    <string name="nav_calendar">കലണ്ടർ</string>
+    <string name="nav_settings">ക്രമീകരണങ്ങൾ</string>
+    <string name="liturgical_season">ആരാധനാക്രമ കാലം</string>
+    <string name="next_hour">അടുത്ത മണിക്കൂർ</string>
+    <string name="canonical_hours">മണിക്കൂർ പ്രാർഥന</string>
+    <string name="saint_of_day">ഇന്നത്തെ വിശുദ്ധൻ</string>
+    <string name="rosary_title">പരിശുദ്ധ ജപമാല</string>
+    <string name="prayers_title">പ്രാർഥനകൾ</string>
+    <string name="settings_title">ക്രമീകരണങ്ങൾ</string>
+    <string name="dark_mode">ഡാർക്ക് മോഡ്</string>
+    <string name="notifications">പ്രാർഥന ഓർമ്മപ്പെടുത്തലുകൾ</string>
+    <string name="next_bead">അടുത്തത്</string>
+    <string name="category_morning">രാവിലെ</string>
+    <string name="category_evening">വൈകുന്നേരം</string>
+    <string name="loading">ലോഡ് ചെയ്യുന്നു…</string>
+</resources>

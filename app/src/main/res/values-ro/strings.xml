@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Ore de rugăciune creștină</string>
+    <string name="nav_home">Acasă</string>
+    <string name="nav_prayers">Rugăciuni</string>
+    <string name="nav_rosary">Rozariul</string>
+    <string name="nav_saints">Sfinți</string>
+    <string name="nav_calendar">Calendar</string>
+    <string name="nav_settings">Setări</string>
+    <string name="liturgical_season">Timp liturgic</string>
+    <string name="next_hour">Ora următoare</string>
+    <string name="canonical_hours">Liturgia Orelor</string>
+    <string name="saint_of_day">Sfântul zilei</string>
+    <string name="rosary_title">Sfântul Rozariu</string>
+    <string name="prayers_title">Rugăciuni</string>
+    <string name="settings_title">Setări</string>
+    <string name="dark_mode">Mod întunecat</string>
+    <string name="notifications">Memento rugăciune</string>
+    <string name="next_bead">Înainte</string>
+    <string name="loading">Se încarcă…</string>
+</resources>

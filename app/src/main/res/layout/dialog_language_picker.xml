@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="@color/color_surface"
+    android:paddingBottom="24dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:paddingHorizontal="24dp" android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Select Language"
+            android:fontFamily="serif" android:textSize="18sp"
+            android:textColor="@color/color_on_background"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="11sp" android:letterSpacing="0.08" android:textAllCaps="true"
+            android:textColor="@color/color_text_secondary"
+            android:text="28 languages"/>
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="@color/color_divider"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_languages" android:layout_width="match_parent"
+        android:layout_height="420dp" android:clipToPadding="false"
+        android:paddingTop="4dp"/>
+</LinearLayout>

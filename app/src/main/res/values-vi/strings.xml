@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Giờ Cầu Nguyện Kitô Giáo</string>
+    <string name="nav_home">Trang Chủ</string>
+    <string name="nav_prayers">Kinh Nguyện</string>
+    <string name="nav_rosary">Kinh Mân Côi</string>
+    <string name="nav_saints">Các Thánh</string>
+    <string name="nav_calendar">Lịch Phụng Vụ</string>
+    <string name="nav_settings">Cài Đặt</string>
+    <string name="liturgical_season">Mùa Phụng Vụ</string>
+    <string name="next_hour">Giờ Kinh Tiếp Theo</string>
+    <string name="canonical_hours">Kinh Nhật Tụng</string>
+    <string name="saint_of_day">Thánh Hôm Nay</string>
+    <string name="rosary_title">Kinh Mân Côi Thánh</string>
+    <string name="prayers_title">Kinh Nguyện</string>
+    <string name="settings_title">Cài Đặt</string>
+    <string name="dark_mode">Chế Độ Tối</string>
+    <string name="notifications">Nhắc Nhở Cầu Nguyện</string>
+    <string name="next_bead">Tiếp Theo</string>
+    <string name="loading">Đang tải…</string>
+</resources>

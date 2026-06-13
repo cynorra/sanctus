@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Oge Ekpere Ndị Kraịst</string>
+    <string name="nav_home">Ụlọ</string>
+    <string name="nav_prayers">Ekpere</string>
+    <string name="nav_rosary">Ụzọ Ọcha</string>
+    <string name="nav_saints">Ndị Ọcha</string>
+    <string name="nav_calendar">Kalenda</string>
+    <string name="nav_settings">Ntọala</string>
+    <string name="liturgical_season">Oge Ọrụ Ụka</string>
+    <string name="next_hour">Elekere Ọzọ</string>
+    <string name="canonical_hours">Ekpere Elekere</string>
+    <string name="saint_of_day">Onye Ọcha Nke Taa</string>
+    <string name="rosary_title">Ụzọ Ọcha Dị Nsọ</string>
+    <string name="prayers_title">Ekpere</string>
+    <string name="settings_title">Ntọala</string>
+    <string name="dark_mode">Ọnọdụ Oji</string>
+    <string name="notifications">Ncheta Ekpere</string>
+    <string name="next_bead">Ọzọ</string>
+    <string name="category_morning">Ụtụtụ</string>
+    <string name="category_evening">Anyasị</string>
+    <string name="loading">Na-ebu…</string>
+</resources>

@@ -1,0 +1,55 @@
+=== SHORT DESCRIPTIONS (80 chars max — Play Store kısa açıklama) ===
+
+EN: Rosary · Canonical Hours · Saints · Liturgical Calendar · 35 Languages. Free.
+TR: Tespih · Kanonik Saatler · Azizler · Liturjik Takvim · 35 Dil. Ücretsiz.
+ES: Rosario · Liturgia de las Horas · Santos · Calendario Litúrgico · 35 Idiomas
+PT: Rosário · Liturgia das Horas · Santos · Calendário Litúrgico · 35 Idiomas
+FR: Rosaire · Liturgie des Heures · Saints · Calendrier Liturgique · 35 Langues
+DE: Rosenkranz · Stundengebet · Heilige · Liturgischer Kalender · 35 Sprachen
+IT: Rosario · Liturgia delle Ore · Santi · Calendario Liturgico · 35 Lingue
+PL: Różaniec · Liturgia Godzin · Święci · Kalendarz Liturgiczny · 35 Języków
+RU: Розарий · Литургия Часов · Святые · Литургический Календарь · 35 Языков
+AR: الروزاريو · صلاة الساعات · القديسون · التقويم الليتورجي · 35 لغة
+FIL: Rosaryo · Mga Oras ng Panalangin · Mga Santo · 35 Wika. Libre.
+ZH: 玫瑰经 · 日课经 · 圣人 · 礼仪历 · 35种语言。免费。
+KO: 묵주기도 · 성무일도 · 성인 · 전례력 · 35개 언어. 무료.
+ID: Rosario · Ibadat Harian · Santo · Kalender Liturgi · 35 Bahasa. Gratis.
+VI: Kinh Mân Côi · Giờ Kinh · Các Thánh · Lịch Phụng Vụ · 35 Ngôn ngữ
+SW: Rozari · Sala za Masaa · Watakatifu · Kalenda · Lugha 35. Bila malipo.
+AM: ጸሎት · ቅዱሳን · ቀን መቁጠሪያ · 35 ቋንቋዎች. ነፃ።
+HI: जपमाला · प्रार्थना · संत · पंचांग · 35 भाषाएं। निःशुल्क।
+ML: ജപമാല · പ്രാർഥന · വിശുദ്ധർ · 35 ഭാഷകൾ. സൗജന്യം.
+TA: ஜெபமாலை · ஜெபம் · புனிதர்கள் · 35 மொழிகள். இலவசம்.
+
+
+=== APP TITLE (30 chars) ===
+Sanctus: Christian Prayer
+
+=== SUBTITLE / TAGLINE (80 chars) ===
+Daily Rosary · Canonical Hours · Saints · Liturgical Calendar · 35 Languages
+
+
+=== KEYWORDS (Apple App Store — 100 chars) ===
+christian,prayer,rosary,catholic,liturgy,hours,saints,calendar,orthodox,daily,bible,advent,lent
+
+
+=== GOOGLE PLAY CATEGORIES ===
+Primary:   Lifestyle
+Secondary: Books & Reference
+
+
+=== CONTENT RATING ===
+Everyone (no mature content)
+
+
+=== WHAT'S NEW (Release Notes) ===
+v1.0.0 — Initial release
+• 35 languages: English, Español, Português, Français, Deutsch, Italiano, Polski,
+  Русский, Українська, العربية, Filipino, 中文, हिन्दी, 한국어, and 22 more
+• Canonical Hours with smart daily reminders
+• Guided Holy Rosary with automatic mystery selection
+• 30 Saints with full biographies
+• Full liturgical calendar — 72 feasts and solemnities
+• 110+ authentic prayers in 33 languages
+• Dark mode with sacred gold design
+• Fully offline

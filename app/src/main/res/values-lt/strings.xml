@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Krikščioniškos maldos valandos</string>
+    <string name="nav_home">Pradžia</string>
+    <string name="nav_prayers">Maldos</string>
+    <string name="nav_rosary">Rožinis</string>
+    <string name="nav_saints">Šventieji</string>
+    <string name="nav_calendar">Kalendorius</string>
+    <string name="nav_settings">Nustatymai</string>
+    <string name="liturgical_season">Liturginis laikas</string>
+    <string name="next_hour">Kita valanda</string>
+    <string name="saint_of_day">Dienos šventasis</string>
+    <string name="rosary_title">Šventasis Rožinis</string>
+    <string name="prayers_title">Maldos</string>
+    <string name="settings_title">Nustatymai</string>
+    <string name="dark_mode">Tamsus režimas</string>
+    <string name="notifications">Maldos priminimai</string>
+    <string name="next_bead">Toliau</string>
+    <string name="loading">Kraunama…</string>
+</resources>

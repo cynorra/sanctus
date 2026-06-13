@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Քրիստոնեական աղոթքի ժամեր</string>
+    <string name="nav_home">Գլխավոր</string>
+    <string name="nav_prayers">Աղոթքներ</string>
+    <string name="nav_rosary">Վարդարան</string>
+    <string name="nav_saints">Սրբեր</string>
+    <string name="nav_calendar">Օրացույց</string>
+    <string name="nav_settings">Կարգավորումներ</string>
+    <string name="liturgical_season">Եկեղեցական շրջան</string>
+    <string name="next_hour">Հաջորդ ժամ</string>
+    <string name="canonical_hours">Ժամերգություն</string>
+    <string name="saint_of_day">Օրվա սուրբ</string>
+    <string name="rosary_title">Սուրբ Վարդարան</string>
+    <string name="prayers_title">Աղոթքներ</string>
+    <string name="settings_title">Կարգավորումներ</string>
+    <string name="dark_mode">Մուգ ռեժիմ</string>
+    <string name="notifications">Աղոթքի հիշեցումներ</string>
+    <string name="next_bead">Հաջորդ</string>
+    <string name="category_morning">Առավոտ</string>
+    <string name="category_evening">Երեկո</string>
+    <string name="loading">Բեռնում…</string>
+</resources>

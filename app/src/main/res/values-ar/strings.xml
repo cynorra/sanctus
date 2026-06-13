@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">أوقات صلاة المسيحيين</string>
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_prayers">الصلوات</string>
+    <string name="nav_rosary">المسبحة</string>
+    <string name="nav_saints">القديسون</string>
+    <string name="nav_calendar">التقويم</string>
+    <string name="nav_settings">الإعدادات</string>
+    <string name="liturgical_season">الموسم الليتورجي</string>
+    <string name="next_hour">الساعة القادمة</string>
+    <string name="canonical_hours">صلاة الساعات</string>
+    <string name="saint_of_day">قديس اليوم</string>
+    <string name="rosary_title">المسبحة المقدسة</string>
+    <string name="prayers_title">الصلوات</string>
+    <string name="settings_title">الإعدادات</string>
+    <string name="dark_mode">الوضع الداكن</string>
+    <string name="notifications">تذكيرات الصلاة</string>
+    <string name="next_bead">التالي</string>
+    <string name="category_all">الكل</string>
+    <string name="category_morning">الصباح</string>
+    <string name="category_evening">المساء</string>
+    <string name="category_rosary">المسبحة</string>
+    <string name="loading">جارٍ التحميل…</string>
+    <string name="joyful_mysteries">الأسرار الفرحة</string>
+    <string name="sorrowful_mysteries">الأسرار الحزينة</string>
+    <string name="glorious_mysteries">الأسرار المجيدة</string>
+    <string name="luminous_mysteries">الأسرار النورانية</string>
+</resources>

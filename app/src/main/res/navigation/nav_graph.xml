@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment android:id="@+id/dashboardFragment"
+        android:name="com.sanctus.christian.prayer.ui.dashboard.DashboardFragment"
+        android:label="@string/nav_home"/>
+
+    <fragment android:id="@+id/prayerFragment"
+        android:name="com.sanctus.christian.prayer.ui.prayer.PrayerFragment"
+        android:label="@string/nav_prayers">
+        <action android:id="@+id/action_prayer_to_detail"
+            app:destination="@id/prayerDetailFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/prayerDetailFragment"
+        android:name="com.sanctus.christian.prayer.ui.prayer.PrayerDetailFragment"
+        android:label="Prayer">
+        <argument android:name="prayer_id" app:argType="integer" android:defaultValue="-1"/>
+    </fragment>
+
+    <fragment android:id="@+id/rosaryFragment"
+        android:name="com.sanctus.christian.prayer.ui.rosary.RosaryFragment"
+        android:label="@string/nav_rosary"/>
+
+    <fragment android:id="@+id/saintFragment"
+        android:name="com.sanctus.christian.prayer.ui.saint.SaintListFragment"
+        android:label="@string/nav_saints">
+        <action android:id="@+id/action_saints_to_detail"
+            app:destination="@id/saintDetailFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/saintDetailFragment"
+        android:name="com.sanctus.christian.prayer.ui.saint.SaintDetailFragment"
+        android:label="Saint">
+        <argument android:name="saint_id" app:argType="integer" android:defaultValue="-1"/>
+    </fragment>
+
+    <fragment android:id="@+id/calendarFragment"
+        android:name="com.sanctus.christian.prayer.ui.calendar.CalendarFragment"
+        android:label="@string/nav_calendar"/>
+
+    <fragment android:id="@+id/settingsFragment"
+        android:name="com.sanctus.christian.prayer.ui.settings.SettingsFragment"
+        android:label="@string/nav_settings"/>
+
+</navigation>

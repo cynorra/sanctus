@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Християнські години молитви</string>
+    <string name="nav_home">Головна</string>
+    <string name="nav_prayers">Молитви</string>
+    <string name="nav_rosary">Вервиця</string>
+    <string name="nav_saints">Святі</string>
+    <string name="nav_calendar">Календар</string>
+    <string name="nav_settings">Налаштування</string>
+    <string name="liturgical_season">Літургійний час</string>
+    <string name="next_hour">Наступна година</string>
+    <string name="canonical_hours">Літургія Годин</string>
+    <string name="saint_of_day">Святий дня</string>
+    <string name="rosary_title">Святий Розарій</string>
+    <string name="prayers_title">Молитви</string>
+    <string name="settings_title">Налаштування</string>
+    <string name="dark_mode">Темний режим</string>
+    <string name="notifications">Нагадування молитви</string>
+    <string name="next_bead">Далі</string>
+    <string name="loading">Завантаження…</string>
+</resources>

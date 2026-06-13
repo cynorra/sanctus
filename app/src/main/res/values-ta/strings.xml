@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">கிறிஸ்தவ ஜெபநேரங்கள்</string>
+    <string name="nav_home">முகப்பு</string>
+    <string name="nav_prayers">ஜெபங்கள்</string>
+    <string name="nav_rosary">ஜெபமாலை</string>
+    <string name="nav_saints">புனிதர்கள்</string>
+    <string name="nav_calendar">நாட்காட்டி</string>
+    <string name="nav_settings">அமைப்புகள்</string>
+    <string name="liturgical_season">திருவழிபாட்டு காலம்</string>
+    <string name="next_hour">அடுத்த மணி நேரம்</string>
+    <string name="canonical_hours">மணி நேர ஜெபம்</string>
+    <string name="saint_of_day">இன்றைய புனிதர்</string>
+    <string name="rosary_title">திருவழிபாட்டு ஜெபமாலை</string>
+    <string name="prayers_title">ஜெபங்கள்</string>
+    <string name="settings_title">அமைப்புகள்</string>
+    <string name="dark_mode">இருண்ட பயன்முறை</string>
+    <string name="notifications">ஜெப நினைவூட்டல்கள்</string>
+    <string name="next_bead">அடுத்து</string>
+    <string name="category_morning">காலை</string>
+    <string name="category_evening">மாலை</string>
+    <string name="loading">ஏற்றுகிறது…</string>
+</resources>

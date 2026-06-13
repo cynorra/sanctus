@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Nyakati za Sala za Kikristo</string>
+    <string name="nav_home">Nyumbani</string>
+    <string name="nav_prayers">Sala</string>
+    <string name="nav_rosary">Rozari</string>
+    <string name="nav_saints">Watakatifu</string>
+    <string name="nav_calendar">Kalenda</string>
+    <string name="nav_settings">Mipangilio</string>
+    <string name="liturgical_season">Msimu wa Liturujia</string>
+    <string name="next_hour">Saa Inayofuata</string>
+    <string name="canonical_hours">Liturujia ya Masaa</string>
+    <string name="saint_of_day">Mtakatifu wa Leo</string>
+    <string name="rosary_title">Rozari Takatifu</string>
+    <string name="prayers_title">Sala</string>
+    <string name="settings_title">Mipangilio</string>
+    <string name="dark_mode">Hali ya Giza</string>
+    <string name="notifications">Vikumbusho vya Sala</string>
+    <string name="next_bead">Inayofuata</string>
+    <string name="category_morning">Asubuhi</string>
+    <string name="category_evening">Jioni</string>
+    <string name="loading">Inapakia…</string>
+</resources>

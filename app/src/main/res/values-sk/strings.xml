@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Kresťanské hodiny modlitby</string>
+    <string name="nav_home">Domov</string>
+    <string name="nav_prayers">Modlitby</string>
+    <string name="nav_rosary">Ruženec</string>
+    <string name="nav_saints">Svätí</string>
+    <string name="nav_calendar">Kalendár</string>
+    <string name="nav_settings">Nastavenia</string>
+    <string name="liturgical_season">Liturgické obdobie</string>
+    <string name="next_hour">Ďalšia hodina</string>
+    <string name="saint_of_day">Svätý dňa</string>
+    <string name="rosary_title">Svätý ruženec</string>
+    <string name="prayers_title">Modlitby</string>
+    <string name="settings_title">Nastavenia</string>
+    <string name="dark_mode">Tmavý režim</string>
+    <string name="notifications">Pripomienky modlitby</string>
+    <string name="next_bead">Ďalej</string>
+    <string name="loading">Načítavam…</string>
+</resources>

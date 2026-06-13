@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_background"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rosary_title"
+        android:fontFamily="serif"
+        android:textSize="28sp"
+        android:textColor="@color/color_on_background" />
+
+    <TextView
+        android:id="@+id/tv_mystery_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="13sp"
+        android:letterSpacing="0.06"
+        android:textAllCaps="true"
+        android:textColor="@color/color_accent" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/color_divider" />
+
+    <TextView
+        android:id="@+id/tv_current_prayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="serif"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textColor="@color/color_on_background" />
+
+    <TextView
+        android:id="@+id/tv_bead_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
+        android:textColor="@color/color_text_secondary" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next_bead"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/next_bead"
+        android:paddingHorizontal="40dp"
+        android:letterSpacing="0.08"
+        android:textAllCaps="true" />
+
+</LinearLayout>

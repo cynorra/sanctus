@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Horario de Oraciones Católicas</string>
+    <string name="nav_home">Inicio</string>
+    <string name="nav_prayers">Oraciones</string>
+    <string name="nav_rosary">Rosario</string>
+    <string name="nav_saints">Santos</string>
+    <string name="nav_calendar">Calendario</string>
+    <string name="nav_settings">Ajustes</string>
+    <string name="liturgical_season">Tiempo Litúrgico</string>
+    <string name="next_hour">Próxima Hora</string>
+    <string name="settings_title">Ajustes</string>
+    <string name="dark_mode">Modo Oscuro</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="rosary_title">Santo Rosario</string>
+    <string name="next_bead">Siguiente</string>
+</resources>

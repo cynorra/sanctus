@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Χριστιανικές ώρες προσευχής</string>
+    <string name="nav_home">Αρχική</string>
+    <string name="nav_prayers">Προσευχές</string>
+    <string name="nav_rosary">Κομποσχοίνι</string>
+    <string name="nav_saints">Άγιοι</string>
+    <string name="nav_calendar">Ημερολόγιο</string>
+    <string name="nav_settings">Ρυθμίσεις</string>
+    <string name="liturgical_season">Λειτουργική εποχή</string>
+    <string name="next_hour">Επόμενη ώρα</string>
+    <string name="canonical_hours">Ώρες Λειτουργίας</string>
+    <string name="saint_of_day">Άγιος της ημέρας</string>
+    <string name="rosary_title">Άγιο Κομποσχοίνι</string>
+    <string name="prayers_title">Προσευχές</string>
+    <string name="settings_title">Ρυθμίσεις</string>
+    <string name="dark_mode">Σκοτεινή λειτουργία</string>
+    <string name="notifications">Υπενθυμίσεις προσευχής</string>
+    <string name="next_bead">Επόμενο</string>
+    <string name="loading">Φόρτωση…</string>
+</resources>

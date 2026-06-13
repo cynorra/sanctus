@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Ore di preghiera cristiana</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_prayers">Preghiere</string>
+    <string name="nav_rosary">Rosario</string>
+    <string name="nav_saints">Santi</string>
+    <string name="nav_calendar">Calendario</string>
+    <string name="nav_settings">Impostazioni</string>
+    <string name="liturgical_season">Tempo liturgico</string>
+    <string name="next_hour">Prossima ora</string>
+    <string name="canonical_hours">Liturgia delle Ore</string>
+    <string name="saint_of_day">Santo del giorno</string>
+    <string name="rosary_title">Santo Rosario</string>
+    <string name="prayers_title">Preghiere</string>
+    <string name="settings_title">Impostazioni</string>
+    <string name="dark_mode">Modalità scura</string>
+    <string name="notifications">Promemoria preghiera</string>
+    <string name="next_bead">Avanti</string>
+    <string name="category_all">Tutte</string>
+    <string name="category_morning">Mattina</string>
+    <string name="category_evening">Sera</string>
+    <string name="loading">Caricamento…</string>
+</resources>

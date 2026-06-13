@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "99271954647",
+    "project_id": "sanctus-b5259",
+    "storage_bucket": "sanctus-b5259.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99271954647:android:0e6fd6536ce7b4db04a092",
+        "android_client_info": {
+          "package_name": "com.sanctus.christian.prayer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8ljWrLID1Y1HfacXE0x01YZreNZtDxdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

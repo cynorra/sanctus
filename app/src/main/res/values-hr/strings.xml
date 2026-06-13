@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Kršćanske molitve</string>
+    <string name="nav_home">Početna</string>
+    <string name="nav_prayers">Molitve</string>
+    <string name="nav_rosary">Krunica</string>
+    <string name="nav_saints">Sveci</string>
+    <string name="nav_calendar">Kalendar</string>
+    <string name="nav_settings">Postavke</string>
+    <string name="liturgical_season">Liturgijsko vrijeme</string>
+    <string name="next_hour">Sljedeći sat</string>
+    <string name="saint_of_day">Svetac dana</string>
+    <string name="rosary_title">Sveta Krunica</string>
+    <string name="prayers_title">Molitve</string>
+    <string name="settings_title">Postavke</string>
+    <string name="dark_mode">Tamni način</string>
+    <string name="notifications">Podsjetnici molitve</string>
+    <string name="next_bead">Dalje</string>
+    <string name="loading">Učitavanje…</string>
+</resources>

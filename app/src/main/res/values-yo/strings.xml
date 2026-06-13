@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Àwọn Àkókò Ìjọsìn Kristian</string>
+    <string name="nav_home">Ilé</string>
+    <string name="nav_prayers">Àwọn Ìjọbá</string>
+    <string name="nav_rosary">Rosary</string>
+    <string name="nav_saints">Àwọn Ènìyàn Mímọ́</string>
+    <string name="nav_calendar">Kalẹndà</string>
+    <string name="nav_settings">Ìpinnu</string>
+    <string name="liturgical_season">Àkókò Ìjọsìn</string>
+    <string name="next_hour">Wákàtí Tó Ń Bọ̀</string>
+    <string name="canonical_hours">Ìjọsìn Wákàtí</string>
+    <string name="saint_of_day">Ènìyàn Mímọ́ Ọjọ Yìí</string>
+    <string name="rosary_title">Rosary Mímọ́</string>
+    <string name="prayers_title">Àwọn Ìjọbá</string>
+    <string name="settings_title">Ìpinnu</string>
+    <string name="dark_mode">Ìpele Òkunkun</string>
+    <string name="notifications">Ìránlọ́wọ́ Ìjọbá</string>
+    <string name="next_bead">Tó Ń Bọ̀</string>
+    <string name="category_morning">Òwúrọ̀</string>
+    <string name="category_evening">Alẹ́</string>
+    <string name="loading">Ń Ṣe Ìgbàlọ…</string>
+</resources>

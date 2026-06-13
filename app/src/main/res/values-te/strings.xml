@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">క్రైస్తవ ప్రార్థన సమయాలు</string>
+    <string name="nav_home">హోమ్</string>
+    <string name="nav_prayers">ప్రార్థనలు</string>
+    <string name="nav_rosary">జపమాల</string>
+    <string name="nav_saints">సాధువులు</string>
+    <string name="nav_calendar">క్యాలెండర్</string>
+    <string name="nav_settings">సెట్టింగులు</string>
+    <string name="liturgical_season">ఆరాధన కాలం</string>
+    <string name="next_hour">తదుపరి గంట</string>
+    <string name="canonical_hours">గంట ప్రార్థన</string>
+    <string name="saint_of_day">నేటి సాధువు</string>
+    <string name="rosary_title">పవిత్ర జపమాల</string>
+    <string name="prayers_title">ప్రార్థనలు</string>
+    <string name="settings_title">సెట్టింగులు</string>
+    <string name="dark_mode">డార్క్ మోడ్</string>
+    <string name="notifications">ప్రార్థన రిమైండర్లు</string>
+    <string name="next_bead">తదుపరి</string>
+    <string name="category_morning">ఉదయం</string>
+    <string name="category_evening">సాయంత్రం</string>
+    <string name="loading">లోడ్ అవుతోంది…</string>
+</resources>

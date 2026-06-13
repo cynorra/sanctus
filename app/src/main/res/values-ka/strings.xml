@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">ქრისტიანული ლოცვის საათები</string>
+    <string name="nav_home">მთავარი</string>
+    <string name="nav_prayers">ლოცვები</string>
+    <string name="nav_rosary">მარიამობა</string>
+    <string name="nav_saints">წმინდანები</string>
+    <string name="nav_calendar">კალენდარი</string>
+    <string name="nav_settings">პარამეტრები</string>
+    <string name="liturgical_season">ლიტურგიული სეზონი</string>
+    <string name="next_hour">შემდეგი საათი</string>
+    <string name="canonical_hours">საათთა ლიტურგია</string>
+    <string name="saint_of_day">დღის წმინდანი</string>
+    <string name="rosary_title">წმინდა მარიამობა</string>
+    <string name="prayers_title">ლოცვები</string>
+    <string name="settings_title">პარამეტრები</string>
+    <string name="dark_mode">მუქი რეჟიმი</string>
+    <string name="notifications">ლოცვის შეხსენებები</string>
+    <string name="next_bead">შემდეგი</string>
+    <string name="category_morning">დილა</string>
+    <string name="category_evening">საღამო</string>
+    <string name="loading">იტვირთება…</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Хришћанске молитве</string>
+    <string name="nav_home">Почетна</string>
+    <string name="nav_prayers">Молитве</string>
+    <string name="nav_rosary">Бројаница</string>
+    <string name="nav_saints">Свеци</string>
+    <string name="nav_calendar">Календар</string>
+    <string name="nav_settings">Подешавања</string>
+    <string name="liturgical_season">Литургијско доба</string>
+    <string name="next_hour">Следећи час</string>
+    <string name="saint_of_day">Светац дана</string>
+    <string name="rosary_title">Свети Розарио</string>
+    <string name="prayers_title">Молитве</string>
+    <string name="settings_title">Подешавања</string>
+    <string name="dark_mode">Тамни режим</string>
+    <string name="notifications">Подсетници молитве</string>
+    <string name="next_bead">Следеће</string>
+    <string name="loading">Учитавање…</string>
+</resources>

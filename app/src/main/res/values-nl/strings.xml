@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Christelijke gebedstijden</string>
+    <string name="nav_home">Start</string>
+    <string name="nav_prayers">Gebeden</string>
+    <string name="nav_rosary">Rozenkrans</string>
+    <string name="nav_saints">Heiligen</string>
+    <string name="nav_calendar">Kalender</string>
+    <string name="nav_settings">Instellingen</string>
+    <string name="liturgical_season">Liturgisch seizoen</string>
+    <string name="next_hour">Volgend uur</string>
+    <string name="canonical_hours">Getijdengebed</string>
+    <string name="saint_of_day">Heilige van de dag</string>
+    <string name="rosary_title">Heilige Rozenkrans</string>
+    <string name="prayers_title">Gebeden</string>
+    <string name="settings_title">Instellingen</string>
+    <string name="dark_mode">Donkere modus</string>
+    <string name="notifications">Gebedherinneringen</string>
+    <string name="next_bead">Volgende</string>
+    <string name="loading">Laden…</string>
+</resources>

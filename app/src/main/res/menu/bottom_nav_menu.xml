@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/prayerFragment"
+        android:icon="@drawable/ic_prayer"
+        android:title="@string/nav_prayers" />
+    <item
+        android:id="@+id/rosaryFragment"
+        android:icon="@drawable/ic_rosary"
+        android:title="@string/nav_rosary" />
+    <item
+        android:id="@+id/saintFragment"
+        android:icon="@drawable/ic_saint"
+        android:title="@string/nav_saints" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/nav_settings" />
+</menu>

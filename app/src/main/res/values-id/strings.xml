@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Jam Doa Kristiani</string>
+    <string name="nav_home">Beranda</string>
+    <string name="nav_prayers">Doa</string>
+    <string name="nav_rosary">Rosario</string>
+    <string name="nav_saints">Orang Kudus</string>
+    <string name="nav_calendar">Kalender</string>
+    <string name="nav_settings">Pengaturan</string>
+    <string name="liturgical_season">Musim Liturgi</string>
+    <string name="next_hour">Ibadat Harian Berikutnya</string>
+    <string name="canonical_hours">Ibadat Harian</string>
+    <string name="saint_of_day">Orang Kudus Hari Ini</string>
+    <string name="rosary_title">Rosario Kudus</string>
+    <string name="prayers_title">Doa-Doa</string>
+    <string name="settings_title">Pengaturan</string>
+    <string name="dark_mode">Mode Gelap</string>
+    <string name="notifications">Pengingat Doa</string>
+    <string name="next_bead">Lanjut</string>
+    <string name="category_morning">Pagi</string>
+    <string name="category_evening">Malam</string>
+    <string name="loading">Memuat…</string>
+</resources>

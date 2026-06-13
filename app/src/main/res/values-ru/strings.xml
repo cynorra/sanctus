@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Христианские часы молитвы</string>
+    <string name="nav_home">Главная</string>
+    <string name="nav_prayers">Молитвы</string>
+    <string name="nav_rosary">Розарий</string>
+    <string name="nav_saints">Святые</string>
+    <string name="nav_calendar">Календарь</string>
+    <string name="nav_settings">Настройки</string>
+    <string name="liturgical_season">Литургический сезон</string>
+    <string name="next_hour">Следующий час</string>
+    <string name="canonical_hours">Литургия часов</string>
+    <string name="saint_of_day">Святой дня</string>
+    <string name="rosary_title">Святой Розарий</string>
+    <string name="prayers_title">Молитвы</string>
+    <string name="settings_title">Настройки</string>
+    <string name="dark_mode">Тёмный режим</string>
+    <string name="notifications">Напоминания о молитве</string>
+    <string name="next_bead">Далее</string>
+    <string name="loading">Загрузка…</string>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@drawable/bg_splash"
+    android:gravity="center_horizontal" android:padding="32dp">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/onboarding_pager" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1"/>
+
+    <TextView android:id="@+id/tv_onboarding_title" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:fontFamily="serif"
+        android:textSize="26sp" android:textColor="@color/color_on_background"
+        android:gravity="center" android:layout_marginTop="24dp"/>
+
+    <TextView android:id="@+id/tv_onboarding_desc" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="12dp"
+        android:textSize="15sp" android:lineSpacingMultiplier="1.5"
+        android:textColor="@color/color_on_surface" android:gravity="center"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/onboarding_dots" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginTop="32dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_onboarding_next" android:layout_width="match_parent"
+        android:layout_height="56dp" android:layout_marginTop="24dp"
+        android:text="Next" android:letterSpacing="0.08" android:textAllCaps="true"/>
+
+    <Button android:id="@+id/btn_onboarding_skip" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginTop="8dp"
+        android:text="Skip" android:textColor="@color/color_text_secondary"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+</LinearLayout>
