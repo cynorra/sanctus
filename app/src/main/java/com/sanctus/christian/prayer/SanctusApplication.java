@@ -9,6 +9,7 @@ import com.sanctus.christian.prayer.data.local.DatabaseInitializer;
 import com.sanctus.christian.prayer.data.local.SanctusDatabase;
 import com.sanctus.christian.prayer.data.repository.SettingsRepository;
 import com.sanctus.christian.prayer.service.PrayerAlarmManager;
+import com.google.android.gms.ads.MobileAds;
 
 public class SanctusApplication extends Application {
 
@@ -21,6 +22,9 @@ public class SanctusApplication extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+
+        // Initialize AdMob
+        MobileAds.initialize(this, initializationStatus -> {});
 
         try {
             database = SanctusDatabase.getInstance(this);
