@@ -2,10 +2,13 @@ package com.sanctus.christian.prayer.data.repository;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.os.LocaleListCompat;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import com.sanctus.christian.prayer.data.local.SanctusDatabase;
 import com.sanctus.christian.prayer.data.local.entity.SettingsEntity;
+import com.sanctus.christian.prayer.util.LanguageManager;
 
 public class SettingsRepository {
     private static final String PREFS_NAME = "sanctus_prefs";
@@ -17,12 +20,20 @@ public class SettingsRepository {
         prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         db = SanctusDatabase.getInstance(context);
         languageLive.setValue(getLanguage());
+
+        // Apply the stored/derived language to the app's locale on cold start
+        // (e.g. after this feature was added, or after a process restart)
+        // so UI resource strings match without requiring the user to reopen Settings.
+        if (AppCompatDelegate.getApplicationLocales().isEmpty()) {
+            AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(getLanguage()));
+        }
     }
 
-    public String getLanguage() { return prefs.getString("language", "en"); }
+    public String getLanguage() { return prefs.getString("language", LanguageManager.getSystemLocaleCode()); }
     public void setLanguage(String lang) {
         prefs.edit().putString("language", lang).apply();
         languageLive.setValue(lang);
+        AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(lang));
     }
 
     public LiveData<String> getLanguageLive() { return languageLive; }

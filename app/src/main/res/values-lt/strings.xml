@@ -18,4 +18,85 @@
     <string name="notifications">Maldos priminimai</string>
     <string name="next_bead">Toliau</string>
     <string name="loading">Kraunama…</string>
+
+    <string name="no_saint_today_title">Šiandien šventojo nėra</string>
+    <string name="no_saint_today_desc">Patikrinkite rytoj arba naršykite visą šventųjų kalendorių.</string>
+
+    <string name="season_advent">Adventas</string>
+    <string name="season_christmas">Kalėdų laikas</string>
+    <string name="season_lent">Gavėnia</string>
+    <string name="season_easter">Velykų laikas</string>
+    <string name="season_ordinary">Eilinis laikas</string>
+
+    <string name="hour_lauds">Rytmetinė (Rytinė malda)</string>
+    <string name="hour_terce">Tretinė (Priešpiečio malda)</string>
+    <string name="hour_sext">Šeštinė (Vidudienio malda)</string>
+    <string name="hour_none">Devintinė (Popiečio malda)</string>
+    <string name="hour_vespers">Vakarinė (Vakaro malda)</string>
+    <string name="hour_compline">Naktinė (Nakties malda)</string>
+    <string name="next_hour_value">Vakarinė · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Rytmetinė</item>
+        <item>Tretinė</item>
+        <item>Šeštinė</item>
+        <item>Devintinė</item>
+        <item>Vakarinė</item>
+        <item>Naktinė</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Pradėkite dieną su Dievu.</item>
+        <item>Sustokite. Įkvėpkite. Melskitės.</item>
+        <item>Vidudienio malda — ramybės akimirka.</item>
+        <item>Popietės apmąstymas.</item>
+        <item>Vakaro malda — padėkokite.</item>
+        <item>Nakties malda — ilsėkitės Jo ramybėje.</item>
+    </string-array>
+    <string name="notification_default_title">Maldos metas</string>
+
+    <string name="prayer_our_father">Tėve mūsų</string>
+    <string name="prayer_hail_mary">Sveika, Marija</string>
+    <string name="prayer_glory_be">Garbė Dievui Tėvui</string>
+    <string name="rosary_hail_mary_progress">Sveika, Marija · %1$d iš 10</string>
+    <string name="rosary_progress">%1$d dešimtis · %2$d karolėlis</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Apreiškimas</item>
+        <item>Aplankymas</item>
+        <item>Jėzaus gimimas</item>
+        <item>Paaukojimas šventykloje</item>
+        <item>Jėzaus atradimas šventykloje</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Jėzaus agonija Alyvų sode</item>
+        <item>Nuplakimas</item>
+        <item>Vainikavimas erškėčiais</item>
+        <item>Kryžiaus nešimas</item>
+        <item>Nukryžiavimas</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Prisikėlimas</item>
+        <item>Žengimas į dangų</item>
+        <item>Šventosios Dvasios atsiuntimas</item>
+        <item>Marijos Ėmimas į dangų</item>
+        <item>Marijos Vainikavimas</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Krikštas Jordane</item>
+        <item>Vestuvės Kanoje</item>
+        <item>Dievo karalystės skelbimas</item>
+        <item>Atsimainymas</item>
+        <item>Eucharistijos įsteigimas</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Sveiki atvykę į Sanctus</string>
+    <string name="onboarding_desc_1">Jūsų šventas palydovas Valandų liturgijai, Rožiniui, šventiesiems ir liturginiam kalendoriui.</string>
+    <string name="onboarding_title_2">Kanoninės valandos</string>
+    <string name="onboarding_desc_2">Gaukite švelnius priminimus visoms šešioms kanoninėms valandoms — Rytmetinei, Tretinei, Šeštinei, Devintinei, Vakarinei ir Naktinei.</string>
+    <string name="onboarding_title_3">Šventasis Rožinis</string>
+    <string name="onboarding_desc_3">Vedamas Rožinis su automatiniu slėpinio pasirinkimu pagal savaitės dieną.</string>
+    <string name="onboarding_title_4">Šventieji ir kalendorius</string>
+    <string name="onboarding_desc_4">Atraskite dienos šventąjį ir naršykite visą liturginį kalendorių — iškilmes, šventes ir laikotarpius.</string>
+    <string name="onboarding_next">Toliau</string>
+    <string name="onboarding_skip">Praleisti</string>
 </resources>

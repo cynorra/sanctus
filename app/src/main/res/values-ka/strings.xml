@@ -21,4 +21,85 @@
     <string name="category_morning">დილა</string>
     <string name="category_evening">საღამო</string>
     <string name="loading">იტვირთება…</string>
+
+    <string name="no_saint_today_title">დღეს წმინდანი არ არის მითითებული</string>
+    <string name="no_saint_today_desc">შეამოწმე ხვალ, ან დაათვალიერე წმინდანთა სრული კალენდარი.</string>
+
+    <string name="season_advent">მოსვლის დრო</string>
+    <string name="season_christmas">შობის პერიოდი</string>
+    <string name="season_lent">დიდი მარხვა</string>
+    <string name="season_easter">აღდგომის პერიოდი</string>
+    <string name="season_ordinary">ჩვეულებრივი დრო</string>
+
+    <string name="hour_lauds">დილის ლოცვა</string>
+    <string name="hour_terce">მესამე საათის ლოცვა</string>
+    <string name="hour_sext">მეექვსე საათის ლოცვა (შუადღის ლოცვა)</string>
+    <string name="hour_none">მეცხრე საათის ლოცვა (ნაშუადღევის ლოცვა)</string>
+    <string name="hour_vespers">სავანო (საღამოს ლოცვა)</string>
+    <string name="hour_compline">ღამის ლოცვა</string>
+    <string name="next_hour_value">საღამოს ლოცვა · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>დილის</item>
+        <item>მესამე საათი</item>
+        <item>მეექვსე საათი</item>
+        <item>მეცხრე საათი</item>
+        <item>საღამოს</item>
+        <item>ღამის</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>დაიწყე დღე ღმერთთან ერთად.</item>
+        <item>გაჩერდი. ჩაისუნთქე. ილოცე.</item>
+        <item>შუადღის ლოცვა — მშვიდობის წუთი.</item>
+        <item>ნაშუადღევის განაზრება.</item>
+        <item>საღამოს ლოცვა — მადლობა გადაუხადე.</item>
+        <item>ღამის ლოცვა — დაისვენე მის მშვიდობაში.</item>
+    </string-array>
+    <string name="notification_default_title">ლოცვის დროა</string>
+
+    <string name="prayer_our_father">მამაო ჩვენო</string>
+    <string name="prayer_hail_mary">გიხაროდენ მარიამ</string>
+    <string name="prayer_glory_be">დიდება მამას</string>
+    <string name="rosary_hail_mary_progress">გიხაროდენ მარიამ · %1$d 10-დან</string>
+    <string name="rosary_progress">ათეული %1$d · მარცვალი %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>ხარება</item>
+        <item>მარიამის სტუმრობა ელისაბედთან</item>
+        <item>იესოს შობა</item>
+        <item>იესოს მიძღვნა ტაძარში</item>
+        <item>იესოს პოვნა ტაძარში</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>გეთსემანის ვნება</item>
+        <item>იესოს გვემა</item>
+        <item>ეკლის გვირგვინით შემკობა</item>
+        <item>ჯვრის ტვირთვა</item>
+        <item>ჯვარცმა</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>აღდგომა</item>
+        <item>ამაღლება</item>
+        <item>სულიწმინდის გარდამოსვლა</item>
+        <item>მარიამის მიძინება</item>
+        <item>მარიამის განდიდება</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>იესოს ნათლისღება იორდანეზე</item>
+        <item>ქორწილი კანაში</item>
+        <item>ღვთის სასუფევლის ქადაგება</item>
+        <item>ფერისცვალება</item>
+        <item>ევქარისტიის დაწესება</item>
+    </string-array>
+
+    <string name="onboarding_title_1">კეთილი იყოს შენი მობრძანება Sanctus-ში</string>
+    <string name="onboarding_desc_1">შენი წმინდა თანამგზავრი საათთა ლიტურგიის, მარიამობის, წმინდანების და საეკლესიო კალენდრისთვის.</string>
+    <string name="onboarding_title_2">კანონიკური საათები</string>
+    <string name="onboarding_desc_2">მიიღე რბილი შეხსენებები ყველა ექვსივე კანონიკური საათისთვის — დილის, მესამე საათი, მეექვსე საათი, მეცხრე საათი, საღამოს და ღამის.</string>
+    <string name="onboarding_title_3">წმინდა მარიამობა</string>
+    <string name="onboarding_desc_3">მართული მარიამობა საიდუმლოებების ავტომატური არჩევით კვირის დღის მიხედვით.</string>
+    <string name="onboarding_title_4">წმინდანები და კალენდარი</string>
+    <string name="onboarding_desc_4">აღმოაჩინე დღის წმინდანი და გაეცანი სრულ საეკლესიო კალენდარს — დღესასწაულებს, დიდ დღესასწაულებს და პერიოდებს.</string>
+    <string name="onboarding_next">შემდეგი</string>
+    <string name="onboarding_skip">გამოტოვება</string>
 </resources>

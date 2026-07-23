@@ -22,4 +22,85 @@
     <string name="category_morning">Mattina</string>
     <string name="category_evening">Sera</string>
     <string name="loading">Caricamento…</string>
+
+    <string name="no_saint_today_title">Nessun Santo Elencato Oggi</string>
+    <string name="no_saint_today_desc">Ricontrolla domani, oppure sfoglia il calendario completo dei santi.</string>
+
+    <string name="season_advent">Avvento</string>
+    <string name="season_christmas">Tempo di Natale</string>
+    <string name="season_lent">Quaresima</string>
+    <string name="season_easter">Tempo di Pasqua</string>
+    <string name="season_ordinary">Tempo Ordinario</string>
+
+    <string name="hour_lauds">Lodi Mattutine</string>
+    <string name="hour_terce">Ora Terza</string>
+    <string name="hour_sext">Ora Sesta</string>
+    <string name="hour_none">Ora Nona</string>
+    <string name="hour_vespers">Vespri</string>
+    <string name="hour_compline">Compieta</string>
+    <string name="next_hour_value">Vespri · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Lodi</item>
+        <item>Terza</item>
+        <item>Sesta</item>
+        <item>Nona</item>
+        <item>Vespri</item>
+        <item>Compieta</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Inizia la giornata con Dio.</item>
+        <item>Fermati. Respira. Prega.</item>
+        <item>Preghiera di mezzogiorno — un momento di pace.</item>
+        <item>Riflessione del pomeriggio.</item>
+        <item>Preghiera della sera — rendi grazie.</item>
+        <item>Preghiera della notte — riposa nella Sua pace.</item>
+    </string-array>
+    <string name="notification_default_title">È Ora di Pregare</string>
+
+    <string name="prayer_our_father">Padre Nostro</string>
+    <string name="prayer_hail_mary">Ave Maria</string>
+    <string name="prayer_glory_be">Gloria al Padre</string>
+    <string name="rosary_hail_mary_progress">Ave Maria · %1$d di 10</string>
+    <string name="rosary_progress">Decina %1$d · Grano %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>L\'Annunciazione</item>
+        <item>La Visitazione</item>
+        <item>La Natività</item>
+        <item>La Presentazione al Tempio</item>
+        <item>Il Ritrovamento di Gesù al Tempio</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>L\'Agonia nell\'Orto</item>
+        <item>La Flagellazione</item>
+        <item>L\'Incoronazione di Spine</item>
+        <item>La Salita al Calvario</item>
+        <item>La Crocifissione</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>La Resurrezione</item>
+        <item>L\'Ascensione</item>
+        <item>La Discesa dello Spirito Santo</item>
+        <item>L\'Assunzione di Maria</item>
+        <item>L\'Incoronazione di Maria</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Il Battesimo di Gesù</item>
+        <item>Le Nozze di Cana</item>
+        <item>L\'Annuncio del Regno di Dio</item>
+        <item>La Trasfigurazione</item>
+        <item>L\'Istituzione dell\'Eucaristia</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Benvenuto in Sanctus</string>
+    <string name="onboarding_desc_1">Il tuo compagno sacro per la Liturgia delle Ore, il Rosario, i Santi e il Calendario Liturgico.</string>
+    <string name="onboarding_title_2">Ore Canoniche</string>
+    <string name="onboarding_desc_2">Ricevi dolci promemoria per tutte e sei le ore canoniche — Lodi, Terza, Sesta, Nona, Vespri e Compieta.</string>
+    <string name="onboarding_title_3">Santo Rosario</string>
+    <string name="onboarding_desc_3">Rosario guidato con selezione automatica dei misteri in base al giorno della settimana.</string>
+    <string name="onboarding_title_4">Santi e Calendario</string>
+    <string name="onboarding_desc_4">Scopri il Santo del giorno ed esplora il calendario liturgico completo — feste, solennità e tempi liturgici.</string>
+    <string name="onboarding_next">Avanti</string>
+    <string name="onboarding_skip">Salta</string>
 </resources>

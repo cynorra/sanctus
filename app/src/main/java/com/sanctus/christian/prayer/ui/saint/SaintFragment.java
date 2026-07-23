@@ -8,8 +8,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import com.sanctus.christian.prayer.R;
-import com.sanctus.christian.prayer.domain.model.Saint;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class SaintFragment extends Fragment {
 
@@ -22,15 +25,23 @@ public class SaintFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        // Load saint of the day
-        Saint saintOfDay = new Saint(1, "Saint Anthony of Padua",
-                "Doctor of the Church, known for his powerful preaching and expert knowledge of Scripture.",
-                "June 13", "Lost items, poor, travelers", "");
+
         TextView tvName = view.findViewById(R.id.tv_saint_name);
         TextView tvDesc = view.findViewById(R.id.tv_saint_description);
         TextView tvFeast = view.findViewById(R.id.tv_feast_date);
-        tvName.setText(saintOfDay.getName());
-        tvDesc.setText(saintOfDay.getDescription());
-        tvFeast.setText("Feast: " + saintOfDay.getFeastDate());
+
+        String today = new SimpleDateFormat("MMMM d", Locale.ENGLISH).format(new Date());
+        SaintViewModel viewModel = new ViewModelProvider(this).get(SaintViewModel.class);
+        viewModel.getSaintByFeastDate(today).observe(getViewLifecycleOwner(), saint -> {
+            if (saint != null) {
+                tvName.setText(saint.name);
+                tvDesc.setText(saint.description);
+                tvFeast.setText("Feast: " + saint.feastDate);
+            } else {
+                tvName.setText(R.string.no_saint_today_title);
+                tvDesc.setText(R.string.no_saint_today_desc);
+                tvFeast.setText("");
+            }
+        });
     }
 }

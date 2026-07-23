@@ -21,4 +21,85 @@
     <string name="category_morning">Umaga</string>
     <string name="category_evening">Gabi</string>
     <string name="loading">Naglo-load…</string>
+
+    <string name="no_saint_today_title">Walang Nakatalang Santo Ngayon</string>
+    <string name="no_saint_today_desc">Bumalik bukas, o tingnan ang buong kalendaryo ng mga santo.</string>
+
+    <string name="season_advent">Adbiyento</string>
+    <string name="season_christmas">Panahon ng Pasko</string>
+    <string name="season_lent">Kuwaresma</string>
+    <string name="season_easter">Panahon ng Pasko ng Muling Pagkabuhay</string>
+    <string name="season_ordinary">Karaniwang Panahon</string>
+
+    <string name="hour_lauds">Laudes (Panalangin sa Umaga)</string>
+    <string name="hour_terce">Terce (Kalagitnaan ng Umaga)</string>
+    <string name="hour_sext">Sext (Panalangin sa Tanghali)</string>
+    <string name="hour_none">None (Kalagitnaan ng Hapon)</string>
+    <string name="hour_vespers">Vesper (Panalangin sa Gabi)</string>
+    <string name="hour_compline">Compline (Panalangin bago Matulog)</string>
+    <string name="next_hour_value">Vesper · 06:00 PM</string>
+    <string-array name="hour_names_short">
+        <item>Laudes</item>
+        <item>Terce</item>
+        <item>Sext</item>
+        <item>None</item>
+        <item>Vesper</item>
+        <item>Compline</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Simulan ang iyong araw kasama ang Diyos.</item>
+        <item>Tumigil. Huminga. Manalangin.</item>
+        <item>Panalangin sa tanghali — sandali ng kapayapaan.</item>
+        <item>Pagninilay sa hapon.</item>
+        <item>Panalangin sa gabi — magpasalamat.</item>
+        <item>Panalangin bago matulog — magpahinga sa Kanyang kapayapaan.</item>
+    </string-array>
+    <string name="notification_default_title">Oras na ng Panalangin</string>
+
+    <string name="prayer_our_father">Ama Namin</string>
+    <string name="prayer_hail_mary">Aba Ginoong Maria</string>
+    <string name="prayer_glory_be">Luwalhati sa Ama</string>
+    <string name="rosary_hail_mary_progress">Aba Ginoong Maria · %1$d ng 10</string>
+    <string name="rosary_progress">Dekada %1$d · Butil %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Ang Pagbati ng Anghel</item>
+        <item>Ang Pagdalaw ni Maria kay Elisabeth</item>
+        <item>Ang Pagsilang ni Hesus</item>
+        <item>Ang Paghahandog kay Hesus sa Templo</item>
+        <item>Ang Pagkatagpo kay Hesus sa Templo</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Ang Paghihirap ni Hesus sa Halamanan</item>
+        <item>Ang Paghahagupit kay Hesus</item>
+        <item>Ang Pagpuputong ng Tinik kay Hesus</item>
+        <item>Ang Pagpasan ni Hesus ng Krus</item>
+        <item>Ang Pagkapako ni Hesus sa Krus</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Ang Muling Pagkabuhay ni Hesus</item>
+        <item>Ang Pag-akyat ni Hesus sa Langit</item>
+        <item>Ang Pagbaba ng Espiritu Santo</item>
+        <item>Ang Pag-akyat ni Maria sa Langit</item>
+        <item>Ang Pagpuputong kay Maria bilang Reyna</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Ang Pagbibinyag kay Hesus sa Ilog Jordan</item>
+        <item>Ang Kasalan sa Cana</item>
+        <item>Ang Pahayag ng Kaharian ng Diyos</item>
+        <item>Ang Pagbabagong-anyo ni Hesus</item>
+        <item>Ang Pagtatatag ng Eukaristiya</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Maligayang Pagdating sa Sanctus</string>
+    <string name="onboarding_desc_1">Ang iyong banal na kasama para sa Liturgy of the Hours, Rosaryo, mga Santo, at Liturgikal na Kalendaryo.</string>
+    <string name="onboarding_title_2">Mga Kanonikal na Oras</string>
+    <string name="onboarding_desc_2">Tumanggap ng magiliw na paalala para sa lahat ng anim na kanonikal na oras — Laudes, Terce, Sext, None, Vesper, at Compline.</string>
+    <string name="onboarding_title_3">Banal na Rosaryo</string>
+    <string name="onboarding_desc_3">Ginabayang Rosaryo na may awtomatikong pagpili ng misteryo batay sa araw ng linggo.</string>
+    <string name="onboarding_title_4">Mga Santo at Kalendaryo</string>
+    <string name="onboarding_desc_4">Tuklasin ang Santo ng Araw at galugarin ang buong liturgikal na kalendaryo — mga kapistahan, solemnidad, at panahon.</string>
+    <string name="onboarding_next">Susunod</string>
+    <string name="onboarding_skip">Laktawan</string>
 </resources>

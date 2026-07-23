@@ -68,6 +68,10 @@
     <string name="lang_te">తెలుగు</string>
     <string name="lang_yo">Yorùbá</string>
     <string name="lang_ig">Igbo</string>
+    <string name="lang_mg">Malagasy</string>
+    <string name="lang_zu">isiZulu</string>
+    <string name="lang_af">Afrikaans</string>
+    <string name="lang_bn">বাংলা</string>
     <string name="loading">Loading…</string>
     <string name="retry">Retry</string>
     <string name="close">Close</string>
@@ -76,5 +80,90 @@
     <string name="onboarding_get_started">Get Started</string>
     <string name="about_title">About</string>
     <string name="select_language">Select Language</string>
-    <string name="languages_supported">36 languages supported</string>
+    <string name="languages_supported">40 languages supported</string>
+    <string name="no_saint_today_title">No Saint Listed Today</string>
+    <string name="no_saint_today_desc">Check back tomorrow, or browse the full calendar of saints.</string>
+
+    <!-- Liturgical seasons -->
+    <string name="season_advent">Advent</string>
+    <string name="season_christmas">Christmas Season</string>
+    <string name="season_lent">Lent</string>
+    <string name="season_easter">Easter Season</string>
+    <string name="season_ordinary">Ordinary Time</string>
+
+    <!-- Canonical hours -->
+    <string name="hour_lauds">Lauds (Morning Prayer)</string>
+    <string name="hour_terce">Terce (Mid-Morning)</string>
+    <string name="hour_sext">Sext (Midday Prayer)</string>
+    <string name="hour_none">None (Mid-Afternoon)</string>
+    <string name="hour_vespers">Vespers (Evening Prayer)</string>
+    <string name="hour_compline">Compline (Night Prayer)</string>
+    <string name="next_hour_value">Vespers · 06:00 PM</string>
+    <string-array name="hour_names_short">
+        <item>Lauds</item>
+        <item>Terce</item>
+        <item>Sext</item>
+        <item>None</item>
+        <item>Vespers</item>
+        <item>Compline</item>
+    </string-array>
+
+    <!-- Prayer notification texts, ordered Lauds..Compline -->
+    <string-array name="hour_notification_subtitles">
+        <item>Begin your day with God.</item>
+        <item>Pause. Breathe. Pray.</item>
+        <item>Midday prayer — a moment of peace.</item>
+        <item>Mid-afternoon reflection.</item>
+        <item>Evening prayer — give thanks.</item>
+        <item>Night prayer — rest in His peace.</item>
+    </string-array>
+    <string name="notification_default_title">Time to Pray</string>
+
+    <!-- Rosary -->
+    <string name="prayer_our_father">Our Father</string>
+    <string name="prayer_hail_mary">Hail Mary</string>
+    <string name="prayer_glory_be">Glory Be</string>
+    <string name="rosary_hail_mary_progress">Hail Mary · %1$d of 10</string>
+    <string name="rosary_progress">Decade %1$d · Bead %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>The Annunciation</item>
+        <item>The Visitation</item>
+        <item>The Nativity</item>
+        <item>The Presentation</item>
+        <item>Finding in the Temple</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Agony in the Garden</item>
+        <item>Scourging at the Pillar</item>
+        <item>Crowning with Thorns</item>
+        <item>Carrying the Cross</item>
+        <item>The Crucifixion</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>The Resurrection</item>
+        <item>The Ascension</item>
+        <item>Descent of the Holy Spirit</item>
+        <item>The Assumption of Mary</item>
+        <item>The Coronation of Mary</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Baptism in the Jordan</item>
+        <item>Wedding at Cana</item>
+        <item>Proclamation of the Kingdom</item>
+        <item>The Transfiguration</item>
+        <item>Institution of the Eucharist</item>
+    </string-array>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title_1">Welcome to Sanctus</string>
+    <string name="onboarding_desc_1">Your sacred companion for the Liturgy of the Hours, Rosary, Saints, and Liturgical Calendar.</string>
+    <string name="onboarding_title_2">Canonical Hours</string>
+    <string name="onboarding_desc_2">Receive gentle reminders for all six canonical hours — Lauds, Terce, Sext, None, Vespers, and Compline.</string>
+    <string name="onboarding_title_3">Holy Rosary</string>
+    <string name="onboarding_desc_3">Guided Rosary with automatic mystery selection based on the day of the week.</string>
+    <string name="onboarding_title_4">Saints &amp; Calendar</string>
+    <string name="onboarding_desc_4">Discover the Saint of the Day and explore the full liturgical calendar — feasts, solemnities, and seasons.</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_skip">Skip</string>
 </resources>

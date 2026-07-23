@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Izikhathi Zomthandazo WamaKristu</string>
+    <string name="nav_home">Ekhaya</string>
+    <string name="nav_prayers">Imithandazo</string>
+    <string name="nav_rosary">IRosari</string>
+    <string name="nav_saints">Abangcwele</string>
+    <string name="nav_calendar">Ikhalenda</string>
+    <string name="nav_settings">Izilungiselelo</string>
+    <string name="liturgical_season">Isizini Yenkonzo</string>
+    <string name="next_hour">Ihora Elilandelayo</string>
+    <string name="canonical_hours">Amahora Angcwele</string>
+    <string name="saint_of_day">Umngcwele Wosuku</string>
+    <string name="verse_of_day">Ivesi Losuku</string>
+    <string name="prayers_title">Imithandazo</string>
+    <string name="rosary_title">IRosari Engcwele</string>
+    <string name="settings_title">Izilungiselelo</string>
+    <string name="dark_mode">Imodi Emnyama</string>
+    <string name="notifications">Izaziso Zomthandazo</string>
+    <string name="language">Ulimi</string>
+    <string name="text_size">Usayizi Wombhalo</string>
+    <string name="next_bead">Okulandelayo</string>
+
+    <string name="no_saint_today_title">Awekho Umngcwele Namuhla</string>
+    <string name="no_saint_today_desc">Buyela kusasa, noma ubheke ikhalenda eliphelele labangcwele.</string>
+
+    <string name="season_advent">Adventi</string>
+    <string name="season_christmas">Isizini KaKhisimuzi</string>
+    <string name="season_lent">ILenti</string>
+    <string name="season_easter">Isizini YePhasika</string>
+    <string name="season_ordinary">Isikhathi Ejwayelekile</string>
+
+    <string name="hour_lauds">Indumiso (Umthandazo Wasekuseni)</string>
+    <string name="hour_terce">Ithezi (Phakathi Kwasekuseni)</string>
+    <string name="hour_sext">Isekisi (Umthandazo Wemini)</string>
+    <string name="hour_none">Inoni (Phakathi Kwentambama)</string>
+    <string name="hour_vespers">Ivesipa (Umthandazo Wakusihlwa)</string>
+    <string name="hour_compline">Ikhompuline (Umthandazo Wasebusuku)</string>
+    <string name="next_hour_value">Ivesipa · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Indumiso</item>
+        <item>Ithezi</item>
+        <item>Isekisi</item>
+        <item>Inoni</item>
+        <item>Ivesipa</item>
+        <item>Ikhompuline</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Qala usuku lwakho noNkulunkulu.</item>
+        <item>Yima. Phefumula. Thandaza.</item>
+        <item>Umthandazo wemini — umzuzu wokuthula.</item>
+        <item>Ukuzindla kwantambama.</item>
+        <item>Umthandazo wakusihlwa — bonga.</item>
+        <item>Umthandazo wasebusuku — phumula ekuthuleni Kwakhe.</item>
+    </string-array>
+    <string name="notification_default_title">Isikhathi Sokuthandaza</string>
+
+    <string name="prayer_our_father">Baba Wethu</string>
+    <string name="prayer_hail_mary">Ave Mariya</string>
+    <string name="prayer_glory_be">Udumo Malube KuBaba</string>
+    <string name="rosary_hail_mary_progress">Ave Mariya · %1$d kwe-10</string>
+    <string name="rosary_progress">Ishumi %1$d · Inhlamvu %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Ukwaziswa KukaMariya</item>
+        <item>Ukuvakashela KukaMariya</item>
+        <item>Ukuzalwa KukaJesu</item>
+        <item>Ukwethulwa KukaJesu Ethempelini</item>
+        <item>Ukutholwa KukaJesu Ethempelini</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Ukuhlupheka Ensimini</item>
+        <item>Ukushaywa Ngesibhaxo</item>
+        <item>Ukuqhelezwa Ngomqhele Wameva</item>
+        <item>Ukuthwala Isiphambano</item>
+        <item>Ukubethelwa Esiphambanweni</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Ukuvuka KukaJesu Kwabafileyo</item>
+        <item>Ukwenyukela KukaJesu Ezulwini</item>
+        <item>Ukwehla KoMoya Oyingcwele</item>
+        <item>Ukwenyuselwa KukaMariya Ezulwini</item>
+        <item>Ukubekwa KukaMariya Umqhele</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Ukubhabhadiswa KukaJesu EMfuleni IJordani</item>
+        <item>Umshado WaseKhana</item>
+        <item>Ukumenyezelwa KoMbuso KaNkulunkulu</item>
+        <item>Ukuguqulwa Isimo KukaJesu</item>
+        <item>Ukusungulwa Kwe-Ekharistiya</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Wamukelekile ku-Sanctus</string>
+    <string name="onboarding_desc_1">Umngane wakho ongcwele wamaHora Angcwele, iRosari, Abangcwele, nekhalenda yenkonzo.</string>
+    <string name="onboarding_title_2">Amahora Angcwele</string>
+    <string name="onboarding_desc_2">Thola izikhumbuzo ezimnene zamahora angcwele ayisithupha — Indumiso, Ithezi, Isekisi, Inoni, Ivesipa, ne-Khompuline.</string>
+    <string name="onboarding_title_3">IRosari Engcwele</string>
+    <string name="onboarding_desc_3">IRosari eqondisiwe enokukhethwa ngokuzenzakalelayo kwemfihlakalo ngokususela osukwini lweviki.</string>
+    <string name="onboarding_title_4">Abangcwele Nekhalenda</string>
+    <string name="onboarding_desc_4">Thola Umngcwele Wosuku futhi uhlole ikhalenda eliphelele lenkonzo — imikhosi, izinsuku ezibalulekile, nezinkathi.</string>
+    <string name="onboarding_next">Okulandelayo</string>
+    <string name="onboarding_skip">Yeqa</string>
+</resources>

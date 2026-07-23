@@ -21,4 +21,85 @@
     <string name="category_morning">아침</string>
     <string name="category_evening">저녁</string>
     <string name="loading">로딩 중…</string>
+
+    <string name="no_saint_today_title">오늘은 등재된 성인이 없습니다</string>
+    <string name="no_saint_today_desc">내일 다시 확인하시거나 전체 성인 달력을 살펴보세요.</string>
+
+    <string name="season_advent">대림절</string>
+    <string name="season_christmas">성탄 시기</string>
+    <string name="season_lent">사순절</string>
+    <string name="season_easter">부활 시기</string>
+    <string name="season_ordinary">연중 시기</string>
+
+    <string name="hour_lauds">아침기도 (찬미기도)</string>
+    <string name="hour_terce">삼시경 (오전 중)</string>
+    <string name="hour_sext">육시경 (한낮 기도)</string>
+    <string name="hour_none">구시경 (오후 중)</string>
+    <string name="hour_vespers">저녁기도</string>
+    <string name="hour_compline">끝기도 (밤 기도)</string>
+    <string name="next_hour_value">저녁기도 · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>아침기도</item>
+        <item>삼시경</item>
+        <item>육시경</item>
+        <item>구시경</item>
+        <item>저녁기도</item>
+        <item>끝기도</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>하느님과 함께 하루를 시작하세요.</item>
+        <item>잠시 멈추고 숨을 고르며 기도하세요.</item>
+        <item>정오의 기도 — 평화의 순간.</item>
+        <item>오후의 묵상.</item>
+        <item>저녁 기도 — 감사를 드리세요.</item>
+        <item>끝기도 — 주님의 평화 안에서 쉬세요.</item>
+    </string-array>
+    <string name="notification_default_title">기도 시간</string>
+
+    <string name="prayer_our_father">주님의 기도</string>
+    <string name="prayer_hail_mary">성모송</string>
+    <string name="prayer_glory_be">영광송</string>
+    <string name="rosary_hail_mary_progress">성모송 · 10 중 %1$d</string>
+    <string name="rosary_progress">%1$d단 · %2$d알</string>
+
+    <string-array name="mysteries_joyful">
+        <item>성모영보</item>
+        <item>마리아의 엘리사벳 방문</item>
+        <item>아기 예수 탄생</item>
+        <item>아기 예수 성전 봉헌</item>
+        <item>성전에서 되찾은 예수</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>겟세마니 동산의 기도</item>
+        <item>채찍질 당하신 예수</item>
+        <item>가시관 쓰신 예수</item>
+        <item>십자가를 지신 예수</item>
+        <item>십자가에 못박혀 돌아가신 예수</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>예수 부활</item>
+        <item>예수 승천</item>
+        <item>성령 강림</item>
+        <item>성모 승천</item>
+        <item>성모 대관</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>요르단 강에서 세례 받으심</item>
+        <item>가나의 혼인잔치</item>
+        <item>하느님 나라 선포</item>
+        <item>예수 거룩하게 변모하심</item>
+        <item>성체성사 제정</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Sanctus에 오신 것을 환영합니다</string>
+    <string name="onboarding_desc_1">성무일도, 묵주기도, 성인, 전례력을 위한 당신의 거룩한 동반자입니다.</string>
+    <string name="onboarding_title_2">성무일도</string>
+    <string name="onboarding_desc_2">아침기도, 삼시경, 육시경, 구시경, 저녁기도, 끝기도까지 여섯 성무일도 모두에 대해 부드러운 알림을 받으세요.</string>
+    <string name="onboarding_title_3">성모 묵주기도</string>
+    <string name="onboarding_desc_3">요일에 따라 자동으로 신비가 선택되는 안내형 묵주기도입니다.</string>
+    <string name="onboarding_title_4">성인과 전례력</string>
+    <string name="onboarding_desc_4">오늘의 성인을 만나고 축일, 대축일, 전례 시기를 포함한 전례력 전체를 살펴보세요.</string>
+    <string name="onboarding_next">다음</string>
+    <string name="onboarding_skip">건너뛰기</string>
 </resources>

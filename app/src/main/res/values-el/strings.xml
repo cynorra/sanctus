@@ -19,4 +19,85 @@
     <string name="notifications">Υπενθυμίσεις προσευχής</string>
     <string name="next_bead">Επόμενο</string>
     <string name="loading">Φόρτωση…</string>
+
+    <string name="no_saint_today_title">Δεν Αναφέρεται Άγιος Σήμερα</string>
+    <string name="no_saint_today_desc">Ελέγξτε ξανά αύριο ή περιηγηθείτε στο πλήρες εορτολόγιο των αγίων.</string>
+
+    <string name="season_advent">Άφιξη (Advent)</string>
+    <string name="season_christmas">Περίοδος Χριστουγέννων</string>
+    <string name="season_lent">Σαρακοστή</string>
+    <string name="season_easter">Πασχάλια Περίοδος</string>
+    <string name="season_ordinary">Κοινός Χρόνος</string>
+
+    <string name="hour_lauds">Όρθρος (Πρωινή Προσευχή)</string>
+    <string name="hour_terce">Τρίτη Ώρα</string>
+    <string name="hour_sext">Έκτη Ώρα (Μεσημβρινή Προσευχή)</string>
+    <string name="hour_none">Ενάτη Ώρα</string>
+    <string name="hour_vespers">Εσπερινός</string>
+    <string name="hour_compline">Απόδειπνο</string>
+    <string name="next_hour_value">Εσπερινός · 06:00 μ.μ.</string>
+    <string-array name="hour_names_short">
+        <item>Όρθρος</item>
+        <item>Τρίτη Ώρα</item>
+        <item>Έκτη Ώρα</item>
+        <item>Ενάτη Ώρα</item>
+        <item>Εσπερινός</item>
+        <item>Απόδειπνο</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Ξεκινήστε τη μέρα σας με τον Θεό.</item>
+        <item>Σταματήστε. Αναπνεύστε. Προσευχηθείτε.</item>
+        <item>Μεσημβρινή προσευχή — μια στιγμή ειρήνης.</item>
+        <item>Απογευματινός στοχασμός.</item>
+        <item>Εσπερινή προσευχή — δώστε χάρη.</item>
+        <item>Νυχτερινή προσευχή — αναπαυθείτε στην ειρήνη Του.</item>
+    </string-array>
+    <string name="notification_default_title">Ώρα για Προσευχή</string>
+
+    <string name="prayer_our_father">Πάτερ Ημών</string>
+    <string name="prayer_hail_mary">Χαίρε Μαρία</string>
+    <string name="prayer_glory_be">Δόξα Πατρί</string>
+    <string name="rosary_hail_mary_progress">Χαίρε Μαρία · %1$d από 10</string>
+    <string name="rosary_progress">Δεκάδα %1$d · Χάντρα %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Ο Ευαγγελισμός</item>
+        <item>Η Επίσκεψη</item>
+        <item>Η Γέννηση</item>
+        <item>Η Υπαπαντή</item>
+        <item>Η Εύρεση στον Ναό</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Η Αγωνία στον Κήπο</item>
+        <item>Η Μαστίγωση</item>
+        <item>Ο Ακάνθινος Στέφανος</item>
+        <item>Η Μεταφορά του Σταυρού</item>
+        <item>Η Σταύρωση</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Η Ανάσταση</item>
+        <item>Η Ανάληψη</item>
+        <item>Η Κάθοδος του Αγίου Πνεύματος</item>
+        <item>Η Κοίμηση της Θεοτόκου</item>
+        <item>Η Στέψη της Θεοτόκου</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Η Βάπτιση στον Ιορδάνη</item>
+        <item>Ο Γάμος στην Κανά</item>
+        <item>Το Κήρυγμα της Βασιλείας</item>
+        <item>Η Μεταμόρφωση</item>
+        <item>Η Σύσταση της Θείας Ευχαριστίας</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Καλώς ήρθατε στο Sanctus</string>
+    <string name="onboarding_desc_1">Ο ιερός σας σύντροφος για τη Λειτουργία των Ωρών, το Κομποσχοίνι, τους Αγίους και το Λειτουργικό Ημερολόγιο.</string>
+    <string name="onboarding_title_2">Κανονικές Ώρες</string>
+    <string name="onboarding_desc_2">Λάβετε ήπιες υπενθυμίσεις για όλες τις έξι κανονικές ώρες — Όρθρος, Τρίτη Ώρα, Έκτη Ώρα, Ενάτη Ώρα, Εσπερινός και Απόδειπνο.</string>
+    <string name="onboarding_title_3">Άγιο Κομποσχοίνι</string>
+    <string name="onboarding_desc_3">Καθοδηγούμενο Κομποσχοίνι με αυτόματη επιλογή μυστηρίου ανάλογα με την ημέρα της εβδομάδας.</string>
+    <string name="onboarding_title_4">Άγιοι &amp; Ημερολόγιο</string>
+    <string name="onboarding_desc_4">Ανακαλύψτε τον Άγιο της ημέρας και εξερευνήστε το πλήρες λειτουργικό ημερολόγιο — εορτές, πανηγύρεις και εποχές.</string>
+    <string name="onboarding_next">Επόμενο</string>
+    <string name="onboarding_skip">Παράλειψη</string>
 </resources>

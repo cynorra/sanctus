@@ -22,4 +22,85 @@
     <string name="category_morning">Matin</string>
     <string name="category_evening">Soir</string>
     <string name="loading">Chargement…</string>
+
+    <string name="no_saint_today_title">Aucun Saint Répertorié Aujourd\'hui</string>
+    <string name="no_saint_today_desc">Revenez demain, ou parcourez le calendrier complet des saints.</string>
+
+    <string name="season_advent">Avent</string>
+    <string name="season_christmas">Temps de Noël</string>
+    <string name="season_lent">Carême</string>
+    <string name="season_easter">Temps Pascal</string>
+    <string name="season_ordinary">Temps Ordinaire</string>
+
+    <string name="hour_lauds">Laudes (Prière du Matin)</string>
+    <string name="hour_terce">Tierce (Milieu de Matinée)</string>
+    <string name="hour_sext">Sexte (Prière de Midi)</string>
+    <string name="hour_none">None (Milieu d\'Après-midi)</string>
+    <string name="hour_vespers">Vêpres (Prière du Soir)</string>
+    <string name="hour_compline">Complies (Prière de la Nuit)</string>
+    <string name="next_hour_value">Vêpres · 18h00</string>
+    <string-array name="hour_names_short">
+        <item>Laudes</item>
+        <item>Tierce</item>
+        <item>Sexte</item>
+        <item>None</item>
+        <item>Vêpres</item>
+        <item>Complies</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Commencez votre journée avec Dieu.</item>
+        <item>Faites une pause. Respirez. Priez.</item>
+        <item>Prière de midi — un moment de paix.</item>
+        <item>Réflexion de l\'après-midi.</item>
+        <item>Prière du soir — rendez grâce.</item>
+        <item>Prière de la nuit — reposez-vous dans Sa paix.</item>
+    </string-array>
+    <string name="notification_default_title">C\'est l\'Heure de Prier</string>
+
+    <string name="prayer_our_father">Notre Père</string>
+    <string name="prayer_hail_mary">Je vous salue Marie</string>
+    <string name="prayer_glory_be">Gloire au Père</string>
+    <string name="rosary_hail_mary_progress">Je vous salue Marie · %1$d sur 10</string>
+    <string name="rosary_progress">Dizaine %1$d · Grain %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>L\'Annonciation</item>
+        <item>La Visitation</item>
+        <item>La Nativité</item>
+        <item>La Présentation au Temple</item>
+        <item>Le Recouvrement au Temple</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>L\'Agonie à Gethsémani</item>
+        <item>La Flagellation</item>
+        <item>Le Couronnement d\'Épines</item>
+        <item>Le Portement de Croix</item>
+        <item>La Crucifixion</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>La Résurrection</item>
+        <item>L\'Ascension</item>
+        <item>La Pentecôte</item>
+        <item>L\'Assomption de Marie</item>
+        <item>Le Couronnement de Marie</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Le Baptême de Jésus au Jourdain</item>
+        <item>Les Noces de Cana</item>
+        <item>L\'Annonce du Royaume de Dieu</item>
+        <item>La Transfiguration</item>
+        <item>L\'Institution de l\'Eucharistie</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Bienvenue dans Sanctus</string>
+    <string name="onboarding_desc_1">Votre compagnon sacré pour la Liturgie des Heures, le Rosaire, les Saints et le Calendrier Liturgique.</string>
+    <string name="onboarding_title_2">Heures Canoniales</string>
+    <string name="onboarding_desc_2">Recevez de doux rappels pour les six heures canoniales — Laudes, Tierce, Sexte, None, Vêpres et Complies.</string>
+    <string name="onboarding_title_3">Saint Rosaire</string>
+    <string name="onboarding_desc_3">Rosaire guidé avec sélection automatique des mystères selon le jour de la semaine.</string>
+    <string name="onboarding_title_4">Saints &amp; Calendrier</string>
+    <string name="onboarding_desc_4">Découvrez le Saint du jour et explorez le calendrier liturgique complet — fêtes, solennités et temps liturgiques.</string>
+    <string name="onboarding_next">Suivant</string>
+    <string name="onboarding_skip">Passer</string>
 </resources>

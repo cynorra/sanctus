@@ -19,4 +19,85 @@
     <string name="notifications">Gebedherinneringen</string>
     <string name="next_bead">Volgende</string>
     <string name="loading">Laden…</string>
+
+    <string name="no_saint_today_title">Geen Heilige Vandaag</string>
+    <string name="no_saint_today_desc">Kom morgen terug, of blader door de volledige heiligenkalender.</string>
+
+    <string name="season_advent">Advent</string>
+    <string name="season_christmas">Kersttijd</string>
+    <string name="season_lent">Vastentijd</string>
+    <string name="season_easter">Paastijd</string>
+    <string name="season_ordinary">Door het Jaar</string>
+
+    <string name="hour_lauds">Lauden (Ochtendgebed)</string>
+    <string name="hour_terce">Terts (Midden van de ochtend)</string>
+    <string name="hour_sext">Sext (Middaggebed)</string>
+    <string name="hour_none">Noon (Midden van de middag)</string>
+    <string name="hour_vespers">Vespers (Avondgebed)</string>
+    <string name="hour_compline">Completen (Nachtgebed)</string>
+    <string name="next_hour_value">Vespers · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Lauden</item>
+        <item>Terts</item>
+        <item>Sext</item>
+        <item>Noon</item>
+        <item>Vespers</item>
+        <item>Completen</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Begin je dag met God.</item>
+        <item>Stop. Adem. Bid.</item>
+        <item>Middaggebed — een moment van vrede.</item>
+        <item>Bezinning in de namiddag.</item>
+        <item>Avondgebed — dank U.</item>
+        <item>Nachtgebed — rust in Zijn vrede.</item>
+    </string-array>
+    <string name="notification_default_title">Tijd om te Bidden</string>
+
+    <string name="prayer_our_father">Onze Vader</string>
+    <string name="prayer_hail_mary">Wees Gegroet Maria</string>
+    <string name="prayer_glory_be">Eer aan de Vader</string>
+    <string name="rosary_hail_mary_progress">Wees Gegroet · %1$d van 10</string>
+    <string name="rosary_progress">Tientje %1$d · Kraal %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>De Aankondiging</item>
+        <item>Het Bezoek aan Elisabet</item>
+        <item>De Geboorte van Jezus</item>
+        <item>De Opdracht in de Tempel</item>
+        <item>Het Terugvinden in de Tempel</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>De Doodsangst in de Hof van Olijven</item>
+        <item>De Geseling</item>
+        <item>De Doornenkroning</item>
+        <item>De Kruisdraging</item>
+        <item>De Kruisiging</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>De Verrijzenis</item>
+        <item>De Hemelvaart</item>
+        <item>De Nederdaling van de Heilige Geest</item>
+        <item>De Tenhemelopneming van Maria</item>
+        <item>De Kroning van Maria</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Het Doopsel in de Jordaan</item>
+        <item>De Bruiloft van Kana</item>
+        <item>De Aankondiging van het Koninkrijk</item>
+        <item>De Gedaanteverandering</item>
+        <item>De Instelling van de Eucharistie</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Welkom bij Sanctus</string>
+    <string name="onboarding_desc_1">Uw heilige metgezel voor het Getijdengebed, de Rozenkrans, Heiligen en de Liturgische Kalender.</string>
+    <string name="onboarding_title_2">Canonieke Uren</string>
+    <string name="onboarding_desc_2">Ontvang zachte herinneringen voor alle zes canonieke uren — Lauden, Terts, Sext, Noon, Vespers en Completen.</string>
+    <string name="onboarding_title_3">Heilige Rozenkrans</string>
+    <string name="onboarding_desc_3">Begeleide Rozenkrans met automatische keuze van het geheim op basis van de dag van de week.</string>
+    <string name="onboarding_title_4">Heiligen &amp; Kalender</string>
+    <string name="onboarding_desc_4">Ontdek de Heilige van de dag en verken de volledige liturgische kalender — feesten, hoogfeesten en tijden.</string>
+    <string name="onboarding_next">Volgende</string>
+    <string name="onboarding_skip">Overslaan</string>
 </resources>

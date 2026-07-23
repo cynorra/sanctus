@@ -10,13 +10,14 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.data.local.entity.CalendarEventEntity;
+import java.util.Objects;
 
 public class CalendarEventAdapter extends ListAdapter<CalendarEventEntity, CalendarEventAdapter.VH> {
 
     public CalendarEventAdapter() {
         super(new DiffUtil.ItemCallback<CalendarEventEntity>() {
             @Override public boolean areItemsTheSame(@NonNull CalendarEventEntity a, @NonNull CalendarEventEntity b) { return a.id == b.id; }
-            @Override public boolean areContentsTheSame(@NonNull CalendarEventEntity a, @NonNull CalendarEventEntity b) { return a.title.equals(b.title); }
+            @Override public boolean areContentsTheSame(@NonNull CalendarEventEntity a, @NonNull CalendarEventEntity b) { return Objects.equals(a.title, b.title); }
         });
     }
 

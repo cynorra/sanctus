@@ -22,4 +22,85 @@
     <string name="category_morning">Morgen</string>
     <string name="category_evening">Abend</string>
     <string name="loading">Laden…</string>
+
+    <string name="no_saint_today_title">Heute ist kein Heiliger verzeichnet</string>
+    <string name="no_saint_today_desc">Schauen Sie morgen wieder vorbei oder durchsuchen Sie den vollständigen Heiligenkalender.</string>
+
+    <string name="season_advent">Advent</string>
+    <string name="season_christmas">Weihnachtszeit</string>
+    <string name="season_lent">Fastenzeit</string>
+    <string name="season_easter">Osterzeit</string>
+    <string name="season_ordinary">Jahreskreis</string>
+
+    <string name="hour_lauds">Laudes (Morgenlob)</string>
+    <string name="hour_terce">Terz (Vormittagshore)</string>
+    <string name="hour_sext">Sext (Mittagshore)</string>
+    <string name="hour_none">Non (Nachmittagshore)</string>
+    <string name="hour_vespers">Vesper (Abendlob)</string>
+    <string name="hour_compline">Komplet (Nachtgebet)</string>
+    <string name="next_hour_value">Vesper · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Laudes</item>
+        <item>Terz</item>
+        <item>Sext</item>
+        <item>Non</item>
+        <item>Vesper</item>
+        <item>Komplet</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Beginnen Sie Ihren Tag mit Gott.</item>
+        <item>Innehalten. Atmen. Beten.</item>
+        <item>Mittagsgebet — ein Moment des Friedens.</item>
+        <item>Nachmittägliche Besinnung.</item>
+        <item>Abendgebet — Dank sagen.</item>
+        <item>Nachtgebet — ruhen Sie in Seinem Frieden.</item>
+    </string-array>
+    <string name="notification_default_title">Zeit zum Gebet</string>
+
+    <string name="prayer_our_father">Vater unser</string>
+    <string name="prayer_hail_mary">Gegrüßet seist du, Maria</string>
+    <string name="prayer_glory_be">Ehre sei dem Vater</string>
+    <string name="rosary_hail_mary_progress">Gegrüßet seist du, Maria · %1$d von 10</string>
+    <string name="rosary_progress">Gesätz %1$d · Perle %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Die Verkündigung des Herrn</item>
+        <item>Maria besucht Elisabeth</item>
+        <item>Die Geburt des Herrn</item>
+        <item>Die Darstellung des Herrn</item>
+        <item>Der zwölfjährige Jesus im Tempel</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Die Todesangst Jesu</item>
+        <item>Die Geißelung Jesu</item>
+        <item>Die Dornenkrönung Jesu</item>
+        <item>Jesus trägt das Kreuz</item>
+        <item>Die Kreuzigung Jesu</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Die Auferstehung des Herrn</item>
+        <item>Die Himmelfahrt des Herrn</item>
+        <item>Die Sendung des Heiligen Geistes</item>
+        <item>Die Aufnahme Mariens in den Himmel</item>
+        <item>Die Krönung Mariens</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Die Taufe Jesu im Jordan</item>
+        <item>Die Hochzeit zu Kana</item>
+        <item>Die Verkündigung des Reiches Gottes</item>
+        <item>Die Verklärung des Herrn</item>
+        <item>Die Einsetzung der Eucharistie</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Willkommen bei Sanctus</string>
+    <string name="onboarding_desc_1">Ihr geistlicher Begleiter für das Stundengebet, den Rosenkranz, die Heiligen und den liturgischen Kalender.</string>
+    <string name="onboarding_title_2">Kanonische Horen</string>
+    <string name="onboarding_desc_2">Erhalten Sie sanfte Erinnerungen an alle sechs kanonischen Horen — Laudes, Terz, Sext, Non, Vesper und Komplet.</string>
+    <string name="onboarding_title_3">Heiliger Rosenkranz</string>
+    <string name="onboarding_desc_3">Geführter Rosenkranz mit automatischer Auswahl der Geheimnisse je nach Wochentag.</string>
+    <string name="onboarding_title_4">Heilige &amp; Kalender</string>
+    <string name="onboarding_desc_4">Entdecken Sie den Heiligen des Tages und erkunden Sie den vollständigen liturgischen Kalender — Feste, Hochfeste und Zeiten.</string>
+    <string name="onboarding_next">Weiter</string>
+    <string name="onboarding_skip">Überspringen</string>
 </resources>

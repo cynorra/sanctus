@@ -22,4 +22,85 @@
     <string name="category_morning">Rano</string>
     <string name="category_evening">Wieczór</string>
     <string name="loading">Ładowanie…</string>
+
+    <string name="no_saint_today_title">Brak Świętego na Dziś</string>
+    <string name="no_saint_today_desc">Sprawdź jutro lub przeglądaj pełny kalendarz świętych.</string>
+
+    <string name="season_advent">Adwent</string>
+    <string name="season_christmas">Okres Bożego Narodzenia</string>
+    <string name="season_lent">Wielki Post</string>
+    <string name="season_easter">Okres Wielkanocny</string>
+    <string name="season_ordinary">Okres Zwykły</string>
+
+    <string name="hour_lauds">Jutrznia (Modlitwa poranna)</string>
+    <string name="hour_terce">Tercja (Modlitwa przedpołudniowa)</string>
+    <string name="hour_sext">Seksta (Modlitwa południowa)</string>
+    <string name="hour_none">Nona (Modlitwa popołudniowa)</string>
+    <string name="hour_vespers">Nieszpory (Modlitwa wieczorna)</string>
+    <string name="hour_compline">Kompleta (Modlitwa na noc)</string>
+    <string name="next_hour_value">Nieszpory · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Jutrznia</item>
+        <item>Tercja</item>
+        <item>Seksta</item>
+        <item>Nona</item>
+        <item>Nieszpory</item>
+        <item>Kompleta</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Rozpocznij dzień z Bogiem.</item>
+        <item>Zatrzymaj się. Odetchnij. Módl się.</item>
+        <item>Modlitwa południowa — chwila pokoju.</item>
+        <item>Popołudniowa refleksja.</item>
+        <item>Modlitwa wieczorna — podziękuj.</item>
+        <item>Modlitwa nocna — spocznij w Jego pokoju.</item>
+    </string-array>
+    <string name="notification_default_title">Czas Modlitwy</string>
+
+    <string name="prayer_our_father">Ojcze Nasz</string>
+    <string name="prayer_hail_mary">Zdrowaś Maryjo</string>
+    <string name="prayer_glory_be">Chwała Ojcu</string>
+    <string name="rosary_hail_mary_progress">Zdrowaś Maryjo · %1$d z 10</string>
+    <string name="rosary_progress">Dziesiątka %1$d · Paciorek %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Zwiastowanie</item>
+        <item>Nawiedzenie św. Elżbiety</item>
+        <item>Narodzenie Pana Jezusa</item>
+        <item>Ofiarowanie Pana Jezusa w Świątyni</item>
+        <item>Odnalezienie Pana Jezusa w Świątyni</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Modlitwa w Ogrójcu</item>
+        <item>Biczowanie</item>
+        <item>Cierniem Ukoronowanie</item>
+        <item>Droga Krzyżowa</item>
+        <item>Śmierć na Krzyżu</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Zmartwychwstanie</item>
+        <item>Wniebowstąpienie</item>
+        <item>Zesłanie Ducha Świętego</item>
+        <item>Wniebowzięcie Najświętszej Maryi Panny</item>
+        <item>Ukoronowanie Maryi na Królową Nieba i Ziemi</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Chrzest Pana Jezusa w Jordanie</item>
+        <item>Objawienie się Pana Jezusa na Weselu w Kanie</item>
+        <item>Głoszenie Królestwa Bożego</item>
+        <item>Przemienienie Pańskie</item>
+        <item>Ustanowienie Eucharystii</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Witamy w Sanctus</string>
+    <string name="onboarding_desc_1">Twój święty towarzysz Liturgii Godzin, Różańca, Świętych i Kalendarza Liturgicznego.</string>
+    <string name="onboarding_title_2">Godziny Kanoniczne</string>
+    <string name="onboarding_desc_2">Otrzymuj delikatne przypomnienia o wszystkich sześciu godzinach kanonicznych — Jutrzni, Tercji, Sekście, Nonie, Nieszporach i Komplecie.</string>
+    <string name="onboarding_title_3">Święty Różaniec</string>
+    <string name="onboarding_desc_3">Prowadzony Różaniec z automatycznym wyborem tajemnicy w zależności od dnia tygodnia.</string>
+    <string name="onboarding_title_4">Święci i Kalendarz</string>
+    <string name="onboarding_desc_4">Odkryj Świętego dnia i przeglądaj pełny kalendarz liturgiczny — uroczystości, święta i okresy liturgiczne.</string>
+    <string name="onboarding_next">Dalej</string>
+    <string name="onboarding_skip">Pomiń</string>
 </resources>

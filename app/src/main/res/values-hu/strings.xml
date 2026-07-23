@@ -18,4 +18,85 @@
     <string name="notifications">Imaemlékeztetők</string>
     <string name="next_bead">Következő</string>
     <string name="loading">Betöltés…</string>
+
+    <string name="no_saint_today_title">Ma nincs feltüntetett szent</string>
+    <string name="no_saint_today_desc">Nézz vissza holnap, vagy böngészd a szentek teljes naptárát.</string>
+
+    <string name="season_advent">Advent</string>
+    <string name="season_christmas">Karácsonyi idő</string>
+    <string name="season_lent">Nagyböjt</string>
+    <string name="season_easter">Húsvéti idő</string>
+    <string name="season_ordinary">Évközi idő</string>
+
+    <string name="hour_lauds">Laudes (Reggeli dicséret)</string>
+    <string name="hour_terce">Terce (Délelőtti imaóra)</string>
+    <string name="hour_sext">Sexta (Déli imaóra)</string>
+    <string name="hour_none">Nóna (Délutáni imaóra)</string>
+    <string name="hour_vespers">Vecsernye (Esti imaóra)</string>
+    <string name="hour_compline">Completorium (Éjszakai imaóra)</string>
+    <string name="next_hour_value">Vecsernye · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Laudes</item>
+        <item>Terce</item>
+        <item>Sexta</item>
+        <item>Nóna</item>
+        <item>Vecsernye</item>
+        <item>Completorium</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Kezdd a napot Istennel.</item>
+        <item>Állj meg. Lélegezz. Imádkozz.</item>
+        <item>Déli imádság — a béke pillanata.</item>
+        <item>Délutáni elmélkedés.</item>
+        <item>Esti imádság — adj hálát.</item>
+        <item>Éjszakai imádság — pihenj békéjében.</item>
+    </string-array>
+    <string name="notification_default_title">Imádság ideje</string>
+
+    <string name="prayer_our_father">Miatyánk</string>
+    <string name="prayer_hail_mary">Üdvözlégy Mária</string>
+    <string name="prayer_glory_be">Dicsőség</string>
+    <string name="rosary_hail_mary_progress">Üdvözlégy Mária · %1$d / 10</string>
+    <string name="rosary_progress">%1$d. tized · %2$d. szem</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Az angyali üdvözlet</item>
+        <item>Mária látogatása Erzsébetnél</item>
+        <item>Jézus születése</item>
+        <item>Jézus bemutatása a templomban</item>
+        <item>A 12 éves Jézus a templomban</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Jézus halálfélelme az Olajfák hegyén</item>
+        <item>Jézus megostorozása</item>
+        <item>Jézus töviskoronázása</item>
+        <item>Jézus keresztvitele</item>
+        <item>Jézus kereszthalála</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Jézus feltámadása</item>
+        <item>Jézus mennybemenetele</item>
+        <item>A Szentlélek eljövetele</item>
+        <item>Mária mennybevétele</item>
+        <item>Mária megkoronázása</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Jézus megkeresztelkedése a Jordánban</item>
+        <item>A kánai menyegző</item>
+        <item>Isten országának meghirdetése</item>
+        <item>Az Úr színeváltozása</item>
+        <item>Az Oltáriszentség alapítása</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Üdvözöl a Sanctus</string>
+    <string name="onboarding_desc_1">Szent társad a zsolozsmához, a rózsafüzérhez, a szentekhez és a liturgikus naptárhoz.</string>
+    <string name="onboarding_title_2">Kánoni imaórák</string>
+    <string name="onboarding_desc_2">Kapj gyengéd emlékeztetőket mind a hat kánoni imaórára — Laudes, Terce, Sexta, Nóna, Vecsernye és Completorium.</string>
+    <string name="onboarding_title_3">Szent Rózsafüzér</string>
+    <string name="onboarding_desc_3">Vezetett rózsafüzér, amely a hét napja szerint automatikusan választja ki az elmélkedendő titkokat.</string>
+    <string name="onboarding_title_4">Szentek és Naptár</string>
+    <string name="onboarding_desc_4">Fedezd fel a nap szentjét, és böngészd a teljes liturgikus naptárat — ünnepeket, főünnepeket és liturgikus időszakokat.</string>
+    <string name="onboarding_next">Következő</string>
+    <string name="onboarding_skip">Kihagyás</string>
 </resources>

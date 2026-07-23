@@ -21,4 +21,85 @@
     <string name="category_morning">Առավոտ</string>
     <string name="category_evening">Երեկո</string>
     <string name="loading">Բեռնում…</string>
+
+    <string name="no_saint_today_title">Այսօր սուրբ նշված չէ</string>
+    <string name="no_saint_today_desc">Ստուգեք վաղը կամ դիտեք սրբերի ամբողջ տոնացույցը։</string>
+
+    <string name="season_advent">Հիսնակ</string>
+    <string name="season_christmas">Ծննդյան շրջան</string>
+    <string name="season_lent">Մեծ Պահք</string>
+    <string name="season_easter">Զատկական շրջան</string>
+    <string name="season_ordinary">Հասարակ ժամանակ</string>
+
+    <string name="hour_lauds">Առավոտյան ժամերգություն</string>
+    <string name="hour_terce">Երրորդ ժամ</string>
+    <string name="hour_sext">Վեցերորդ ժամ (Կեսօրվա աղոթք)</string>
+    <string name="hour_none">Իններորդ ժամ (Ցերեկվա աղոթք)</string>
+    <string name="hour_vespers">Երեկոյան ժամերգություն</string>
+    <string name="hour_compline">Գիշերային աղոթք</string>
+    <string name="next_hour_value">Երեկոյան ժամերգություն · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Առավոտյան</item>
+        <item>Երրորդ ժամ</item>
+        <item>Վեցերորդ ժամ</item>
+        <item>Իններորդ ժամ</item>
+        <item>Երեկոյան</item>
+        <item>Գիշերային</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Սկսիր օրդ Աստծո հետ։</item>
+        <item>Կանգնիր։ Շնչիր։ Աղոթիր։</item>
+        <item>Կեսօրվա աղոթք — խաղաղության պահ։</item>
+        <item>Կեսօրից հետո խորհրդածություն։</item>
+        <item>Երեկոյան աղոթք — շնորհակալություն հայտնիր։</item>
+        <item>Գիշերային աղոթք — հանգստացիր Նրա խաղաղության մեջ։</item>
+    </string-array>
+    <string name="notification_default_title">Աղոթքի ժամանակն է</string>
+
+    <string name="prayer_our_father">Հայր մեր</string>
+    <string name="prayer_hail_mary">Ողջույն քեզ, Մարիամ</string>
+    <string name="prayer_glory_be">Փառք Հորը</string>
+    <string name="rosary_hail_mary_progress">Ողջույն Մարիամ · %1$d/10</string>
+    <string name="rosary_progress">Տասնյակ %1$d · Հատիկ %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Ավետում</item>
+        <item>Այցելություն Եղիսաբեթին</item>
+        <item>Հիսուսի ծնունդը</item>
+        <item>Հիսուսի ընծայումը տաճարում</item>
+        <item>Հիսուսի գտնվելը տաճարում</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Հիսուսի տառապանքը Գեթսեմանիում</item>
+        <item>Հիսուսի խարազանումը</item>
+        <item>Փշե պսակով պսակումը</item>
+        <item>Խաչի կրումը</item>
+        <item>Խաչելությունը</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Հարությունը</item>
+        <item>Համբարձումը</item>
+        <item>Սուրբ Հոգու իջումը</item>
+        <item>Մարիամի Վերափոխումը</item>
+        <item>Մարիամի Պսակադրումը</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Մկրտությունը Հորդանանում</item>
+        <item>Հարսանիքը Կանայում</item>
+        <item>Աստծո Արքայության հռչակումը</item>
+        <item>Այլակերպումը</item>
+        <item>Հաղորդության հաստատումը</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Բարի գալուստ Sanctus</string>
+    <string name="onboarding_desc_1">Ձեր սուրբ ուղեկիցը ժամերգության, Վարդարանի, Սրբերի և եկեղեցական տոնացույցի համար։</string>
+    <string name="onboarding_title_2">Կանոնական ժամեր</string>
+    <string name="onboarding_desc_2">Ստացեք մեղմ հիշեցումներ բոլոր վեց կանոնական ժամերի համար՝ Առավոտյան, Երրորդ, Վեցերորդ, Իններորդ, Երեկոյան և Գիշերային։</string>
+    <string name="onboarding_title_3">Սուրբ Վարդարան</string>
+    <string name="onboarding_desc_3">Առաջնորդվող Վարդարան՝ շաբաթվա օրվան համապատասխան խորհուրդների ինքնաշխատ ընտրությամբ։</string>
+    <string name="onboarding_title_4">Սրբեր և Տոնացույց</string>
+    <string name="onboarding_desc_4">Բացահայտեք օրվա սուրբին և ուսումնասիրեք եկեղեցական ամբողջ տոնացույցը՝ տոները, մեծ տոները և շրջանները։</string>
+    <string name="onboarding_next">Հաջորդը</string>
+    <string name="onboarding_skip">Բաց թողնել</string>
 </resources>

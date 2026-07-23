@@ -36,6 +36,9 @@ public class LanguageManager {
         new Language("yo",  "Yorùbá",             "Yoruba",             25, false),
         new Language("sw",  "Kiswahili",          "Swahili",            70, false),
         new Language("am",  "አማርኛ",               "Amharic",            62, false),
+        new Language("mg",  "Malagasy",           "Malagasy",           20, false),
+        new Language("zu",  "isiZulu",            "Zulu",               11, false),
+        new Language("af",  "Afrikaans",          "Afrikaans",           6, false),
         // Europe
         new Language("ru",  "Русский",            "Russian",           101, false),
         new Language("de",  "Deutsch",            "German",             53, false),
@@ -63,6 +66,7 @@ public class LanguageManager {
         new Language("ko",  "한국어",               "Korean",             15, false),
         new Language("id",  "Bahasa Indonesia",   "Indonesian",         27, false),
         new Language("vi",  "Tiếng Việt",         "Vietnamese",          7, false),
+        new Language("bn",  "বাংলা",              "Bengali",             3, false),
         // Middle East
         new Language("ar",  "العربية",            "Arabic",             20, true),
         new Language("hy",  "Հայերեն",            "Armenian",            7, false),

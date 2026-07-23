@@ -19,4 +19,85 @@
     <string name="notifications">Нагадування молитви</string>
     <string name="next_bead">Далі</string>
     <string name="loading">Завантаження…</string>
+
+    <string name="no_saint_today_title">Сьогодні немає святого в календарі</string>
+    <string name="no_saint_today_desc">Перевірте завтра, або перегляньте повний календар святих.</string>
+
+    <string name="season_advent">Адвент</string>
+    <string name="season_christmas">Різдвяний час</string>
+    <string name="season_lent">Великий піст</string>
+    <string name="season_easter">Великодній час</string>
+    <string name="season_ordinary">Звичайний час</string>
+
+    <string name="hour_lauds">Утреня (Ранкова молитва)</string>
+    <string name="hour_terce">Третя година</string>
+    <string name="hour_sext">Шоста година (Полудень)</string>
+    <string name="hour_none">Дев\'ята година (Пополудні)</string>
+    <string name="hour_vespers">Вечірня (Вечірня молитва)</string>
+    <string name="hour_compline">Повечір\'я (Нічна молитва)</string>
+    <string name="next_hour_value">Вечірня · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Утреня</item>
+        <item>Третя година</item>
+        <item>Шоста година</item>
+        <item>Дев\'ята година</item>
+        <item>Вечірня</item>
+        <item>Повечір\'я</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Почни свій день з Богом.</item>
+        <item>Зупинись. Вдихни. Молись.</item>
+        <item>Полуднева молитва — мить спокою.</item>
+        <item>Пополудневе роздумування.</item>
+        <item>Вечірня молитва — подякуй.</item>
+        <item>Нічна молитва — спочинь у Його мирі.</item>
+    </string-array>
+    <string name="notification_default_title">Час молитви</string>
+
+    <string name="prayer_our_father">Отче наш</string>
+    <string name="prayer_hail_mary">Радуйся, Маріє</string>
+    <string name="prayer_glory_be">Слава Отцю</string>
+    <string name="rosary_hail_mary_progress">Радуйся, Маріє · %1$d з 10</string>
+    <string name="rosary_progress">Десяток %1$d · Зерня %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Благовіщення</item>
+        <item>Відвідини Єлизавети</item>
+        <item>Різдво Христове</item>
+        <item>Стрітення Господнє</item>
+        <item>Знайдення Ісуса в храмі</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Моління за чашею в Гетсиманії</item>
+        <item>Бичування Ісуса</item>
+        <item>Увінчання терновим вінцем</item>
+        <item>Несення хреста</item>
+        <item>Розп\'яття Господнє</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Воскресіння Христове</item>
+        <item>Вознесіння Господнє</item>
+        <item>Зіслання Святого Духа</item>
+        <item>Внебовзяття Пресвятої Богородиці</item>
+        <item>Коронування Пресвятої Богородиці</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Хрещення Господнє в Йордані</item>
+        <item>Весілля в Кані Галілейській</item>
+        <item>Проповідування Царства Божого</item>
+        <item>Преображення Господнє</item>
+        <item>Встановлення Євхаристії</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Ласкаво просимо до Sanctus</string>
+    <string name="onboarding_desc_1">Ваш священний супутник для Літургії Годин, Розарію, святих та літургійного календаря.</string>
+    <string name="onboarding_title_2">Канонічні години</string>
+    <string name="onboarding_desc_2">Отримуйте лагідні нагадування про всі шість канонічних годин — Утреню, Третю, Шосту, Дев\'яту годину, Вечірню та Повечір\'я.</string>
+    <string name="onboarding_title_3">Святий Розарій</string>
+    <string name="onboarding_desc_3">Розарій із автоматичним вибором таємниці залежно від дня тижня.</string>
+    <string name="onboarding_title_4">Святі та календар</string>
+    <string name="onboarding_desc_4">Відкрийте святого дня та досліджуйте повний літургійний календар — свята, урочистості та періоди року.</string>
+    <string name="onboarding_next">Далі</string>
+    <string name="onboarding_skip">Пропустити</string>
 </resources>

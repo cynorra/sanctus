@@ -21,4 +21,85 @@
     <string name="language">Dil</string>
     <string name="text_size">Yazı Boyutu</string>
     <string name="next_bead">İleri</string>
+
+    <string name="no_saint_today_title">Bugün İçin Aziz Bulunmuyor</string>
+    <string name="no_saint_today_desc">Yarın tekrar bakın veya azizlerin tüm takvimine göz atın.</string>
+
+    <string name="season_advent">Adventus (Gelim Zamanı)</string>
+    <string name="season_christmas">Noel Dönemi</string>
+    <string name="season_lent">Büyük Perhiz</string>
+    <string name="season_easter">Paskalya Dönemi</string>
+    <string name="season_ordinary">Yıl İçi Devir</string>
+
+    <string name="hour_lauds">Övgüler (Sabah Duası)</string>
+    <string name="hour_terce">Üçüncü Saat</string>
+    <string name="hour_sext">Öğle Duası</string>
+    <string name="hour_none">İkindi Duası</string>
+    <string name="hour_vespers">Akşam Duası</string>
+    <string name="hour_compline">Gece Duası</string>
+    <string name="next_hour_value">Akşam Duası · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Övgüler</item>
+        <item>Üçüncü Saat</item>
+        <item>Öğle Duası</item>
+        <item>İkindi Duası</item>
+        <item>Akşam Duası</item>
+        <item>Gece Duası</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Güne Tanrı ile başla.</item>
+        <item>Dur. Nefes al. Dua et.</item>
+        <item>Öğle duası — bir huzur anı.</item>
+        <item>İkindi vakti düşünce zamanı.</item>
+        <item>Akşam duası — şükret.</item>
+        <item>Gece duası — O\'nun huzurunda dinlen.</item>
+    </string-array>
+    <string name="notification_default_title">Dua Vakti</string>
+
+    <string name="prayer_our_father">Göklerdeki Babamız</string>
+    <string name="prayer_hail_mary">Selam Sana Meryem</string>
+    <string name="prayer_glory_be">Şan Olsun</string>
+    <string name="rosary_hail_mary_progress">Selam Sana Meryem · 10\'da %1$d</string>
+    <string name="rosary_progress">%1$d. Onluk · %2$d. Tane</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Müjde</item>
+        <item>Meryem\'in Ziyareti</item>
+        <item>İsa\'nın Doğuşu</item>
+        <item>İsa\'nın Mabede Takdimi</item>
+        <item>İsa\'nın Mabedde Bulunuşu</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Bahçedeki Can Çekişme</item>
+        <item>Direkte Kamçılanma</item>
+        <item>Dikenli Taçla Taçlandırılma</item>
+        <item>Çarmıhı Taşıma</item>
+        <item>Çarmıha Gerilme</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Diriliş</item>
+        <item>Göğe Yükseliş</item>
+        <item>Kutsal Ruh\'un İnişi</item>
+        <item>Meryem\'in Göğe Alınışı</item>
+        <item>Meryem\'in Taçlandırılması</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Şeria Nehri\'nde Vaftiz</item>
+        <item>Kana Düğünü</item>
+        <item>Tanrı\'nın Egemenliğinin İlanı</item>
+        <item>Başkalaşım (Tabor Dağı)</item>
+        <item>Efkaristiya\'nın Kurulması</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Sanctus\'a Hoş Geldiniz</string>
+    <string name="onboarding_desc_1">İbadet Saatleri, Tespih, Azizler ve Liturjik Takvim için kutsal yol arkadaşınız.</string>
+    <string name="onboarding_title_2">Kanonik Saatler</string>
+    <string name="onboarding_desc_2">Altı kanonik saatin tamamı için nazik hatırlatmalar alın — Övgüler, Üçüncü Saat, Öğle Duası, İkindi Duası, Akşam Duası ve Gece Duası.</string>
+    <string name="onboarding_title_3">Kutsal Tespih</string>
+    <string name="onboarding_desc_3">Haftanın gününe göre otomatik gizem seçimiyle rehberli Tespih.</string>
+    <string name="onboarding_title_4">Azizler ve Takvim</string>
+    <string name="onboarding_desc_4">Günün Azizini keşfedin ve bayramlar, büyük bayramlar ve dönemleriyle tüm liturjik takvimi keşfedin.</string>
+    <string name="onboarding_next">İleri</string>
+    <string name="onboarding_skip">Geç</string>
 </resources>

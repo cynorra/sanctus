@@ -13,30 +13,15 @@ public class PrayerNotificationReceiver extends BroadcastReceiver {
 
     private static final String CHANNEL_ID = "prayer_times";
 
-    private static final String[] HOUR_SUBTITLES = {
-        "Begin your day with God.",
-        "Pause. Breathe. Pray.",
-        "Midday prayer — a moment of peace.",
-        "Mid-afternoon reflection.",
-        "Evening prayer — give thanks.",
-        "Night prayer — rest in His peace."
-    };
-
-    private static final String[] HOUR_ICONS_DESC = {
-        "Morning Prayer — Lauds",
-        "Mid-Morning — Terce",
-        "Midday Prayer — Sext",
-        "Mid-Afternoon — None",
-        "Evening Prayer — Vespers",
-        "Night Prayer — Compline"
-    };
-
     @Override
     public void onReceive(Context context, Intent intent) {
         String hourName = intent.getStringExtra("hour_name");
         int reqCode = intent.getIntExtra("req_code", 1001);
         int idx = reqCode - 1001;
-        if (idx < 0 || idx >= HOUR_SUBTITLES.length) idx = 0;
+
+        String[] subtitles = context.getResources().getStringArray(R.array.hour_notification_subtitles);
+        if (idx < 0 || idx >= subtitles.length) idx = 0;
+        String subtitle = subtitles[idx];
 
         Intent openIntent = new Intent(context, MainActivity.class);
         openIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -45,9 +30,9 @@ public class PrayerNotificationReceiver extends BroadcastReceiver {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_cross)
-                .setContentTitle(hourName != null ? hourName : "Time to Pray")
-                .setContentText(HOUR_SUBTITLES[idx])
-                .setStyle(new NotificationCompat.BigTextStyle().bigText(HOUR_SUBTITLES[idx]))
+                .setContentTitle(hourName != null ? hourName : context.getString(R.string.notification_default_title))
+                .setContentText(subtitle)
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(subtitle))
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setCategory(NotificationCompat.CATEGORY_REMINDER)
                 .setAutoCancel(true)

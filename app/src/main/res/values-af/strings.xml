@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Christelike Gebedstye</string>
+    <string name="nav_home">Tuis</string>
+    <string name="nav_prayers">Gebede</string>
+    <string name="nav_rosary">Rosekrans</string>
+    <string name="nav_saints">Heiliges</string>
+    <string name="nav_calendar">Kalender</string>
+    <string name="nav_settings">Instellings</string>
+    <string name="liturgical_season">Liturgiese Seisoen</string>
+    <string name="next_hour">Volgende Uur</string>
+    <string name="canonical_hours">Kanonieke Ure</string>
+    <string name="saint_of_day">Heilige van die Dag</string>
+    <string name="verse_of_day">Vers van die Dag</string>
+    <string name="prayers_title">Gebede</string>
+    <string name="rosary_title">Heilige Rosekrans</string>
+    <string name="settings_title">Instellings</string>
+    <string name="dark_mode">Donker Modus</string>
+    <string name="notifications">Gebedskennisgewings</string>
+    <string name="language">Taal</string>
+    <string name="text_size">Teksgrootte</string>
+    <string name="next_bead">Volgende</string>
+
+    <string name="no_saint_today_title">Geen Heilige Vandag Gelys Nie</string>
+    <string name="no_saint_today_desc">Kom môre weer kyk, of blaai deur die volledige kalender van heiliges.</string>
+
+    <string name="season_advent">Advent</string>
+    <string name="season_christmas">Kersseisoen</string>
+    <string name="season_lent">Vasteseisoen</string>
+    <string name="season_easter">Paasseisoen</string>
+    <string name="season_ordinary">Gewone Tyd</string>
+
+    <string name="hour_lauds">Lofsang (Oggendgebed)</string>
+    <string name="hour_terce">Terts (Midoggend)</string>
+    <string name="hour_sext">Sekst (Middaggebed)</string>
+    <string name="hour_none">Noon (Namiddag)</string>
+    <string name="hour_vespers">Vesper (Aandgebed)</string>
+    <string name="hour_compline">Kompletorium (Naggebed)</string>
+    <string name="next_hour_value">Vesper · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Lofsang</item>
+        <item>Terts</item>
+        <item>Sekst</item>
+        <item>Noon</item>
+        <item>Vesper</item>
+        <item>Kompletorium</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Begin jou dag met God.</item>
+        <item>Staak. Asem. Bid.</item>
+        <item>Middaggebed — 'n oomblik van vrede.</item>
+        <item>Namiddag-oordenking.</item>
+        <item>Aandgebed — bring dank.</item>
+        <item>Naggebed — rus in Sy vrede.</item>
+    </string-array>
+    <string name="notification_default_title">Tyd om te Bid</string>
+
+    <string name="prayer_our_father">Onse Vader</string>
+    <string name="prayer_hail_mary">Wees Gegroet Maria</string>
+    <string name="prayer_glory_be">Eer aan die Vader</string>
+    <string name="rosary_hail_mary_progress">Wees Gegroet Maria · %1$d van 10</string>
+    <string name="rosary_progress">Dekade %1$d · Kraal %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Die Aankondiging</item>
+        <item>Die Besoek aan Elisabet</item>
+        <item>Die Geboorte van Jesus</item>
+        <item>Die Voorstelling in die Tempel</item>
+        <item>Jesus in die Tempel Gevind</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Doodsangs in Getsemane</item>
+        <item>Geseling aan die Pilaar</item>
+        <item>Kroning met Dorings</item>
+        <item>Die Kruisdraging</item>
+        <item>Die Kruisiging</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Die Opstanding</item>
+        <item>Die Hemelvaart</item>
+        <item>Die Neerdaling van die Heilige Gees</item>
+        <item>Die Hemelopneming van Maria</item>
+        <item>Die Kroning van Maria</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Die Doop in die Jordaan</item>
+        <item>Die Bruilof te Kana</item>
+        <item>Die Verkondiging van die Koninkryk</item>
+        <item>Die Verheerliking op die Berg</item>
+        <item>Die Instelling van die Eucharistie</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Welkom by Sanctus</string>
+    <string name="onboarding_desc_1">Jou heilige metgesel vir die Getydegebed, Rosekrans, Heiliges en Liturgiese Kalender.</string>
+    <string name="onboarding_title_2">Kanonieke Ure</string>
+    <string name="onboarding_desc_2">Ontvang sagte herinneringe vir al ses kanonieke ure — Lofsang, Terts, Sekst, Noon, Vesper en Kompletorium.</string>
+    <string name="onboarding_title_3">Heilige Rosekrans</string>
+    <string name="onboarding_desc_3">Begeleide Rosekrans met outomatiese keuse van geheimenis volgens die dag van die week.</string>
+    <string name="onboarding_title_4">Heiliges en Kalender</string>
+    <string name="onboarding_desc_4">Ontdek die Heilige van die Dag en verken die volledige liturgiese kalender — feeste, hoogfeeste en seisoene.</string>
+    <string name="onboarding_next">Volgende</string>
+    <string name="onboarding_skip">Slaan Oor</string>
+</resources>

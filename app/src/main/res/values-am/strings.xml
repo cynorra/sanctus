@@ -19,4 +19,85 @@
     <string name="notifications">የጸሎት ማሳሰቢያዎች</string>
     <string name="next_bead">ቀጣይ</string>
     <string name="loading">በመጫን ላይ…</string>
+
+    <string name="no_saint_today_title">ዛሬ ቅዱስ አልተዘረዘረም</string>
+    <string name="no_saint_today_desc">ነገ እንደገና ይመልከቱ፣ ወይም ሙሉውን የቅዱሳን ቀን መቁጠሪያ ያስሱ።</string>
+
+    <string name="season_advent">ጾመ ገና (አድቬንት)</string>
+    <string name="season_christmas">የልደት ወቅት</string>
+    <string name="season_lent">ዐቢይ ጾም</string>
+    <string name="season_easter">የትንሳኤ ወቅት</string>
+    <string name="season_ordinary">መደበኛ ወቅት</string>
+
+    <string name="hour_lauds">ንጋት ጸሎት (ውዳሴ)</string>
+    <string name="hour_terce">ሶስተኛ ሰዓት ጸሎት</string>
+    <string name="hour_sext">እኩለ ቀን ጸሎት</string>
+    <string name="hour_none">ዘጠነኛ ሰዓት ጸሎት</string>
+    <string name="hour_vespers">የምሽት ጸሎት</string>
+    <string name="hour_compline">የሌሊት ጸሎት</string>
+    <string name="next_hour_value">የምሽት ጸሎት · 06:00 ከሰዓት</string>
+    <string-array name="hour_names_short">
+        <item>ውዳሴ</item>
+        <item>ሶስተኛ ሰዓት</item>
+        <item>እኩለ ቀን</item>
+        <item>ዘጠነኛ ሰዓት</item>
+        <item>ምሽት</item>
+        <item>ሌሊት</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>ቀንዎን ከእግዚአብሔር ጋር ይጀምሩ።</item>
+        <item>ቆም ይበሉ። ይተንፍሱ። ይጸልዩ።</item>
+        <item>የቀትር ጸሎት — የሰላም ጊዜ።</item>
+        <item>የከሰዓት በኋላ ማሰላሰል።</item>
+        <item>የምሽት ጸሎት — ያመስግኑ።</item>
+        <item>የሌሊት ጸሎት — በሰላሙ ውስጥ ያርፉ።</item>
+    </string-array>
+    <string name="notification_default_title">የጸሎት ጊዜ</string>
+
+    <string name="prayer_our_father">አባታችን ሆይ</string>
+    <string name="prayer_hail_mary">ሰላም ለኪ ማርያም</string>
+    <string name="prayer_glory_be">ስብሐት ለአብ</string>
+    <string name="rosary_hail_mary_progress">ሰላም ለኪ ማርያም · %1$d ከ10</string>
+    <string name="rosary_progress">ዙር %1$d · ዶቃ %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>ብስራተ ገብርኤል</item>
+        <item>ጉብኝት ለኤልሳቤጥ</item>
+        <item>የጌታ ልደት</item>
+        <item>ወደ ቤተ መቅደስ መቅረብ</item>
+        <item>በቤተ መቅደስ መገኘት</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>የጌቴሴማኒ ስቃይ</item>
+        <item>በአስከንድር መገረፍ</item>
+        <item>በእሾህ አክሊል መቀዳጀት</item>
+        <item>መስቀሉን መሸከም</item>
+        <item>የመስቀል ላይ ሞት</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>ትንሳኤ</item>
+        <item>ዕርገት</item>
+        <item>የመንፈስ ቅዱስ መውረድ</item>
+        <item>የማርያም ዕርገት</item>
+        <item>የማርያም ንግስት ሆና መቀዳጀት</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>በዮርዳኖስ ጥምቀት</item>
+        <item>የቃና ሰርግ</item>
+        <item>የመንግስተ እግዚአብሔር ስብከት</item>
+        <item>መልክአ መለወጥ</item>
+        <item>የቅዱስ ቁርባን መመስረት</item>
+    </string-array>
+
+    <string name="onboarding_title_1">እንኳን ወደ ሳንክተስ በደህና መጡ</string>
+    <string name="onboarding_desc_1">ለቀን ጸሎቶች፣ ለቅዱስ መቁጠሪያ፣ ለቅዱሳን እና ለቤተ ክርስቲያን ቀን መቁጠሪያ ቅዱስ ጓደኛዎ።</string>
+    <string name="onboarding_title_2">የቀን ጸሎት ሰዓቶች</string>
+    <string name="onboarding_desc_2">ለስድስቱም የቀን ጸሎት ሰዓቶች ገር ማሳሰቢያዎችን ይቀበሉ — ውዳሴ፣ ሶስተኛ ሰዓት፣ እኩለ ቀን፣ ዘጠነኛ ሰዓት፣ ምሽት እና ሌሊት።</string>
+    <string name="onboarding_title_3">ቅዱስ መቁጠሪያ</string>
+    <string name="onboarding_desc_3">በሳምንቱ ቀን ላይ በተመሰረተ ራስ-ሰር ምርጫ የሚመራ ቅዱስ መቁጠሪያ።</string>
+    <string name="onboarding_title_4">ቅዱሳን እና ቀን መቁጠሪያ</string>
+    <string name="onboarding_desc_4">የዕለቱን ቅዱስ ያግኙ እና ሙሉውን የቤተ ክርስቲያን ቀን መቁጠሪያ — በዓላት እና ወቅቶች ያስሱ።</string>
+    <string name="onboarding_next">ቀጣይ</string>
+    <string name="onboarding_skip">ዝለል</string>
 </resources>

@@ -21,4 +21,85 @@
     <string name="category_morning">காலை</string>
     <string name="category_evening">மாலை</string>
     <string name="loading">ஏற்றுகிறது…</string>
+
+    <string name="no_saint_today_title">இன்று பட்டியலிடப்பட்ட புனிதர் இல்லை</string>
+    <string name="no_saint_today_desc">நாளை மீண்டும் பாருங்கள், அல்லது முழு புனிதர் நாட்காட்டியை உலாவுங்கள்.</string>
+
+    <string name="season_advent">வருகைக் காலம்</string>
+    <string name="season_christmas">கிறிஸ்துமஸ் காலம்</string>
+    <string name="season_lent">தவக்காலம்</string>
+    <string name="season_easter">பாஸ்கா காலம்</string>
+    <string name="season_ordinary">சாதாரண காலம்</string>
+
+    <string name="hour_lauds">காலைத் துதி (காலை ஜெபம்)</string>
+    <string name="hour_terce">மூன்றாம் மணி ஜெபம்</string>
+    <string name="hour_sext">நண்பகல் ஜெபம்</string>
+    <string name="hour_none">பிற்பகல் ஜெபம்</string>
+    <string name="hour_vespers">மாலை ஜெபம்</string>
+    <string name="hour_compline">இரவுத் தொழுகை</string>
+    <string name="next_hour_value">மாலை ஜெபம் · மாலை 6:00</string>
+    <string-array name="hour_names_short">
+        <item>காலைத் துதி</item>
+        <item>மூன்றாம் மணி</item>
+        <item>நண்பகல்</item>
+        <item>பிற்பகல்</item>
+        <item>மாலை ஜெபம்</item>
+        <item>இரவுத் தொழுகை</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>உங்கள் நாளை இறைவனுடன் தொடங்குங்கள்.</item>
+        <item>நில்லுங்கள். மூச்சு விடுங்கள். ஜெபியுங்கள்.</item>
+        <item>நண்பகல் ஜெபம் — அமைதியின் நேரம்.</item>
+        <item>பிற்பகல் தியானம்.</item>
+        <item>மாலை ஜெபம் — நன்றி செலுத்துங்கள்.</item>
+        <item>இரவுத் தொழுகை — அவரது சமாதானத்தில் ஓய்வெடுங்கள்.</item>
+    </string-array>
+    <string name="notification_default_title">ஜெபிக்கும் நேரம்</string>
+
+    <string name="prayer_our_father">பரலோக தந்தையே</string>
+    <string name="prayer_hail_mary">அருள் நிறை மரியே</string>
+    <string name="prayer_glory_be">தந்தைக்கு மகிமை</string>
+    <string name="rosary_hail_mary_progress">அருள் நிறை மரியே · 10இல் %1$d</string>
+    <string name="rosary_progress">பத்து %1$d · மணி %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>தூதுவர் அறிவிப்பு</item>
+        <item>எலிசபெத்தை மரியா சந்தித்தது</item>
+        <item>இயேசுவின் பிறப்பு</item>
+        <item>இயேசுவை ஆலயத்தில் அர்ப்பணித்தது</item>
+        <item>இயேசுவை ஆலயத்தில் கண்டெடுத்தது</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>தோட்டத்தில் இயேசுவின் வேதனை</item>
+        <item>இயேசு சாட்டையால் அடிக்கப்பட்டது</item>
+        <item>முள் முடி சூட்டப்பட்டது</item>
+        <item>சிலுவையைச் சுமந்தது</item>
+        <item>இயேசு சிலுவையில் அறையப்பட்டது</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>இயேசுவின் உயிர்த்தெழுதல்</item>
+        <item>இயேசுவின் விண்ணேற்பு</item>
+        <item>பரிசுத்த ஆவியின் வருகை</item>
+        <item>மரியாவின் விண்ணேற்பு</item>
+        <item>மரியா இராணியாக முடிசூட்டப்பட்டது</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>யோர்தானில் இயேசுவின் ஞானஸ்நானம்</item>
+        <item>கானாவூர் திருமணம்</item>
+        <item>இறையாட்சியின் பிரகடனம்</item>
+        <item>இயேசுவின் உருமாற்றம்</item>
+        <item>திருவிருந்தின் ஸ்தாபனம்</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Sanctus-க்கு வரவேற்கிறோம்</string>
+    <string name="onboarding_desc_1">மணி நேர ஜெபம், ஜெபமாலை, புனிதர்கள் மற்றும் திருவழிபாட்டு நாட்காட்டிக்கான உங்கள் புனித தோழர்.</string>
+    <string name="onboarding_title_2">நியமன மணி நேரங்கள்</string>
+    <string name="onboarding_desc_2">ஆறு நியமன மணி நேரங்களுக்கும் மென்மையான நினைவூட்டல்களைப் பெறுங்கள் — காலைத் துதி, மூன்றாம் மணி, நண்பகல், பிற்பகல், மாலை ஜெபம் மற்றும் இரவுத் தொழுகை.</string>
+    <string name="onboarding_title_3">திருவழிபாட்டு ஜெபமாலை</string>
+    <string name="onboarding_desc_3">வார நாளின் அடிப்படையில் தானியங்கி மறை தேர்வுடன் வழிநடத்தப்படும் ஜெபமாலை.</string>
+    <string name="onboarding_title_4">புனிதர்களும் நாட்காட்டியும்</string>
+    <string name="onboarding_desc_4">இன்றைய புனிதரைக் கண்டறியுங்கள், விழாக்கள், பேரிழாக்கள் மற்றும் காலங்களுடன் கூடிய முழு திருவழிபாட்டு நாட்காட்டியையும் ஆராயுங்கள்.</string>
+    <string name="onboarding_next">அடுத்து</string>
+    <string name="onboarding_skip">தவிர்</string>
 </resources>

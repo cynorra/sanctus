@@ -21,4 +21,85 @@
     <string name="category_morning">Pagi</string>
     <string name="category_evening">Malam</string>
     <string name="loading">Memuat…</string>
+
+    <string name="no_saint_today_title">Tidak Ada Orang Kudus Hari Ini</string>
+    <string name="no_saint_today_desc">Periksa lagi besok, atau jelajahi kalender lengkap para orang kudus.</string>
+
+    <string name="season_advent">Adven</string>
+    <string name="season_christmas">Masa Natal</string>
+    <string name="season_lent">Masa Prapaskah</string>
+    <string name="season_easter">Masa Paskah</string>
+    <string name="season_ordinary">Masa Biasa</string>
+
+    <string name="hour_lauds">Pujian Pagi (Ibadat Pagi)</string>
+    <string name="hour_terce">Ibadat Tengah Pagi</string>
+    <string name="hour_sext">Ibadat Siang</string>
+    <string name="hour_none">Ibadat Tengah Petang</string>
+    <string name="hour_vespers">Ibadat Sore (Vesper)</string>
+    <string name="hour_compline">Ibadat Penutup Hari</string>
+    <string name="next_hour_value">Ibadat Sore · 18.00</string>
+    <string-array name="hour_names_short">
+        <item>Pujian Pagi</item>
+        <item>Tengah Pagi</item>
+        <item>Siang</item>
+        <item>Tengah Petang</item>
+        <item>Sore</item>
+        <item>Penutup Hari</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Mulailah harimu bersama Tuhan.</item>
+        <item>Berhenti sejenak. Bernapas. Berdoalah.</item>
+        <item>Doa siang — saat damai.</item>
+        <item>Renungan sore.</item>
+        <item>Doa petang — mengucap syukur.</item>
+        <item>Doa malam — beristirahat dalam damai-Nya.</item>
+    </string-array>
+    <string name="notification_default_title">Waktunya Berdoa</string>
+
+    <string name="prayer_our_father">Bapa Kami</string>
+    <string name="prayer_hail_mary">Salam Maria</string>
+    <string name="prayer_glory_be">Kemuliaan</string>
+    <string name="rosary_hail_mary_progress">Salam Maria · %1$d dari 10</string>
+    <string name="rosary_progress">Dasa %1$d · Manik %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Kabar Sukacita</item>
+        <item>Maria Mengunjungi Elisabet</item>
+        <item>Yesus Dilahirkan</item>
+        <item>Yesus Dipersembahkan di Bait Allah</item>
+        <item>Yesus Ditemukan di Bait Allah</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Yesus Berdoa dalam Sengsara-Nya</item>
+        <item>Yesus Didera</item>
+        <item>Yesus Dimahkotai Duri</item>
+        <item>Yesus Memanggul Salib</item>
+        <item>Yesus Wafat di Kayu Salib</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Yesus Bangkit dari Mati</item>
+        <item>Yesus Naik ke Surga</item>
+        <item>Roh Kudus Turun atas Para Rasul</item>
+        <item>Maria Diangkat ke Surga</item>
+        <item>Maria Dimahkotai di Surga</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Yesus Dibaptis di Sungai Yordan</item>
+        <item>Yesus Menyatakan Diri dalam Perkawinan di Kana</item>
+        <item>Yesus Memaklumkan Kerajaan Allah</item>
+        <item>Yesus Menampakkan Kemuliaan-Nya</item>
+        <item>Yesus Menetapkan Ekaristi</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Selamat Datang di Sanctus</string>
+    <string name="onboarding_desc_1">Sahabat rohani Anda untuk Ibadat Harian, Rosario, Orang Kudus, dan Kalender Liturgi.</string>
+    <string name="onboarding_title_2">Ibadat Harian</string>
+    <string name="onboarding_desc_2">Terima pengingat lembut untuk keenam ibadat harian — Pujian Pagi, Tengah Pagi, Siang, Tengah Petang, Sore, dan Penutup Hari.</string>
+    <string name="onboarding_title_3">Rosario Kudus</string>
+    <string name="onboarding_desc_3">Rosario terpandu dengan pemilihan misteri otomatis berdasarkan hari dalam seminggu.</string>
+    <string name="onboarding_title_4">Orang Kudus &amp; Kalender</string>
+    <string name="onboarding_desc_4">Temukan Orang Kudus Hari Ini dan jelajahi kalender liturgi lengkap — pesta, hari raya, dan masa liturgi.</string>
+    <string name="onboarding_next">Lanjut</string>
+    <string name="onboarding_skip">Lewati</string>
 </resources>

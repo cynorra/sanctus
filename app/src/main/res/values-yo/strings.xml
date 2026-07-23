@@ -21,4 +21,85 @@
     <string name="category_morning">Òwúrọ̀</string>
     <string name="category_evening">Alẹ́</string>
     <string name="loading">Ń Ṣe Ìgbàlọ…</string>
+
+    <string name="no_saint_today_title">Kò Sí Ènìyàn Mímọ́ Fún Ọjọ́ Yìí</string>
+    <string name="no_saint_today_desc">Wá wò lẹ́ẹ̀kansí ní ọ̀la, tàbí wo gbogbo kalẹndà àwọn ènìyàn mímọ́.</string>
+
+    <string name="season_advent">Àkókò Adventi</string>
+    <string name="season_christmas">Àkókò Kérésìmesì</string>
+    <string name="season_lent">Àkókò Àwẹ̀</string>
+    <string name="season_easter">Àkókò Ìajíǹde</string>
+    <string name="season_ordinary">Àkókò Lásán</string>
+
+    <string name="hour_lauds">Ìyìn Òwúrọ̀ (Àdúrà Òwúrọ̀)</string>
+    <string name="hour_terce">Wákàtí Kẹta</string>
+    <string name="hour_sext">Àdúrà Ọ̀sán</string>
+    <string name="hour_none">Àdúrà Ọ̀sán Gbàngbà</string>
+    <string name="hour_vespers">Àdúrà Alẹ́</string>
+    <string name="hour_compline">Àdúrà Òru</string>
+    <string name="next_hour_value">Àdúrà Alẹ́ · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Ìyìn Òwúrọ̀</item>
+        <item>Wákàtí Kẹta</item>
+        <item>Àdúrà Ọ̀sán</item>
+        <item>Ọ̀sán Gbàngbà</item>
+        <item>Àdúrà Alẹ́</item>
+        <item>Àdúrà Òru</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Bẹ̀rẹ̀ ọjọ́ rẹ pẹ̀lú Ọlọ́run.</item>
+        <item>Dúró. Mí. Gbàdúrà.</item>
+        <item>Àdúrà ọ̀sán — ìṣẹ́jú àlàáfíà.</item>
+        <item>Ìrònú ọ̀sán gbàngbà.</item>
+        <item>Àdúrà alẹ́ — dúpẹ́.</item>
+        <item>Àdúrà òru — sinmi nínú àlàáfíà Rẹ̀.</item>
+    </string-array>
+    <string name="notification_default_title">Àkókò Gbàdúrà</string>
+
+    <string name="prayer_our_father">Bàbá Wa</string>
+    <string name="prayer_hail_mary">Àbáàjẹ Màríà</string>
+    <string name="prayer_glory_be">Ògo Ni Fún Bàbá</string>
+    <string name="rosary_hail_mary_progress">Àbáàjẹ Màríà · %1$d nínú 10</string>
+    <string name="rosary_progress">Ìdámẹ́wàá %1$d · Òkúta %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Ìkéde Áńgẹ́lì</item>
+        <item>Ìbẹ̀wò Màríà sí Èlísábẹ́tì</item>
+        <item>Ìbí Jésù</item>
+        <item>Ìgbékalẹ̀ Jésù Nínú Tẹ́mpìlì</item>
+        <item>Wíwá Jésù Nínú Tẹ́mpìlì</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Ìrora Jésù Nínú Ọgbà</item>
+        <item>Nínà Jésù</item>
+        <item>Wíwọ Adé Ẹ̀gún Fún Jésù</item>
+        <item>Ríru Àgbélébùú</item>
+        <item>Kíkàn Jésù Mọ́ Àgbélébùú</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Àjíǹde Jésù</item>
+        <item>Ìgòkè Jésù Lọ Sí Ọ̀run</item>
+        <item>Ìsọ̀kalẹ̀ Ẹ̀mí Mímọ́</item>
+        <item>Ìgòkè Màríà Lọ Sí Ọ̀run</item>
+        <item>Adé Ìjọba Fún Màríà</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Ìtẹ̀bọmi Jésù Ní Odò Jọ́danì</item>
+        <item>Ìgbéyàwó Ní Kánà</item>
+        <item>Ìkéde Ìjọba Ọlọ́run</item>
+        <item>Ìyípadà Jésù</item>
+        <item>Ìdásílẹ̀ Eucharist</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Káàbọ̀ sí Sanctus</string>
+    <string name="onboarding_desc_1">Alábàákẹ́gbẹ́ mímọ́ rẹ fún Ìjọsìn Wákàtí, Rosary, Àwọn Ènìyàn Mímọ́, àti Kalẹndà Ìjọsìn.</string>
+    <string name="onboarding_title_2">Àwọn Wákàtí Ìjọsìn</string>
+    <string name="onboarding_desc_2">Gba ìrántí pẹ̀lẹ́ fún gbogbo wákàtí ìjọsìn mẹ́fà — Ìyìn Òwúrọ̀, Wákàtí Kẹta, Àdúrà Ọ̀sán, Ọ̀sán Gbàngbà, Àdúrà Alẹ́, àti Àdúrà Òru.</string>
+    <string name="onboarding_title_3">Rosary Mímọ́</string>
+    <string name="onboarding_desc_3">Rosary tí a ń darí pẹ̀lú yíyan awò-awò-ìjìnlẹ̀ láìfọwọ́kàn gẹ́gẹ́ bí ọjọ́ ọ̀sẹ̀.</string>
+    <string name="onboarding_title_4">Àwọn Ènìyàn Mímọ́ àti Kalẹndà</string>
+    <string name="onboarding_desc_4">Ṣàwárí Ènìyàn Mímọ́ Ọjọ́ Yìí kí o sì wo gbogbo kalẹndà ìjọsìn — àwọn àjọdún, ọlá ńlá, àti àwọn àkókò.</string>
+    <string name="onboarding_next">Tó Ń Bọ̀</string>
+    <string name="onboarding_skip">Fò Ẹ̀</string>
 </resources>

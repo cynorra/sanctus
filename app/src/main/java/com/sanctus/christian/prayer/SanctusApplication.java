@@ -67,5 +67,11 @@ public class SanctusApplication extends Application {
 
     public static SanctusApplication getInstance() { return instance; }
     public SanctusDatabase getDatabase() { return database; }
-    public SettingsRepository getSettingsRepository() { return settingsRepository; }
+
+    public SettingsRepository getSettingsRepository() {
+        if (settingsRepository == null) {
+            settingsRepository = new SettingsRepository(this);
+        }
+        return settingsRepository;
+    }
 }

@@ -32,7 +32,7 @@ public class CalendarFragment extends Fragment {
 
         LiturgicalSeasonHelper.Season season = LiturgicalSeasonHelper.getCurrentSeason();
         ((TextView) view.findViewById(R.id.tv_current_season)).setText(
-                LiturgicalSeasonHelper.getSeasonName(season));
+                LiturgicalSeasonHelper.getSeasonName(requireContext(), season));
 
         String today = new SimpleDateFormat("MM-dd", Locale.getDefault()).format(new Date());
         ((TextView) view.findViewById(R.id.tv_today_date)).setText(DateUtils.getTodayFormatted());

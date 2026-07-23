@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">Ny Fotoam-bavaka Kristianina</string>
+    <string name="nav_home">Fandraisana</string>
+    <string name="nav_prayers">Vavaka</string>
+    <string name="nav_rosary">Rozery</string>
+    <string name="nav_saints">Olomasina</string>
+    <string name="nav_calendar">Kalandrie</string>
+    <string name="nav_settings">Fandrindrana</string>
+    <string name="liturgical_season">Vanim-potoana Litorjika</string>
+    <string name="next_hour">Ora Manaraka</string>
+    <string name="canonical_hours">Ora Kanônika</string>
+    <string name="saint_of_day">Olomasin\'ny Andro</string>
+    <string name="verse_of_day">Andinin-tsoratra Masina amin\'ny Andro</string>
+    <string name="prayers_title">Vavaka</string>
+    <string name="rosary_title">Rozery Masina</string>
+    <string name="settings_title">Fandrindrana</string>
+    <string name="dark_mode">Endrika Maizina</string>
+    <string name="notifications">Fampahatsiahivana Vavaka</string>
+    <string name="language">Fiteny</string>
+    <string name="text_size">Haben\'ny Soratra</string>
+    <string name="next_bead">Manaraka</string>
+
+    <string name="no_saint_today_title">Tsy Misy Olomasina Voatondro Anio</string>
+    <string name="no_saint_today_desc">Avereno jerena rahampitso, na jereo ny kalandrien\'ny olomasina manontolo.</string>
+
+    <string name="season_advent">Advento</string>
+    <string name="season_christmas">Vanim-potoanan\'ny Noely</string>
+    <string name="season_lent">Karemy</string>
+    <string name="season_easter">Vanim-potoanan\'ny Paska</string>
+    <string name="season_ordinary">Fotoana Tsotra</string>
+
+    <string name="hour_lauds">Laodesy (Vavaka Maraina)</string>
+    <string name="hour_terce">Tersa (Ora Fahatelo)</string>
+    <string name="hour_sext">Seksta (Vavaka Mitataovovonana)</string>
+    <string name="hour_none">Nona (Vavaka Hariva Antoandro)</string>
+    <string name="hour_vespers">Vaoperinina (Vavaka Hariva)</string>
+    <string name="hour_compline">Konplen (Vavaka Alina)</string>
+    <string name="next_hour_value">Vaoperinina · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Laodesy</item>
+        <item>Tersa</item>
+        <item>Seksta</item>
+        <item>Nona</item>
+        <item>Vaoperinina</item>
+        <item>Konplen</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Anombohy amin\'Andriamanitra ny andronao.</item>
+        <item>Mijanòna. Miaina. Mivavaha.</item>
+        <item>Vavaka mitataovovonana — fotoana fiadanana.</item>
+        <item>Fisaintsainana amin\'ny hariva antoandro.</item>
+        <item>Vavaka hariva — misaotra.</item>
+        <item>Vavaka alina — mitsahara ao amin\'ny fiadanany.</item>
+    </string-array>
+    <string name="notification_default_title">Fotoana Hivavahana</string>
+
+    <string name="prayer_our_father">Rainay</string>
+    <string name="prayer_hail_mary">Arahaba Ry Maria</string>
+    <string name="prayer_glory_be">Voninahitra Ho An\'ny Ray</string>
+    <string name="rosary_hail_mary_progress">Arahaba Ry Maria · %1$d amin\'ny 10</string>
+    <string name="rosary_progress">Am-polony %1$d · Vato %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Ny Filazana</item>
+        <item>Ny Fitsidihana</item>
+        <item>Ny Nahaterahan\'i Jesosy</item>
+        <item>Ny Fanolorana An\'i Jesosy Tao Amin\'ny Tempoly</item>
+        <item>Ny Nahitana An\'i Jesosy Tao Amin\'ny Tempoly</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Ny Fangirifiriana Tao Getsemane</item>
+        <item>Ny Nikapohana An\'i Jesosy</item>
+        <item>Ny Nasiana Satroka Tsilo An\'i Jesosy</item>
+        <item>Ny Nitondran\'i Jesosy Ny Hazo Fijaliana</item>
+        <item>Ny Nahafatesan\'i Jesosy Teo Amin\'ny Hazo Fijaliana</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Ny Nitsanganan\'i Jesosy Tamin\'ny Maty</item>
+        <item>Ny Niakaran\'i Jesosy Tany An-danitra</item>
+        <item>Ny Nidinan\'ny Fanahy Masina</item>
+        <item>Ny Nampiakarana An\'i Maria Tany An-danitra</item>
+        <item>Ny Nampitafiana Satro-boninahitra An\'i Maria</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Ny Batemin\'i Jesosy Tao Jordana</item>
+        <item>Ny Fampakaram-bady Tao Kanà</item>
+        <item>Ny Fitorian\'i Jesosy Ny Fanjakan\'Andriamanitra</item>
+        <item>Ny Niova Tarehin\'i Jesosy</item>
+        <item>Ny Fanorenana Ny Eokaristia</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Tongasoa Ao Amin\'ny Sanctus</string>
+    <string name="onboarding_desc_1">Ny namanao masina ho an\'ny Vavaka Fanoloran-tena, ny Rozery, ny Olomasina, ary ny Kalandrie Litorjika.</string>
+    <string name="onboarding_title_2">Ora Kanônika</string>
+    <string name="onboarding_desc_2">Mandraisa fampahatsiahivana malefaka ho an\'ny ora kanônika enina — Laodesy, Tersa, Seksta, Nona, Vaoperinina, ary Konplen.</string>
+    <string name="onboarding_title_3">Rozery Masina</string>
+    <string name="onboarding_desc_3">Rozery notarihina miaraka amin\'ny fifantenana mahazatra ny zava-miafina araka ny andro amin\'ny herinandro.</string>
+    <string name="onboarding_title_4">Olomasina Sy Kalandrie</string>
+    <string name="onboarding_desc_4">Hitantsika ny Olomasin\'ny Andro sy ny Kalandrie Litorjika manontolo — fety, fety lehibe, ary vanim-potoana.</string>
+    <string name="onboarding_next">Manaraka</string>
+    <string name="onboarding_skip">Ihodivo</string>
+</resources>

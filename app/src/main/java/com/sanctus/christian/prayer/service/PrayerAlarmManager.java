@@ -5,6 +5,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.receiver.PrayerNotificationReceiver;
 import java.util.Calendar;
 
@@ -20,17 +21,14 @@ public class PrayerAlarmManager {
         {21, 0,  1006, 5},  // Compline  (Night Prayer)
     };
 
-    private static final String[] HOUR_NAMES = {
-        "Lauds", "Terce", "Sext", "None", "Vespers", "Compline"
-    };
-
     public static void scheduleAll(Context context) {
         AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         if (am == null) return;
 
+        String[] hourNames = context.getResources().getStringArray(R.array.hour_names_short);
         for (int[] h : CANONICAL_HOURS) {
             int hour = h[0], minute = h[1], reqCode = h[2], nameIdx = h[3];
-            scheduleHour(context, am, hour, minute, reqCode, HOUR_NAMES[nameIdx]);
+            scheduleHour(context, am, hour, minute, reqCode, hourNames[nameIdx]);
         }
     }
 

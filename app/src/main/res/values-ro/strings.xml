@@ -19,4 +19,85 @@
     <string name="notifications">Memento rugăciune</string>
     <string name="next_bead">Înainte</string>
     <string name="loading">Se încarcă…</string>
+
+    <string name="no_saint_today_title">Niciun Sfânt Listat Astăzi</string>
+    <string name="no_saint_today_desc">Revino mâine sau răsfoiește calendarul complet al sfinților.</string>
+
+    <string name="season_advent">Advent</string>
+    <string name="season_christmas">Timpul Crăciunului</string>
+    <string name="season_lent">Postul Mare</string>
+    <string name="season_easter">Timpul Pascal</string>
+    <string name="season_ordinary">Timpul de Peste An</string>
+
+    <string name="hour_lauds">Laude (Rugăciunea de Dimineață)</string>
+    <string name="hour_terce">Terța (Ora a Treia)</string>
+    <string name="hour_sext">Sexta (Ora a Șasea)</string>
+    <string name="hour_none">Nona (Ora a Noua)</string>
+    <string name="hour_vespers">Vecernie (Rugăciunea de Seară)</string>
+    <string name="hour_compline">Completoriul (Rugăciunea de Noapte)</string>
+    <string name="next_hour_value">Vecernie · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Laude</item>
+        <item>Terța</item>
+        <item>Sexta</item>
+        <item>Nona</item>
+        <item>Vecernie</item>
+        <item>Completoriul</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Începe-ți ziua cu Dumnezeu.</item>
+        <item>Oprește-te. Respiră. Roagă-te.</item>
+        <item>Rugăciunea de amiază — o clipă de pace.</item>
+        <item>Reflecție de după-amiază.</item>
+        <item>Rugăciunea de seară — mulțumește.</item>
+        <item>Rugăciunea de noapte — odihnește-te în pacea Lui.</item>
+    </string-array>
+    <string name="notification_default_title">Timp de Rugăciune</string>
+
+    <string name="prayer_our_father">Tatăl Nostru</string>
+    <string name="prayer_hail_mary">Bucură-te, Marie</string>
+    <string name="prayer_glory_be">Slavă Tatălui</string>
+    <string name="rosary_hail_mary_progress">Bucură-te, Marie · %1$d din 10</string>
+    <string name="rosary_progress">Decada %1$d · Mărgeaua %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Buna Vestire</item>
+        <item>Vizitarea Elisabetei</item>
+        <item>Nașterea Domnului</item>
+        <item>Prezentarea la Templu</item>
+        <item>Regăsirea lui Isus în Templu</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Agonia din Grădina Ghetsimani</item>
+        <item>Biciuirea</item>
+        <item>Încununarea cu Spini</item>
+        <item>Purtarea Crucii</item>
+        <item>Răstignirea</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Învierea</item>
+        <item>Înălțarea la Cer</item>
+        <item>Coborârea Duhului Sfânt</item>
+        <item>Adormirea Maicii Domnului</item>
+        <item>Încoronarea Mariei</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Botezul în Iordan</item>
+        <item>Nunta din Cana</item>
+        <item>Vestirea Împărăției lui Dumnezeu</item>
+        <item>Schimbarea la Față</item>
+        <item>Instituirea Euharistiei</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Bine ai venit la Sanctus</string>
+    <string name="onboarding_desc_1">Însoțitorul tău sacru pentru Liturgia Orelor, Rozariu, Sfinți și Calendarul Liturgic.</string>
+    <string name="onboarding_title_2">Orele Canonice</string>
+    <string name="onboarding_desc_2">Primește mementouri blânde pentru toate cele șase ore canonice — Laude, Terța, Sexta, Nona, Vecernie și Completoriul.</string>
+    <string name="onboarding_title_3">Sfântul Rozariu</string>
+    <string name="onboarding_desc_3">Rozariu ghidat cu selecția automată a tainei în funcție de ziua săptămânii.</string>
+    <string name="onboarding_title_4">Sfinți și Calendar</string>
+    <string name="onboarding_desc_4">Descoperă Sfântul zilei și explorează întregul calendar liturgic — sărbători, solemnități și timpuri liturgice.</string>
+    <string name="onboarding_next">Înainte</string>
+    <string name="onboarding_skip">Omite</string>
 </resources>

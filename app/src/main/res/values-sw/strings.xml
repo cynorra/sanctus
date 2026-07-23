@@ -21,4 +21,85 @@
     <string name="category_morning">Asubuhi</string>
     <string name="category_evening">Jioni</string>
     <string name="loading">Inapakia…</string>
+
+    <string name="no_saint_today_title">Hakuna Mtakatifu Aliyeorodheshwa Leo</string>
+    <string name="no_saint_today_desc">Rudi kesho, au vinjari kalenda nzima ya watakatifu.</string>
+
+    <string name="season_advent">Majilio</string>
+    <string name="season_christmas">Msimu wa Krismasi</string>
+    <string name="season_lent">Kwaresima</string>
+    <string name="season_easter">Msimu wa Pasaka</string>
+    <string name="season_ordinary">Wakati wa Kawaida</string>
+
+    <string name="hour_lauds">Sifa za Asubuhi</string>
+    <string name="hour_terce">Terce (Saa ya Tatu)</string>
+    <string name="hour_sext">Sext (Sala ya Adhuhuri)</string>
+    <string name="hour_none">None (Sala ya Alasiri)</string>
+    <string name="hour_vespers">Vespa (Sala ya Jioni)</string>
+    <string name="hour_compline">Complin (Sala ya Usiku)</string>
+    <string name="next_hour_value">Vespa · Saa 12:00 Jioni</string>
+    <string-array name="hour_names_short">
+        <item>Sifa za Asubuhi</item>
+        <item>Terce</item>
+        <item>Sext</item>
+        <item>None</item>
+        <item>Vespa</item>
+        <item>Complin</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Anza siku yako na Mungu.</item>
+        <item>Simama. Vuta pumzi. Sali.</item>
+        <item>Sala ya adhuhuri — wakati wa amani.</item>
+        <item>Tafakari ya alasiri.</item>
+        <item>Sala ya jioni — toa shukrani.</item>
+        <item>Sala ya usiku — pumzika katika amani Yake.</item>
+    </string-array>
+    <string name="notification_default_title">Wakati wa Kusali</string>
+
+    <string name="prayer_our_father">Baba Yetu</string>
+    <string name="prayer_hail_mary">Salamu Maria</string>
+    <string name="prayer_glory_be">Atukuzwe Baba</string>
+    <string name="rosary_hail_mary_progress">Salamu Maria · %1$d kati ya 10</string>
+    <string name="rosary_progress">Fungu %1$d · Punje %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Tangazo la Malaika</item>
+        <item>Kutembelewa kwa Maria kwa Elizabeti</item>
+        <item>Kuzaliwa kwa Yesu</item>
+        <item>Kutolewa kwa Yesu Hekaluni</item>
+        <item>Kupatikana kwa Yesu Hekaluni</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Uchungu wa Yesu Bustanini</item>
+        <item>Kupigwa Mijeledi kwa Yesu</item>
+        <item>Kuvikwa Taji ya Miiba</item>
+        <item>Kubeba Msalaba</item>
+        <item>Kusulubiwa kwa Yesu</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Ufufuko wa Yesu</item>
+        <item>Kupaa Mbinguni kwa Yesu</item>
+        <item>Kushuka kwa Roho Mtakatifu</item>
+        <item>Kupalizwa Mbinguni kwa Maria</item>
+        <item>Kutawazwa kwa Maria kuwa Malkia</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Ubatizo wa Yesu Mtoni Yordani</item>
+        <item>Harusi ya Kana</item>
+        <item>Kutangazwa kwa Ufalme wa Mungu</item>
+        <item>Kugeuka Sura kwa Yesu</item>
+        <item>Kuanzishwa kwa Ekaristi</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Karibu Sanctus</string>
+    <string name="onboarding_desc_1">Mwenzako mtakatifu kwa ajili ya Liturujia ya Masaa, Rozari, Watakatifu na Kalenda ya Liturujia.</string>
+    <string name="onboarding_title_2">Masaa ya Kanuni</string>
+    <string name="onboarding_desc_2">Pokea vikumbusho vya upole kwa masaa yote sita ya kanuni — Sifa za Asubuhi, Terce, Sext, None, Vespa na Complin.</string>
+    <string name="onboarding_title_3">Rozari Takatifu</string>
+    <string name="onboarding_desc_3">Rozari inayoongozwa kwa uchaguzi wa kiotomatiki wa fumbo kulingana na siku ya wiki.</string>
+    <string name="onboarding_title_4">Watakatifu na Kalenda</string>
+    <string name="onboarding_desc_4">Gundua Mtakatifu wa Leo na uchunguze kalenda nzima ya liturujia — sherehe, maadhimisho makuu, na misimu.</string>
+    <string name="onboarding_next">Endelea</string>
+    <string name="onboarding_skip">Ruka</string>
 </resources>

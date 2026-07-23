@@ -19,4 +19,85 @@
     <string name="notifications">Nhắc Nhở Cầu Nguyện</string>
     <string name="next_bead">Tiếp Theo</string>
     <string name="loading">Đang tải…</string>
+
+    <string name="no_saint_today_title">Hôm Nay Không Có Thánh Được Liệt Kê</string>
+    <string name="no_saint_today_desc">Hãy quay lại vào ngày mai, hoặc xem toàn bộ lịch các thánh.</string>
+
+    <string name="season_advent">Mùa Vọng</string>
+    <string name="season_christmas">Mùa Giáng Sinh</string>
+    <string name="season_lent">Mùa Chay</string>
+    <string name="season_easter">Mùa Phục Sinh</string>
+    <string name="season_ordinary">Mùa Thường Niên</string>
+
+    <string name="hour_lauds">Kinh Sáng</string>
+    <string name="hour_terce">Kinh Giờ Ba</string>
+    <string name="hour_sext">Kinh Giờ Sáu (Kinh Trưa)</string>
+    <string name="hour_none">Kinh Giờ Chín (Kinh Chiều Sớm)</string>
+    <string name="hour_vespers">Kinh Chiều</string>
+    <string name="hour_compline">Kinh Tối</string>
+    <string name="next_hour_value">Kinh Chiều · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Kinh Sáng</item>
+        <item>Kinh Giờ Ba</item>
+        <item>Kinh Giờ Sáu</item>
+        <item>Kinh Giờ Chín</item>
+        <item>Kinh Chiều</item>
+        <item>Kinh Tối</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Hãy bắt đầu ngày mới với Thiên Chúa.</item>
+        <item>Dừng lại. Hít thở. Cầu nguyện.</item>
+        <item>Kinh trưa — một phút giây bình an.</item>
+        <item>Suy niệm buổi chiều.</item>
+        <item>Kinh chiều — dâng lời tạ ơn.</item>
+        <item>Kinh tối — nghỉ ngơi trong bình an của Người.</item>
+    </string-array>
+    <string name="notification_default_title">Giờ Cầu Nguyện</string>
+
+    <string name="prayer_our_father">Kinh Lạy Cha</string>
+    <string name="prayer_hail_mary">Kinh Kính Mừng</string>
+    <string name="prayer_glory_be">Kinh Sáng Danh</string>
+    <string name="rosary_hail_mary_progress">Kinh Kính Mừng · %1$d trên 10</string>
+    <string name="rosary_progress">Chục Kinh %1$d · Hạt %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Truyền Tin</item>
+        <item>Đức Mẹ Thăm Viếng Bà Thánh Elisabeth</item>
+        <item>Chúa Giêsu Giáng Sinh</item>
+        <item>Đức Mẹ Dâng Chúa Giêsu Trong Đền Thánh</item>
+        <item>Tìm Được Chúa Giêsu Trong Đền Thánh</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Chúa Giêsu Hấp Hối Trong Vườn Cây Dầu</item>
+        <item>Chúa Giêsu Chịu Đánh Đòn</item>
+        <item>Chúa Giêsu Chịu Đội Mão Gai</item>
+        <item>Chúa Giêsu Vác Thánh Giá</item>
+        <item>Chúa Giêsu Chịu Đóng Đinh</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Chúa Giêsu Sống Lại</item>
+        <item>Chúa Giêsu Lên Trời</item>
+        <item>Chúa Thánh Thần Hiện Xuống</item>
+        <item>Đức Mẹ Lên Trời</item>
+        <item>Đức Mẹ Được Tôn Vinh Làm Nữ Vương</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Chúa Giêsu Chịu Phép Rửa Tại Sông Giođan</item>
+        <item>Chúa Giêsu Làm Phép Lạ Tại Tiệc Cưới Cana</item>
+        <item>Chúa Giêsu Rao Giảng Nước Trời</item>
+        <item>Chúa Giêsu Biến Hình</item>
+        <item>Chúa Giêsu Lập Bí Tích Thánh Thể</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Chào Mừng Đến Với Sanctus</string>
+    <string name="onboarding_desc_1">Người bạn đồng hành thánh thiện cho Kinh Nhật Tụng, Kinh Mân Côi, Các Thánh và Lịch Phụng Vụ.</string>
+    <string name="onboarding_title_2">Các Giờ Kinh Nhật Tụng</string>
+    <string name="onboarding_desc_2">Nhận những lời nhắc nhở nhẹ nhàng cho cả sáu giờ kinh — Kinh Sáng, Kinh Giờ Ba, Kinh Giờ Sáu, Kinh Giờ Chín, Kinh Chiều và Kinh Tối.</string>
+    <string name="onboarding_title_3">Kinh Mân Côi Thánh</string>
+    <string name="onboarding_desc_3">Kinh Mân Côi có hướng dẫn với việc tự động chọn mầu nhiệm theo ngày trong tuần.</string>
+    <string name="onboarding_title_4">Các Thánh và Lịch Phụng Vụ</string>
+    <string name="onboarding_desc_4">Khám phá vị thánh hôm nay và xem toàn bộ lịch phụng vụ — các lễ kính, lễ trọng và các mùa.</string>
+    <string name="onboarding_next">Tiếp Theo</string>
+    <string name="onboarding_skip">Bỏ Qua</string>
 </resources>

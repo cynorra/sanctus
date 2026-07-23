@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.data.local.entity.SaintEntity;
+import java.util.Objects;
 
 public class SaintListAdapter extends ListAdapter<SaintEntity, SaintListAdapter.ViewHolder> {
 
@@ -19,7 +20,7 @@ public class SaintListAdapter extends ListAdapter<SaintEntity, SaintListAdapter.
     public SaintListAdapter(OnSaintClick listener) {
         super(new DiffUtil.ItemCallback<SaintEntity>() {
             @Override public boolean areItemsTheSame(@NonNull SaintEntity a, @NonNull SaintEntity b) { return a.id == b.id; }
-            @Override public boolean areContentsTheSame(@NonNull SaintEntity a, @NonNull SaintEntity b) { return a.name.equals(b.name); }
+            @Override public boolean areContentsTheSame(@NonNull SaintEntity a, @NonNull SaintEntity b) { return Objects.equals(a.name, b.name); }
         });
         this.listener = listener;
     }

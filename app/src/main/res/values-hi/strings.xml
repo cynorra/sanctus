@@ -19,4 +19,85 @@
     <string name="notifications">प्रार्थना स्मरण</string>
     <string name="next_bead">आगे</string>
     <string name="loading">लोड हो रहा है…</string>
+
+    <string name="no_saint_today_title">आज कोई संत सूचीबद्ध नहीं</string>
+    <string name="no_saint_today_desc">कल फिर देखें, या संतों के पूरे पंचांग को ब्राउज़ करें।</string>
+
+    <string name="season_advent">आगमन काल</string>
+    <string name="season_christmas">क्रिसमस काल</string>
+    <string name="season_lent">चालीसा काल</string>
+    <string name="season_easter">पास्का काल</string>
+    <string name="season_ordinary">सामान्य काल</string>
+
+    <string name="hour_lauds">प्रभात प्रार्थना (स्तुति)</string>
+    <string name="hour_terce">तृतीय प्रहर प्रार्थना</string>
+    <string name="hour_sext">मध्याह्न प्रार्थना</string>
+    <string name="hour_none">अपराह्न प्रार्थना</string>
+    <string name="hour_vespers">संध्या प्रार्थना</string>
+    <string name="hour_compline">रात्रि प्रार्थना</string>
+    <string name="next_hour_value">संध्या प्रार्थना · शाम 06:00</string>
+    <string-array name="hour_names_short">
+        <item>प्रभात</item>
+        <item>तृतीय</item>
+        <item>मध्याह्न</item>
+        <item>अपराह्न</item>
+        <item>संध्या</item>
+        <item>रात्रि</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>अपने दिन की शुरुआत ईश्वर के साथ करें।</item>
+        <item>रुकें। सांस लें। प्रार्थना करें।</item>
+        <item>मध्याह्न प्रार्थना — शांति का एक क्षण।</item>
+        <item>अपराह्न मनन।</item>
+        <item>संध्या प्रार्थना — धन्यवाद दें।</item>
+        <item>रात्रि प्रार्थना — उसकी शांति में विश्राम करें।</item>
+    </string-array>
+    <string name="notification_default_title">प्रार्थना का समय</string>
+
+    <string name="prayer_our_father">हे हमारे पिता</string>
+    <string name="prayer_hail_mary">नमस्कार मरियम</string>
+    <string name="prayer_glory_be">पिता को महिमा</string>
+    <string name="rosary_hail_mary_progress">नमस्कार मरियम · 10 में से %1$d</string>
+    <string name="rosary_progress">दहाई %1$d · मनका %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>मरियम को शुभ संदेश</item>
+        <item>एलिज़बेथ से मरियम की भेंट</item>
+        <item>प्रभु येसु का जन्म</item>
+        <item>मंदिर में प्रभु येसु का समर्पण</item>
+        <item>मंदिर में बालक येसु की प्राप्ति</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>गेथसेमने बारी में प्रभु की वेदना</item>
+        <item>प्रभु का कोड़ों से मार खाना</item>
+        <item>काँटों का मुकुट पहनाया जाना</item>
+        <item>क्रूस उठाना</item>
+        <item>क्रूस पर मृत्यु</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>प्रभु येसु का पुनरुत्थान</item>
+        <item>प्रभु येसु का स्वर्गारोहण</item>
+        <item>पवित्र आत्मा का अवतरण</item>
+        <item>मरियम का स्वर्गारोहण</item>
+        <item>मरियम का राज्याभिषेक</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>यर्दन नदी में प्रभु येसु का बपतिस्मा</item>
+        <item>काना के विवाह में पहला चमत्कार</item>
+        <item>ईश्वर के राज्य की घोषणा</item>
+        <item>प्रभु का रूपांतरण</item>
+        <item>परमप्रसाद संस्कार की स्थापना</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Sanctus में आपका स्वागत है</string>
+    <string name="onboarding_desc_1">घंटों की प्रार्थना, माला, संतों और धार्मिक पंचांग के लिए आपका पवित्र साथी।</string>
+    <string name="onboarding_title_2">घंटों की प्रार्थना</string>
+    <string name="onboarding_desc_2">सभी छह प्रार्थना घंटों — प्रभात, तृतीय, मध्याह्न, अपराह्न, संध्या और रात्रि प्रार्थना — के लिए कोमल स्मरण प्राप्त करें।</string>
+    <string name="onboarding_title_3">पवित्र माला</string>
+    <string name="onboarding_desc_3">सप्ताह के दिन के अनुसार स्वचालित रहस्य चयन के साथ निर्देशित माला।</string>
+    <string name="onboarding_title_4">संत और पंचांग</string>
+    <string name="onboarding_desc_4">आज के संत को जानें और पर्वों, महापर्वों और मौसमों सहित संपूर्ण धार्मिक पंचांग खोजें।</string>
+    <string name="onboarding_next">आगे</string>
+    <string name="onboarding_skip">छोड़ें</string>
 </resources>

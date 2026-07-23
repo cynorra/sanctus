@@ -18,4 +18,85 @@
     <string name="notifications">Подсетници молитве</string>
     <string name="next_bead">Следеће</string>
     <string name="loading">Учитавање…</string>
+
+    <string name="no_saint_today_title">Данас нема наведеног свеца</string>
+    <string name="no_saint_today_desc">Проверите поново сутра или прегледајте цео календар светаца.</string>
+
+    <string name="season_advent">Адвент</string>
+    <string name="season_christmas">Божићно време</string>
+    <string name="season_lent">Ускршњи пост</string>
+    <string name="season_easter">Ускршње време</string>
+    <string name="season_ordinary">Редовно време</string>
+
+    <string name="hour_lauds">Јутрење (Јутарња молитва)</string>
+    <string name="hour_terce">Треће часовно</string>
+    <string name="hour_sext">Шесто часовно (Подневна молитва)</string>
+    <string name="hour_none">Девето часовно (Поподневна молитва)</string>
+    <string name="hour_vespers">Вечерње (Вечерња молитва)</string>
+    <string name="hour_compline">Повечерје (Ноћна молитва)</string>
+    <string name="next_hour_value">Вечерње · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Јутрење</item>
+        <item>Треће часовно</item>
+        <item>Шесто часовно</item>
+        <item>Девето часовно</item>
+        <item>Вечерње</item>
+        <item>Повечерје</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Започни свој дан са Богом.</item>
+        <item>Заустави се. Удахни. Помоли се.</item>
+        <item>Подневна молитва — тренутак мира.</item>
+        <item>Поподневно размишљање.</item>
+        <item>Вечерња молитва — захвали се.</item>
+        <item>Ноћна молитва — почини у Његовом миру.</item>
+    </string-array>
+    <string name="notification_default_title">Време за молитву</string>
+
+    <string name="prayer_our_father">Оче наш</string>
+    <string name="prayer_hail_mary">Здраво Марије</string>
+    <string name="prayer_glory_be">Слава Оцу</string>
+    <string name="rosary_hail_mary_progress">Здраво Марије · %1$d од 10</string>
+    <string name="rosary_progress">Десетица %1$d · Зрно %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Благовести</item>
+        <item>Похођење Марије Јелисавети</item>
+        <item>Рођење Исусово</item>
+        <item>Приказање Исуса у храму</item>
+        <item>Проналажење Исуса у храму</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Исусова агонија у Гетсиманском врту</item>
+        <item>Бичевање Исуса</item>
+        <item>Крунисање трновом круном</item>
+        <item>Ношење крста</item>
+        <item>Распеће Исусово</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Васкрсење Исусово</item>
+        <item>Вазнесење Исусово</item>
+        <item>Силазак Духа Светога</item>
+        <item>Успење Марије</item>
+        <item>Крунисање Марије за Царицу</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Крштење на Јордану</item>
+        <item>Свадба у Кани Галилејској</item>
+        <item>Проглашење Царства Божијег</item>
+        <item>Преображење Господње</item>
+        <item>Установљење Евхаристије</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Добродошли у Sanctus</string>
+    <string name="onboarding_desc_1">Ваш свети сапутник за Часословне молитве, Розарио, свеце и литургијски календар.</string>
+    <string name="onboarding_title_2">Канонски часови</string>
+    <string name="onboarding_desc_2">Примајте благе подсетнике за свих шест канонских часова — Јутрење, Треће часовно, Шесто часовно, Девето часовно, Вечерње и Повечерје.</string>
+    <string name="onboarding_title_3">Свети Розарио</string>
+    <string name="onboarding_desc_3">Вођени Розарио са аутоматским избором тајне према дану у недељи.</string>
+    <string name="onboarding_title_4">Свеци и календар</string>
+    <string name="onboarding_desc_4">Откријте свеца дана и истражите цео литургијски календар — празнике, свечаности и времена.</string>
+    <string name="onboarding_next">Следеће</string>
+    <string name="onboarding_skip">Прескочи</string>
 </resources>

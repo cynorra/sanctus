@@ -27,4 +27,85 @@
     <string name="sorrowful_mysteries">الأسرار الحزينة</string>
     <string name="glorious_mysteries">الأسرار المجيدة</string>
     <string name="luminous_mysteries">الأسرار النورانية</string>
+
+    <string name="no_saint_today_title">لا يوجد قديس لهذا اليوم</string>
+    <string name="no_saint_today_desc">تحقق مرة أخرى غدًا، أو تصفح تقويم القديسين الكامل.</string>
+
+    <string name="season_advent">المجيء</string>
+    <string name="season_christmas">زمن الميلاد</string>
+    <string name="season_lent">الصوم الكبير</string>
+    <string name="season_easter">الزمن الفصحي</string>
+    <string name="season_ordinary">الزمن العادي</string>
+
+    <string name="hour_lauds">صلاة الصبح (التسبيح)</string>
+    <string name="hour_terce">صلاة الساعة الثالثة</string>
+    <string name="hour_sext">صلاة الظهيرة</string>
+    <string name="hour_none">صلاة الساعة التاسعة</string>
+    <string name="hour_vespers">صلاة الغروب</string>
+    <string name="hour_compline">صلاة النوم</string>
+    <string name="next_hour_value">صلاة الغروب · 06:00 مساءً</string>
+    <string-array name="hour_names_short">
+        <item>التسبيح</item>
+        <item>الساعة الثالثة</item>
+        <item>الظهيرة</item>
+        <item>الساعة التاسعة</item>
+        <item>الغروب</item>
+        <item>النوم</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>ابدأ يومك مع الله.</item>
+        <item>توقف. تنفّس. صلِّ.</item>
+        <item>صلاة الظهيرة — لحظة سلام.</item>
+        <item>تأمل بعد الظهر.</item>
+        <item>صلاة الغروب — قدّم الشكر.</item>
+        <item>صلاة النوم — استرح في سلامه.</item>
+    </string-array>
+    <string name="notification_default_title">حان وقت الصلاة</string>
+
+    <string name="prayer_our_father">أبانا الذي في السموات</string>
+    <string name="prayer_hail_mary">السلام عليك يا مريم</string>
+    <string name="prayer_glory_be">المجد للآب</string>
+    <string name="rosary_hail_mary_progress">السلام عليك يا مريم · %1$d من 10</string>
+    <string name="rosary_progress">العشرية %1$d · الحبة %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>البشارة</item>
+        <item>الزيارة</item>
+        <item>الميلاد</item>
+        <item>تقدمة الرب إلى الهيكل</item>
+        <item>وجود يسوع في الهيكل</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>حزن يسوع في البستان</item>
+        <item>جلد يسوع</item>
+        <item>إكليل الشوك</item>
+        <item>حمل الصليب</item>
+        <item>الصلب</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>القيامة</item>
+        <item>الصعود</item>
+        <item>حلول الروح القدس</item>
+        <item>انتقال مريم</item>
+        <item>تتويج مريم ملكة</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>العماد في نهر الأردن</item>
+        <item>عرس قانا الجليل</item>
+        <item>إعلان ملكوت الله</item>
+        <item>التجلي</item>
+        <item>تأسيس سر الإفخارستيا</item>
+    </string-array>
+
+    <string name="onboarding_title_1">أهلاً بك في Sanctus</string>
+    <string name="onboarding_desc_1">رفيقك المقدس لصلاة الساعات والمسبحة والقديسين والتقويم الليتورجي.</string>
+    <string name="onboarding_title_2">الساعات الكنسية</string>
+    <string name="onboarding_desc_2">احصل على تذكيرات لطيفة لجميع الساعات الكنسية الست — التسبيح، الساعة الثالثة، الظهيرة، الساعة التاسعة، الغروب، والنوم.</string>
+    <string name="onboarding_title_3">المسبحة المقدسة</string>
+    <string name="onboarding_desc_3">مسبحة موجّهة مع اختيار تلقائي للأسرار حسب يوم الأسبوع.</string>
+    <string name="onboarding_title_4">القديسون والتقويم</string>
+    <string name="onboarding_desc_4">اكتشف قديس اليوم واستكشف التقويم الليتورجي الكامل — الأعياد والاحتفالات والأزمنة.</string>
+    <string name="onboarding_next">التالي</string>
+    <string name="onboarding_skip">تخطي</string>
 </resources>

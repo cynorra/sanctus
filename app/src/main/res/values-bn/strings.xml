@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sanctus</string>
+    <string name="app_tagline">খ্রিস্টান প্রার্থনার সময়</string>
+    <string name="nav_home">হোম</string>
+    <string name="nav_prayers">প্রার্থনা</string>
+    <string name="nav_rosary">জপমালা</string>
+    <string name="nav_saints">সাধুগণ</string>
+    <string name="nav_calendar">পঞ্জিকা</string>
+    <string name="nav_settings">সেটিংস</string>
+    <string name="liturgical_season">গির্জাবর্ষের কাল</string>
+    <string name="next_hour">পরবর্তী প্রার্থনা</string>
+    <string name="canonical_hours">প্রার্থনা প্রহর</string>
+    <string name="saint_of_day">আজকের সাধু</string>
+    <string name="verse_of_day">আজকের পদ</string>
+    <string name="prayers_title">প্রার্থনাসমূহ</string>
+    <string name="rosary_title">পবিত্র জপমালা</string>
+    <string name="settings_title">সেটিংস</string>
+    <string name="dark_mode">ডার্ক মোড</string>
+    <string name="notifications">প্রার্থনা বিজ্ঞপ্তি</string>
+    <string name="language">ভাষা</string>
+    <string name="text_size">লেখার আকার</string>
+    <string name="next_bead">পরবর্তী</string>
+
+    <string name="no_saint_today_title">আজ কোনো সাধুর স্মরণ নেই</string>
+    <string name="no_saint_today_desc">আগামীকাল আবার দেখুন, অথবা সাধুদের সম্পূর্ণ পঞ্জিকা ব্রাউজ করুন।</string>
+
+    <string name="season_advent">আগমনকাল</string>
+    <string name="season_christmas">বড়দিনের কাল</string>
+    <string name="season_lent">উপবাসকাল</string>
+    <string name="season_easter">পুনরুত্থান কাল</string>
+    <string name="season_ordinary">সাধারণ কাল</string>
+
+    <string name="hour_lauds">প্রভাতী প্রার্থনা (লউডস)</string>
+    <string name="hour_terce">তৃতীয় প্রহর (মধ্য-সকাল)</string>
+    <string name="hour_sext">মধ্যাহ্ন প্রার্থনা (ষষ্ঠ প্রহর)</string>
+    <string name="hour_none">নবম প্রহর (মধ্য-বিকাল)</string>
+    <string name="hour_vespers">সন্ধ্যা প্রার্থনা (ভেসপার্স)</string>
+    <string name="hour_compline">রাত্রি প্রার্থনা (কমপ্লাইন)</string>
+    <string name="next_hour_value">সন্ধ্যা প্রার্থনা · 06:00 PM</string>
+    <string-array name="hour_names_short">
+        <item>প্রভাতী</item>
+        <item>তৃতীয় প্রহর</item>
+        <item>মধ্যাহ্ন</item>
+        <item>নবম প্রহর</item>
+        <item>সন্ধ্যা</item>
+        <item>রাত্রি</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>ঈশ্বরের সাথে দিন শুরু করুন।</item>
+        <item>থামুন। শ্বাস নিন। প্রার্থনা করুন।</item>
+        <item>মধ্যাহ্ন প্রার্থনা — শান্তির এক মুহূর্ত।</item>
+        <item>মধ্য-বিকালের ধ্যান।</item>
+        <item>সন্ধ্যা প্রার্থনা — ধন্যবাদ জ্ঞাপন করুন।</item>
+        <item>রাত্রি প্রার্থনা — তাঁর শান্তিতে বিশ্রাম নিন।</item>
+    </string-array>
+    <string name="notification_default_title">প্রার্থনার সময়</string>
+
+    <string name="prayer_our_father">আমাদের পিতা</string>
+    <string name="prayer_hail_mary">নমস্কার মারীয়া</string>
+    <string name="prayer_glory_be">পিতাকে মহিমা</string>
+    <string name="rosary_hail_mary_progress">নমস্কার মারীয়া · ১০-এ %1$d</string>
+    <string name="rosary_progress">দশক %1$d · দানা %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>স্বর্গদূতের বার্তা</item>
+        <item>মারীয়ার সাক্ষাৎ</item>
+        <item>যীশুর জন্ম</item>
+        <item>মন্দিরে যীশুকে উৎসর্গ</item>
+        <item>মন্দিরে যীশুকে খুঁজে পাওয়া</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>বাগানে যন্ত্রণাভোগ</item>
+        <item>স্তম্ভে কশাঘাত</item>
+        <item>কাঁটার মুকুট পরানো</item>
+        <item>ক্রুশ বহন</item>
+        <item>ক্রুশবিদ্ধকরণ</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>পুনরুত্থান</item>
+        <item>স্বর্গারোহণ</item>
+        <item>পবিত্র আত্মার অবতরণ</item>
+        <item>মারীয়ার স্বর্গারোপণ</item>
+        <item>মারীয়ার মুকুটদান</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>জর্ডনে যীশুর দীক্ষাস্নান</item>
+        <item>কানার বিবাহ</item>
+        <item>ঈশ্বররাজ্যের ঘোষণা</item>
+        <item>রূপান্তর</item>
+        <item>খ্রিস্টযাগের প্রতিষ্ঠা</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Sanctus-এ স্বাগতম</string>
+    <string name="onboarding_desc_1">প্রার্থনা প্রহর, জপমালা, সাধুগণ এবং গির্জাবর্ষের পঞ্জিকার জন্য আপনার পবিত্র সঙ্গী।</string>
+    <string name="onboarding_title_2">প্রার্থনা প্রহর</string>
+    <string name="onboarding_desc_2">ছয়টি প্রার্থনা প্রহরের জন্য কোমল স্মারক পান — প্রভাতী, তৃতীয় প্রহর, মধ্যাহ্ন, নবম প্রহর, সন্ধ্যা ও রাত্রি প্রার্থনা।</string>
+    <string name="onboarding_title_3">পবিত্র জপমালা</string>
+    <string name="onboarding_desc_3">সপ্তাহের দিন অনুযায়ী স্বয়ংক্রিয় রহস্য নির্বাচনসহ গাইডেড জপমালা।</string>
+    <string name="onboarding_title_4">সাধুগণ ও পঞ্জিকা</string>
+    <string name="onboarding_desc_4">আজকের সাধুকে জানুন এবং সম্পূর্ণ গির্জাবর্ষের পঞ্জিকা অন্বেষণ করুন — পর্ব, মহাপর্ব ও ঋতু।</string>
+    <string name="onboarding_next">পরবর্তী</string>
+    <string name="onboarding_skip">এড়িয়ে যান</string>
+</resources>

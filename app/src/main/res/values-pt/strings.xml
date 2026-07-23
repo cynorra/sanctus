@@ -16,4 +16,85 @@
     <string name="rosary_title">Santo Rosário</string>
     <string name="next_bead">Próximo</string>
     <string name="prayers_title">Orações</string>
+
+    <string name="no_saint_today_title">Nenhum Santo Listado Hoje</string>
+    <string name="no_saint_today_desc">Volte amanhã ou navegue pelo calendário completo dos santos.</string>
+
+    <string name="season_advent">Advento</string>
+    <string name="season_christmas">Tempo do Natal</string>
+    <string name="season_lent">Quaresma</string>
+    <string name="season_easter">Tempo Pascal</string>
+    <string name="season_ordinary">Tempo Comum</string>
+
+    <string name="hour_lauds">Laudes (Oração da Manhã)</string>
+    <string name="hour_terce">Tércia (Meio da Manhã)</string>
+    <string name="hour_sext">Sexta (Oração do Meio-Dia)</string>
+    <string name="hour_none">Noa (Meio da Tarde)</string>
+    <string name="hour_vespers">Vésperas (Oração da Tarde)</string>
+    <string name="hour_compline">Completas (Oração da Noite)</string>
+    <string name="next_hour_value">Vésperas · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Laudes</item>
+        <item>Tércia</item>
+        <item>Sexta</item>
+        <item>Noa</item>
+        <item>Vésperas</item>
+        <item>Completas</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Comece o seu dia com Deus.</item>
+        <item>Pare. Respire. Reze.</item>
+        <item>Oração do meio-dia — um momento de paz.</item>
+        <item>Reflexão da tarde.</item>
+        <item>Oração da tarde — dê graças.</item>
+        <item>Oração da noite — descanse em Sua paz.</item>
+    </string-array>
+    <string name="notification_default_title">Hora de Rezar</string>
+
+    <string name="prayer_our_father">Pai Nosso</string>
+    <string name="prayer_hail_mary">Ave Maria</string>
+    <string name="prayer_glory_be">Glória ao Pai</string>
+    <string name="rosary_hail_mary_progress">Ave Maria · %1$d de 10</string>
+    <string name="rosary_progress">Dezena %1$d · Conta %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Anunciação</item>
+        <item>Visitação</item>
+        <item>Natividade</item>
+        <item>Apresentação no Templo</item>
+        <item>Encontro de Jesus no Templo</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Agonia no Horto</item>
+        <item>Flagelação</item>
+        <item>Coroação de Espinhos</item>
+        <item>Jesus Carrega a Cruz</item>
+        <item>Crucificação</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Ressurreição</item>
+        <item>Ascensão</item>
+        <item>Descida do Espírito Santo</item>
+        <item>Assunção de Maria</item>
+        <item>Coroação de Maria</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Batismo no Jordão</item>
+        <item>Bodas de Caná</item>
+        <item>Anúncio do Reino de Deus</item>
+        <item>Transfiguração</item>
+        <item>Instituição da Eucaristia</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Bem-vindo ao Sanctus</string>
+    <string name="onboarding_desc_1">Seu companheiro sagrado para a Liturgia das Horas, o Rosário, os Santos e o Calendário Litúrgico.</string>
+    <string name="onboarding_title_2">Horas Canônicas</string>
+    <string name="onboarding_desc_2">Receba lembretes suaves para todas as seis horas canônicas — Laudes, Tércia, Sexta, Noa, Vésperas e Completas.</string>
+    <string name="onboarding_title_3">Santo Rosário</string>
+    <string name="onboarding_desc_3">Rosário guiado com seleção automática do mistério de acordo com o dia da semana.</string>
+    <string name="onboarding_title_4">Santos e Calendário</string>
+    <string name="onboarding_desc_4">Descubra o Santo do Dia e explore o calendário litúrgico completo — festas, solenidades e tempos litúrgicos.</string>
+    <string name="onboarding_next">Próximo</string>
+    <string name="onboarding_skip">Pular</string>
 </resources>

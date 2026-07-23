@@ -19,4 +19,85 @@
     <string name="notifications">Напоминания о молитве</string>
     <string name="next_bead">Далее</string>
     <string name="loading">Загрузка…</string>
+
+    <string name="no_saint_today_title">Сегодня нет памяти святого</string>
+    <string name="no_saint_today_desc">Загляните завтра или просмотрите полный календарь святых.</string>
+
+    <string name="season_advent">Адвент</string>
+    <string name="season_christmas">Рождественское время</string>
+    <string name="season_lent">Великий пост</string>
+    <string name="season_easter">Пасхальное время</string>
+    <string name="season_ordinary">Рядовое время</string>
+
+    <string name="hour_lauds">Хвалитны (Утренняя молитва)</string>
+    <string name="hour_terce">Третий час (Середина утра)</string>
+    <string name="hour_sext">Шестой час (Полуденная молитва)</string>
+    <string name="hour_none">Девятый час (Середина дня)</string>
+    <string name="hour_vespers">Вечерня (Вечерняя молитва)</string>
+    <string name="hour_compline">Повечерие (Ночная молитва)</string>
+    <string name="next_hour_value">Вечерня · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Хвалитны</item>
+        <item>Третий час</item>
+        <item>Шестой час</item>
+        <item>Девятый час</item>
+        <item>Вечерня</item>
+        <item>Повечерие</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Начните свой день с Богом.</item>
+        <item>Остановитесь. Вдохните. Помолитесь.</item>
+        <item>Полуденная молитва — момент покоя.</item>
+        <item>Послеполуденное размышление.</item>
+        <item>Вечерняя молитва — возблагодарите.</item>
+        <item>Ночная молитва — почейте в Его мире.</item>
+    </string-array>
+    <string name="notification_default_title">Время Молитвы</string>
+
+    <string name="prayer_our_father">Отче наш</string>
+    <string name="prayer_hail_mary">Радуйся, Мария</string>
+    <string name="prayer_glory_be">Слава Отцу</string>
+    <string name="rosary_hail_mary_progress">Радуйся, Мария · %1$d из 10</string>
+    <string name="rosary_progress">Десяток %1$d · Бусина %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Благовещение</item>
+        <item>Посещение Елизаветы</item>
+        <item>Рождество Христово</item>
+        <item>Сретение Господне</item>
+        <item>Обретение Отрока Иисуса в Храме</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Моление о чаше в Гефсиманском саду</item>
+        <item>Бичевание Христа</item>
+        <item>Увенчание тернием</item>
+        <item>Несение Креста</item>
+        <item>Распятие и смерть Господа</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Воскресение Христово</item>
+        <item>Вознесение Господне</item>
+        <item>Сошествие Святого Духа</item>
+        <item>Успение Пресвятой Богородицы</item>
+        <item>Коронование Девы Марии</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Крещение Господне в Иордане</item>
+        <item>Брак в Кане Галилейской</item>
+        <item>Провозглашение Царства Божия</item>
+        <item>Преображение Господне</item>
+        <item>Установление Евхаристии</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Добро пожаловать в Sanctus</string>
+    <string name="onboarding_desc_1">Ваш священный спутник в Литургии часов, Розарии, житиях святых и литургическом календаре.</string>
+    <string name="onboarding_title_2">Канонические часы</string>
+    <string name="onboarding_desc_2">Получайте мягкие напоминания обо всех шести канонических часах — Хвалитнах, Третьем часе, Шестом часе, Девятом часе, Вечерне и Повечерии.</string>
+    <string name="onboarding_title_3">Святой Розарий</string>
+    <string name="onboarding_desc_3">Розарий с пошаговым руководством и автоматическим выбором тайны в зависимости от дня недели.</string>
+    <string name="onboarding_title_4">Святые и календарь</string>
+    <string name="onboarding_desc_4">Узнайте, кто сегодня святой дня, и изучите полный литургический календарь — праздники, торжества и литургические периоды.</string>
+    <string name="onboarding_next">Далее</string>
+    <string name="onboarding_skip">Пропустить</string>
 </resources>

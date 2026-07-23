@@ -15,4 +15,85 @@
     <string name="notifications">Notificaciones</string>
     <string name="rosary_title">Santo Rosario</string>
     <string name="next_bead">Siguiente</string>
+
+    <string name="no_saint_today_title">No Hay Santo Listado Hoy</string>
+    <string name="no_saint_today_desc">Vuelva a consultar mañana, o explore el calendario completo de santos.</string>
+
+    <string name="season_advent">Adviento</string>
+    <string name="season_christmas">Tiempo de Navidad</string>
+    <string name="season_lent">Cuaresma</string>
+    <string name="season_easter">Tiempo Pascual</string>
+    <string name="season_ordinary">Tiempo Ordinario</string>
+
+    <string name="hour_lauds">Laudes (Oración de la Mañana)</string>
+    <string name="hour_terce">Tercia (Media Mañana)</string>
+    <string name="hour_sext">Sexta (Oración del Mediodía)</string>
+    <string name="hour_none">Nona (Media Tarde)</string>
+    <string name="hour_vespers">Vísperas (Oración de la Tarde)</string>
+    <string name="hour_compline">Completas (Oración de la Noche)</string>
+    <string name="next_hour_value">Vísperas · 06:00 PM</string>
+    <string-array name="hour_names_short">
+        <item>Laudes</item>
+        <item>Tercia</item>
+        <item>Sexta</item>
+        <item>Nona</item>
+        <item>Vísperas</item>
+        <item>Completas</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Comienza tu día con Dios.</item>
+        <item>Detente. Respira. Ora.</item>
+        <item>Oración del mediodía — un momento de paz.</item>
+        <item>Reflexión de media tarde.</item>
+        <item>Oración de la tarde — da gracias.</item>
+        <item>Oración de la noche — descansa en su paz.</item>
+    </string-array>
+    <string name="notification_default_title">Hora de Orar</string>
+
+    <string name="prayer_our_father">Padre Nuestro</string>
+    <string name="prayer_hail_mary">Ave María</string>
+    <string name="prayer_glory_be">Gloria al Padre</string>
+    <string name="rosary_hail_mary_progress">Ave María · %1$d de 10</string>
+    <string name="rosary_progress">Década %1$d · Cuenta %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>La Anunciación</item>
+        <item>La Visitación</item>
+        <item>La Natividad</item>
+        <item>La Presentación</item>
+        <item>El Niño Perdido y Hallado en el Templo</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>La Agonía en el Huerto</item>
+        <item>La Flagelación</item>
+        <item>La Coronación de Espinas</item>
+        <item>Jesús con la Cruz a Cuestas</item>
+        <item>La Crucifixión</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>La Resurrección</item>
+        <item>La Ascensión</item>
+        <item>La Venida del Espíritu Santo</item>
+        <item>La Asunción de María</item>
+        <item>La Coronación de María</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>El Bautismo en el Jordán</item>
+        <item>Las Bodas de Caná</item>
+        <item>El Anuncio del Reino de Dios</item>
+        <item>La Transfiguración</item>
+        <item>La Institución de la Eucaristía</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Bienvenido a Sanctus</string>
+    <string name="onboarding_desc_1">Tu compañero sagrado para la Liturgia de las Horas, el Rosario, los Santos y el Calendario Litúrgico.</string>
+    <string name="onboarding_title_2">Horas Canónicas</string>
+    <string name="onboarding_desc_2">Recibe recordatorios suaves para las seis horas canónicas — Laudes, Tercia, Sexta, Nona, Vísperas y Completas.</string>
+    <string name="onboarding_title_3">Santo Rosario</string>
+    <string name="onboarding_desc_3">Rosario guiado con selección automática de misterios según el día de la semana.</string>
+    <string name="onboarding_title_4">Santos y Calendario</string>
+    <string name="onboarding_desc_4">Descubre el Santo del Día y explora el calendario litúrgico completo — fiestas, solemnidades y tiempos.</string>
+    <string name="onboarding_next">Siguiente</string>
+    <string name="onboarding_skip">Omitir</string>
 </resources>

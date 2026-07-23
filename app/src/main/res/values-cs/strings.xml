@@ -18,4 +18,85 @@
     <string name="notifications">Připomínky modlitby</string>
     <string name="next_bead">Další</string>
     <string name="loading">Načítání…</string>
+
+    <string name="no_saint_today_title">Dnes není uveden žádný svatý</string>
+    <string name="no_saint_today_desc">Zkontrolujte zítra, nebo si prohlédněte celý kalendář svatých.</string>
+
+    <string name="season_advent">Advent</string>
+    <string name="season_christmas">Vánoční doba</string>
+    <string name="season_lent">Postní doba</string>
+    <string name="season_easter">Velikonoční doba</string>
+    <string name="season_ordinary">Liturgické mezidobí</string>
+
+    <string name="hour_lauds">Ranní chvály</string>
+    <string name="hour_terce">Modlitba uprostřed dopoledne</string>
+    <string name="hour_sext">Modlitba v pravé poledne</string>
+    <string name="hour_none">Modlitba uprostřed odpoledne</string>
+    <string name="hour_vespers">Nešpory</string>
+    <string name="hour_compline">Kompletář</string>
+    <string name="next_hour_value">Nešpory · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Ranní chvály</item>
+        <item>Dopoledne</item>
+        <item>Poledne</item>
+        <item>Odpoledne</item>
+        <item>Nešpory</item>
+        <item>Kompletář</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Začněte svůj den s Bohem.</item>
+        <item>Zastavte se. Nadechněte se. Modlete se.</item>
+        <item>Polední modlitba — chvíle klidu.</item>
+        <item>Odpolední zamyšlení.</item>
+        <item>Večerní modlitba — vzdejte díky.</item>
+        <item>Noční modlitba — odpočiňte v Jeho pokoji.</item>
+    </string-array>
+    <string name="notification_default_title">Čas modlitby</string>
+
+    <string name="prayer_our_father">Otče náš</string>
+    <string name="prayer_hail_mary">Zdrávas Maria</string>
+    <string name="prayer_glory_be">Sláva Otci</string>
+    <string name="rosary_hail_mary_progress">Zdrávas Maria · %1$d z 10</string>
+    <string name="rosary_progress">Desátek %1$d · Zrnko %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Zvěstování Panně Marii</item>
+        <item>Navštívení Panny Marie</item>
+        <item>Narození Páně</item>
+        <item>Obětování Páně</item>
+        <item>Nalezení Ježíše v chrámu</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Ježíšova modlitba a úzkost v zahradě</item>
+        <item>Bičování Páně</item>
+        <item>Korunování trním</item>
+        <item>Ježíš nese kříž</item>
+        <item>Ukřižování Páně</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Zmrtvýchvstání Páně</item>
+        <item>Nanebevstoupení Páně</item>
+        <item>Seslání Ducha Svatého</item>
+        <item>Nanebevzetí Panny Marie</item>
+        <item>Korunování Panny Marie</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Křest Páně v Jordánu</item>
+        <item>Svatba v Káně Galilejské</item>
+        <item>Hlásání Božího království</item>
+        <item>Proměnění Páně na hoře Tábor</item>
+        <item>Ustanovení Eucharistie</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Vítejte v aplikaci Sanctus</string>
+    <string name="onboarding_desc_1">Váš duchovní společník pro breviář, růženec, svaté a liturgický kalendář.</string>
+    <string name="onboarding_title_2">Kanonické hodinky</string>
+    <string name="onboarding_desc_2">Dostávejte jemná připomenutí pro všech šest kanonických hodinek — ranní chvály, dopoledne, poledne, odpoledne, nešpory a kompletář.</string>
+    <string name="onboarding_title_3">Svatý růženec</string>
+    <string name="onboarding_desc_3">Vedený růženec s automatickým výběrem tajemství podle dne v týdnu.</string>
+    <string name="onboarding_title_4">Svatí a kalendář</string>
+    <string name="onboarding_desc_4">Objevte světce dne a prozkoumejte celý liturgický kalendář — svátky, slavnosti a liturgická období.</string>
+    <string name="onboarding_next">Další</string>
+    <string name="onboarding_skip">Přeskočit</string>
 </resources>

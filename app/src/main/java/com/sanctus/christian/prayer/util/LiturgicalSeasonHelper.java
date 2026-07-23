@@ -1,5 +1,7 @@
 package com.sanctus.christian.prayer.util;
 
+import android.content.Context;
+import com.sanctus.christian.prayer.R;
 import java.util.Calendar;
 
 public class LiturgicalSeasonHelper {
@@ -11,10 +13,10 @@ public class LiturgicalSeasonHelper {
         int day = now.get(Calendar.DAY_OF_MONTH);
 
         // Simplified liturgical season detection
-        if ((month == 12 && day >= 1) || (month == 12 && day <= 24)) return Season.ADVENT;
-        if ((month == 12 && day >= 25) || (month == 1)) return Season.CHRISTMAS;
-        if (month == 2 && day >= 14 && month == 4) return Season.LENT;
-        if (month >= 4 && month <= 5) return Season.EASTER;
+        if (month == 12 && day <= 24) return Season.ADVENT;
+        if ((month == 12 && day >= 25) || month == 1) return Season.CHRISTMAS;
+        if ((month == 2 && day >= 14) || month == 3) return Season.LENT;
+        if (month == 4 || month == 5) return Season.EASTER;
         return Season.ORDINARY;
     }
 
@@ -28,13 +30,13 @@ public class LiturgicalSeasonHelper {
         }
     }
 
-    public static String getSeasonName(Season season) {
+    public static String getSeasonName(Context context, Season season) {
         switch (season) {
-            case ADVENT: return "Advent";
-            case CHRISTMAS: return "Christmas Season";
-            case LENT: return "Lent";
-            case EASTER: return "Easter Season";
-            default: return "Ordinary Time";
+            case ADVENT: return context.getString(R.string.season_advent);
+            case CHRISTMAS: return context.getString(R.string.season_christmas);
+            case LENT: return context.getString(R.string.season_lent);
+            case EASTER: return context.getString(R.string.season_easter);
+            default: return context.getString(R.string.season_ordinary);
         }
     }
 }

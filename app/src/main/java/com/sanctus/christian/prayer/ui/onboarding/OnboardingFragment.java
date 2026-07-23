@@ -1,6 +1,9 @@
 package com.sanctus.christian.prayer.ui.onboarding;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +12,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.tabs.TabLayout;
@@ -20,12 +26,10 @@ import com.sanctus.christian.prayer.ui.main.MainActivity;
 
 public class OnboardingFragment extends Fragment {
 
-    private static final String[][] PAGES = {
-        {"Welcome to Sanctus", "Your sacred companion for the Liturgy of the Hours, Rosary, Saints, and Liturgical Calendar."},
-        {"Canonical Hours", "Receive gentle reminders for all six canonical hours — Lauds, Terce, Sext, None, Vespers, and Compline."},
-        {"Holy Rosary", "Guided Rosary with automatic mystery selection based on the day of the week."},
-        {"Saints & Calendar", "Discover the Saint of the Day and explore the full liturgical calendar — feasts, solemnities, and seasons."},
-    };
+    private final ActivityResultLauncher<String> notifPermissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), granted -> proceedToMain());
+
+    private String[][] pages;
 
     @Nullable @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -37,6 +41,13 @@ public class OnboardingFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        pages = new String[][]{
+            {getString(R.string.onboarding_title_1), getString(R.string.onboarding_desc_1)},
+            {getString(R.string.onboarding_title_2), getString(R.string.onboarding_desc_2)},
+            {getString(R.string.onboarding_title_3), getString(R.string.onboarding_desc_3)},
+            {getString(R.string.onboarding_title_4), getString(R.string.onboarding_desc_4)},
+        };
+
         ViewPager2 pager = view.findViewById(R.id.onboarding_pager);
         TabLayout dots = view.findViewById(R.id.onboarding_dots);
         Button btnNext = view.findViewById(R.id.btn_onboarding_next);
@@ -44,24 +55,24 @@ public class OnboardingFragment extends Fragment {
         TextView tvTitle = view.findViewById(R.id.tv_onboarding_title);
         TextView tvDesc = view.findViewById(R.id.tv_onboarding_desc);
 
-        OnboardingPagerAdapter adapter = new OnboardingPagerAdapter(PAGES);
+        OnboardingPagerAdapter adapter = new OnboardingPagerAdapter(pages);
         pager.setAdapter(adapter);
         new TabLayoutMediator(dots, pager, (tab, pos) -> {}).attach();
 
         pager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override public void onPageSelected(int position) {
-                tvTitle.setText(PAGES[position][0]);
-                tvDesc.setText(PAGES[position][1]);
-                boolean isLast = position == PAGES.length - 1;
-                btnNext.setText(isLast ? "Get Started" : "Next");
+                tvTitle.setText(pages[position][0]);
+                tvDesc.setText(pages[position][1]);
+                boolean isLast = position == pages.length - 1;
+                btnNext.setText(isLast ? getString(R.string.onboarding_get_started) : getString(R.string.onboarding_next));
             }
         });
-        tvTitle.setText(PAGES[0][0]);
-        tvDesc.setText(PAGES[0][1]);
+        tvTitle.setText(pages[0][0]);
+        tvDesc.setText(pages[0][1]);
 
         btnNext.setOnClickListener(v -> {
             int cur = pager.getCurrentItem();
-            if (cur < PAGES.length - 1) {
+            if (cur < pages.length - 1) {
                 pager.setCurrentItem(cur + 1);
             } else {
                 finishOnboarding();
@@ -73,6 +84,17 @@ public class OnboardingFragment extends Fragment {
     private void finishOnboarding() {
         SanctusApplication.getInstance().getSettingsRepository()
                 .setNotificationsEnabled(true);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
+                ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.POST_NOTIFICATIONS)
+                        != PackageManager.PERMISSION_GRANTED) {
+            notifPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
+        } else {
+            proceedToMain();
+        }
+    }
+
+    private void proceedToMain() {
         PrayerAlarmManager.scheduleAll(requireContext());
         startActivity(new Intent(requireContext(), MainActivity.class));
         requireActivity().finish();

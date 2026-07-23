@@ -37,17 +37,17 @@ public class DashboardFragment extends Fragment {
         // Season
         TextView tvSeason = view.findViewById(R.id.tv_liturgical_season);
         LiturgicalSeasonHelper.Season season = LiturgicalSeasonHelper.getCurrentSeason();
-        tvSeason.setText(LiturgicalSeasonHelper.getSeasonName(season));
+        tvSeason.setText(LiturgicalSeasonHelper.getSeasonName(requireContext(), season));
 
         // Next canonical hour
         TextView tvNextHour = view.findViewById(R.id.tv_next_hour);
-        tvNextHour.setText(com.sanctus.christian.prayer.util.PrayerTimeCalculator.getNextHour());
+        tvNextHour.setText(com.sanctus.christian.prayer.util.PrayerTimeCalculator.getNextHour(requireContext()));
 
         // Prayer times recycler
         RecyclerView rvPrayerTimes = view.findViewById(R.id.rv_prayer_times);
         rvPrayerTimes.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false));
         PrayerTimeAdapter adapter = new PrayerTimeAdapter(
-                com.sanctus.christian.prayer.util.PrayerTimeCalculator.getCanonicalHours()
+                com.sanctus.christian.prayer.util.PrayerTimeCalculator.getCanonicalHours(requireContext())
         );
         rvPrayerTimes.setAdapter(adapter);
     }

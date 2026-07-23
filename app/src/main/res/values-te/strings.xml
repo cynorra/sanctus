@@ -21,4 +21,85 @@
     <string name="category_morning">ఉదయం</string>
     <string name="category_evening">సాయంత్రం</string>
     <string name="loading">లోడ్ అవుతోంది…</string>
+
+    <string name="no_saint_today_title">ఈరోజు సాధువు జాబితా చేయబడలేదు</string>
+    <string name="no_saint_today_desc">రేపు మళ్లీ చూడండి, లేదా సాధువుల పూర్తి క్యాలెండర్‌ను బ్రౌజ్ చేయండి.</string>
+
+    <string name="season_advent">రాకడ కాలం</string>
+    <string name="season_christmas">క్రిస్మస్ కాలం</string>
+    <string name="season_lent">ఉపవాస కాలం</string>
+    <string name="season_easter">ఈస్టర్ కాలం</string>
+    <string name="season_ordinary">సాధారణ కాలం</string>
+
+    <string name="hour_lauds">ఉదయ స్తుతి (ఉదయ ప్రార్థన)</string>
+    <string name="hour_terce">మూడవ గంట ప్రార్థన</string>
+    <string name="hour_sext">మధ్యాహ్న ప్రార్థన</string>
+    <string name="hour_none">అపరాహ్న ప్రార్థన</string>
+    <string name="hour_vespers">సాయంత్ర ప్రార్థన</string>
+    <string name="hour_compline">రాత్రి ప్రార్థన</string>
+    <string name="next_hour_value">సాయంత్ర ప్రార్థన · సా. 6:00</string>
+    <string-array name="hour_names_short">
+        <item>ఉదయ స్తుతి</item>
+        <item>మూడవ గంట</item>
+        <item>మధ్యాహ్న ప్రార్థన</item>
+        <item>అపరాహ్న ప్రార్థన</item>
+        <item>సాయంత్ర ప్రార్థన</item>
+        <item>రాత్రి ప్రార్థన</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>మీ రోజును దేవునితో ప్రారంభించండి.</item>
+        <item>ఆగండి. శ్వాస తీసుకోండి. ప్రార్థించండి.</item>
+        <item>మధ్యాహ్న ప్రార్థన — శాంతి క్షణం.</item>
+        <item>అపరాహ్న ధ్యానం.</item>
+        <item>సాయంత్ర ప్రార్థన — కృతజ్ఞతలు తెలుపండి.</item>
+        <item>రాత్రి ప్రార్థన — ఆయన శాంతిలో విశ్రమించండి.</item>
+    </string-array>
+    <string name="notification_default_title">ప్రార్థనా సమయం</string>
+
+    <string name="prayer_our_father">పరలోకమందున్న మా తండ్రీ</string>
+    <string name="prayer_hail_mary">నమస్కారము మరియమ్మా</string>
+    <string name="prayer_glory_be">తండ్రికి మహిమ</string>
+    <string name="rosary_hail_mary_progress">నమస్కారము మరియమ్మా · 10లో %1$d</string>
+    <string name="rosary_progress">దశకం %1$d · పూస %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>దూత వర్తమానం</item>
+        <item>మరియ ఎలిజబెత్‌ను దర్శించడం</item>
+        <item>యేసు జననం</item>
+        <item>యేసును దేవాలయంలో సమర్పించడం</item>
+        <item>యేసును దేవాలయంలో కనుగొనడం</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>తోటలో యేసు వేదన</item>
+        <item>యేసును కొరడాలతో కొట్టడం</item>
+        <item>ముళ్ల కిరీటం ధరింపజేయడం</item>
+        <item>సిలువను మోయడం</item>
+        <item>యేసు సిలువ వేయబడటం</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>యేసు పునరుత్థానం</item>
+        <item>యేసు ఆరోహణం</item>
+        <item>పరిశుద్ధాత్మ అవతరణం</item>
+        <item>మరియ పరలోకారోహణం</item>
+        <item>మరియకు రాణి పట్టాభిషేకం</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>యోర్దానులో యేసు బాప్తిస్మం</item>
+        <item>కానాలో వివాహం</item>
+        <item>దేవుని రాజ్య ప్రకటన</item>
+        <item>యేసు రూపాంతరం</item>
+        <item>పరిశుద్ధ కుర్బానా స్థాపన</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Sanctusకు స్వాగతం</string>
+    <string name="onboarding_desc_1">గంట ప్రార్థన, జపమాల, సాధువులు మరియు ఆరాధన క్యాలెండర్ కోసం మీ పవిత్ర సహచరుడు.</string>
+    <string name="onboarding_title_2">నియమిత గంటలు</string>
+    <string name="onboarding_desc_2">ఆరు నియమిత గంటలకూ సున్నితమైన రిమైండర్లు పొందండి — ఉదయ స్తుతి, మూడవ గంట, మధ్యాహ్న ప్రార్థన, అపరాహ్న ప్రార్థన, సాయంత్ర ప్రార్థన మరియు రాత్రి ప్రార్థన.</string>
+    <string name="onboarding_title_3">పవిత్ర జపమాల</string>
+    <string name="onboarding_desc_3">వారంలోని రోజును బట్టి స్వయంచాలకంగా రహస్యం ఎంచుకునే మార్గదర్శక జపమాల.</string>
+    <string name="onboarding_title_4">సాధువులు మరియు క్యాలెండర్</string>
+    <string name="onboarding_desc_4">నేటి సాధువును కనుగొనండి మరియు పండుగలు, మహా పండుగలు మరియు కాలాలతో కూడిన పూర్తి ఆరాధన క్యాలెండర్‌ను అన్వేషించండి.</string>
+    <string name="onboarding_next">తదుపరి</string>
+    <string name="onboarding_skip">దాటవేయి</string>
 </resources>

@@ -18,4 +18,85 @@
     <string name="notifications">Pripomienky modlitby</string>
     <string name="next_bead">Ďalej</string>
     <string name="loading">Načítavam…</string>
+
+    <string name="no_saint_today_title">Dnes nie je uvedený žiadny svätý</string>
+    <string name="no_saint_today_desc">Skúste to zajtra, alebo si prezrite celý kalendár svätých.</string>
+
+    <string name="season_advent">Advent</string>
+    <string name="season_christmas">Vianočné obdobie</string>
+    <string name="season_lent">Pôst</string>
+    <string name="season_easter">Veľkonočné obdobie</string>
+    <string name="season_ordinary">Cezročné obdobie</string>
+
+    <string name="hour_lauds">Ranné chvály</string>
+    <string name="hour_terce">Predpoludňajšie hodinky (Tercia)</string>
+    <string name="hour_sext">Poludňajšie hodinky (Sexta)</string>
+    <string name="hour_none">Popoludňajšie hodinky (Nona)</string>
+    <string name="hour_vespers">Vešpery (Večerné chvály)</string>
+    <string name="hour_compline">Kompletórium (Nočná modlitba)</string>
+    <string name="next_hour_value">Vešpery · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Ranné chvály</item>
+        <item>Tercia</item>
+        <item>Sexta</item>
+        <item>Nona</item>
+        <item>Vešpery</item>
+        <item>Kompletórium</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Začni svoj deň s Bohom.</item>
+        <item>Zastav sa. Nadýchni sa. Modli sa.</item>
+        <item>Poludňajšia modlitba — chvíľa pokoja.</item>
+        <item>Popoludňajšie zamyslenie.</item>
+        <item>Večerná modlitba — vzdaj vďaku.</item>
+        <item>Nočná modlitba — odpočiň si v Jeho pokoji.</item>
+    </string-array>
+    <string name="notification_default_title">Čas modlitby</string>
+
+    <string name="prayer_our_father">Otče náš</string>
+    <string name="prayer_hail_mary">Zdravas Mária</string>
+    <string name="prayer_glory_be">Sláva Otcu</string>
+    <string name="rosary_hail_mary_progress">Zdravas Mária · %1$d z 10</string>
+    <string name="rosary_progress">Desiatok %1$d · Zrnko %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Zvestovanie Pána</item>
+        <item>Navštívenie Panny Márie</item>
+        <item>Narodenie Pána</item>
+        <item>Obetovanie Pána</item>
+        <item>Nájdenie Ježiša v chráme</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Ježišova úzkosť v Getsemanskej záhrade</item>
+        <item>Bičovanie Pána Ježiša</item>
+        <item>Korunovanie tŕním</item>
+        <item>Ježiš nesie kríž</item>
+        <item>Ukrižovanie Pána</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Zmŕtvychvstanie Pána</item>
+        <item>Nanebovstúpenie Pána</item>
+        <item>Zoslanie Ducha Svätého</item>
+        <item>Nanebovzatie Panny Márie</item>
+        <item>Korunovanie Panny Márie za Kráľovnú</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Krst Pána Ježiša v Jordáne</item>
+        <item>Svadba v Káne Galilejskej</item>
+        <item>Ohlasovanie Božieho kráľovstva</item>
+        <item>Premenenie Pána</item>
+        <item>Ustanovenie Eucharistie</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Vitajte v Sanctus</string>
+    <string name="onboarding_desc_1">Váš posvätný spoločník pre Liturgiu hodín, ruženec, svätých a liturgický kalendár.</string>
+    <string name="onboarding_title_2">Kanonické hodinky</string>
+    <string name="onboarding_desc_2">Dostávajte jemné pripomienky pre všetkých šesť kanonických hodiniek — ranné chvály, terciu, sextu, nonu, vešpery a kompletórium.</string>
+    <string name="onboarding_title_3">Svätý ruženec</string>
+    <string name="onboarding_desc_3">Sprevádzaná modlitba ruženca s automatickým výberom tajomstva podľa dňa v týždni.</string>
+    <string name="onboarding_title_4">Svätí a kalendár</string>
+    <string name="onboarding_desc_4">Objavte svätého dňa a preskúmajte celý liturgický kalendár — sviatky, slávnosti a obdobia.</string>
+    <string name="onboarding_next">Ďalej</string>
+    <string name="onboarding_skip">Preskočiť</string>
 </resources>

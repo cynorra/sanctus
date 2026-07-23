@@ -21,4 +21,85 @@
     <string name="category_morning">早祷</string>
     <string name="category_evening">晚祷</string>
     <string name="loading">加载中…</string>
+
+    <string name="no_saint_today_title">今日无圣人纪念</string>
+    <string name="no_saint_today_desc">请明天再查看，或浏览完整的圣人历。</string>
+
+    <string name="season_advent">将临期</string>
+    <string name="season_christmas">圣诞期</string>
+    <string name="season_lent">四旬期</string>
+    <string name="season_easter">复活期</string>
+    <string name="season_ordinary">常年期</string>
+
+    <string name="hour_lauds">晨祷（早祷）</string>
+    <string name="hour_terce">三时经</string>
+    <string name="hour_sext">六时经（午祷）</string>
+    <string name="hour_none">九时经（午后祷）</string>
+    <string name="hour_vespers">晚祷</string>
+    <string name="hour_compline">夜祷</string>
+    <string name="next_hour_value">晚祷 · 下午6:00</string>
+    <string-array name="hour_names_short">
+        <item>晨祷</item>
+        <item>三时经</item>
+        <item>六时经</item>
+        <item>九时经</item>
+        <item>晚祷</item>
+        <item>夜祷</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>与天主一同开始新的一天。</item>
+        <item>停下来。深呼吸。祈祷。</item>
+        <item>午祷——片刻的平安。</item>
+        <item>午后默想。</item>
+        <item>晚祷——感恩的时刻。</item>
+        <item>夜祷——安息在祂的平安中。</item>
+    </string-array>
+    <string name="notification_default_title">祈祷时间</string>
+
+    <string name="prayer_our_father">天主经</string>
+    <string name="prayer_hail_mary">圣母经</string>
+    <string name="prayer_glory_be">圣三光荣经</string>
+    <string name="rosary_hail_mary_progress">圣母经 · 第%1$d遍（共10遍）</string>
+    <string name="rosary_progress">第%1$d端 · 第%2$d颗</string>
+
+    <string-array name="mysteries_joyful">
+        <item>天使报喜</item>
+        <item>圣母往见表姐依撒伯尔</item>
+        <item>耶稣圣诞</item>
+        <item>圣母献耶稣于圣殿</item>
+        <item>耶稣在圣殿中讲道</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>耶稣在山园祈祷忧闷</item>
+        <item>耶稣受鞭打</item>
+        <item>耶稣受茨冠</item>
+        <item>耶稣背十字架</item>
+        <item>耶稣被钉十字架</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>耶稣复活</item>
+        <item>耶稣升天</item>
+        <item>圣神降临</item>
+        <item>圣母蒙召升天</item>
+        <item>圣母加冕为天上母后</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>耶稣在约旦河受洗</item>
+        <item>耶稣在加纳婚宴显奇迹</item>
+        <item>耶稣宣讲天国</item>
+        <item>耶稣显圣容</item>
+        <item>耶稣建立圣体圣事</item>
+    </string-array>
+
+    <string name="onboarding_title_1">欢迎使用 Sanctus</string>
+    <string name="onboarding_desc_1">您在日课经、玫瑰经、圣人和礼仪历方面的神圣伴侣。</string>
+    <string name="onboarding_title_2">日课经时辰</string>
+    <string name="onboarding_desc_2">获得全部六个日课经时辰的温馨提醒——晨祷、三时经、六时经、九时经、晚祷和夜祷。</string>
+    <string name="onboarding_title_3">圣玫瑰经</string>
+    <string name="onboarding_desc_3">根据星期几自动选择奥迹的引导式玫瑰经。</string>
+    <string name="onboarding_title_4">圣人与礼仪历</string>
+    <string name="onboarding_desc_4">探索今日圣人，浏览完整的礼仪历——瞻礼、庆节与礼仪季节。</string>
+    <string name="onboarding_next">下一步</string>
+    <string name="onboarding_skip">跳过</string>
 </resources>

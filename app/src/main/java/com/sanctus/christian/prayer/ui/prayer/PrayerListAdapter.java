@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.data.local.entity.PrayerEntity;
+import java.util.Objects;
 
 public class PrayerListAdapter extends ListAdapter<PrayerEntity, PrayerListAdapter.ViewHolder> {
 
@@ -20,7 +21,7 @@ public class PrayerListAdapter extends ListAdapter<PrayerEntity, PrayerListAdapt
     public PrayerListAdapter(OnPrayerClick listener) {
         super(new DiffUtil.ItemCallback<PrayerEntity>() {
             @Override public boolean areItemsTheSame(@NonNull PrayerEntity a, @NonNull PrayerEntity b) { return a.id == b.id; }
-            @Override public boolean areContentsTheSame(@NonNull PrayerEntity a, @NonNull PrayerEntity b) { return a.name.equals(b.name) && a.isFavorite == b.isFavorite; }
+            @Override public boolean areContentsTheSame(@NonNull PrayerEntity a, @NonNull PrayerEntity b) { return Objects.equals(a.name, b.name) && a.isFavorite == b.isFavorite; }
         });
         this.listener = listener;
     }
@@ -35,7 +36,7 @@ public class PrayerListAdapter extends ListAdapter<PrayerEntity, PrayerListAdapt
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         PrayerEntity prayer = getItem(position);
         holder.tvName.setText(prayer.name);
-        holder.tvCategory.setText(prayer.category.toUpperCase());
+        holder.tvCategory.setText(prayer.category != null ? prayer.category.toUpperCase() : "");
         holder.btnFavorite.setSelected(prayer.isFavorite);
         holder.itemView.setOnClickListener(v -> listener.onClick(prayer));
     }

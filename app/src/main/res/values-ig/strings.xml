@@ -21,4 +21,85 @@
     <string name="category_morning">Ụtụtụ</string>
     <string name="category_evening">Anyasị</string>
     <string name="loading">Na-ebu…</string>
+
+    <string name="no_saint_today_title">Ọ Nweghị Onye Ọcha Edere Taa</string>
+    <string name="no_saint_today_desc">Lelịtaa echi, ma ọ bụ chọgharịa kalenda ndị ọcha zuru ezu.</string>
+
+    <string name="season_advent">Adventi</string>
+    <string name="season_christmas">Oge Ekeresimesi</string>
+    <string name="season_lent">Oge Lenti</string>
+    <string name="season_easter">Oge Ista</string>
+    <string name="season_ordinary">Oge Nkịtị</string>
+
+    <string name="hour_lauds">Ekpere Ụtụtụ</string>
+    <string name="hour_terce">Ekpere Etiti Ụtụtụ</string>
+    <string name="hour_sext">Ekpere Ehihie</string>
+    <string name="hour_none">Ekpere Mgbede</string>
+    <string name="hour_vespers">Ekpere Anyasị</string>
+    <string name="hour_compline">Ekpere Abalị</string>
+    <string name="next_hour_value">Ekpere Anyasị · 6:00 PM</string>
+    <string-array name="hour_names_short">
+        <item>Ụtụtụ</item>
+        <item>Etiti Ụtụtụ</item>
+        <item>Ehihie</item>
+        <item>Mgbede</item>
+        <item>Anyasị</item>
+        <item>Abalị</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Malite ụbọchị gị na Chineke.</item>
+        <item>Kwụsị. Kuo ume. Kpee ekpere.</item>
+        <item>Ekpere ehihie — oge udo.</item>
+        <item>Ntụgharị uche mgbede.</item>
+        <item>Ekpere anyasị — kelee Chineke.</item>
+        <item>Ekpere abalị — zuru ike n\'udo Ya.</item>
+    </string-array>
+    <string name="notification_default_title">Oge Ikpe Ekpere</string>
+
+    <string name="prayer_our_father">Nna Anyị</string>
+    <string name="prayer_hail_mary">Nnọọ Meri</string>
+    <string name="prayer_glory_be">Otuto Diri Nna</string>
+    <string name="rosary_hail_mary_progress">Nnọọ Meri · %1$d n\'ime 10</string>
+    <string name="rosary_progress">Ụkọ %1$d · Mkpụrụ %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Ozi Ọma nye Meri</item>
+        <item>Nleta Meri</item>
+        <item>Ọmụmụ Jizọs</item>
+        <item>Ndoro Jizọs n\'Ụlọnsọ</item>
+        <item>Ịchọta Jizọs n\'Ụlọnsọ</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Ihe mgbu Jizọs n\'Ubi Getsemani</item>
+        <item>Ịpịa Jizọs Ihe</item>
+        <item>Ikpu Jizọs Okpu Ogwu</item>
+        <item>Iburu Jizọs Obe</item>
+        <item>Ọnwụ Jizọs n\'Obe</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Mbilite n\'Ọnwụ Jizọs</item>
+        <item>Ịrigo Jizọs n\'Eluigwe</item>
+        <item>Mmụọ Nsọ Ịdaba</item>
+        <item>Ịrigo Meri n\'Eluigwe</item>
+        <item>Ikpu Meri Okpueze</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Ime Baptism Jizọs na Jọdan</item>
+        <item>Ọrịrị Alụmdi na Alụnwunye na Kena</item>
+        <item>Ikwusa Alaeze Chineke</item>
+        <item>Ngbanwe Jizọs</item>
+        <item>Ịtọ Ekaristi</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Nnọọ na Sanctus</string>
+    <string name="onboarding_desc_1">Onye ibe gị dị nsọ maka Ekpere Elekere, Ụzọ Ọcha, Ndị Ọcha, na Kalenda Ọrụ Ụka.</string>
+    <string name="onboarding_title_2">Ekpere Elekere</string>
+    <string name="onboarding_desc_2">Nata ncheta dị nro maka ekpere elekere isii ahụ — Ụtụtụ, Etiti Ụtụtụ, Ehihie, Mgbede, Anyasị, na Abalị.</string>
+    <string name="onboarding_title_3">Ụzọ Ọcha Dị Nsọ</string>
+    <string name="onboarding_desc_3">Ụzọ Ọcha e duziri eduzi nke na-ahọrọ ihe omimi kwa ụbọchị dịka ụbọchị izu.</string>
+    <string name="onboarding_title_4">Ndị Ọcha na Kalenda</string>
+    <string name="onboarding_desc_4">Chọpụta Onye Ọcha nke taa ma nyochaa kalenda ọrụ ụka zuru ezu — mmemme, oke mmemme, na oge dị iche iche.</string>
+    <string name="onboarding_next">Ọzọ</string>
+    <string name="onboarding_skip">Machapụ</string>
 </resources>

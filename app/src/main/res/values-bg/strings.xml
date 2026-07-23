@@ -18,4 +18,85 @@
     <string name="notifications">Напомняния за молитва</string>
     <string name="next_bead">Напред</string>
     <string name="loading">Зареждане…</string>
+
+    <string name="no_saint_today_title">Няма отбелязан светец днес</string>
+    <string name="no_saint_today_desc">Проверете отново утре или разгледайте пълния календар на светците.</string>
+
+    <string name="season_advent">Адвент</string>
+    <string name="season_christmas">Коледен период</string>
+    <string name="season_lent">Велики пости</string>
+    <string name="season_easter">Великденски период</string>
+    <string name="season_ordinary">Обредно време</string>
+
+    <string name="hour_lauds">Утреня (Утринна молитва)</string>
+    <string name="hour_terce">Трети час</string>
+    <string name="hour_sext">Шести час (Обедна молитва)</string>
+    <string name="hour_none">Девети час</string>
+    <string name="hour_vespers">Вечерня</string>
+    <string name="hour_compline">Повечерие</string>
+    <string name="next_hour_value">Вечерня · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Утреня</item>
+        <item>Трети час</item>
+        <item>Шести час</item>
+        <item>Девети час</item>
+        <item>Вечерня</item>
+        <item>Повечерие</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Започнете деня си с Бог.</item>
+        <item>Спрете. Поемете дъх. Молете се.</item>
+        <item>Обедна молитва — миг на спокойствие.</item>
+        <item>Следобедно размишление.</item>
+        <item>Вечерна молитва — благодарете.</item>
+        <item>Нощна молитва — почивка в Неговия мир.</item>
+    </string-array>
+    <string name="notification_default_title">Време за молитва</string>
+
+    <string name="prayer_our_father">Отче наш</string>
+    <string name="prayer_hail_mary">Радвай се, Марийо</string>
+    <string name="prayer_glory_be">Слава на Отца</string>
+    <string name="rosary_hail_mary_progress">Радвай се, Марийо · %1$d от 10</string>
+    <string name="rosary_progress">Десетица %1$d · Зърно %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Благовещение</item>
+        <item>Посещение на Елисавета</item>
+        <item>Рождество Христово</item>
+        <item>Сретение Господне</item>
+        <item>Намиране на Исус в храма</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Молитва в Гетсиманската градина</item>
+        <item>Бичуване на Христос</item>
+        <item>Увенчаване с трънен венец</item>
+        <item>Носене на кръста</item>
+        <item>Разпятие</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Възкресение</item>
+        <item>Възнесение</item>
+        <item>Слизане на Светия Дух</item>
+        <item>Успение на Пресвета Богородица</item>
+        <item>Коронясване на Пресвета Богородица</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Кръщение в Йордан</item>
+        <item>Сватбата в Кана Галилейска</item>
+        <item>Проповядване на Божието царство</item>
+        <item>Преображение Господне</item>
+        <item>Установяване на Евхаристията</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Добре дошли в Sanctus</string>
+    <string name="onboarding_desc_1">Вашият духовен спътник за часословните молитви, розария, светците и литургичния календар.</string>
+    <string name="onboarding_title_2">Канонични часове</string>
+    <string name="onboarding_desc_2">Получавайте нежни напомняния за всичките шест канонични часа — Утреня, Трети час, Шести час, Девети час, Вечерня и Повечерие.</string>
+    <string name="onboarding_title_3">Свети Розарий</string>
+    <string name="onboarding_desc_3">Управляван Розарий с автоматичен избор на тайнство според деня от седмицата.</string>
+    <string name="onboarding_title_4">Светци и Календар</string>
+    <string name="onboarding_desc_4">Открийте светеца на деня и разгледайте пълния литургичен календар — празници, тържества и периоди.</string>
+    <string name="onboarding_next">Напред</string>
+    <string name="onboarding_skip">Пропусни</string>
 </resources>

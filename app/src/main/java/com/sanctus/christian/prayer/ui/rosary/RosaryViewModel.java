@@ -1,12 +1,17 @@
 package com.sanctus.christian.prayer.ui.rosary;
 
 import android.app.Application;
+import android.content.res.Resources;
+import androidx.annotation.ArrayRes;
+import androidx.annotation.StringRes;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.domain.model.RosaryMystery;
 import com.sanctus.christian.prayer.util.DateUtils;
 import java.util.Arrays;
+import java.util.Calendar;
 
 public class RosaryViewModel extends AndroidViewModel {
     private final MutableLiveData<RosaryMystery> currentMystery = new MutableLiveData<>();
@@ -15,37 +20,66 @@ public class RosaryViewModel extends AndroidViewModel {
     private int beadIndex = 0;
     private int decadeIndex = 0;
 
-    private static final String[] JOYFUL = {
-            "The Annunciation", "The Visitation", "The Nativity",
-            "The Presentation", "Finding in the Temple"
-    };
-    private static final String[] SORROWFUL = {
-            "Agony in the Garden", "Scourging at the Pillar", "Crowning with Thorns",
-            "Carrying the Cross", "The Crucifixion"
-    };
-
     public RosaryViewModel(Application app) {
         super(app);
         loadTodayMystery();
     }
 
+    // Traditional weekday schedule: Mon/Sat Joyful, Tue/Fri Sorrowful, Wed/Sun Glorious, Thu Luminous
+    private RosaryMystery.Type typeForDay(int dayOfWeek) {
+        switch (dayOfWeek) {
+            case Calendar.MONDAY:
+            case Calendar.SATURDAY:
+                return RosaryMystery.Type.JOYFUL;
+            case Calendar.TUESDAY:
+            case Calendar.FRIDAY:
+                return RosaryMystery.Type.SORROWFUL;
+            case Calendar.THURSDAY:
+                return RosaryMystery.Type.LUMINOUS;
+            default: // Wednesday, Sunday
+                return RosaryMystery.Type.GLORIOUS;
+        }
+    }
+
+    @ArrayRes
+    private int mysteriesArrayFor(RosaryMystery.Type type) {
+        switch (type) {
+            case SORROWFUL: return R.array.mysteries_sorrowful;
+            case GLORIOUS: return R.array.mysteries_glorious;
+            case LUMINOUS: return R.array.mysteries_luminous;
+            default: return R.array.mysteries_joyful;
+        }
+    }
+
+    @StringRes
+    private int titleFor(RosaryMystery.Type type) {
+        switch (type) {
+            case SORROWFUL: return R.string.sorrowful_mysteries;
+            case GLORIOUS: return R.string.glorious_mysteries;
+            case LUMINOUS: return R.string.luminous_mysteries;
+            default: return R.string.joyful_mysteries;
+        }
+    }
+
     private void loadTodayMystery() {
+        Resources res = getApplication().getResources();
         int day = DateUtils.getDayOfWeekInt();
-        String[] mysteries = (day == 1 || day == 4) ? SORROWFUL : JOYFUL;
+        RosaryMystery.Type type = typeForDay(day);
         currentMystery.setValue(new RosaryMystery(
-                (day == 1 || day == 4) ? "Sorrowful Mysteries" : "Joyful Mysteries",
-                (day == 1 || day == 4) ? RosaryMystery.Type.SORROWFUL : RosaryMystery.Type.JOYFUL,
-                Arrays.asList(mysteries), DateUtils.getDayOfWeek()
+                res.getString(titleFor(type)),
+                type,
+                Arrays.asList(res.getStringArray(mysteriesArrayFor(type))),
+                DateUtils.getDayOfWeek()
         ));
         updatePrayer();
     }
 
     private void updatePrayer() {
-        String[] prayers = {"Our Father", "Hail Mary", "Glory Be"};
-        if (beadIndex == 0) currentPrayer.setValue("Our Father");
-        else if (beadIndex <= 10) currentPrayer.setValue("Hail Mary · " + beadIndex + " of 10");
-        else currentPrayer.setValue("Glory Be");
-        progress.setValue("Decade " + (decadeIndex + 1) + " · Bead " + beadIndex);
+        Resources res = getApplication().getResources();
+        if (beadIndex == 0) currentPrayer.setValue(res.getString(R.string.prayer_our_father));
+        else if (beadIndex <= 10) currentPrayer.setValue(res.getString(R.string.rosary_hail_mary_progress, beadIndex));
+        else currentPrayer.setValue(res.getString(R.string.prayer_glory_be));
+        progress.setValue(res.getString(R.string.rosary_progress, decadeIndex + 1, beadIndex));
     }
 
     public void nextBead() {

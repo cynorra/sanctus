@@ -21,4 +21,85 @@
     <string name="category_morning">രാവിലെ</string>
     <string name="category_evening">വൈകുന്നേരം</string>
     <string name="loading">ലോഡ് ചെയ്യുന്നു…</string>
+
+    <string name="no_saint_today_title">ഇന്ന് വിശുദ്ധൻ ലിസ്റ്റ് ചെയ്തിട്ടില്ല</string>
+    <string name="no_saint_today_desc">നാളെ വീണ്ടും പരിശോധിക്കുക, അല്ലെങ്കിൽ വിശുദ്ധരുടെ മുഴുവൻ കലണ്ടറും ബ്രൗസ് ചെയ്യുക.</string>
+
+    <string name="season_advent">ആഗമനകാലം</string>
+    <string name="season_christmas">ക്രിസ്മസ് കാലം</string>
+    <string name="season_lent">നോമ്പുകാലം</string>
+    <string name="season_easter">ഉയിർപ്പുകാലം</string>
+    <string name="season_ordinary">സാധാരണകാലം</string>
+
+    <string name="hour_lauds">പ്രഭാത പ്രാർത്ഥന</string>
+    <string name="hour_terce">ത്രിതീയ യാമം (പൂർവാഹ്നം)</string>
+    <string name="hour_sext">ഷഷ്ഠ യാമം (മധ്യാഹ്നം)</string>
+    <string name="hour_none">നവമ യാമം (അപരാഹ്നം)</string>
+    <string name="hour_vespers">സന്ധ്യാ പ്രാർത്ഥന</string>
+    <string name="hour_compline">രാത്രി പ്രാർത്ഥന</string>
+    <string name="next_hour_value">സന്ധ്യാ പ്രാർത്ഥന · 06:00 PM</string>
+    <string-array name="hour_names_short">
+        <item>പ്രഭാതം</item>
+        <item>ത്രിതീയം</item>
+        <item>ഷഷ്ഠം</item>
+        <item>നവമം</item>
+        <item>സന്ധ്യ</item>
+        <item>രാത്രി</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>ദൈവത്തോടൊപ്പം നിങ്ങളുടെ ദിവസം ആരംഭിക്കുക.</item>
+        <item>നിർത്തുക. ശ്വസിക്കുക. പ്രാർത്ഥിക്കുക.</item>
+        <item>ഉച്ചയ്ക്കുള്ള പ്രാർത്ഥന — സമാധാനത്തിന്റെ ഒരു നിമിഷം.</item>
+        <item>ഉച്ചതിരിഞ്ഞുള്ള ധ്യാനം.</item>
+        <item>സന്ധ്യാ പ്രാർത്ഥന — നന്ദി അർപ്പിക്കുക.</item>
+        <item>രാത്രി പ്രാർത്ഥന — അവിടുത്തെ സമാധാനത്തിൽ വിശ്രമിക്കുക.</item>
+    </string-array>
+    <string name="notification_default_title">പ്രാർത്ഥനാ സമയം</string>
+
+    <string name="prayer_our_father">സ്വർഗ്ഗസ്ഥനായ പിതാവേ</string>
+    <string name="prayer_hail_mary">നന്മ നിറഞ്ഞ മറിയമേ</string>
+    <string name="prayer_glory_be">ത്രിത്വസ്തുതി</string>
+    <string name="rosary_hail_mary_progress">നന്മ നിറഞ്ഞ മറിയമേ · 10-ൽ %1$d</string>
+    <string name="rosary_progress">ദശകം %1$d · മുത്ത് %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>മംഗളവാർത്ത</item>
+        <item>മറിയത്തിന്റെ സന്ദർശനം</item>
+        <item>ഈശോയുടെ ജനനം</item>
+        <item>ഈശോയെ ദൈവാലയത്തിൽ സമർപ്പിക്കൽ</item>
+        <item>ഈശോയെ ദൈവാലയത്തിൽ കണ്ടെത്തൽ</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>തോട്ടത്തിലെ ഉദ്വേഗം</item>
+        <item>ചമ്മട്ടിയടി</item>
+        <item>മുൾമുടി ചൂടിക്കൽ</item>
+        <item>കുരിശു വഹിക്കൽ</item>
+        <item>കുരിശുമരണം</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>ഉത്ഥാനം</item>
+        <item>സ്വർഗ്ഗാരോഹണം</item>
+        <item>പരിശുദ്ധാത്മാവിന്റെ ആഗമനം</item>
+        <item>മറിയത്തിന്റെ സ്വർഗ്ഗാരോപണം</item>
+        <item>മറിയത്തിന്റെ കിരീടധാരണം</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>യോർദ്ദാനിലെ ജ്ഞാനസ്നാനം</item>
+        <item>കാനായിലെ കല്യാണം</item>
+        <item>ദൈവരാജ്യ പ്രഘോഷണം</item>
+        <item>രൂപാന്തരീകരണം</item>
+        <item>തിരുവോസ്തി സ്ഥാപനം</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Sanctus-ലേക്ക് സ്വാഗതം</string>
+    <string name="onboarding_desc_1">നാമകൃത്യങ്ങൾ, ജപമാല, വിശുദ്ധർ, ആരാധനാക്രമ കലണ്ടർ എന്നിവയ്ക്കുള്ള നിങ്ങളുടെ വിശുദ്ധ സഹയാത്രികൻ.</string>
+    <string name="onboarding_title_2">കാനോനിക മണിക്കൂറുകൾ</string>
+    <string name="onboarding_desc_2">ആറ് കാനോനിക മണിക്കൂറുകൾക്കും — പ്രഭാത പ്രാർത്ഥന, ത്രിതീയ യാമം, ഷഷ്ഠ യാമം, നവമ യാമം, സന്ധ്യാ പ്രാർത്ഥന, രാത്രി പ്രാർത്ഥന — ലളിതമായ ഓർമ്മപ്പെടുത്തലുകൾ ലഭിക്കും.</string>
+    <string name="onboarding_title_3">വിശുദ്ധ ജപമാല</string>
+    <string name="onboarding_desc_3">ആഴ്ചയിലെ ദിവസം അനുസരിച്ച് സ്വയമേവ രഹസ്യം തിരഞ്ഞെടുക്കുന്ന നിർദേശിത ജപമാല.</string>
+    <string name="onboarding_title_4">വിശുദ്ധരും കലണ്ടറും</string>
+    <string name="onboarding_desc_4">ഇന്നത്തെ വിശുദ്ധനെ കണ്ടെത്തുകയും തിരുനാളുകൾ, മഹോത്സവങ്ങൾ, കാലങ്ങൾ ഉൾപ്പെടെ മുഴുവൻ ആരാധനാക്രമ കലണ്ടറും പരിശോധിക്കുകയും ചെയ്യുക.</string>
+    <string name="onboarding_next">അടുത്തത്</string>
+    <string name="onboarding_skip">ഒഴിവാക്കുക</string>
 </resources>

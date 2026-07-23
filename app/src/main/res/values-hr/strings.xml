@@ -18,4 +18,85 @@
     <string name="notifications">Podsjetnici molitve</string>
     <string name="next_bead">Dalje</string>
     <string name="loading">Učitavanje…</string>
+
+    <string name="no_saint_today_title">Danas nema sveca na popisu</string>
+    <string name="no_saint_today_desc">Provjerite sutra ili pregledajte cijeli kalendar svetaca.</string>
+
+    <string name="season_advent">Došašće</string>
+    <string name="season_christmas">Božićno vrijeme</string>
+    <string name="season_lent">Korizma</string>
+    <string name="season_easter">Uskrsno vrijeme</string>
+    <string name="season_ordinary">Vrijeme kroz godinu</string>
+
+    <string name="hour_lauds">Jutarnja hvalidba</string>
+    <string name="hour_terce">Treći čas</string>
+    <string name="hour_sext">Šesti čas (Podnevna molitva)</string>
+    <string name="hour_none">Deveti čas (Popodnevna molitva)</string>
+    <string name="hour_vespers">Večernja</string>
+    <string name="hour_compline">Povečerje</string>
+    <string name="next_hour_value">Večernja · 18:00</string>
+    <string-array name="hour_names_short">
+        <item>Jutarnja</item>
+        <item>Treći čas</item>
+        <item>Šesti čas</item>
+        <item>Deveti čas</item>
+        <item>Večernja</item>
+        <item>Povečerje</item>
+    </string-array>
+
+    <string-array name="hour_notification_subtitles">
+        <item>Započni dan s Bogom.</item>
+        <item>Zastani. Udahni. Moli.</item>
+        <item>Podnevna molitva — trenutak mira.</item>
+        <item>Popodnevno razmišljanje.</item>
+        <item>Večernja molitva — zahvali.</item>
+        <item>Noćna molitva — počini u Njegovom miru.</item>
+    </string-array>
+    <string name="notification_default_title">Vrijeme za molitvu</string>
+
+    <string name="prayer_our_father">Oče naš</string>
+    <string name="prayer_hail_mary">Zdravo Marijo</string>
+    <string name="prayer_glory_be">Slava Ocu</string>
+    <string name="rosary_hail_mary_progress">Zdravo Marijo · %1$d od 10</string>
+    <string name="rosary_progress">Deseterica %1$d · Zrno %2$d</string>
+
+    <string-array name="mysteries_joyful">
+        <item>Navještenje</item>
+        <item>Pohod Marijin</item>
+        <item>Rođenje Isusovo</item>
+        <item>Prikazanje Isusovo u hramu</item>
+        <item>Nalaženje Isusa u hramu</item>
+    </string-array>
+    <string-array name="mysteries_sorrowful">
+        <item>Isusov smrtni strah</item>
+        <item>Bičevanje Isusovo</item>
+        <item>Trnovo okrunjenje</item>
+        <item>Isus nosi križ</item>
+        <item>Raspeće i smrt Isusova</item>
+    </string-array>
+    <string-array name="mysteries_glorious">
+        <item>Uskrsnuće Isusovo</item>
+        <item>Uzašašće Isusovo</item>
+        <item>Silazak Duha Svetoga</item>
+        <item>Uznesenje Marijino</item>
+        <item>Krunidba Marijina</item>
+    </string-array>
+    <string-array name="mysteries_luminous">
+        <item>Krštenje na Jordanu</item>
+        <item>Čudo na svadbi u Kani</item>
+        <item>Navještenje kraljevstva Božjega</item>
+        <item>Isusovo preobraženje</item>
+        <item>Ustanova euharistije</item>
+    </string-array>
+
+    <string name="onboarding_title_1">Dobrodošli u Sanctus</string>
+    <string name="onboarding_desc_1">Vaš sveti pratitelj za Časoslov, Krunicu, Svece i Liturgijski kalendar.</string>
+    <string name="onboarding_title_2">Kanonski časovi</string>
+    <string name="onboarding_desc_2">Primajte nježne podsjetnike za svih šest kanonskih časova — Jutarnju, Treći čas, Šesti čas, Deveti čas, Večernju i Povečerje.</string>
+    <string name="onboarding_title_3">Sveta Krunica</string>
+    <string name="onboarding_desc_3">Vođena Krunica s automatskim odabirom otajstava prema danu u tjednu.</string>
+    <string name="onboarding_title_4">Sveci i Kalendar</string>
+    <string name="onboarding_desc_4">Otkrijte sveca dana i istražite cijeli liturgijski kalendar — blagdane, svetkovine i vremena.</string>
+    <string name="onboarding_next">Dalje</string>
+    <string name="onboarding_skip">Preskoči</string>
 </resources>
