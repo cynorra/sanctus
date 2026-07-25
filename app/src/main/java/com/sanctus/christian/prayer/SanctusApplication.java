@@ -50,7 +50,7 @@ public class SanctusApplication extends Application {
 
         // Seed DB
         try {
-            DatabaseInitializer.seedIfEmpty(this);
+            DatabaseInitializer.seed(this);
         } catch (Exception e) {
             Log.e(TAG, "DB seed failed", e);
         }

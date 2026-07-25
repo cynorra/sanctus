@@ -4,10 +4,13 @@ import android.content.Context;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.domain.model.PrayerTime;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class PrayerTimeCalculator {
-    // Catholic Canonical Hours (Liturgy of the Hours)
+    // Catholic Canonical Hours (Liturgy of the Hours): {hour, minute}
+    private static final int[][] HOUR_TIMES = {{6, 0}, {9, 0}, {12, 0}, {15, 0}, {18, 0}, {21, 0}};
+
     public static List<PrayerTime> getCanonicalHours(Context context) {
         List<PrayerTime> hours = new ArrayList<>();
         hours.add(new PrayerTime("lauds", context.getString(R.string.hour_lauds), "06:00 AM", true));
@@ -19,8 +22,22 @@ public class PrayerTimeCalculator {
         return hours;
     }
 
+    /** Returns "<Hour name> · <time>" for the next canonical hour still ahead today, or tomorrow's Lauds if past Compline. */
     public static String getNextHour(Context context) {
-        // Simplified: return vespers as default "next" for demo
-        return context.getString(R.string.next_hour_value);
+        String[] shortNames = context.getResources().getStringArray(R.array.hour_names_short);
+        Calendar now = Calendar.getInstance();
+        int nowMinutes = now.get(Calendar.HOUR_OF_DAY) * 60 + now.get(Calendar.MINUTE);
+
+        for (int i = 0; i < HOUR_TIMES.length; i++) {
+            int hourMinutes = HOUR_TIMES[i][0] * 60 + HOUR_TIMES[i][1];
+            if (hourMinutes > nowMinutes) {
+                return formatHour(context, shortNames[i], HOUR_TIMES[i][0], HOUR_TIMES[i][1]);
+            }
+        }
+        return formatHour(context, shortNames[0], HOUR_TIMES[0][0], HOUR_TIMES[0][1]);
+    }
+
+    private static String formatHour(Context context, String name, int hour, int minute) {
+        return name + " · " + DateUtils.getTimeFormatted(hour, minute);
     }
 }

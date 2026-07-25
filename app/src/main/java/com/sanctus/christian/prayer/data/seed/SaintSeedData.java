@@ -129,15 +129,141 @@ public class SaintSeedData {
             "Chief among the angels, defender of the Church, and patron of soldiers. He leads the heavenly army in the defeat of Satan in the Book of Revelation. The Prayer to Saint Michael is said after Mass in many parishes.",
             "Soldiers, police, paramedics, grocers"));
 
+        // ── TURKISH TRANSLATIONS (same canonical feastDate keys as above) ──
+        list.add(saint("Aziz Yusuf", "March 19",
+            "İşçilerin, evrensel Kilise'nin ve babaların koruyucusu. Kutsal Bakire Meryem'in eşi ve İsa'nın manevi babası. Nasıra'da bir marangozdu; Kutsal Aile'yi Mısır'a kaçışları sırasında korudu ve Tanrı'nın Oğlu'nu sevgi ve alçakgönüllülükle büyüttü.",
+            "İşçiler, babalar, aileler, Kilise, ölmekte olanlar", "tr"));
+
+        list.add(saint("Aziz Patrick", "March 17",
+            "İrlanda'nın koruyucu azizi, 5. yüzyılda Hristiyanlığı İrlanda halkına getirmesiyle tanınır. Roma Britanyası'nda doğdu, İrlandalı korsanlar tarafından esir alınıp köle edildi. Kaçtıktan sonra İrlanda'yı Hristiyanlaştırmak için piskopos olarak geri döndü.",
+            "İrlanda, mühendisler, dışlanmışlar", "tr"));
+
+        list.add(saint("Assisili Aziz Francis", "October 4",
+            "Fransisken Tarikatı'nın kurucusu, yoksulluk ve doğa sevgisiyle tanınır. 1224'te Mesih'in yaralarını, yani stigmata'yı aldı. Güneş Ezgisi, İtalyan edebiyatının bilinen ilk eserlerinden biridir.",
+            "Hayvanlar, ekoloji, tüccarlar, İtalya", "tr"));
+
+        list.add(saint("Avilalı Azize Teresa", "October 15",
+            "Kilise Doktoru ve mistik. Karmelit Tarikatı'nı reforme etti ve İç Kale ile Kemal Yolu gibi derin ruhsal klasikler yazdı. Tefekkür duası üzerine öğretileri hâlâ temel niteliktedir.",
+            "Baş ağrısı çekenler, İspanya, satranç oyuncuları", "tr"));
+
+        list.add(saint("Padualı Aziz Anthony", "June 13",
+            "Kilise Doktoru, Fransisken keşişi ve en sevilen azizlerden biri. Güçlü vaazları ve mucizevi işleriyle tanınır. Kayıp eşyaların bulunması ve yoksullara yardım için kendisine dua edilir.",
+            "Kayıp eşyalar, yoksullar, yolcular, Portekiz, Brezilya", "tr"));
+
+        list.add(saint("Havari Aziz Petrus", "June 29",
+            "İsa'nın Göklerin Egemenliği'nin anahtarlarını verdiği Havarilerin başı. Roma'nın ilk Piskoposu ve ilk Papa. İmparator Nero döneminde, MS 64–68 civarında baş aşağı çarmıha gerilerek şehit edildi.",
+            "Balıkçılar, papalık, ağ yapımcıları, Roma", "tr"));
+
+        list.add(saint("Havari Aziz Pavlus", "June 29",
+            "Milletlere Havari, misyoner ve Yeni Ahit'in büyük bölümünün yazarı. Tarsuslu Saul olarak doğdu, Şam yolunda yaşadığı çarpıcı dönüşümden önce ilk Hristiyanlara zulmetti. Akdeniz dünyasını dolaşarak kiliseler kurdu.",
+            "Yazarlar, ilahiyatçılar, misyonerler, Yunanistan", "tr"));
+
+        list.add(saint("Azize Meryem Magdalena", "July 22",
+            "İsa Mesih'in sadık bir öğrencisi. İsa'nın çarmıha gerilişinde ve gömülüşünde hazır bulundu ve Dirilişe tanıklık eden ilk kişi oldu — bu ona 'Havarilerin Havarisi' unvanını kazandırdı.",
+            "Tefekkür edenler, kadınlar, parfümcüler, din değiştirenler", "tr"));
+
+        list.add(saint("Hippolu Aziz Augustinus", "August 28",
+            "Kilise Doktoru ve filozof. Otobiyografisi İtiraflar, tarihin en büyük ruhsal eserlerinden biridir. Dönüşümünden önce günahla derin bir mücadele verdi ve şöyle yazdı: 'Yüreğimiz, Sende huzur bulana dek huzursuzdur.'",
+            "İlahiyatçılar, biracılar, matbaacılar, göz ağrısı", "tr"));
+
+        list.add(saint("Lisieuxlu Azize Thérèse", "October 1",
+            "'Küçük Çiçek' olarak bilinir, 15 yaşında Karmel'e girdi ve 24 yaşında veremden öldü. Otobiyografisi Bir Ruhun Öyküsü, dünya çapında Katolik maneviyatını dönüştüren 'küçük yolunu' — küçük şeyleri büyük sevgiyle yapmayı — tanıttı.",
+            "Misyonlar, Fransa, AIDS hastaları, çiçekçiler", "tr"));
+
+        list.add(saint("Aziz Nikolaos", "December 6",
+            "4. yüzyılda Myra Piskoposu, yoksullara cömertliğiyle tanınır. Üç fakir kız kardeşe gizlice çeyiz sağladı, geceleyin pencerelerinden altın torbaları attı — bu hikaye Noel Baba efsanesine ilham verdi.",
+            "Çocuklar, denizciler, tüccarlar, Rusya", "tr"));
+
+        list.add(saint("Vaftizci Yahya", "June 24",
+            "İsa Mesih'in habercisi ve peygamberi. Şeria Nehri'nde İsa'yı vaftiz etti ve 'İşte Tanrı Kuzusu!' diye haykırdı. Salome'nin isteği üzerine Herod Antipas tarafından başı kesilerek şehit edildi.",
+            "Vaftiz, Şeria Nehri, terziler, nalbantlar", "tr"));
+
+        list.add(saint("Sienalı Azize Catherine", "April 29",
+            "Kilise Doktoru, mistik ve siyasi reformcu. Papa XI. Gregorius'u papalığı Avignon'dan Roma'ya geri getirmeye ikna etmeyi başardı. Ruhsal başyapıtı Diyalog, mistik teolojinin bir hazinesi olmaya devam ediyor.",
+            "İtalya, hemşireler, yangın önleme, Roma", "tr"));
+
+        list.add(saint("Loyolalı Aziz Ignatius", "July 31",
+            "İsa Cemiyeti'nin (Cizvitler) kurucusu. Savaş yaralarından iyileşirken ruhsal bir dönüşüm yaşayan İspanyol bir askerdi; dünya çapında hâlâ kullanılan 30 günlük bir dua programı olan Ruhsal Alıştırmalar'ı kaleme aldı.",
+            "Cizvitler, askerler, ruhsal çekilişler, İspanya", "tr"));
+
+        list.add(saint("Aziz Dominic", "August 8",
+            "Vaizler Tarikatı'nın (Dominikenler) kurucusu ve Tespih'in yaygınlaştırıcısı. Sapkınlığa karşı güç yerine gerçekle mücadele etmek için vaaz ve bilime adanmış bir dilenci tarikatı kurdu.",
+            "Astronomlar, haksız suçlananlar, bilim insanları", "tr"));
+
+        list.add(saint("Assisili Azize Clare", "August 11",
+            "Yoksul Hanımlar Tarikatı'nın (Clarisler) kurucusu. Assisili Francis'ten ilham alarak radikal yoksulluğu benimsedi. Hastalığı nedeniyle kiliseye gidemediğinde Noel Ayini'ni hücresinin duvarında gördüğü rivayet edildiğinden televizyonun koruyucu azizesidir.",
+            "Televizyon, göz hastalıkları, elişi yapanlar", "tr"));
+
+        list.add(saint("II. Yuhanna Pavlus", "October 22",
+            "1978'den 2005'e kadar Papa'lık yaptı, tarihin en çok seyahat eden ve etkili papalarından biri. Polonya'da Komünizmin sona ermesinde kilit bir rol oynadı. Sayısız genelge yazdı ve önceki hiçbir papadan daha fazla azizi kutsadı ve azizlik ilan etti.",
+            "Dünya Gençlik Günü, Polonya", "tr"));
+
+        list.add(saint("Nursialı Aziz Benedictus", "July 11",
+            "Batı manastırcılığının ve Benediktin Tarikatı'nın kurucusu. Keşişleri ora et labora (dua et ve çalış) yaşamına çağıran Aziz Benedictus Kuralı, Batı Kilisesi'nde manastır yaşamının temeli oldu.",
+            "Avrupa, öğrenciler, keşişler, çiftçiler", "tr"));
+
+        list.add(saint("İncilci Aziz Luka", "October 18",
+            "Hekim, Pavlus'un yol arkadaşı, üçüncü İncil'in ve Elçilerin İşleri'nin yazarı. İncili merhameti, Kutsal Ruh'u, duayı ve kadınların rolünü vurgular. Geleneğe göre Bakire Meryem'in ilk ikonasını o resmetti.",
+            "Hekimler, cerrahlar, sanatçılar, ressamlar", "tr"));
+
+        list.add(saint("İncilci Aziz Yuhanna", "December 27",
+            "'Sevgili öğrenci' ve en genç Havari. Dördüncü İncil'in, üç mektubun ve Vahiy Kitabı'nın yazarı. Çarmıhın dibinde durdu ve Bakire Meryem'in bakımıyla görevlendirildi.",
+            "Yazarlar, ilahiyatçılar, sanat tüccarları, Türkiye", "tr"));
+
+        list.add(saint("Aziz İstefanos", "December 26",
+            "İlk Hristiyan şehidi (protomartir). Havariler tarafından seçilen yedi diyakozdan biri, Sanhedrin önünde güçlü bir konuşma yaptıktan sonra taşlanarak öldürüldü. Tarsuslu Saul (sonradan Pavlus) şehadetine tanık oldu.",
+            "Diyakozlar, duvarcılar, baş ağrısı çekenler", "tr"));
+
+        list.add(saint("Aziz Valentinus", "February 14",
+            "MS 269'da şehit edilen Romalı bir rahip ve hekim. Aşk ve romantizmle ilişkilendirilir, ancak tarihsel ayrıntısı azdır. Bayram günü, 14. yüzyıl İngiliz şiirinde romantik aşkla bağlantılı hale geldi.",
+            "Aşk, nişanlı çiftler, mutlu evlilikler, arıcılar", "tr"));
+
+        list.add(saint("Aziz Christophoros", "July 25",
+            "Bir çocuğu nehirden taşıyan dev cüsseli bir adam; sonradan çocuğun dünyanın ağırlığını taşıyan Mesih olduğunu keşfetti. Adı 'Mesih taşıyıcısı' anlamına gelir. 1969'da genel Roma takviminden çıkarılmasına rağmen hâlâ sevilir.",
+            "Yolcular, sürücüler, sörfçüler, fırtınalar", "tr"));
+
+        list.add(saint("Kutsal Bakire Meryem (Göğe Alınış)", "August 15",
+            "Meryem'in Göğe Alınışı, Meryem'in beden ve ruhuyla göksel görkeme alındığı dogmasını kutlar. Kilise'nin en eski bayramlarından biridir; çoğu ülkede zorunlu bir bayram olarak büyük görkemle kutlanır.",
+            "Tüm insanlık, Kilise", "tr"));
+
+        list.add(saint("Aziz Thomas Aquinas", "January 28",
+            "Kilise Doktoru ve Orta Çağ'ın en büyük ilahiyatçısı. Başyapıtı Summa Theologiae, Aristoteles felsefesini Hristiyan teolojisiyle birleştirdi ve Katolik entelektüel geleneğinin temeli olmaya devam ediyor.",
+            "Öğrenciler, okullar, üniversiteler, İtalya", "tr"));
+
+        list.add(saint("Kalkütalı Azize Teresa", "September 5",
+            "Sevgi Misyonerleri'nin kurucusu. Hayatını Kalküta'nın gecekondularındaki en yoksullara adadı. Sade sözleri — 'Hepimiz büyük şeyler yapamayız. Ama küçük şeyleri büyük sevgiyle yapabiliriz.' — dünya çapında yankılanmaya devam ediyor.",
+            "Dünya Gençlik Günü, sevgi misyonerleri", "tr"));
+
+        list.add(saint("Aziz Georgios", "April 23",
+            "3. yüzyıldan beri saygı gösterilen asker-şehit. Bir prensesi kurtarmak için ejderha öldürme efsanesi, iyinin kötüye ve imanın korkuya karşı zaferini simgeler. İngiltere, Gürcistan ve birçok başka ulusun koruyucusudur.",
+            "İngiltere, askerler, izciler, çiftçiler", "tr"));
+
+        list.add(saint("Macaristanlı Azize Elizabeth", "November 17",
+            "Yoksullara bakmak için kraliyet hayatından vazgeçen Macaristan Prensesi. 20 yaşında dul kaldı, Aziz Francis'in Üçüncü Tarikatı'na katıldı ve kalan yıllarını hastalara ve yoksullara hizmet ederek geçirdi, 24 yaşında öldü.",
+            "Yoksullar, hastaneler, fırıncılar, hemşireler", "tr"));
+
+        list.add(saint("Azize Faustina Kowalska", "October 5",
+            "Polonyalı mistik ve İlahi Merhamet'in havarisi. Günlüğü, Ruhumda İlahi Merhamet, kendisinden merhametinin mesajını yaymasını isteyen İsa'nın görümlerini kaydeder. İlahi Merhamet ibadeti bugün dünya çapında milyonlara ulaşıyor.",
+            "Merhamet, Polonya, İlahi Merhamet ibadeti", "tr"));
+
+        list.add(saint("Başmelek Mikail", "September 29",
+            "Meleklerin başı, Kilise'nin savunucusu ve askerlerin koruyucusu. Vahiy Kitabı'nda Şeytan'ın yenilgisinde göksel orduya öncülük eder. Aziz Mikail Duası birçok cemaatte Ayin sonrasında okunur.",
+            "Askerler, polisler, sağlık görevlileri, bakkallar", "tr"));
+
         return list;
     }
 
     private static SaintEntity saint(String name, String feastDate, String description, String patronOf) {
+        return saint(name, feastDate, description, patronOf, "en");
+    }
+
+    private static SaintEntity saint(String name, String feastDate, String description, String patronOf, String language) {
         SaintEntity e = new SaintEntity();
         e.name = name;
         e.feastDate = feastDate;
         e.description = description;
         e.patronOf = patronOf;
+        e.language = language;
         return e;
     }
 }

@@ -13,25 +13,24 @@ import java.util.concurrent.Executors;
 
 public class DatabaseInitializer {
 
-    public static void seedIfEmpty(Context context) {
+    /**
+     * Inserts all seed content on every app start. Prayers/saints/calendar_events each have a
+     * unique index on their natural key, and inserts use OnConflictStrategy.IGNORE, so rows that
+     * already exist are silent no-ops while newly added seed content (from an app update) reaches
+     * existing installs too — not just fresh installs.
+     */
+    public static void seed(Context context) {
         Executors.newSingleThreadExecutor().execute(() -> {
             SanctusDatabase db = SanctusDatabase.getInstance(context);
 
-            if (db.prayerDao().getCount() == 0) {
-                List<PrayerEntity> all = new ArrayList<>();
-                all.addAll(PrayerSeedData.getAll());       // EN, TR, ES, PT (28)
-                all.addAll(PrayerSeedDataExtra.getAll());  // DE,FR,IT,PL,UK,RU,RO,NL,EL,FIL,ZH,HI,KO,ID,VI,SW,AM,HU,CS,SK,HR (55)
-                all.addAll(PrayerSeedDataAfrica.getAll()); // AR,HY,KA,TA,ML,TE,YO,IG (28)
-                db.prayerDao().insertAll(all.toArray(new PrayerEntity[0]));
-            }
+            List<PrayerEntity> all = new ArrayList<>();
+            all.addAll(PrayerSeedData.getAll());       // EN, TR, ES, PT
+            all.addAll(PrayerSeedDataExtra.getAll());  // DE,FR,IT,PL,UK,RU,RO,NL,EL,FIL,ZH,HI,KO,ID,VI,SW,AM,HU,CS,SK,HR
+            all.addAll(PrayerSeedDataAfrica.getAll()); // AR,HY,KA,TA,ML,TE,YO,IG
+            db.prayerDao().insertAll(all.toArray(new PrayerEntity[0]));
 
-            if (db.saintDao().getCount() == 0) {
-                db.saintDao().insertAll(SaintSeedData.getAll());
-            }
-
-            if (db.calendarEventDao().getCount() == 0) {
-                db.calendarEventDao().insertAll(CalendarSeedData.getAll());
-            }
+            db.saintDao().insertAll(SaintSeedData.getAll());
+            db.calendarEventDao().insertAll(CalendarSeedData.getAll());
         });
     }
 }

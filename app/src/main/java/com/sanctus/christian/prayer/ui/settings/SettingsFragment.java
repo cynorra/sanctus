@@ -1,7 +1,9 @@
 package com.sanctus.christian.prayer.ui.settings;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -69,6 +71,15 @@ public class SettingsFragment extends Fragment {
                 updateLangLabel(tvCurrentLang);
             });
             dialog.show(getChildFragmentManager(), "lang_picker");
+        });
+
+        // About
+        view.findViewById(R.id.row_about).setOnClickListener(v -> {
+            try {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(BuildConfig.WEBSITE_URL)));
+            } catch (Exception ignored) {
+                // No browser available to handle the intent — nothing more we can do here.
+            }
         });
 
         // Version

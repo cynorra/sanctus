@@ -9,11 +9,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.sanctus.christian.prayer.R;
+import com.sanctus.christian.prayer.ui.saint.SaintViewModel;
 import com.sanctus.christian.prayer.util.DateUtils;
 import com.sanctus.christian.prayer.util.LiturgicalSeasonHelper;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class DashboardFragment extends Fragment {
 
@@ -43,6 +48,10 @@ public class DashboardFragment extends Fragment {
         TextView tvNextHour = view.findViewById(R.id.tv_next_hour);
         tvNextHour.setText(com.sanctus.christian.prayer.util.PrayerTimeCalculator.getNextHour(requireContext()));
 
+        // Tap hero card to go pray
+        view.findViewById(R.id.card_next_hour).setOnClickListener(v ->
+                Navigation.findNavController(v).navigate(R.id.prayerFragment));
+
         // Prayer times recycler
         RecyclerView rvPrayerTimes = view.findViewById(R.id.rv_prayer_times);
         rvPrayerTimes.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false));
@@ -50,5 +59,27 @@ public class DashboardFragment extends Fragment {
                 com.sanctus.christian.prayer.util.PrayerTimeCalculator.getCanonicalHours(requireContext())
         );
         rvPrayerTimes.setAdapter(adapter);
+
+        // Saint of the day
+        TextView tvSaintName = view.findViewById(R.id.tv_saint_name);
+        TextView tvSaintFeast = view.findViewById(R.id.tv_saint_feast);
+        TextView tvSaintDesc = view.findViewById(R.id.tv_saint_desc);
+        String today = new SimpleDateFormat("MMMM d", Locale.ENGLISH).format(new Date());
+
+        SaintViewModel saintViewModel = new ViewModelProvider(this).get(SaintViewModel.class);
+        saintViewModel.getSaintByFeastDate(today).observe(getViewLifecycleOwner(), saint -> {
+            if (saint != null) {
+                tvSaintName.setText(saint.name);
+                tvSaintFeast.setText(getString(R.string.saint_feast_day_format, saint.feastDate));
+                tvSaintDesc.setText(saint.description);
+            } else {
+                tvSaintName.setText(R.string.no_saint_today_title);
+                tvSaintFeast.setText("");
+                tvSaintDesc.setText(R.string.no_saint_today_desc);
+            }
+        });
+
+        view.findViewById(R.id.card_saint_of_day).setOnClickListener(v ->
+                Navigation.findNavController(v).navigate(R.id.saintFragment));
     }
 }

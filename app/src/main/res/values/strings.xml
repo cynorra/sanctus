@@ -83,6 +83,30 @@
     <string name="languages_supported">40 languages supported</string>
     <string name="no_saint_today_title">No Saint Listed Today</string>
     <string name="no_saint_today_desc">Check back tomorrow, or browse the full calendar of saints.</string>
+    <string name="saint_feast_day_format">Feast Day · %1$s</string>
+    <string name="saint_feast_prefix">Feast: %1$s</string>
+    <string name="saint_patron_prefix">Patron of: %1$s</string>
+    <string name="next_canonical_hour_label">NEXT CANONICAL HOUR</string>
+    <string name="tap_to_begin_prayer">Tap to begin prayer</string>
+
+    <!-- Settings screen -->
+    <string name="settings_section_appearance">APPEARANCE</string>
+    <string name="settings_section_language">LANGUAGE</string>
+    <string name="settings_section_notifications">NOTIFICATIONS</string>
+    <string name="prayer_language_label">Prayer language</string>
+    <string name="notification_hours_summary">Lauds · Terce · Sext · None · Vespers · Compline</string>
+    <string name="about_row_subtitle">Website &amp; privacy policy</string>
+
+    <!-- Search / Calendar -->
+    <string name="search_saints_hint">Search saints…</string>
+    <string name="upcoming_solemnities">UPCOMING SOLEMNITIES</string>
+    <string name="search_prayers_hint">Search prayers…</string>
+    <string name="no_results_found">No results found</string>
+    <string name="no_prayers_in_language">No prayers found. Showing English by default.</string>
+    <string name="content_desc_back">Back</string>
+    <string name="content_desc_decrease_font">Decrease font</string>
+    <string name="content_desc_increase_font">Increase font</string>
+    <string name="about_section_title">ABOUT</string>
 
     <!-- Liturgical seasons -->
     <string name="season_advent">Advent</string>
@@ -90,6 +114,12 @@
     <string name="season_lent">Lent</string>
     <string name="season_easter">Easter Season</string>
     <string name="season_ordinary">Ordinary Time</string>
+
+    <!-- Calendar -->
+    <string name="feria_weekday">Feria (Weekday)</string>
+    <string name="calendar_type_solemnity">Solemnity</string>
+    <string name="calendar_type_feast">Feast</string>
+    <string name="calendar_type_memorial">Memorial</string>
 
     <!-- Canonical hours -->
     <string name="hour_lauds">Lauds (Morning Prayer)</string>
@@ -125,6 +155,8 @@
     <string name="prayer_glory_be">Glory Be</string>
     <string name="rosary_hail_mary_progress">Hail Mary · %1$d of 10</string>
     <string name="rosary_progress">Decade %1$d · Bead %2$d</string>
+    <string name="rosary_complete">Rosary complete</string>
+    <string name="prayer_hail_holy_queen">Hail, holy Queen, Mother of mercy,\nour life, our sweetness and our hope.\nTo thee do we cry,\npoor banished children of Eve.\nTo thee do we send up our sighs,\nmourning and weeping in this valley of tears.\nTurn then, most gracious advocate,\nthine eyes of mercy toward us,\nand after this our exile,\nshow unto us the blessed fruit of thy womb, Jesus.\nO clement, O loving, O sweet Virgin Mary.\n\nPray for us, O holy Mother of God,\nthat we may be made worthy of the promises of Christ.\nAmen.</string>
 
     <string-array name="mysteries_joyful">
         <item>The Annunciation</item>

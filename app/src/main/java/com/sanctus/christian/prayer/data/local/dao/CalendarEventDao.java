@@ -10,14 +10,8 @@ import java.util.List;
 
 @Dao
 public interface CalendarEventDao {
-    @Query("SELECT * FROM calendar_events WHERE date = :monthDay ORDER BY isSolemnity DESC")
-    LiveData<List<CalendarEventEntity>> getEventsForDate(String monthDay);
-
-    @Query("SELECT * FROM calendar_events WHERE isSolemnity = 1 OR isHolyDayOfObligation = 1 ORDER BY date ASC")
-    LiveData<List<CalendarEventEntity>> getMajorFeast();
-
-    @Query("SELECT * FROM calendar_events WHERE season = :season ORDER BY date ASC")
-    LiveData<List<CalendarEventEntity>> getEventsBySeason(String season);
+    @Query("SELECT * FROM calendar_events WHERE language = :language")
+    LiveData<List<CalendarEventEntity>> getAllEvents(String language);
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insertAll(List<CalendarEventEntity> events);

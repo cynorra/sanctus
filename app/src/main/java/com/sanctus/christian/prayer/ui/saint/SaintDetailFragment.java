@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 import com.sanctus.christian.prayer.R;
+import com.sanctus.christian.prayer.SanctusApplication;
 
 public class SaintDetailFragment extends Fragment {
     public static final String ARG_SAINT_ID = "saint_id";
@@ -31,13 +32,35 @@ public class SaintDetailFragment extends Fragment {
         ImageButton btnBack = view.findViewById(R.id.btn_back);
         btnBack.setOnClickListener(v -> Navigation.findNavController(v).popBackStack());
 
+        TextView tvDesc = view.findViewById(R.id.tv_saint_desc_detail);
+        ImageButton btnFontIncrease = view.findViewById(R.id.btn_font_increase);
+        ImageButton btnFontDecrease = view.findViewById(R.id.btn_font_decrease);
+
+        int[] fontSize = {SanctusApplication.getInstance().getSettingsRepository().getTextSize()};
+        tvDesc.setTextSize(fontSize[0]);
+
+        btnFontIncrease.setOnClickListener(v -> {
+            if (fontSize[0] < 26) {
+                fontSize[0] += 2;
+                tvDesc.setTextSize(fontSize[0]);
+                SanctusApplication.getInstance().getSettingsRepository().setTextSize(fontSize[0]);
+            }
+        });
+        btnFontDecrease.setOnClickListener(v -> {
+            if (fontSize[0] > 12) {
+                fontSize[0] -= 2;
+                tvDesc.setTextSize(fontSize[0]);
+                SanctusApplication.getInstance().getSettingsRepository().setTextSize(fontSize[0]);
+            }
+        });
+
         if (saintId != -1) {
             vm.getSaintById(saintId).observe(getViewLifecycleOwner(), saint -> {
                 if (saint == null) return;
                 ((TextView) view.findViewById(R.id.tv_saint_name_detail)).setText(saint.name);
-                ((TextView) view.findViewById(R.id.tv_feast_date_detail)).setText("Feast: " + saint.feastDate);
-                ((TextView) view.findViewById(R.id.tv_saint_desc_detail)).setText(saint.description);
-                ((TextView) view.findViewById(R.id.tv_saint_patron_detail)).setText("Patron of: " + saint.patronOf);
+                ((TextView) view.findViewById(R.id.tv_feast_date_detail)).setText(getString(R.string.saint_feast_prefix, saint.feastDate));
+                tvDesc.setText(saint.description);
+                ((TextView) view.findViewById(R.id.tv_saint_patron_detail)).setText(getString(R.string.saint_patron_prefix, saint.patronOf));
             });
         }
     }

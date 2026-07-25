@@ -12,11 +12,16 @@ import com.sanctus.christian.prayer.domain.model.RosaryMystery;
 import com.sanctus.christian.prayer.util.DateUtils;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.List;
 
 public class RosaryViewModel extends AndroidViewModel {
+    private static final int DECADE_COUNT = 5;
+
     private final MutableLiveData<RosaryMystery> currentMystery = new MutableLiveData<>();
+    private final MutableLiveData<String> currentMysteryLine = new MutableLiveData<>();
     private final MutableLiveData<String> currentPrayer = new MutableLiveData<>();
     private final MutableLiveData<String> progress = new MutableLiveData<>();
+    private final MutableLiveData<Boolean> finished = new MutableLiveData<>(false);
     private int beadIndex = 0;
     private int decadeIndex = 0;
 
@@ -76,6 +81,14 @@ public class RosaryViewModel extends AndroidViewModel {
 
     private void updatePrayer() {
         Resources res = getApplication().getResources();
+
+        RosaryMystery mystery = currentMystery.getValue();
+        if (mystery != null) {
+            List<String> lines = mystery.getMysteries();
+            int idx = Math.min(decadeIndex, lines.size() - 1);
+            currentMysteryLine.setValue((idx + 1) + ". " + lines.get(idx));
+        }
+
         if (beadIndex == 0) currentPrayer.setValue(res.getString(R.string.prayer_our_father));
         else if (beadIndex <= 10) currentPrayer.setValue(res.getString(R.string.rosary_hail_mary_progress, beadIndex));
         else currentPrayer.setValue(res.getString(R.string.prayer_glory_be));
@@ -83,15 +96,31 @@ public class RosaryViewModel extends AndroidViewModel {
     }
 
     public void nextBead() {
+        if (Boolean.TRUE.equals(finished.getValue())) return;
+
         beadIndex++;
         if (beadIndex > 11) {
             beadIndex = 0;
-            decadeIndex = Math.min(decadeIndex + 1, 4);
+            if (decadeIndex >= DECADE_COUNT - 1) {
+                showClosingPrayer();
+                return;
+            }
+            decadeIndex++;
         }
         updatePrayer();
     }
 
+    private void showClosingPrayer() {
+        Resources res = getApplication().getResources();
+        currentMysteryLine.setValue("");
+        currentPrayer.setValue(res.getString(R.string.prayer_hail_holy_queen));
+        progress.setValue(res.getString(R.string.rosary_complete));
+        finished.setValue(true);
+    }
+
     public LiveData<RosaryMystery> getCurrentMystery() { return currentMystery; }
+    public LiveData<String> getCurrentMysteryLine() { return currentMysteryLine; }
     public LiveData<String> getCurrentPrayer() { return currentPrayer; }
     public LiveData<String> getProgress() { return progress; }
+    public LiveData<Boolean> getFinished() { return finished; }
 }

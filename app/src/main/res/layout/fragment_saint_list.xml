@@ -15,14 +15,30 @@
             android:id="@+id/et_search_saints" android:layout_width="match_parent"
             android:layout_height="48dp" android:layout_marginTop="16dp"
             android:background="@drawable/bg_card_gold" android:paddingHorizontal="16dp"
-            android:hint="Search saints…" android:textSize="14sp"
+            android:hint="@string/search_saints_hint" android:textSize="14sp"
             android:textColor="@color/color_on_surface"
             android:textColorHint="@color/color_text_secondary"
             android:inputType="text" android:imeOptions="actionSearch"/>
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_saints" android:layout_width="match_parent"
-        android:layout_height="match_parent" android:paddingTop="4dp"
-        android:clipToPadding="false"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_saints" android:layout_width="match_parent"
+            android:layout_height="match_parent" android:paddingTop="4dp"
+            android:clipToPadding="false"/>
+
+        <TextView
+            android:id="@+id/tv_empty_saints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/no_results_found"
+            android:textSize="14sp"
+            android:textColor="@color/color_text_secondary"
+            android:visibility="gone" />
+
+    </FrameLayout>
 </LinearLayout>

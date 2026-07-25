@@ -74,6 +74,42 @@ public class PrayerSeedData {
         list.add(prayer("Ölülere Dua", "Requiem Aeternam", "devotional",
             "Ey Rabbim, onlara sonsuz dinçlik ver,\nve ebedi ışık onları aydınlatsın.\nRuhları ve tüm ölülerin ruhları\nTanrı'nın merhametiyle huzur bulsun.\nAmin.", "tr"));
 
+        list.add(prayer("Şan Olsun", "Doksoloji", "rosary",
+            "Şan olsun Baba'ya,\nOğul'a\nve Kutsal Ruh'a.\nEzelde olduğu gibi,\nşimdi ve her zaman\nve ebediyen.\nAmin.", "tr"));
+
+        list.add(prayer("Havariler İnancı", "İman Duası", "morning",
+            "Her şeye gücü yeten Baba,\ngöğün ve yerin yaratıcısı Tanrı'ya inanıyorum.\nO'nun biricik Oğlu, Rabbimiz İsa Mesih'e inanıyorum.\nO, Kutsal Ruh'tan vücut buldu,\nBakire Meryem'den doğdu.\nPontius Pilatus zamanında acı çekti,\nçarmıha gerildi, öldü ve gömüldü.\nÖlüler diyarına indi;\nüçüncü gün ölüler arasından dirildi;\ngöğe yükseldi,\nher şeye gücü yeten Baba Tanrı'nın sağında oturmaktadır;\noradan dirileri ve ölüleri yargılamak için yeniden gelecektir.\nKutsal Ruh'a,\nkutsal Katolik Kilise'ye,\naziz cemaatine,\ngünahların bağışlanmasına,\nbedenin dirilişine\nve sonsuz yaşama inanıyorum.\nAmin.", "tr"));
+
+        list.add(prayer("Pişmanlık Duası", "İtiraf Duası", "mass",
+            "Ey Tanrım, Seni gücendirdiğim için\nyürekten pişmanım,\nve tüm günahlarımdan nefret ediyorum,\nçünkü onlar adil cezanı hak ediyor,\nama en çok da Seni, tüm iyiliklerin ve\nsevgiye layık olan Tanrım'ı gücendirdikleri için.\nLütfunun yardımıyla\nbir daha günah işlememeye\nve günaha yaklaşan fırsatlardan kaçınmaya\nkesin karar veriyorum.\nAmin.", "tr"));
+
+        list.add(prayer("Selam Ey Hükümdar Ana", "Salve Regina", "rosary",
+            "Selam, ey kutsal Hükümdar Ana, merhamet Anası,\nhayatımız, tatlılığımız ve ümidimiz, selam sana.\nSana sesleniyoruz,\nHavva'nın sürgündeki evlatları.\nSana iç çekişlerimizi gönderiyoruz,\nbu gözyaşı vadisinde inleyerek ve ağlayarak.\nO halde, ey bizim savunucumuz,\nmerhamet dolu gözlerini bize çevir.\nVe bu sürgünden sonra,\nrahminin kutsal meyvesi İsa'yı bize göster.\nEy şefkatli, ey sevgi dolu, ey tatlı Bakire Meryem.\nBizim için dua et, ey Tanrı'nın kutsal Anası,\nMesih'in vaatlerine layık olalım.\nAmin.", "tr"));
+
+        list.add(prayer("Tespihin Başlangıç Duası", "Tespihten Önce", "rosary",
+            "İnanıyorum…\n(Havariler İnancı)\nBabamız…\nSelam Sana Meryem… (İman, Ümit ve Sevgi için 3 kez)\nŞan Olsun…\n\nBirinci Gizemi duyurun.\nBabamız…\n10 Selam Sana Meryem…\nŞan Olsun…\nEy İsa'm, günahlarımızı bağışla…", "tr"));
+
+        list.add(prayer("Fatima Duası", "Ey İsa'm", "rosary",
+            "Ey İsa'm, günahlarımızı bağışla,\nbizi cehennem ateşinden koru.\nTüm ruhları cennete götür,\nözellikle merhametine en çok ihtiyaç duyanları.\nAmin.", "tr"));
+
+        list.add(prayer("Aziz Mikail Duası", "Koruma Duası", "devotional",
+            "Başmelek Aziz Mikail,\nsavaşta bizi koru.\nŞeytanın kötülüğüne ve tuzaklarına karşı\nbize kalkan ol.\nTanrı onu azarlasın, alçakgönüllülükle dileriz;\nve sen, ey Göksel Ordular Prensi,\nTanrı'nın gücüyle,\ndünyada dolaşıp ruhların yıkımını arayan\nŞeytan'ı ve tüm kötü ruhları\ncehenneme at.\nAmin.", "tr"));
+
+        list.add(prayer("Memorare", "Meryem'e Sığınış Duası", "devotional",
+            "Hatırla, ey en şefkatli Bakire Meryem,\nkoruman altına sığınan,\nyardımını dileyen ya da şefaatini arayan\nhiç kimsenin yardımsız bırakılmadığını.\nBu güvenden ilham alarak,\nsana koşuyorum, ey bakirelerin Bakiresi, Anam.\nSana geliyorum, önünde duruyorum,\ngünahkâr ve kederli.\nEy vücut bulmuş Söz'ün Anası,\nyakarışlarımı hor görme,\nlütfen merhametle işit ve bana cevap ver.\nAmin.", "tr"));
+
+        list.add(prayer("Mesih'in Ruhu", "Anima Christi", "mass",
+            "Mesih'in ruhu, beni kutsa.\nMesih'in bedeni, beni kurtar.\nMesih'in kanı, beni sarhoş et.\nMesih'in yanından akan su, beni yıka.\nMesih'in çilesi, beni güçlendir.\nEy iyi İsa, beni işit.\nYaralarının içinde, beni sakla.\nSenden ayrılmama izin verme.\nHain düşmandan, beni koru.\nÖlüm saatimde, beni çağır.\nVe yanına gelmemi buyur,\nazizlerinle birlikte Seni övmem için\nsonsuza dek.\nAmin.", "tr"));
+
+        list.add(prayer("Övgüler — Sabah İbadeti", "İbadet Saatleri", "morning",
+            "Ya Rab, dudaklarımı aç.\nVe ağzım Sana övgüler duyursun.\nŞan olsun Baba'ya, Oğul'a\nve Kutsal Ruh'a;\nezelde olduğu gibi, şimdi ve her zaman\nve ebediyen. Amin. Alleluya.\n\nİlahi:\nGün ışığı gökyüzünü doldururken,\nyüreklerimizi yüce Tanrı'ya kaldırıyoruz,\nO'nun, yaptığımız ve söylediğimiz her şeyde,\nbizi bugün kötülükten korumasını dileriz.\nAmin.", "tr"));
+
+        list.add(prayer("Akşam İbadeti — Vesperler", "İbadet Saatleri", "evening",
+            "Ey Tanrım, yardımıma gel.\nYa Rab, imdadıma yetişmekte acele et.\nŞan olsun Baba'ya, Oğul'a\nve Kutsal Ruh'a;\nezelde olduğu gibi, şimdi ve her zaman\nve ebediyen. Amin.\n\nMagnificat:\nRuhum Rab'bin yüceliğini ilan eder,\nyüreğim Kurtarıcım Tanrı'da sevinir.\nÇünkü O, alçakgönüllü kulunun haline baktı.\nBundan böyle bütün kuşaklar beni mutlu sayacak;\nkudretli Olan büyük işler yaptı benim için,\nO'nun adı kutsaldır.\nAmin.", "tr"));
+
+        list.add(prayer("Gece İbadeti — Komplin", "İbadet Saatleri", "evening",
+            "Her şeye gücü yeten Rab bize huzurlu bir gece\nve barış içinde bir ölüm bahşetsin.\nAmin.\n\nHer şeye gücü yeten Tanrı'ya\nve sizlere, kardeşlerime,\ndüşüncelerimde ve sözlerimde,\nyaptıklarımda ve yapmadıklarımda\nçokça günah işlediğimi itiraf ediyorum.\nBenim suçumla, benim suçumla,\nbenim çok büyük suçumla;\nbu yüzden ebediyen bakire kutsal Meryem'den,\ntüm Melekler ve Azizlerden,\nve sizlerden, kardeşlerimden,\nbenim için Rabbimiz Tanrı'ya dua etmenizi diliyorum.", "tr"));
+
         // ── SPANISH ──────────────────────────────────────────────────────
         list.add(prayer("Padre Nuestro", "Oración del Señor", "morning",
             "Padre nuestro, que estás en los cielos,\nsantificado sea Tu nombre.\nVenga Tu reino,\nhágase Tu voluntad,\nasí en la tierra como en el cielo.\nDanos hoy nuestro pan de cada día.\nPerdona nuestras ofensas,\ncomo también nosotros perdonamos\na los que nos ofenden.\nNo nos dejes caer en tentación,\ny líbranos del mal.\nAmén.", "es"));
@@ -96,6 +132,32 @@ public class PrayerSeedData {
 
         list.add(prayer("Glória ao Pai", "Doxologia", "rosary",
             "Glória ao Pai,\nao Filho\ne ao Espírito Santo.\nComo era no princípio,\nagora e sempre,\npor todos os séculos dos séculos.\nAmém.", "pt"));
+
+        // ── CORE DEVOTIONS (English) ────────────────────────────────────
+        list.add(prayer("The Way of the Cross", "Stations of the Cross", "devotional",
+            "1. Jesus is condemned to death.\n2. Jesus carries His cross.\n3. Jesus falls the first time.\n4. Jesus meets His Mother.\n5. Simon of Cyrene helps Jesus carry the cross.\n6. Veronica wipes the face of Jesus.\n7. Jesus falls the second time.\n8. Jesus meets the women of Jerusalem.\n9. Jesus falls the third time.\n10. Jesus is stripped of His garments.\n11. Jesus is nailed to the cross.\n12. Jesus dies on the cross.\n13. Jesus is taken down from the cross.\n14. Jesus is laid in the tomb.\n\nWe adore You, O Christ, and we bless You,\nbecause by Your holy Cross You have redeemed the world.", "en"));
+
+        list.add(prayer("Divine Mercy Chaplet", "Chaplet of the Divine Mercy", "devotional",
+            "Eternal Father, I offer You the Body and Blood,\nSoul and Divinity of Your dearly beloved Son,\nOur Lord Jesus Christ,\nin atonement for our sins and those of the whole world.\n\n(On the 10 small beads, repeat 10 times:)\nFor the sake of His sorrowful Passion,\nhave mercy on us and on the whole world.\n\n(Conclude, three times:)\nHoly God, Holy Mighty One, Holy Immortal One,\nhave mercy on us and on the whole world.", "en"));
+
+        list.add(prayer("The Angelus", "Noon Devotion", "devotional",
+            "V. The Angel of the Lord declared unto Mary,\nR. And she conceived of the Holy Spirit.\nHail Mary…\n\nV. Behold the handmaid of the Lord,\nR. Be it done unto me according to Thy word.\nHail Mary…\n\nV. And the Word was made flesh,\nR. And dwelt among us.\nHail Mary…\n\nV. Pray for us, O holy Mother of God,\nR. That we may be made worthy of the promises of Christ.\n\nLet us pray:\nPour forth, we beseech Thee, O Lord,\nThy grace into our hearts,\nthat we, to whom the Incarnation of Christ, Thy Son,\nwas made known by the message of an angel,\nmay by His Passion and Cross\nbe brought to the glory of His Resurrection.\nThrough the same Christ our Lord.\nAmen.", "en"));
+
+        list.add(prayer("Regina Coeli", "Easter Season Devotion", "devotional",
+            "Queen of Heaven, rejoice, alleluia.\nFor He whom you did merit to bear, alleluia,\nHas risen, as He said, alleluia.\nPray for us to God, alleluia.\n\nRejoice and be glad, O Virgin Mary, alleluia.\nFor the Lord has truly risen, alleluia.\n\nLet us pray:\nO God, who through the resurrection of Your Son,\nour Lord Jesus Christ,\ndid vouchsafe to give joy to the world;\ngrant, we beseech You,\nthat through His Mother, the Virgin Mary,\nwe may obtain the joys of everlasting life.\nThrough the same Christ our Lord.\nAmen.", "en"));
+
+        // ── CORE DEVOTIONS (Turkish) ────────────────────────────────────
+        list.add(prayer("Çarmıh Yolu", "İstasyonlar", "devotional",
+            "1. İsa ölüme mahkûm edilir.\n2. İsa çarmıhını yüklenir.\n3. İsa ilk kez düşer.\n4. İsa, Annesi'yle karşılaşır.\n5. Simon Kirineli, çarmıhı taşımasına yardım eder.\n6. Veronika, İsa'nın yüzünü siler.\n7. İsa ikinci kez düşer.\n8. İsa, Kudüs kadınlarıyla karşılaşır.\n9. İsa üçüncü kez düşer.\n10. İsa'nın giysileri soyulur.\n11. İsa çarmıha çivilenir.\n12. İsa çarmıhta ölür.\n13. İsa çarmıhtan indirilir.\n14. İsa mezara konulur.\n\nSana tapıyoruz, ey Mesih, ve Seni kutsuyoruz,\nçünkü kutsal Çarmıhınla dünyayı kurtardın.", "tr"));
+
+        list.add(prayer("İlahi Merhamet Koroncası", "Merhamet Tespihi", "devotional",
+            "Ebedi Baba, Sana sunuyorum\nçok sevgili Oğlun Rabbimiz İsa Mesih'in\nBedenini ve Kanını, Ruhunu ve Tanrılığını,\ngünahlarımızın ve tüm dünyanın günahlarının kefareti için.\n\n(10 küçük tanede, 10 kez tekrarlayın:)\nO'nun acılı Çilesi hatırına,\nbize ve tüm dünyaya merhamet et.\n\n(Üç kez tekrarlayarak bitirin:)\nKutsal Tanrı, Kutsal Kudretli, Kutsal Ölümsüz,\nbize ve tüm dünyaya merhamet et.", "tr"));
+
+        list.add(prayer("Angelus (Rab'bin Melek Duası)", "Öğle Duası", "devotional",
+            "Rab'bin meleği Meryem'e müjdeledi,\nve o, Kutsal Ruh'tan gebe kaldı.\nSelam Sana Meryem…\n\nİşte Rab'bin hizmetçisiyim,\nbana sözün gerçekleşsin.\nSelam Sana Meryem…\n\nVe Söz insan oldu,\nve aramızda yaşadı.\nSelam Sana Meryem…\n\nBizim için dua et, ey Tanrı'nın kutsal Anası,\nMesih'in vaatlerine layık olalım.\n\nDua edelim:\nYa Rab, sana yalvarıyoruz,\nlütfunu yüreklerimize dök,\nbiz ki Oğlun Mesih'in bedenlenişini\nbir meleğin haberiyle öğrendik,\nO'nun Çilesi ve Çarmıhı aracılığıyla\nDirilişinin görkemine erişelim.\nAynı Mesih Rabbimiz aracılığıyla.\nAmin.", "tr"));
+
+        list.add(prayer("Regina Coeli (Göklerin Kraliçesi)", "Paskalya Dönemi Duası", "devotional",
+            "Göklerin Kraliçesi, sevin, alleluya.\nÇünkü taşımaya layık görüldüğün O, alleluya,\nsöylediği gibi dirildi, alleluya.\nBizim için Tanrı'ya dua et, alleluya.\n\nSevin ve mutlu ol, ey Bakire Meryem, alleluya.\nÇünkü Rab gerçekten dirildi, alleluya.\n\nDua edelim:\nEy Tanrım, Oğlun Rabbimiz İsa Mesih'in\ndirilişiyle dünyaya sevinç bahşeden,\nsana yalvarıyoruz,\nAnası Bakire Meryem aracılığıyla\nsonsuz yaşamın sevincine erişelim.\nAynı Mesih Rabbimiz aracılığıyla.\nAmin.", "tr"));
 
         return list;
     }

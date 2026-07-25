@@ -13,7 +13,7 @@
 
         <!-- APPEARANCE -->
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginTop="28dp" android:text="APPEARANCE"
+            android:layout_marginTop="28dp" android:text="@string/settings_section_appearance"
             android:textSize="10sp" android:letterSpacing="0.15" android:textAllCaps="true"
             android:textColor="@color/color_text_secondary"/>
 
@@ -33,7 +33,7 @@
 
         <!-- LANGUAGE -->
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginTop="28dp" android:text="LANGUAGE"
+            android:layout_marginTop="28dp" android:text="@string/settings_section_language"
             android:textSize="10sp" android:letterSpacing="0.15" android:textAllCaps="true"
             android:textColor="@color/color_text_secondary"/>
 
@@ -45,10 +45,10 @@
             <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1" android:orientation="vertical">
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="Prayer language" android:textSize="16sp"
+                    android:text="@string/prayer_language_label" android:textSize="16sp"
                     android:textColor="@color/color_on_surface"/>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="36 languages supported" android:textSize="12sp"
+                    android:text="@string/languages_supported" android:textSize="12sp"
                     android:textColor="@color/color_text_secondary"/>
             </LinearLayout>
             <TextView android:id="@+id/tv_current_language"
@@ -65,7 +65,7 @@
 
         <!-- NOTIFICATIONS -->
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginTop="28dp" android:text="NOTIFICATIONS"
+            android:layout_marginTop="28dp" android:text="@string/settings_section_notifications"
             android:textSize="10sp" android:letterSpacing="0.15" android:textAllCaps="true"
             android:textColor="@color/color_text_secondary"/>
 
@@ -78,12 +78,40 @@
                     android:text="@string/notifications" android:textSize="16sp"
                     android:textColor="@color/color_on_surface"/>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="Lauds · Terce · Sext · None · Vespers · Compline"
+                    android:text="@string/notification_hours_summary"
                     android:textSize="12sp" android:textColor="@color/color_text_secondary"/>
             </LinearLayout>
             <com.google.android.material.materialswitch.MaterialSwitch
                 android:id="@+id/switch_notifications" android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="0.5dp"
+            android:background="@color/color_divider"/>
+
+        <!-- ABOUT -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="28dp" android:text="@string/about_section_title"
+            android:textSize="10sp" android:letterSpacing="0.15" android:textAllCaps="true"
+            android:textColor="@color/color_text_secondary"/>
+
+        <LinearLayout android:id="@+id/row_about"
+            android:layout_width="match_parent" android:layout_height="64dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackground">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/about_title" android:textSize="16sp"
+                    android:textColor="@color/color_on_surface"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/about_row_subtitle" android:textSize="12sp"
+                    android:textColor="@color/color_text_secondary"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="›" android:textSize="20sp"
+                android:textColor="@color/color_text_secondary"/>
         </LinearLayout>
 
         <View android:layout_width="match_parent" android:layout_height="0.5dp"

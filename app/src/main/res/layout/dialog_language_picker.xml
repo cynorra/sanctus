@@ -8,7 +8,7 @@
         android:paddingHorizontal="24dp" android:gravity="center_vertical"
         android:orientation="horizontal">
         <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-            android:layout_weight="1" android:text="Select Language"
+            android:layout_weight="1" android:text="@string/select_language"
             android:fontFamily="serif" android:textSize="18sp"
             android:textColor="@color/color_on_background"/>
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"

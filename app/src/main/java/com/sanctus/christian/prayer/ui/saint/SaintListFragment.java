@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -45,15 +46,15 @@ public class SaintListFragment extends Fragment {
         etSearch.addTextChangedListener(new TextWatcher() {
             @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (s.length() > 0) {
-                    viewModel.search(s.toString()).observe(getViewLifecycleOwner(), adapter::submitList);
-                } else {
-                    viewModel.getAllSaints().observe(getViewLifecycleOwner(), adapter::submitList);
-                }
+                viewModel.setQuery(s.toString());
             }
             @Override public void afterTextChanged(Editable s) {}
         });
 
-        viewModel.getAllSaints().observe(getViewLifecycleOwner(), adapter::submitList);
+        TextView tvEmpty = view.findViewById(R.id.tv_empty_saints);
+        viewModel.getResults().observe(getViewLifecycleOwner(), list -> {
+            adapter.submitList(list);
+            tvEmpty.setVisibility(list == null || list.isEmpty() ? View.VISIBLE : View.GONE);
+        });
     }
 }

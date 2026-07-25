@@ -9,7 +9,16 @@
         <ImageButton android:id="@+id/btn_back" android:layout_width="44dp"
             android:layout_height="44dp" android:src="@drawable/ic_arrow_back"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:tint="@color/color_on_surface" android:contentDescription="Back"/>
+            android:tint="@color/color_on_surface" android:contentDescription="@string/content_desc_back"/>
+        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+        <ImageButton android:id="@+id/btn_font_decrease" android:layout_width="44dp"
+            android:layout_height="44dp" android:src="@drawable/ic_font_decrease"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/color_text_secondary" android:contentDescription="@string/content_desc_decrease_font"/>
+        <ImageButton android:id="@+id/btn_font_increase" android:layout_width="44dp"
+            android:layout_height="44dp" android:src="@drawable/ic_font_increase"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/color_text_secondary" android:contentDescription="@string/content_desc_increase_font"/>
     </LinearLayout>
 
     <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">

@@ -8,15 +8,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.sanctus.christian.prayer.R;
-import com.sanctus.christian.prayer.data.local.SanctusDatabase;
+import com.sanctus.christian.prayer.util.CalendarResolver;
 import com.sanctus.christian.prayer.util.DateUtils;
 import com.sanctus.christian.prayer.util.LiturgicalSeasonHelper;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.List;
 
 public class CalendarFragment extends Fragment {
 
@@ -33,8 +34,6 @@ public class CalendarFragment extends Fragment {
         LiturgicalSeasonHelper.Season season = LiturgicalSeasonHelper.getCurrentSeason();
         ((TextView) view.findViewById(R.id.tv_current_season)).setText(
                 LiturgicalSeasonHelper.getSeasonName(requireContext(), season));
-
-        String today = new SimpleDateFormat("MM-dd", Locale.getDefault()).format(new Date());
         ((TextView) view.findViewById(R.id.tv_today_date)).setText(DateUtils.getTodayFormatted());
 
         RecyclerView rvEvents = view.findViewById(R.id.rv_calendar_events);
@@ -42,25 +41,30 @@ public class CalendarFragment extends Fragment {
         CalendarEventAdapter adapter = new CalendarEventAdapter();
         rvEvents.setAdapter(adapter);
 
-        // Today's events
-        SanctusDatabase.getInstance(requireContext())
-                .calendarEventDao().getEventsForDate(today)
-                .observe(getViewLifecycleOwner(), events -> {
-                    TextView tvTodayLabel = view.findViewById(R.id.tv_today_feast_label);
-                    if (events != null && !events.isEmpty()) {
-                        tvTodayLabel.setText(events.get(0).title);
-                        if (events.get(0).isSolemnity) {
-                            tvTodayLabel.setTextColor(
-                                requireContext().getColor(R.color.color_accent));
-                        }
-                    } else {
-                        tvTodayLabel.setText("Feria (Weekday)");
-                    }
-                });
+        TextView tvTodayLabel = view.findViewById(R.id.tv_today_feast_label);
+        TextView tvEmpty = view.findViewById(R.id.tv_empty_calendar);
+        Calendar today = Calendar.getInstance();
 
-        // Upcoming solemnities
-        SanctusDatabase.getInstance(requireContext())
-                .calendarEventDao().getMajorFeast()
-                .observe(getViewLifecycleOwner(), adapter::submitList);
+        CalendarViewModel viewModel = new ViewModelProvider(this).get(CalendarViewModel.class);
+        viewModel.getAllEvents().observe(getViewLifecycleOwner(), events -> {
+            List<com.sanctus.christian.prayer.data.local.entity.CalendarEventEntity> safeEvents =
+                    events != null ? events : Collections.emptyList();
+
+            List<com.sanctus.christian.prayer.domain.model.ResolvedCalendarEvent> todays =
+                    CalendarResolver.resolveForToday(safeEvents, today);
+            if (!todays.isEmpty()) {
+                tvTodayLabel.setText(todays.get(0).event.title);
+                if (todays.get(0).event.isSolemnity) {
+                    tvTodayLabel.setTextColor(requireContext().getColor(R.color.color_accent));
+                }
+            } else {
+                tvTodayLabel.setText(R.string.feria_weekday);
+            }
+
+            List<com.sanctus.christian.prayer.domain.model.ResolvedCalendarEvent> upcoming =
+                    CalendarResolver.resolveUpcomingMajorFeasts(safeEvents, today, 15);
+            adapter.submitList(upcoming);
+            tvEmpty.setVisibility(upcoming.isEmpty() ? View.VISIBLE : View.GONE);
+        });
     }
 }

@@ -69,7 +69,7 @@ public class PrayerDetailFragment extends Fragment {
             repo.getPrayerById(prayerId).observe(getViewLifecycleOwner(), prayer -> {
                 if (prayer == null) return;
                 tvTitle.setText(prayer.name);
-                tvCategory.setText(prayer.category != null ? prayer.category.toUpperCase() : "");
+                tvCategory.setText(prayer.category != null ? prayer.category.toUpperCase(java.util.Locale.ROOT) : "");
                 tvContent.setText(prayer.content);
                 btnFavorite.setSelected(prayer.isFavorite);
                 btnFavorite.setOnClickListener(v -> {

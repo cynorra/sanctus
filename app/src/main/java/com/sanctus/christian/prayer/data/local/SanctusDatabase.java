@@ -12,10 +12,11 @@ import com.sanctus.christian.prayer.data.local.entity.CalendarEventEntity;
 import com.sanctus.christian.prayer.data.local.entity.PrayerEntity;
 import com.sanctus.christian.prayer.data.local.entity.SaintEntity;
 import com.sanctus.christian.prayer.data.local.entity.SettingsEntity;
+import com.sanctus.christian.prayer.data.local.migration.Migrations;
 
 @Database(
     entities = {PrayerEntity.class, SettingsEntity.class, SaintEntity.class, CalendarEventEntity.class},
-    version = 2,
+    version = 3,
     exportSchema = false
 )
 public abstract class SanctusDatabase extends RoomDatabase {
@@ -34,7 +35,9 @@ public abstract class SanctusDatabase extends RoomDatabase {
                             context.getApplicationContext(),
                             SanctusDatabase.class,
                             "sanctus_db"
-                    ).fallbackToDestructiveMigration().build();
+                    ).addMigrations(Migrations.MIGRATION_2_3)
+                     .fallbackToDestructiveMigrationOnDowngrade()
+                     .build();
                 }
             }
         }

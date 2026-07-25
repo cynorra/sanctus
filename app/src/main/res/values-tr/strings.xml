@@ -24,12 +24,39 @@
 
     <string name="no_saint_today_title">Bugün İçin Aziz Bulunmuyor</string>
     <string name="no_saint_today_desc">Yarın tekrar bakın veya azizlerin tüm takvimine göz atın.</string>
+    <string name="saint_feast_day_format">Bayram Günü · %1$s</string>
+    <string name="saint_feast_prefix">Bayram: %1$s</string>
+    <string name="saint_patron_prefix">Koruyucusu: %1$s</string>
+    <string name="next_canonical_hour_label">SONRAKİ İBADET SAATİ</string>
+    <string name="tap_to_begin_prayer">Duaya başlamak için dokunun</string>
+
+    <string name="settings_section_appearance">GÖRÜNÜM</string>
+    <string name="settings_section_language">DİL</string>
+    <string name="settings_section_notifications">BİLDİRİMLER</string>
+    <string name="prayer_language_label">Dua dili</string>
+    <string name="notification_hours_summary">Övgüler · Üçüncü Saat · Öğle Duası · İkindi Duası · Akşam Duası · Gece Duası</string>
+    <string name="about_row_subtitle">Web sitesi ve gizlilik politikası</string>
+
+    <string name="search_saints_hint">Aziz ara…</string>
+    <string name="upcoming_solemnities">YAKLAŞAN BÜYÜK BAYRAMLAR</string>
+    <string name="search_prayers_hint">Dua ara…</string>
+    <string name="no_results_found">Sonuç bulunamadı</string>
+    <string name="no_prayers_in_language">Dua bulunamadı. Varsayılan olarak İngilizce gösteriliyor.</string>
+    <string name="content_desc_back">Geri</string>
+    <string name="content_desc_decrease_font">Yazıyı küçült</string>
+    <string name="content_desc_increase_font">Yazıyı büyüt</string>
+    <string name="about_section_title">HAKKINDA</string>
 
     <string name="season_advent">Adventus (Gelim Zamanı)</string>
     <string name="season_christmas">Noel Dönemi</string>
     <string name="season_lent">Büyük Perhiz</string>
     <string name="season_easter">Paskalya Dönemi</string>
     <string name="season_ordinary">Yıl İçi Devir</string>
+
+    <string name="feria_weekday">Ferial Gün (Hafta İçi)</string>
+    <string name="calendar_type_solemnity">Büyük Bayram</string>
+    <string name="calendar_type_feast">Bayram</string>
+    <string name="calendar_type_memorial">Anma Günü</string>
 
     <string name="hour_lauds">Övgüler (Sabah Duası)</string>
     <string name="hour_terce">Üçüncü Saat</string>
@@ -62,6 +89,8 @@
     <string name="prayer_glory_be">Şan Olsun</string>
     <string name="rosary_hail_mary_progress">Selam Sana Meryem · 10\'da %1$d</string>
     <string name="rosary_progress">%1$d. Onluk · %2$d. Tane</string>
+    <string name="rosary_complete">Tespih tamamlandı</string>
+    <string name="prayer_hail_holy_queen">Selam, ey kutsal Kraliçe, merhamet Anası,\nhayatımız, tatlılığımız ve ümidimiz, selam sana.\nSana sesleniyoruz,\nHavva\'nın sürgündeki evlatları.\nSana iç çekişlerimizi gönderiyoruz,\nbu gözyaşı vadisinde inleyerek ve ağlayarak.\nO halde, ey bizim savunucumuz,\nmerhamet dolu gözlerini bize çevir.\nVe bu sürgünden sonra,\nrahminin kutsal meyvesi İsa\'yı bize göster.\nEy şefkatli, ey sevgi dolu, ey tatlı Bakire Meryem.\n\nBizim için dua et, ey Tanrı\'nın kutsal Anası,\nMesih\'in vaatlerine layık olalım.\nAmin.</string>
 
     <string-array name="mysteries_joyful">
         <item>Müjde</item>
@@ -102,4 +131,27 @@
     <string name="onboarding_desc_4">Günün Azizini keşfedin ve bayramlar, büyük bayramlar ve dönemleriyle tüm liturjik takvimi keşfedin.</string>
     <string name="onboarding_next">İleri</string>
     <string name="onboarding_skip">Geç</string>
+    <string name="onboarding_get_started">Başlayın</string>
+
+    <string name="category_all">Tümü</string>
+    <string name="category_morning">Sabah</string>
+    <string name="category_evening">Akşam</string>
+    <string name="category_mass">Ayin</string>
+    <string name="category_rosary">Tespih</string>
+    <string name="category_devotional">İbadet</string>
+
+    <string name="joyful_mysteries">Sevinç Dolu Gizemler</string>
+    <string name="sorrowful_mysteries">Acı Dolu Gizemler</string>
+    <string name="glorious_mysteries">Şanlı Gizemler</string>
+    <string name="luminous_mysteries">Işıklı Gizemler</string>
+
+    <string name="loading">Yükleniyor…</string>
+    <string name="retry">Tekrar Dene</string>
+    <string name="close">Kapat</string>
+    <string name="read_more">Devamını Oku</string>
+    <string name="favorite">Favori</string>
+    <string name="about_title">Hakkında</string>
+    <string name="select_language">Dil Seçin</string>
+    <string name="languages_supported">40 dil desteklenmektedir</string>
+    <string name="location">Konum</string>
 </resources>

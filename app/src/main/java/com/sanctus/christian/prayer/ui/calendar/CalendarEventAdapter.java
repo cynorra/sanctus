@@ -1,5 +1,6 @@
 package com.sanctus.christian.prayer.ui.calendar;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,15 +10,19 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import com.sanctus.christian.prayer.R;
-import com.sanctus.christian.prayer.data.local.entity.CalendarEventEntity;
+import com.sanctus.christian.prayer.domain.model.ResolvedCalendarEvent;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
 import java.util.Objects;
 
-public class CalendarEventAdapter extends ListAdapter<CalendarEventEntity, CalendarEventAdapter.VH> {
+public class CalendarEventAdapter extends ListAdapter<ResolvedCalendarEvent, CalendarEventAdapter.VH> {
 
     public CalendarEventAdapter() {
-        super(new DiffUtil.ItemCallback<CalendarEventEntity>() {
-            @Override public boolean areItemsTheSame(@NonNull CalendarEventEntity a, @NonNull CalendarEventEntity b) { return a.id == b.id; }
-            @Override public boolean areContentsTheSame(@NonNull CalendarEventEntity a, @NonNull CalendarEventEntity b) { return Objects.equals(a.title, b.title); }
+        super(new DiffUtil.ItemCallback<ResolvedCalendarEvent>() {
+            @Override public boolean areItemsTheSame(@NonNull ResolvedCalendarEvent a, @NonNull ResolvedCalendarEvent b) { return a.event.id == b.event.id; }
+            @Override public boolean areContentsTheSame(@NonNull ResolvedCalendarEvent a, @NonNull ResolvedCalendarEvent b) {
+                return Objects.equals(a.event.title, b.event.title) && a.occursOn.equals(b.occursOn);
+            }
         });
     }
 
@@ -29,25 +34,17 @@ public class CalendarEventAdapter extends ListAdapter<CalendarEventEntity, Calen
 
     @Override
     public void onBindViewHolder(@NonNull VH holder, int position) {
-        CalendarEventEntity ev = getItem(position);
-        holder.tvTitle.setText(ev.title);
-        holder.tvDate.setText(formatDate(ev.date));
-        holder.tvType.setText(ev.isSolemnity ? "Solemnity" : ev.isFeastDay ? "Feast" : "Memorial");
-        if (ev.isHolyDayOfObligation) {
-            holder.tvHoly.setVisibility(View.VISIBLE);
-        } else {
-            holder.tvHoly.setVisibility(View.GONE);
-        }
-    }
-
-    private String formatDate(String mmdd) {
-        if (mmdd == null || mmdd.length() < 5) return mmdd;
-        String[] months = {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
-        try {
-            int m = Integer.parseInt(mmdd.substring(0, 2)) - 1;
-            int d = Integer.parseInt(mmdd.substring(3, 5));
-            return months[m] + " " + d;
-        } catch (Exception e) { return mmdd; }
+        ResolvedCalendarEvent item = getItem(position);
+        Context context = holder.itemView.getContext();
+        holder.tvTitle.setText(item.event.title);
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM d", Locale.getDefault());
+        holder.tvDate.setText(sdf.format(item.occursOn.getTime()));
+        holder.tvType.setText(item.event.isSolemnity
+                ? context.getString(R.string.calendar_type_solemnity)
+                : item.event.isFeastDay
+                    ? context.getString(R.string.calendar_type_feast)
+                    : context.getString(R.string.calendar_type_memorial));
+        holder.tvHoly.setVisibility(item.event.isHolyDayOfObligation ? View.VISIBLE : View.GONE);
     }
 
     static class VH extends RecyclerView.ViewHolder {

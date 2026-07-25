@@ -41,17 +41,6 @@ public class SettingsRepository {
     public void setDarkMode(boolean dark) { prefs.edit().putBoolean("dark_mode", dark).apply(); }
     public boolean isNotificationsEnabled() { return prefs.getBoolean("notifications", true); }
     public void setNotificationsEnabled(boolean enabled) { prefs.edit().putBoolean("notifications", enabled).apply(); }
-    public String getLocationCity() { return prefs.getString("location_city", ""); }
-    public void setLocationCity(String city) { prefs.edit().putString("location_city", city).apply(); }
-    public double getLocationLat() { return Double.longBitsToDouble(prefs.getLong("lat", Double.doubleToLongBits(0))); }
-    public double getLocationLng() { return Double.longBitsToDouble(prefs.getLong("lng", Double.doubleToLongBits(0))); }
-    public void setLocation(String city, double lat, double lng) {
-        prefs.edit()
-                .putString("location_city", city)
-                .putLong("lat", Double.doubleToLongBits(lat))
-                .putLong("lng", Double.doubleToLongBits(lng))
-                .apply();
-    }
     public int getTextSize() { return prefs.getInt("text_size", 16); }
     public void setTextSize(int size) { prefs.edit().putInt("text_size", size).apply(); }
 }

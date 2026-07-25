@@ -1,9 +1,10 @@
 package com.sanctus.christian.prayer.data.local.entity;
 
 import androidx.room.Entity;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "prayers")
+@Entity(tableName = "prayers", indices = {@Index(value = {"language", "name"}, unique = true)})
 public class PrayerEntity {
     @PrimaryKey(autoGenerate = true)
     public int id;
