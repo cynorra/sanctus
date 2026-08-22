@@ -20,8 +20,7 @@
         <!-- Splash -->
         <activity android:name=".ui.splash.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.Sanctus.Splash"
-            android:screenOrientation="portrait">
+            android:theme="@style/Theme.Sanctus.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -31,13 +30,11 @@
         <!-- Main -->
         <activity android:name=".ui.main.MainActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
-            android:screenOrientation="portrait"/>
+            android:windowSoftInputMode="adjustResize"/>
 
         <!-- Onboarding -->
         <activity android:name=".ui.onboarding.OnboardingActivity"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:theme="@style/Theme.Sanctus"/>
 
         <!-- Notification Receiver -->
@@ -52,6 +49,19 @@
                 <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
             </intent-filter>
         </receiver>
+
+        <!-- Firebase Cloud Messaging Service -->
+        <service
+            android:name=".service.SanctusFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_cross"/>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

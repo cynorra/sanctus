@@ -37,12 +37,21 @@ public class SanctusApplication extends Application {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             try {
                 NotificationManager nm = getSystemService(NotificationManager.class);
-                NotificationChannel ch = new NotificationChannel(
-                        "prayer_times", "Canonical Hours",
-                        NotificationManager.IMPORTANCE_HIGH);
-                ch.setDescription("Daily canonical hour prayer reminders");
-                ch.enableVibration(true);
-                nm.createNotificationChannel(ch);
+                if (nm != null) {
+                    NotificationChannel ch1 = new NotificationChannel(
+                            "prayer_times", "Canonical Hours",
+                            NotificationManager.IMPORTANCE_HIGH);
+                    ch1.setDescription("Daily canonical hour prayer reminders");
+                    ch1.enableVibration(true);
+                    nm.createNotificationChannel(ch1);
+
+                    NotificationChannel ch2 = new NotificationChannel(
+                            "fcm_push_notifications", "Announcements & Daily Inspiration",
+                            NotificationManager.IMPORTANCE_HIGH);
+                    ch2.setDescription("Push notifications for daily verses, saints, and updates");
+                    ch2.enableVibration(true);
+                    nm.createNotificationChannel(ch2);
+                }
             } catch (Exception e) {
                 Log.e(TAG, "Notification channel failed", e);
             }
