@@ -8,6 +8,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import com.sanctus.christian.prayer.R;
+import com.sanctus.christian.prayer.SanctusApplication;
 import com.sanctus.christian.prayer.domain.model.RosaryMystery;
 import com.sanctus.christian.prayer.util.DateUtils;
 import java.util.Arrays;
@@ -116,6 +117,7 @@ public class RosaryViewModel extends AndroidViewModel {
         currentPrayer.setValue(res.getString(R.string.prayer_hail_holy_queen));
         progress.setValue(res.getString(R.string.rosary_complete));
         finished.setValue(true);
+        SanctusApplication.getInstance().getSettingsRepository().recordPrayerActivityToday();
     }
 
     public LiveData<RosaryMystery> getCurrentMystery() { return currentMystery; }

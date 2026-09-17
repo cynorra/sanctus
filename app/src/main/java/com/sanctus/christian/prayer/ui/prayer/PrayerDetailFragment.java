@@ -1,5 +1,6 @@
 package com.sanctus.christian.prayer.ui.prayer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,10 +12,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
+import com.sanctus.christian.prayer.BuildConfig;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.SanctusApplication;
 import com.sanctus.christian.prayer.data.local.entity.PrayerEntity;
 import com.sanctus.christian.prayer.data.repository.PrayerRepository;
+import com.sanctus.christian.prayer.util.AnimUtils;
 import java.util.concurrent.Executors;
 
 public class PrayerDetailFragment extends Fragment {
@@ -41,6 +44,7 @@ public class PrayerDetailFragment extends Fragment {
         ImageButton btnFavorite = view.findViewById(R.id.btn_favorite_detail);
         ImageButton btnFontIncrease = view.findViewById(R.id.btn_font_increase);
         ImageButton btnFontDecrease = view.findViewById(R.id.btn_font_decrease);
+        ImageButton btnShare = view.findViewById(R.id.btn_share_detail);
 
         btnBack.setOnClickListener(v -> Navigation.findNavController(v).popBackStack());
 
@@ -71,6 +75,7 @@ public class PrayerDetailFragment extends Fragment {
                 tvTitle.setText(prayer.name);
                 tvCategory.setText(prayer.category != null ? prayer.category.toUpperCase(java.util.Locale.ROOT) : "");
                 tvContent.setText(prayer.content);
+                SanctusApplication.getInstance().getSettingsRepository().recordPrayerActivityToday();
                 btnFavorite.setSelected(prayer.isFavorite);
                 btnFavorite.setOnClickListener(v -> {
                     Executors.newSingleThreadExecutor().execute(() -> {
@@ -80,6 +85,16 @@ public class PrayerDetailFragment extends Fragment {
                                 .getInstance(requireContext()).prayerDao().update(prayer);
                     });
                     btnFavorite.setSelected(!btnFavorite.isSelected());
+                    AnimUtils.bounce(btnFavorite);
+                });
+                btnShare.setOnClickListener(v -> {
+                    AnimUtils.pressFeedback(btnShare);
+                    String text = getString(R.string.share_prayer_text,
+                            prayer.name, prayer.content, BuildConfig.PLAY_STORE_URL);
+                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                    shareIntent.setType("text/plain");
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, text);
+                    startActivity(Intent.createChooser(shareIntent, getString(R.string.share_prayer_chooser_title)));
                 });
             });
         }

@@ -8,6 +8,7 @@ import android.content.Intent;
 import androidx.core.app.NotificationCompat;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.ui.main.MainActivity;
+import com.sanctus.christian.prayer.widget.PrayerWidgetProvider;
 
 public class PrayerNotificationReceiver extends BroadcastReceiver {
 
@@ -43,5 +44,6 @@ public class PrayerNotificationReceiver extends BroadcastReceiver {
 
         // Re-schedule for next day
         com.sanctus.christian.prayer.service.PrayerAlarmManager.scheduleAll(context);
+        PrayerWidgetProvider.refreshAll(context);
     }
 }

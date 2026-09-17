@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.data.local.entity.PrayerEntity;
+import com.sanctus.christian.prayer.util.AnimUtils;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -45,6 +46,7 @@ public class PrayerListAdapter extends ListAdapter<PrayerEntity, PrayerListAdapt
         holder.itemView.setOnClickListener(v -> listener.onClick(prayer));
         holder.btnFavorite.setOnClickListener(v -> {
             holder.btnFavorite.setSelected(!holder.btnFavorite.isSelected());
+            AnimUtils.bounce(holder.btnFavorite);
             favoriteListener.onClick(prayer);
         });
     }

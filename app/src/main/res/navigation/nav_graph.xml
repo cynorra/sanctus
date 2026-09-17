@@ -12,7 +12,11 @@
         android:name="com.sanctus.christian.prayer.ui.prayer.PrayerFragment"
         android:label="@string/nav_prayers">
         <action android:id="@+id/action_prayer_to_detail"
-            app:destination="@id/prayerDetailFragment"/>
+            app:destination="@id/prayerDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment android:id="@+id/prayerDetailFragment"
@@ -29,7 +33,11 @@
         android:name="com.sanctus.christian.prayer.ui.saint.SaintListFragment"
         android:label="@string/nav_saints">
         <action android:id="@+id/action_saints_to_detail"
-            app:destination="@id/saintDetailFragment"/>
+            app:destination="@id/saintDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment android:id="@+id/saintDetailFragment"
@@ -44,6 +52,17 @@
 
     <fragment android:id="@+id/settingsFragment"
         android:name="com.sanctus.christian.prayer.ui.settings.SettingsFragment"
-        android:label="@string/nav_settings"/>
+        android:label="@string/nav_settings">
+        <action android:id="@+id/action_settings_to_invite"
+            app:destination="@id/inviteFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment android:id="@+id/inviteFragment"
+        android:name="com.sanctus.christian.prayer.ui.invite.InviteFragment"
+        android:label="Invite"/>
 
 </navigation>

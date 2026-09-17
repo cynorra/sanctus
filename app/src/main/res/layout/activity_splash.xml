@@ -12,12 +12,14 @@
         android:gravity="center">
 
         <ImageView
+            android:id="@+id/iv_splash_cross"
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:src="@drawable/ic_cross"
             android:contentDescription="Cross" />
 
         <TextView
+            android:id="@+id/tv_splash_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -28,6 +30,7 @@
             android:textColor="@color/color_on_background" />
 
         <TextView
+            android:id="@+id/tv_splash_tagline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

@@ -8,6 +8,7 @@ import android.util.Log;
 import com.sanctus.christian.prayer.data.local.DatabaseInitializer;
 import com.sanctus.christian.prayer.data.local.SanctusDatabase;
 import com.sanctus.christian.prayer.data.repository.SettingsRepository;
+import com.sanctus.christian.prayer.referral.InstallReferrerHelper;
 import com.sanctus.christian.prayer.service.PrayerAlarmManager;
 import com.google.android.gms.ads.MobileAds;
 
@@ -25,6 +26,10 @@ public class SanctusApplication extends Application {
 
         // Initialize AdMob
         MobileAds.initialize(this, initializationStatus -> {});
+
+        // Capture any pending invite code from the Play Store install referrer (free, no
+        // App Links/domain needed). Consumed later when the user actually signs in.
+        InstallReferrerHelper.captureOnce(this);
 
         try {
             database = SanctusDatabase.getInstance(this);

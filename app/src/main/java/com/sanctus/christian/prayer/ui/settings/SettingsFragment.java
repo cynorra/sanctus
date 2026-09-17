@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import com.google.android.material.materialswitch.MaterialSwitch;
 import com.sanctus.christian.prayer.BuildConfig;
 import com.sanctus.christian.prayer.R;
@@ -38,6 +39,10 @@ public class SettingsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         settingsRepo = SanctusApplication.getInstance().getSettingsRepository();
+
+        // Invite friends
+        view.findViewById(R.id.row_invite).setOnClickListener(v ->
+                Navigation.findNavController(v).navigate(R.id.action_settings_to_invite));
 
         // Dark mode
         MaterialSwitch switchDark = view.findViewById(R.id.switch_dark_mode);

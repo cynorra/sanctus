@@ -57,14 +57,16 @@ public class OnboardingFragment extends Fragment {
 
         OnboardingPagerAdapter adapter = new OnboardingPagerAdapter(pages);
         pager.setAdapter(adapter);
+        pager.setPageTransformer(new DepthPageTransformer());
         new TabLayoutMediator(dots, pager, (tab, pos) -> {}).attach();
 
         pager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override public void onPageSelected(int position) {
-                tvTitle.setText(pages[position][0]);
-                tvDesc.setText(pages[position][1]);
                 boolean isLast = position == pages.length - 1;
                 btnNext.setText(isLast ? getString(R.string.onboarding_get_started) : getString(R.string.onboarding_next));
+
+                crossfadeText(tvTitle, pages[position][0]);
+                crossfadeText(tvDesc, pages[position][1]);
             }
         });
         tvTitle.setText(pages[0][0]);
@@ -79,6 +81,16 @@ public class OnboardingFragment extends Fragment {
             }
         });
         btnSkip.setOnClickListener(v -> finishOnboarding());
+    }
+
+    private void crossfadeText(TextView tv, String text) {
+        tv.animate().cancel();
+        tv.animate().alpha(0f).translationY(-10f).setDuration(120)
+            .withEndAction(() -> {
+                tv.setText(text);
+                tv.setTranslationY(10f);
+                tv.animate().alpha(1f).translationY(0f).setDuration(200).start();
+            }).start();
     }
 
     private void finishOnboarding() {

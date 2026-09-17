@@ -50,6 +50,17 @@
             </intent-filter>
         </receiver>
 
+        <!-- Home screen widget -->
+        <receiver android:name=".widget.PrayerWidgetProvider"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_prayer_info"/>
+        </receiver>
+
         <!-- Firebase Cloud Messaging Service -->
         <service
             android:name=".service.SanctusFirebaseMessagingService"

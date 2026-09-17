@@ -26,4 +26,8 @@ public class DashboardViewModel extends AndroidViewModel {
     public String getLanguage() {
         return settingsRepository.getLanguage();
     }
+
+    public int getStreak() {
+        return settingsRepository.getStreak();
+    }
 }

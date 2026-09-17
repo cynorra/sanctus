@@ -23,6 +23,8 @@ import java.util.Locale;
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel viewModel;
+    private View rowStreak;
+    private TextView tvStreak;
 
     @Nullable
     @Override
@@ -38,6 +40,10 @@ public class DashboardFragment extends Fragment {
         // Date
         TextView tvDate = view.findViewById(R.id.tv_date);
         tvDate.setText(DateUtils.getTodayFormatted());
+
+        rowStreak = view.findViewById(R.id.row_streak);
+        tvStreak = view.findViewById(R.id.tv_streak);
+        refreshStreak();
 
         // Season
         TextView tvSeason = view.findViewById(R.id.tv_liturgical_season);
@@ -81,5 +87,24 @@ public class DashboardFragment extends Fragment {
 
         view.findViewById(R.id.card_saint_of_day).setOnClickListener(v ->
                 Navigation.findNavController(v).navigate(R.id.saintFragment));
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Fragment stays alive across bottom-nav tab switches, so re-check the streak
+        // whenever this tab regains focus rather than only once at view creation.
+        if (viewModel != null) refreshStreak();
+    }
+
+    private void refreshStreak() {
+        if (viewModel == null || rowStreak == null) return;
+        int streak = viewModel.getStreak();
+        if (streak > 0) {
+            tvStreak.setText(getString(R.string.streak_days_format, streak));
+            rowStreak.setVisibility(View.VISIBLE);
+        } else {
+            rowStreak.setVisibility(View.GONE);
+        }
     }
 }
