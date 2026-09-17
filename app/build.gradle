@@ -23,9 +23,8 @@ android {
 
         buildConfigField "String", "WEBSITE_URL", '"https://sanctus.app"'
         buildConfigField "String", "PLAY_STORE_URL", '"https://play.google.com/store/apps/details?id=com.sanctus.christian.prayer"'
-        // From Firebase Console > Authentication > Sign-in method > Google > Web SDK configuration,
-        // after enabling Google sign-in. Placeholder until filled in — see README/setup notes.
-        buildConfigField "String", "GOOGLE_WEB_CLIENT_ID", '"REPLACE_WITH_FIREBASE_WEB_CLIENT_ID"'
+        // From Firebase Console > Authentication > Sign-in method > Google > Web SDK configuration.
+        buildConfigField "String", "GOOGLE_WEB_CLIENT_ID", '"99271954647-gp0ggqtig5qgn1udv8sb8fk113acqfv1.apps.googleusercontent.com"'
     }
 
     buildTypes {
