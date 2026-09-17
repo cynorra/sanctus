@@ -12,6 +12,7 @@ import com.sanctus.christian.prayer.data.repository.SettingsRepository;
 import com.sanctus.christian.prayer.referral.InstallReferrerHelper;
 import com.sanctus.christian.prayer.service.PrayerAlarmManager;
 import com.google.android.gms.ads.MobileAds;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class SanctusApplication extends Application {
 
@@ -86,7 +87,19 @@ public class SanctusApplication extends Application {
         } catch (Exception e) {
             Log.e(TAG, "Alarm schedule failed", e);
         }
+
+        // Engagement push topic (see scripts/send-daily-engagement-notification.js +
+        // .github/workflows/send-engagement-notification.yml for the sender side).
+        try {
+            if (settingsRepository != null && settingsRepository.isNotificationsEnabled()) {
+                FirebaseMessaging.getInstance().subscribeToTopic(ENGAGEMENT_TOPIC);
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Engagement topic subscribe failed", e);
+        }
     }
+
+    public static final String ENGAGEMENT_TOPIC = "engagement";
 
     public static SanctusApplication getInstance() { return instance; }
     public SanctusDatabase getDatabase() { return database; }

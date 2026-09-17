@@ -1,0 +1,110 @@
+#!/usr/bin/env node
+// Sends one daily push notification to the "engagement" FCM topic: a short inviting title
+// (rotates by day of week, not the same text every day) + today's rotating featured prayer
+// as the body — the same "Prayer of the Day" pick logic the app itself uses on the dashboard
+// (day-of-year modulo prayer count), so the notification and the in-app card always agree.
+//
+// Auth: Google Application Default Credentials (gcloud user login locally, or
+// google-github-actions/auth with a service account in CI) — needs the
+// https://www.googleapis.com/auth/firebase.messaging scope, which a normal
+// `gcloud auth print-access-token` / cloud-platform-scoped service account already covers.
+
+const { execSync } = require('child_process');
+
+const PROJECT_ID = process.env.FIREBASE_PROJECT_ID || 'sanctus-b5259';
+const TOPIC = 'engagement';
+
+const TITLES = [
+  'Bugün dua etmek için bir an ayır 🙏',
+  'Günün duası seni bekliyor',
+  'Sanctus ile bugüne huzurla başla',
+  'Bir dakikanı Tanrı\'ya ayır',
+  'Bugünün duasını okudun mu?',
+  'Haftanın bu günü, dua zamanı',
+  'Kalbini bugün de O\'na aç',
+];
+
+function getAccessToken() {
+  return execSync('gcloud auth print-access-token').toString().trim();
+}
+
+function dayOfYearUTC(date) {
+  const start = Date.UTC(date.getUTCFullYear(), 0, 1);
+  const diff = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()) - start;
+  return Math.floor(diff / 86400000) + 1;
+}
+
+async function fetchEnglishPrayers(token) {
+  const url = `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default)/documents:runQuery`;
+  const body = {
+    structuredQuery: {
+      from: [{ collectionId: 'prayers' }],
+      where: {
+        fieldFilter: {
+          field: { fieldPath: 'language' },
+          op: 'EQUAL',
+          value: { stringValue: 'en' },
+        },
+      },
+    },
+  };
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) throw new Error(`Firestore query failed: ${res.status} ${await res.text()}`);
+  const rows = await res.json();
+  return rows
+    .filter(r => r.document)
+    .map(r => ({
+      name: r.document.fields.name?.stringValue || '',
+      content: r.document.fields.content?.stringValue || '',
+    }))
+    .filter(p => p.name && p.content)
+    .sort((a, b) => a.name.localeCompare(b.name)); // stable order, matches the app's ORDER BY name
+}
+
+function excerpt(text, maxChars) {
+  const collapsed = text.replace(/\n/g, ' ').trim();
+  return collapsed.length <= maxChars ? collapsed : collapsed.slice(0, maxChars).trim() + '…';
+}
+
+async function sendPush(token, title, body) {
+  const url = `https://fcm.googleapis.com/v1/projects/${PROJECT_ID}/messages:send`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      message: {
+        topic: TOPIC,
+        notification: { title, body },
+        android: { priority: 'high' },
+      },
+    }),
+  });
+  if (!res.ok) throw new Error(`FCM send failed: ${res.status} ${await res.text()}`);
+  return res.json();
+}
+
+async function main() {
+  const token = getAccessToken();
+  const now = new Date();
+
+  const prayers = await fetchEnglishPrayers(token);
+  if (prayers.length === 0) {
+    console.log('No English prayers found in Firestore — skipping send.');
+    return;
+  }
+  const doy = dayOfYearUTC(now);
+  const prayer = prayers[doy % prayers.length];
+
+  const title = TITLES[now.getUTCDay() % TITLES.length];
+  const body = `${prayer.name} — ${excerpt(prayer.content, 100)}`;
+
+  console.log(`Sending to topic "${TOPIC}": "${title}" / "${body}"`);
+  const result = await sendPush(token, title, body);
+  console.log('Sent:', result.name || result);
+}
+
+main().catch(e => { console.error(e); process.exit(1); });

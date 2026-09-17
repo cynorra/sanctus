@@ -61,8 +61,12 @@ public class SettingsFragment extends Fragment {
             if (isChecked) {
                 requestNotificationPermission();
                 PrayerAlarmManager.scheduleAll(requireContext());
+                com.google.firebase.messaging.FirebaseMessaging.getInstance()
+                        .subscribeToTopic(SanctusApplication.ENGAGEMENT_TOPIC);
             } else {
                 PrayerAlarmManager.cancelAll(requireContext());
+                com.google.firebase.messaging.FirebaseMessaging.getInstance()
+                        .unsubscribeFromTopic(SanctusApplication.ENGAGEMENT_TOPIC);
             }
         });
 
