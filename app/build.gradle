@@ -27,11 +27,31 @@ android {
         buildConfigField "String", "GOOGLE_WEB_CLIENT_ID", '"99271954647-gp0ggqtig5qgn1udv8sb8fk113acqfv1.apps.googleusercontent.com"'
     }
 
+    // Only present in CI (see .github/workflows/release-build.yml): a tag push decodes the
+    // release keystore from a secret and passes its path/passwords via these env vars. A local
+    // dev build has none of them set, so signingConfigs.release is simply never applied below —
+    // assembleDebug/bundleDebug are completely unaffected.
+    def releaseStoreFile = System.getenv("RELEASE_STORE_FILE")
+
+    signingConfigs {
+        if (releaseStoreFile != null) {
+            release {
+                storeFile file(releaseStoreFile)
+                storePassword System.getenv("RELEASE_STORE_PASSWORD")
+                keyAlias System.getenv("RELEASE_KEY_ALIAS")
+                keyPassword System.getenv("RELEASE_KEY_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (releaseStoreFile != null) {
+                signingConfig signingConfigs.release
+            }
         }
     }
 
