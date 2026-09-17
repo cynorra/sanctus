@@ -12,7 +12,28 @@
           "package_name": "com.sanctus.christian.prayer"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "99271954647-6jun517dqeeuh8qfrp2d6novv3i1vebe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sanctus.christian.prayer",
+            "certificate_hash": "335e2b021382ee0baa31aed9097a93a9ca403eb7"
+          }
+        },
+        {
+          "client_id": "99271954647-ukjjcsipnsin7fniu0peqgjrfe5rursm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sanctus.christian.prayer",
+            "certificate_hash": "ec89bf702ece2f27c099723d09e9f55c257acfe2"
+          }
+        },
+        {
+          "client_id": "99271954647-gp0ggqtig5qgn1udv8sb8fk113acqfv1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyC8ljWrLID1Y1HfacXE0x01YZreNZtDxdM"
@@ -20,7 +41,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99271954647-gp0ggqtig5qgn1udv8sb8fk113acqfv1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
