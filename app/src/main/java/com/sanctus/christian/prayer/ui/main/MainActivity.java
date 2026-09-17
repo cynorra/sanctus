@@ -1,5 +1,6 @@
 package com.sanctus.christian.prayer.ui.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,10 +13,17 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.sanctus.christian.prayer.R;
+import com.sanctus.christian.prayer.data.local.SanctusDatabase;
+import com.sanctus.christian.prayer.data.local.entity.PrayerEntity;
+import com.sanctus.christian.prayer.ui.prayer.PrayerDetailFragment;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final String EXTRA_DEEP_LINK_PRAYER_NAME = "deep_link_prayer_name";
+    public static final String EXTRA_DEEP_LINK_PRAYER_LANGUAGE = "deep_link_prayer_language";
 
     private NavController navController;
     private AdView adView;
@@ -47,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
             NavigationUI.setupWithNavController(bottomNav, navController);
         }
 
+        handleDeepLink(getIntent());
+
         // Load AdMob Banner
         adView = findViewById(R.id.adView);
         if (adView != null) {
@@ -71,6 +81,41 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         if (adView != null) adView.destroy();
         super.onDestroy();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        handleDeepLink(intent);
+    }
+
+    /**
+     * The daily engagement push links straight to the specific prayer it mentioned, not just the
+     * app's default screen (see SanctusFirebaseMessagingService for why this needs a data-only
+     * FCM payload to work at all). The push only carries the prayer's name/language since that's
+     * all Firestore's copy has — the local Room row id is looked up here, off the main thread.
+     */
+    private void handleDeepLink(Intent intent) {
+        if (intent == null || navController == null) return;
+        String name = intent.getStringExtra(EXTRA_DEEP_LINK_PRAYER_NAME);
+        String language = intent.getStringExtra(EXTRA_DEEP_LINK_PRAYER_LANGUAGE);
+        if (name == null || language == null) return;
+
+        // Consume so a config change / re-entry into this activity doesn't re-navigate.
+        intent.removeExtra(EXTRA_DEEP_LINK_PRAYER_NAME);
+        intent.removeExtra(EXTRA_DEEP_LINK_PRAYER_LANGUAGE);
+
+        Executors.newSingleThreadExecutor().execute(() -> {
+            PrayerEntity prayer = SanctusDatabase.getInstance(this).prayerDao()
+                    .findByNameAndLanguage(name, language);
+            if (prayer == null) return;
+            runOnUiThread(() -> {
+                Bundle args = new Bundle();
+                args.putInt(PrayerDetailFragment.ARG_PRAYER_ID, prayer.id);
+                navController.navigate(R.id.prayerDetailFragment, args);
+            });
+        });
     }
 
     @Override

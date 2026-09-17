@@ -38,4 +38,9 @@ public interface PrayerDao {
     /** Returns rows affected — used by ContentSyncManager to decide update-vs-insert. */
     @Query("UPDATE prayers SET category = :category, content = :content WHERE language = :language AND name = :name")
     int updateContent(String language, String name, String category, String content);
+
+    /** Synchronous lookup (call off the main thread) — used to resolve a push notification's
+     *  deep link (which only knows the prayer's name/language, not the local row id) to an id. */
+    @Query("SELECT * FROM prayers WHERE name = :name AND language = :language LIMIT 1")
+    PrayerEntity findByNameAndLanguage(String name, String language);
 }

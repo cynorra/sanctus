@@ -70,7 +70,13 @@ function excerpt(text, maxChars) {
   return collapsed.length <= maxChars ? collapsed : collapsed.slice(0, maxChars).trim() + '…';
 }
 
-async function sendPush(token, title, body) {
+// Data-only payload (no top-level "notification" field) on purpose: FCM only hands a
+// notification-payload message to the app's own code when the app is in the foreground — in the
+// background/killed state (the common case for a daily reminder), the OS displays it generically
+// and drops any custom tap deep-link. A data-only payload always reaches
+// SanctusFirebaseMessagingService.onMessageReceived(), which builds the notification itself and
+// can attach the prayer_name/language so tapping it opens that exact prayer.
+async function sendPush(token, title, body, prayerName, language) {
   const url = `https://fcm.googleapis.com/v1/projects/${PROJECT_ID}/messages:send`;
   const res = await fetch(url, {
     method: 'POST',
@@ -78,7 +84,7 @@ async function sendPush(token, title, body) {
     body: JSON.stringify({
       message: {
         topic: TOPIC,
-        notification: { title, body },
+        data: { title, body, prayer_name: prayerName, language },
         android: { priority: 'high' },
       },
     }),
@@ -102,8 +108,8 @@ async function main() {
   const title = TITLES[now.getUTCDay() % TITLES.length];
   const body = `${prayer.name} — ${excerpt(prayer.content, 100)}`;
 
-  console.log(`Sending to topic "${TOPIC}": "${title}" / "${body}"`);
-  const result = await sendPush(token, title, body);
+  console.log(`Sending to topic "${TOPIC}": "${title}" / "${body}" (deep link: ${prayer.name}, en)`);
+  const result = await sendPush(token, title, body, prayer.name, 'en');
   console.log('Sent:', result.name || result);
 }
 

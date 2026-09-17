@@ -26,6 +26,16 @@ public class SanctusFirebaseMessagingService extends FirebaseMessagingService {
         // Token can be sent to custom backend server if needed in future
     }
 
+    /**
+     * FCM behaves very differently depending on the message shape: a payload with a top-level
+     * "notification" field is displayed directly by the OS system tray whenever the app is in
+     * the background or killed — this method never even runs for it, so any custom deep-link
+     * extras we'd want to attach to the tap action are silently dropped. Only a data-only
+     * payload (no "notification" field, just "data") reliably reaches this method regardless of
+     * app state, which is required for the tap to open the specific prayer instead of just the
+     * app's default screen. scripts/send-daily-engagement-notification.js sends data-only for
+     * exactly this reason — don't add a "notification" field back without re-checking this.
+     */
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
@@ -40,7 +50,10 @@ public class SanctusFirebaseMessagingService extends FirebaseMessagingService {
             body = remoteMessage.getNotification().getBody();
         }
 
-        // Check if message contains data payload
+        // Check if message contains data payload. Deep-link fields (prayer_name/language) only
+        // ever arrive this way — see the important note on onMessageReceived's doc comment about
+        // why the daily engagement push is sent as data-only, never with a top-level "notification".
+        String prayerName = null, language = null;
         if (remoteMessage.getData().size() > 0) {
             if (title == null && remoteMessage.getData().containsKey("title")) {
                 title = remoteMessage.getData().get("title");
@@ -48,14 +61,17 @@ public class SanctusFirebaseMessagingService extends FirebaseMessagingService {
             if (body == null && remoteMessage.getData().containsKey("body")) {
                 body = remoteMessage.getData().get("body");
             }
+            prayerName = remoteMessage.getData().get("prayer_name");
+            language = remoteMessage.getData().get("language");
         }
 
         if (title != null || body != null) {
-            sendNotification(title != null ? title : getString(R.string.app_name), body != null ? body : "");
+            sendNotification(title != null ? title : getString(R.string.app_name), body != null ? body : "",
+                    prayerName, language);
         }
     }
 
-    private void sendNotification(String title, String messageBody) {
+    private void sendNotification(String title, String messageBody, String deepLinkPrayerName, String deepLinkLanguage) {
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         if (notificationManager == null) return;
 
@@ -72,6 +88,10 @@ public class SanctusFirebaseMessagingService extends FirebaseMessagingService {
 
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        if (deepLinkPrayerName != null && deepLinkLanguage != null) {
+            intent.putExtra(MainActivity.EXTRA_DEEP_LINK_PRAYER_NAME, deepLinkPrayerName);
+            intent.putExtra(MainActivity.EXTRA_DEEP_LINK_PRAYER_LANGUAGE, deepLinkLanguage);
+        }
 
         PendingIntent pendingIntent = PendingIntent.getActivity(
                 this,
