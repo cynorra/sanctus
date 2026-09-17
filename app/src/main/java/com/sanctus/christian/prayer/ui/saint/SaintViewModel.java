@@ -43,6 +43,31 @@ public class SaintViewModel extends AndroidViewModel {
                 saint == null ? dao.getSaintByFeastDate(date, "en") : staticLiveData(saint));
     }
 
+    /**
+     * Only ~60 of the 365 feast days have a matching saint, so most days getSaintByFeastDate()
+     * falls through to the same static "no saint today" message. This picks a rotating spotlight
+     * (deterministic by day-of-year, not random) from the full list instead, so there's always
+     * something different to show.
+     */
+    public LiveData<SaintEntity> getSaintSpotlight(String date, int dayOfYear) {
+        return Transformations.switchMap(getSaintByFeastDate(date), exact ->
+                exact != null ? staticLiveData(exact) : rotatingFallback(dayOfYear));
+    }
+
+    private LiveData<SaintEntity> rotatingFallback(int dayOfYear) {
+        LiveData<List<SaintEntity>> primary = dao.getAllSaints(language);
+        if ("en".equals(language)) return Transformations.map(primary, list -> pickForDay(list, dayOfYear));
+        return Transformations.switchMap(primary, list -> {
+            if (list != null && !list.isEmpty()) return staticLiveData(pickForDay(list, dayOfYear));
+            return Transformations.map(dao.getAllSaints("en"), l -> pickForDay(l, dayOfYear));
+        });
+    }
+
+    private static SaintEntity pickForDay(List<SaintEntity> list, int dayOfYear) {
+        if (list == null || list.isEmpty()) return null;
+        return list.get(dayOfYear % list.size());
+    }
+
     public LiveData<SaintEntity> getSaintById(int id) { return dao.getSaintById(id); }
 
     private static LiveData<List<SaintEntity>> withListFallback(LiveData<List<SaintEntity>> primary, LiveData<List<SaintEntity>> fallback) {

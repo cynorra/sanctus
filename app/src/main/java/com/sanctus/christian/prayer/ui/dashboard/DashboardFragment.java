@@ -66,14 +66,30 @@ public class DashboardFragment extends Fragment {
         );
         rvPrayerTimes.setAdapter(adapter);
 
+        // Prayer of the day
+        TextView tvPrayerOfDayName = view.findViewById(R.id.tv_prayer_of_day_name);
+        TextView tvPrayerOfDayExcerpt = view.findViewById(R.id.tv_prayer_of_day_excerpt);
+        View cardPrayerOfDay = view.findViewById(R.id.card_prayer_of_day);
+        viewModel.getPrayerOfTheDay().observe(getViewLifecycleOwner(), prayer -> {
+            if (prayer == null) return;
+            tvPrayerOfDayName.setText(prayer.name);
+            tvPrayerOfDayExcerpt.setText(prayer.content);
+            cardPrayerOfDay.setOnClickListener(v -> {
+                Bundle args = new Bundle();
+                args.putInt(com.sanctus.christian.prayer.ui.prayer.PrayerDetailFragment.ARG_PRAYER_ID, prayer.id);
+                Navigation.findNavController(v).navigate(R.id.action_dashboard_to_prayer_detail, args);
+            });
+        });
+
         // Saint of the day
         TextView tvSaintName = view.findViewById(R.id.tv_saint_name);
         TextView tvSaintFeast = view.findViewById(R.id.tv_saint_feast);
         TextView tvSaintDesc = view.findViewById(R.id.tv_saint_desc);
         String today = new SimpleDateFormat("MMMM d", Locale.ENGLISH).format(new Date());
+        int dayOfYear = java.util.Calendar.getInstance().get(java.util.Calendar.DAY_OF_YEAR);
 
         SaintViewModel saintViewModel = new ViewModelProvider(this).get(SaintViewModel.class);
-        saintViewModel.getSaintByFeastDate(today).observe(getViewLifecycleOwner(), saint -> {
+        saintViewModel.getSaintSpotlight(today, dayOfYear).observe(getViewLifecycleOwner(), saint -> {
             if (saint != null) {
                 tvSaintName.setText(saint.name);
                 tvSaintFeast.setText(getString(R.string.saint_feast_day_format, saint.feastDate));

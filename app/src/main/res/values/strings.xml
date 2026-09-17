@@ -12,6 +12,7 @@
     <string name="next_hour">Next Hour</string>
     <string name="canonical_hours">Canonical Hours</string>
     <string name="saint_of_day">Saint of the Day</string>
+    <string name="prayer_of_day">Prayer of the Day</string>
     <string name="verse_of_day">Verse of the Day</string>
     <string name="prayers_title">Prayers</string>
     <string name="category_all">All</string>
