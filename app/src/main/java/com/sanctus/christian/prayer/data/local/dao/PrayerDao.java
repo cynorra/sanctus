@@ -34,4 +34,8 @@ public interface PrayerDao {
 
     @Query("SELECT COUNT(*) FROM prayers")
     int getCount();
+
+    /** Returns rows affected — used by ContentSyncManager to decide update-vs-insert. */
+    @Query("UPDATE prayers SET category = :category, content = :content WHERE language = :language AND name = :name")
+    int updateContent(String language, String name, String category, String content);
 }

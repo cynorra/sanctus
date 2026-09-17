@@ -1,6 +1,5 @@
 package com.sanctus.christian.prayer.ui.saint;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -70,10 +69,9 @@ public class SaintDetailFragment extends Fragment {
                     String text = getString(R.string.share_saint_text,
                             saint.name, getString(R.string.saint_feast_prefix, saint.feastDate),
                             saint.description, BuildConfig.PLAY_STORE_URL);
-                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
-                    shareIntent.setType("text/plain");
-                    shareIntent.putExtra(Intent.EXTRA_TEXT, text);
-                    startActivity(Intent.createChooser(shareIntent, getString(R.string.share_saint_chooser_title)));
+                    com.sanctus.christian.prayer.share.ShareSheetDialogFragment
+                            .create(saint.name, saint.description, text, getString(R.string.share_saint_chooser_title))
+                            .show(getChildFragmentManager(), "share_sheet");
                 });
             });
         }

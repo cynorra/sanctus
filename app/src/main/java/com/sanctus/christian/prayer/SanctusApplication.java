@@ -7,6 +7,7 @@ import android.os.Build;
 import android.util.Log;
 import com.sanctus.christian.prayer.data.local.DatabaseInitializer;
 import com.sanctus.christian.prayer.data.local.SanctusDatabase;
+import com.sanctus.christian.prayer.data.remote.ContentSyncManager;
 import com.sanctus.christian.prayer.data.repository.SettingsRepository;
 import com.sanctus.christian.prayer.referral.InstallReferrerHelper;
 import com.sanctus.christian.prayer.service.PrayerAlarmManager;
@@ -62,11 +63,19 @@ public class SanctusApplication extends Application {
             }
         }
 
-        // Seed DB
+        // Seed DB (bundled JSON — offline-first baseline)
         try {
             DatabaseInitializer.seed(this);
         } catch (Exception e) {
             Log.e(TAG, "DB seed failed", e);
+        }
+
+        // Pull any newer prayer/saint content from Firestore, if reachable. Best-effort: the
+        // bundled seed above already leaves the app fully usable offline.
+        try {
+            ContentSyncManager.syncIfNeeded(this);
+        } catch (Exception e) {
+            Log.e(TAG, "Content sync failed", e);
         }
 
         // Alarms

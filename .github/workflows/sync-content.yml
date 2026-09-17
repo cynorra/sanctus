@@ -1,0 +1,30 @@
+name: Sync prayer/saint content to Firestore
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'app/src/main/assets/seed/**'
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Requires a repo secret FIRESTORE_SYNC_SERVICE_ACCOUNT holding the JSON key of a
+      # service account scoped to roles/datastore.user on the sanctus-b5259 GCP project —
+      # nothing broader. See scripts/sync-content-to-firestore.js for what it's used for.
+      - uses: google-github-actions/auth@v2
+        with:
+          credentials_json: '${{ secrets.FIRESTORE_SYNC_SERVICE_ACCOUNT }}'
+
+      - uses: google-github-actions/setup-gcloud@v2
+
+      - name: Sync content
+        run: node scripts/sync-content-to-firestore.js

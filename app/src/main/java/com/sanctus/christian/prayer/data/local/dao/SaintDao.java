@@ -34,4 +34,8 @@ public interface SaintDao {
 
     @Query("SELECT COUNT(*) FROM saints")
     int getCount();
+
+    /** Returns rows affected — used by ContentSyncManager to decide update-vs-insert. */
+    @Query("UPDATE saints SET description = :description, patronOf = :patronOf WHERE language = :language AND feastDate = :feastDate AND name = :name")
+    int updateContent(String language, String feastDate, String name, String description, String patronOf);
 }

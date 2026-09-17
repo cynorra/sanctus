@@ -1,6 +1,5 @@
 package com.sanctus.christian.prayer.ui.prayer;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -91,10 +90,9 @@ public class PrayerDetailFragment extends Fragment {
                     AnimUtils.pressFeedback(btnShare);
                     String text = getString(R.string.share_prayer_text,
                             prayer.name, prayer.content, BuildConfig.PLAY_STORE_URL);
-                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
-                    shareIntent.setType("text/plain");
-                    shareIntent.putExtra(Intent.EXTRA_TEXT, text);
-                    startActivity(Intent.createChooser(shareIntent, getString(R.string.share_prayer_chooser_title)));
+                    com.sanctus.christian.prayer.share.ShareSheetDialogFragment
+                            .create(prayer.name, prayer.content, text, getString(R.string.share_prayer_chooser_title))
+                            .show(getChildFragmentManager(), "share_sheet");
                 });
             });
         }

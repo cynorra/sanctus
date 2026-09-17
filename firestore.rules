@@ -25,5 +25,23 @@ service cloud.firestore {
 
       allow delete: if false;
     }
+
+    // Prayer/saint content + its version markers. Public read (it's not sensitive — the app
+    // itself ships the same content as a bundled JSON fallback). No client write path at all:
+    // these are only ever written by scripts/sync-content-to-firestore.js authenticated via
+    // gcloud IAM (a service account with roles/datastore.user), which bypasses these rules
+    // entirely — that's intentional, not a hole to close.
+    match /prayers/{prayerId} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /saints/{saintId} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /content_meta/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
   }
 }

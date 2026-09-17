@@ -128,6 +128,9 @@
     <string name="sign_in_failed">Sign-in failed. Please try again.</string>
 
     <!-- Sharing -->
+    <string name="share_sheet_title">Share</string>
+    <string name="share_more_option">More…</string>
+    <string name="share_app_not_installed">App not installed</string>
     <string name="share_prayer_chooser_title">Share this prayer</string>
     <string name="share_prayer_text">"%1$s\n\n%2$s\n\n— Shared from Sanctus: Christian Prayer\n%3$s"</string>
     <string name="share_saint_chooser_title">Share this saint</string>
