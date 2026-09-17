@@ -13,9 +13,10 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.sanctus.christian.prayer.R;
 
 /**
- * Bottom sheet offering direct share-to-platform buttons for WhatsApp/Facebook/Instagram/TikTok
- * (rendering a branded image card, since those platforms mostly ignore a plain-text caption),
- * plus a "More…" row that falls back to the system share sheet with the plain-text version.
+ * Bottom sheet offering direct share-to-platform buttons for WhatsApp/TikTok (feed-style) and
+ * Facebook/Instagram (both feed post AND a dedicated Story option), rendering a branded image
+ * card since those platforms mostly ignore a plain-text caption on ACTION_SEND. Also offers a
+ * "More…" row that falls back to the system share sheet with the plain-text version.
  */
 public class ShareSheetDialogFragment extends BottomSheetDialogFragment {
 
@@ -50,10 +51,15 @@ public class ShareSheetDialogFragment extends BottomSheetDialogFragment {
         String plainText = args.getString(ARG_PLAIN_TEXT, "");
         String chooserTitle = args.getString(ARG_CHOOSER_TITLE, "");
 
-        bindPlatformRow(view, R.id.row_whatsapp, SocialShareHelper.Platform.WHATSAPP, name, content, plainText);
-        bindPlatformRow(view, R.id.row_facebook, SocialShareHelper.Platform.FACEBOOK, name, content, plainText);
-        bindPlatformRow(view, R.id.row_instagram, SocialShareHelper.Platform.INSTAGRAM, name, content, plainText);
-        bindPlatformRow(view, R.id.row_tiktok, SocialShareHelper.Platform.TIKTOK, name, content, plainText);
+        bindPostRow(view, R.id.row_whatsapp, SocialShareHelper.Platform.WHATSAPP, name, content, plainText);
+        bindPostRow(view, R.id.row_facebook, SocialShareHelper.Platform.FACEBOOK, name, content, plainText);
+        bindPostRow(view, R.id.row_instagram, SocialShareHelper.Platform.INSTAGRAM, name, content, plainText);
+        bindPostRow(view, R.id.row_tiktok, SocialShareHelper.Platform.TIKTOK, name, content, plainText);
+
+        bindStoryRow(view, R.id.row_facebook_story, SocialShareHelper.Platform.FACEBOOK, name, content,
+                (ctx, uri) -> SocialShareHelper.shareToFacebookStory(ctx, uri));
+        bindStoryRow(view, R.id.row_instagram_story, SocialShareHelper.Platform.INSTAGRAM, name, content,
+                (ctx, uri) -> SocialShareHelper.shareToInstagramStory(ctx, uri));
 
         view.findViewById(R.id.row_more).setOnClickListener(v -> {
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
@@ -64,16 +70,35 @@ public class ShareSheetDialogFragment extends BottomSheetDialogFragment {
         });
     }
 
-    private void bindPlatformRow(View root, int rowId, SocialShareHelper.Platform platform,
-                                  String name, String content, String plainText) {
+    private interface StoryShareFn { boolean share(android.content.Context ctx, Uri uri); }
+
+    private void bindPostRow(View root, int rowId, SocialShareHelper.Platform platform,
+                              String name, String content, String plainText) {
         View row = root.findViewById(rowId);
         if (!SocialShareHelper.isInstalled(requireContext(), platform)) {
             row.setVisibility(View.GONE);
             return;
         }
         row.setOnClickListener(v -> {
-            Uri cardUri = ShareCardGenerator.generate(requireContext(), name, content);
+            Uri cardUri = ShareCardGenerator.generate(requireContext(), ShareCardGenerator.Format.POST, name, content);
             boolean started = SocialShareHelper.share(requireContext(), platform, cardUri, plainText);
+            if (!started) {
+                Toast.makeText(requireContext(), R.string.share_app_not_installed, Toast.LENGTH_SHORT).show();
+            }
+            dismiss();
+        });
+    }
+
+    private void bindStoryRow(View root, int rowId, SocialShareHelper.Platform platform,
+                               String name, String content, StoryShareFn shareFn) {
+        View row = root.findViewById(rowId);
+        if (!SocialShareHelper.isInstalled(requireContext(), platform)) {
+            row.setVisibility(View.GONE);
+            return;
+        }
+        row.setOnClickListener(v -> {
+            Uri cardUri = ShareCardGenerator.generate(requireContext(), ShareCardGenerator.Format.STORY, name, content);
+            boolean started = shareFn.share(requireContext(), cardUri);
             if (!started) {
                 Toast.makeText(requireContext(), R.string.share_app_not_installed, Toast.LENGTH_SHORT).show();
             }

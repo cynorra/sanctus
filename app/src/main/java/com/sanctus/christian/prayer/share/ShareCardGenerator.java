@@ -18,12 +18,23 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * Renders a shareable square "prayer card" image (dark purple/gold, matching the app's theme)
- * so prayers can be posted to Instagram/TikTok/Facebook, which don't let a plain ACTION_SEND
- * text share carry custom caption text into a feed/story post the way WhatsApp does.
+ * Renders a shareable "prayer card" image (dark purple/gold, matching the app's theme) so
+ * prayers can be posted to Instagram/TikTok/Facebook/WhatsApp, which don't let a plain
+ * ACTION_SEND text share carry custom caption text into a feed/story post the way a chat does.
+ *
+ * Two formats: POST (square, for feed posts) and STORY (9:16, for Instagram/Facebook Stories
+ * and WhatsApp Status, where the image fills the whole screen so content is vertically centered).
  */
 public class ShareCardGenerator {
-    private static final int SIZE = 1080;
+
+    public enum Format {
+        POST(1080, 1080),
+        STORY(1080, 1920);
+
+        final int width, height;
+        Format(int width, int height) { this.width = width; this.height = height; }
+    }
+
     private static final int PADDING = 90;
 
     private static final int COLOR_BACKGROUND = Color.parseColor("#0D0A1A");
@@ -33,38 +44,61 @@ public class ShareCardGenerator {
     private static final int COLOR_BODY = Color.parseColor("#D4C8E8");
     private static final int COLOR_FOOTER = Color.parseColor("#9985B8");
 
-    public static Uri generate(Context context, String prayerName, String prayerContent) {
-        Bitmap bitmap = Bitmap.createBitmap(SIZE, SIZE, Bitmap.Config.ARGB_8888);
+    public static Uri generate(Context context, Format format, String prayerName, String prayerContent) {
+        int w = format.width, h = format.height;
+        Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
         canvas.drawColor(COLOR_BACKGROUND);
 
-        Paint cardPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        cardPaint.setColor(COLOR_CARD);
-        canvas.drawRoundRect(PADDING - 30f, PADDING - 30f, SIZE - PADDING + 30f, SIZE - PADDING + 30f, 32f, 32f, cardPaint);
-
-        Paint linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        linePaint.setColor(COLOR_ACCENT);
-        float y = PADDING + 40f;
-        canvas.drawRect(PADDING, y, PADDING + 90f, y + 4f, linePaint);
-        y += 60f;
+        int contentWidth = w - 2 * PADDING;
+        boolean isStory = format == Format.STORY;
+        int maxChars = isStory ? 420 : 260;
 
         TextPaint titlePaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
         titlePaint.setColor(COLOR_TITLE);
-        titlePaint.setTextSize(56f);
+        titlePaint.setTextSize(isStory ? 62f : 56f);
         titlePaint.setTypeface(Typeface.create(Typeface.SERIF, Typeface.BOLD));
-        StaticLayout titleLayout = buildLayout(prayerName, titlePaint, SIZE - 2 * PADDING);
+        StaticLayout titleLayout = buildLayoutWithLineSpacing(prayerName, titlePaint, contentWidth, 1.1f);
+
+        TextPaint bodyPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
+        bodyPaint.setColor(COLOR_BODY);
+        bodyPaint.setTextSize(isStory ? 42f : 38f);
+        bodyPaint.setTypeface(Typeface.SERIF);
+        String excerpt = truncate(prayerContent, maxChars);
+        StaticLayout bodyLayout = buildLayoutWithLineSpacing(excerpt, bodyPaint, contentWidth, 1.35f);
+
+        float lineY = 40f;
+        float titleGap = 50f;
+        float blockHeight = 4f + titleGap + titleLayout.getHeight() + 50f + bodyLayout.getHeight();
+
+        // Post: content starts near the top, in a card. Story: content is centered in the
+        // full-bleed vertical frame so it reads naturally when viewed full-screen.
+        float cardTop, y;
+        if (isStory) {
+            cardTop = (h - blockHeight) / 2f - 60f;
+            y = cardTop + lineY;
+        } else {
+            cardTop = PADDING - 30f;
+            y = PADDING + lineY;
+        }
+
+        if (!isStory) {
+            Paint cardPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+            cardPaint.setColor(COLOR_CARD);
+            canvas.drawRoundRect(PADDING - 30f, cardTop, w - PADDING + 30f, PADDING - 30f + blockHeight + 60f, 32f, 32f, cardPaint);
+        }
+
+        Paint linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        linePaint.setColor(COLOR_ACCENT);
+        canvas.drawRect(PADDING, y, PADDING + 90f, y + 4f, linePaint);
+        y += titleGap;
+
         canvas.save();
         canvas.translate(PADDING, y);
         titleLayout.draw(canvas);
         canvas.restore();
         y += titleLayout.getHeight() + 50f;
 
-        TextPaint bodyPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
-        bodyPaint.setColor(COLOR_BODY);
-        bodyPaint.setTextSize(38f);
-        bodyPaint.setTypeface(Typeface.SERIF);
-        String excerpt = truncate(prayerContent, 260);
-        StaticLayout bodyLayout = buildLayoutWithLineSpacing(excerpt, bodyPaint, SIZE - 2 * PADDING, 1.35f);
         canvas.save();
         canvas.translate(PADDING, y);
         bodyLayout.draw(canvas);
@@ -76,18 +110,14 @@ public class ShareCardGenerator {
         footerPaint.setTypeface(Typeface.SANS_SERIF);
         footerPaint.setLetterSpacing(0.05f);
         String footer = "✝  Sanctus: Christian Prayer";
-        canvas.drawText(footer, PADDING, SIZE - PADDING - 40f, footerPaint);
+        canvas.drawText(footer, PADDING, h - PADDING - 40f, footerPaint);
 
         TextPaint linkPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
         linkPaint.setColor(COLOR_ACCENT);
         linkPaint.setTextSize(28f);
-        canvas.drawText(BuildConfig.WEBSITE_URL, PADDING, SIZE - PADDING, linkPaint);
+        canvas.drawText(BuildConfig.WEBSITE_URL, PADDING, h - PADDING, linkPaint);
 
-        return saveToCache(context, bitmap);
-    }
-
-    private static StaticLayout buildLayout(String text, TextPaint paint, int width) {
-        return buildLayoutWithLineSpacing(text, paint, width, 1.1f);
+        return saveToCache(context, bitmap, isStory ? "story" : "post");
     }
 
     private static StaticLayout buildLayoutWithLineSpacing(String text, TextPaint paint, int width, float spacingMult) {
@@ -105,10 +135,10 @@ public class ShareCardGenerator {
         return collapsed.substring(0, maxChars).trim() + "…";
     }
 
-    private static Uri saveToCache(Context context, Bitmap bitmap) {
+    private static Uri saveToCache(Context context, Bitmap bitmap, String suffix) {
         File dir = new File(context.getCacheDir(), "share_cards");
         if (!dir.exists()) dir.mkdirs();
-        File file = new File(dir, "prayer_card_" + System.currentTimeMillis() + ".png");
+        File file = new File(dir, "prayer_card_" + suffix + "_" + System.currentTimeMillis() + ".png");
         try (FileOutputStream out = new FileOutputStream(file)) {
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
         } catch (IOException e) {
