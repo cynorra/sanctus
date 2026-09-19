@@ -10,14 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import com.google.android.material.materialswitch.MaterialSwitch;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.sanctus.christian.prayer.BuildConfig;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.SanctusApplication;
@@ -27,7 +29,19 @@ import com.sanctus.christian.prayer.util.LanguageManager;
 
 public class SettingsFragment extends Fragment {
     private SettingsRepository settingsRepo;
-    private static final int REQ_NOTIF = 101;
+    private MaterialSwitch switchNotif;
+
+    // Denial isn't silently ignored: reverting the switch re-enters the checked-change listener
+    // with isChecked=false, which persists "disabled" and cancels alarms/unsubscribes the topic —
+    // so the UI and the actual notification state can never disagree.
+    private final ActivityResultLauncher<String> notifPermissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), granted -> {
+                if (granted) {
+                    applyNotificationsEnabled(true);
+                } else {
+                    switchNotif.setChecked(false);
+                }
+            });
 
     @Nullable @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -54,20 +68,17 @@ public class SettingsFragment extends Fragment {
         });
 
         // Notifications
-        MaterialSwitch switchNotif = view.findViewById(R.id.switch_notifications);
+        switchNotif = view.findViewById(R.id.switch_notifications);
         switchNotif.setChecked(settingsRepo.isNotificationsEnabled());
         switchNotif.setOnCheckedChangeListener((btn, isChecked) -> {
-            settingsRepo.setNotificationsEnabled(isChecked);
-            if (isChecked) {
-                requestNotificationPermission();
-                PrayerAlarmManager.scheduleAll(requireContext());
-                com.google.firebase.messaging.FirebaseMessaging.getInstance()
-                        .subscribeToTopic(SanctusApplication.ENGAGEMENT_TOPIC);
-            } else {
-                PrayerAlarmManager.cancelAll(requireContext());
-                com.google.firebase.messaging.FirebaseMessaging.getInstance()
-                        .unsubscribeFromTopic(SanctusApplication.ENGAGEMENT_TOPIC);
+            if (isChecked && needsNotificationPermissionPrompt()) {
+                // Persistence/scheduling happens in the launcher callback once we know whether
+                // the user actually granted it — not here, so a denial can't leave the switch
+                // showing "on" while nothing is actually scheduled.
+                notifPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
+                return;
             }
+            applyNotificationsEnabled(isChecked);
         });
 
         // Language picker row
@@ -101,12 +112,20 @@ public class SettingsFragment extends Fragment {
         tv.setText(lang.nativeName + " (" + lang.englishName + ")");
     }
 
-    private void requestNotificationPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
-            ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.POST_NOTIFICATIONS)
-                != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(requireActivity(),
-                    new String[]{Manifest.permission.POST_NOTIFICATIONS}, REQ_NOTIF);
+    private boolean needsNotificationPermissionPrompt() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
+                ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.POST_NOTIFICATIONS)
+                        != PackageManager.PERMISSION_GRANTED;
+    }
+
+    private void applyNotificationsEnabled(boolean enabled) {
+        settingsRepo.setNotificationsEnabled(enabled);
+        if (enabled) {
+            PrayerAlarmManager.scheduleAll(requireContext());
+            FirebaseMessaging.getInstance().subscribeToTopic(SanctusApplication.ENGAGEMENT_TOPIC);
+        } else {
+            PrayerAlarmManager.cancelAll(requireContext());
+            FirebaseMessaging.getInstance().unsubscribeFromTopic(SanctusApplication.ENGAGEMENT_TOPIC);
         }
     }
 }

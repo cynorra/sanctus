@@ -11,6 +11,12 @@ public class UserProfile {
     @PropertyName("invitedByUid")
     public String invitedByUid;
     public long inviteCount;
+    /** Null until paired. Set via UserRepository.pairWithPartner — see firestore.rules for the
+     *  narrow "claim an empty slot" write rule that makes this safe without a Cloud Function. */
+    public String partnerUid;
+    /** Best-effort mirror of the local streak (see SettingsRepository), so a paired partner can
+     *  see it without either device needing to be online at the same time. */
+    public long streak;
 
     public UserProfile() {}
 

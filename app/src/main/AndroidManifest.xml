@@ -4,8 +4,10 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- Not USE_EXACT_ALARM: that's reserved for alarm-clock-category apps and needs a Play
+         Console policy declaration to avoid rejection. PrayerAlarmManager already falls back to
+         an inexact alarm when SCHEDULE_EXACT_ALARM isn't granted, so it isn't needed. -->
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
-    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
     <!-- Android 11+ package visibility: needed to detect whether these apps are installed
