@@ -9,3 +9,7 @@
 .cxx
 /app/build
 *.log
+
+# local tooling / backups
+graphify-out/
+play_console_assets/_original_backup/
