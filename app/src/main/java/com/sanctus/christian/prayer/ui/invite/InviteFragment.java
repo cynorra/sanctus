@@ -14,6 +14,7 @@ import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseUser;
 import com.sanctus.christian.prayer.BuildConfig;
 import com.sanctus.christian.prayer.R;
+import com.sanctus.christian.prayer.analytics.AnalyticsLogger;
 import com.sanctus.christian.prayer.auth.AuthManager;
 import com.sanctus.christian.prayer.data.remote.UserProfile;
 import com.sanctus.christian.prayer.data.remote.UserRepository;
@@ -123,6 +124,7 @@ public class InviteFragment extends Fragment {
 
         String link = BuildConfig.PLAY_STORE_URL + "&referrer=" + urlEncode("ref_code=" + code);
         String text = getString(R.string.invite_share_text, link);
+        AnalyticsLogger.logInviteShared(requireContext());
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
         shareIntent.putExtra(Intent.EXTRA_TEXT, text);

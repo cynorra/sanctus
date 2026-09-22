@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.sanctus.christian.prayer.BuildConfig;
+import com.sanctus.christian.prayer.analytics.AnalyticsLogger;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -65,7 +66,7 @@ public class AuthManager {
                 new CredentialManagerCallback<GetCredentialResponse, GetCredentialException>() {
                     @Override
                     public void onResult(GetCredentialResponse result) {
-                        handleCredential(result.getCredential(), callback);
+                        handleCredential(context, result.getCredential(), callback);
                     }
 
                     @Override
@@ -76,7 +77,7 @@ public class AuthManager {
                 });
     }
 
-    private void handleCredential(Credential credential, SignInCallback callback) {
+    private void handleCredential(Context context, Credential credential, SignInCallback callback) {
         if (!(credential instanceof CustomCredential) ||
                 !GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL.equals(credential.getType())) {
             callback.onError(new IllegalStateException("Unexpected credential type: " + credential.getType()));
@@ -88,7 +89,10 @@ public class AuthManager {
             AuthCredential firebaseCredential =
                     GoogleAuthProvider.getCredential(googleIdTokenCredential.getIdToken(), null);
             firebaseAuth.signInWithCredential(firebaseCredential)
-                    .addOnSuccessListener(result -> callback.onSuccess(result.getUser()))
+                    .addOnSuccessListener(result -> {
+                        AnalyticsLogger.logSignIn(context);
+                        callback.onSuccess(result.getUser());
+                    })
                     .addOnFailureListener(callback::onError);
         } catch (RuntimeException e) {
             callback.onError(e);

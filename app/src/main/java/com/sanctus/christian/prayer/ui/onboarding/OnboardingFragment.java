@@ -21,6 +21,7 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.SanctusApplication;
+import com.sanctus.christian.prayer.analytics.AnalyticsLogger;
 import com.sanctus.christian.prayer.service.PrayerAlarmManager;
 import com.sanctus.christian.prayer.ui.main.MainActivity;
 
@@ -94,6 +95,7 @@ public class OnboardingFragment extends Fragment {
     }
 
     private void finishOnboarding() {
+        AnalyticsLogger.logOnboardingComplete(requireContext());
         SanctusApplication.getInstance().getSettingsRepository()
                 .setNotificationsEnabled(true);
 

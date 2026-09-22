@@ -14,6 +14,7 @@ import androidx.navigation.Navigation;
 import com.sanctus.christian.prayer.BuildConfig;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.SanctusApplication;
+import com.sanctus.christian.prayer.analytics.AnalyticsLogger;
 import com.sanctus.christian.prayer.data.local.entity.PrayerEntity;
 import com.sanctus.christian.prayer.data.repository.PrayerRepository;
 import com.sanctus.christian.prayer.util.AnimUtils;
@@ -75,6 +76,7 @@ public class PrayerDetailFragment extends Fragment {
                 tvCategory.setText(prayer.category != null ? prayer.category.toUpperCase(java.util.Locale.ROOT) : "");
                 tvContent.setText(prayer.content);
                 SanctusApplication.getInstance().getSettingsRepository().recordPrayerActivityToday();
+                AnalyticsLogger.logPrayerCompleted(requireContext(), prayer.category);
                 btnFavorite.setSelected(prayer.isFavorite);
                 btnFavorite.setOnClickListener(v -> {
                     Executors.newSingleThreadExecutor().execute(() -> {
