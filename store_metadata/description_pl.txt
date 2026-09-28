@@ -1,4 +1,4 @@
-Name: Sanctus: Modlitwa Chrześcijańska
+Name: Sanctus: Modlitwa Chrześcijan
 
 Short Desc: Codzienna aplikacja modlitewna: Różaniec, Liturgia Godzin i modlitwy katolickie
 
