@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.data.local.entity.SaintEntity;
+import com.sanctus.christian.prayer.util.AnimUtils;
 import java.util.Objects;
 
 public class SaintListAdapter extends ListAdapter<SaintEntity, SaintListAdapter.ViewHolder> {
@@ -37,7 +38,10 @@ public class SaintListAdapter extends ListAdapter<SaintEntity, SaintListAdapter.
         holder.tvName.setText(s.name);
         holder.tvFeast.setText(s.feastDate);
         holder.tvPatron.setText(s.patronOf);
-        holder.itemView.setOnClickListener(v -> listener.onClick(s));
+        holder.itemView.setOnClickListener(v -> {
+            AnimUtils.pressFeedback(v);
+            listener.onClick(s);
+        });
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {

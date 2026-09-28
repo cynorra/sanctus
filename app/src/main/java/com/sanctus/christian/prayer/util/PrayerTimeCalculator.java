@@ -25,16 +25,19 @@ public class PrayerTimeCalculator {
     /** Returns "<Hour name> · <time>" for the next canonical hour still ahead today, or tomorrow's Lauds if past Compline. */
     public static String getNextHour(Context context) {
         String[] shortNames = context.getResources().getStringArray(R.array.hour_names_short);
+        int i = getNextHourIndex();
+        return formatHour(context, shortNames[i], HOUR_TIMES[i][0], HOUR_TIMES[i][1]);
+    }
+
+    /** Index into {@link #getCanonicalHours} / HOUR_TIMES of the next hour still ahead today, or 0 (Lauds) if past Compline. */
+    public static int getNextHourIndex() {
         Calendar now = Calendar.getInstance();
         int nowMinutes = now.get(Calendar.HOUR_OF_DAY) * 60 + now.get(Calendar.MINUTE);
-
         for (int i = 0; i < HOUR_TIMES.length; i++) {
             int hourMinutes = HOUR_TIMES[i][0] * 60 + HOUR_TIMES[i][1];
-            if (hourMinutes > nowMinutes) {
-                return formatHour(context, shortNames[i], HOUR_TIMES[i][0], HOUR_TIMES[i][1]);
-            }
+            if (hourMinutes > nowMinutes) return i;
         }
-        return formatHour(context, shortNames[0], HOUR_TIMES[0][0], HOUR_TIMES[0][1]);
+        return 0;
     }
 
     private static String formatHour(Context context, String name, int hour, int minute) {

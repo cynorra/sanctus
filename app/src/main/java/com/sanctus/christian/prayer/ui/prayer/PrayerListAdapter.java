@@ -43,7 +43,10 @@ public class PrayerListAdapter extends ListAdapter<PrayerEntity, PrayerListAdapt
         holder.tvName.setText(prayer.name);
         holder.tvCategory.setText(prayer.category != null ? prayer.category.toUpperCase(Locale.ROOT) : "");
         holder.btnFavorite.setSelected(prayer.isFavorite);
-        holder.itemView.setOnClickListener(v -> listener.onClick(prayer));
+        holder.itemView.setOnClickListener(v -> {
+            AnimUtils.pressFeedback(v);
+            listener.onClick(prayer);
+        });
         holder.btnFavorite.setOnClickListener(v -> {
             holder.btnFavorite.setSelected(!holder.btnFavorite.isSelected());
             AnimUtils.bounce(holder.btnFavorite);

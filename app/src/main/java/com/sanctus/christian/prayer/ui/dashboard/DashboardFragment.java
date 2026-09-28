@@ -1,23 +1,33 @@
 package com.sanctus.christian.prayer.ui.dashboard;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.transition.AutoTransition;
+import androidx.transition.TransitionManager;
 import com.sanctus.christian.prayer.R;
+import com.sanctus.christian.prayer.domain.model.PrayerTime;
 import com.sanctus.christian.prayer.ui.saint.SaintViewModel;
+import com.sanctus.christian.prayer.util.AnimUtils;
 import com.sanctus.christian.prayer.util.DateUtils;
 import com.sanctus.christian.prayer.util.LiturgicalSeasonHelper;
+import com.sanctus.christian.prayer.util.PrayerTimeCalculator;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 public class DashboardFragment extends Fragment {
@@ -52,18 +62,49 @@ public class DashboardFragment extends Fragment {
 
         // Next canonical hour
         TextView tvNextHour = view.findViewById(R.id.tv_next_hour);
-        tvNextHour.setText(com.sanctus.christian.prayer.util.PrayerTimeCalculator.getNextHour(requireContext()));
+        tvNextHour.setText(PrayerTimeCalculator.getNextHour(requireContext()));
 
-        // Tap hero card to go pray
-        view.findViewById(R.id.card_next_hour).setOnClickListener(v ->
+        // Expandable header: reveals today's full canonical-hour schedule in place, next hour highlighted.
+        View cardNextHour = view.findViewById(R.id.card_next_hour);
+        View rowHeader = view.findViewById(R.id.row_next_hour_header);
+        View expandContainer = view.findViewById(R.id.container_hours_expand);
+        ImageView ivChevron = view.findViewById(R.id.iv_expand_chevron);
+        LinearLayout listHoursMini = view.findViewById(R.id.list_hours_mini);
+
+        List<PrayerTime> hours = PrayerTimeCalculator.getCanonicalHours(requireContext());
+        int nextIndex = PrayerTimeCalculator.getNextHourIndex();
+        for (int i = 0; i < hours.size(); i++) {
+            PrayerTime hour = hours.get(i);
+            View row = LayoutInflater.from(requireContext()).inflate(R.layout.item_hour_mini_row, listHoursMini, false);
+            TextView tvHourName = row.findViewById(R.id.tv_hour_name);
+            TextView tvHourTime = row.findViewById(R.id.tv_hour_time);
+            tvHourName.setText(hour.getNameLocalized());
+            tvHourTime.setText(hour.getTime());
+            if (i == nextIndex) {
+                int accent = ContextCompat.getColor(requireContext(), R.color.color_accent);
+                tvHourName.setTextColor(accent);
+                tvHourTime.setTextColor(accent);
+                tvHourName.setTypeface(tvHourName.getTypeface(), Typeface.BOLD);
+            }
+            listHoursMini.addView(row);
+        }
+
+        rowHeader.setOnClickListener(v -> {
+            AnimUtils.pressFeedback(rowHeader);
+            TransitionManager.beginDelayedTransition((ViewGroup) cardNextHour, new AutoTransition());
+            boolean expanding = expandContainer.getVisibility() != View.VISIBLE;
+            expandContainer.setVisibility(expanding ? View.VISIBLE : View.GONE);
+            ivChevron.animate().rotation(expanding ? 180f : 0f).setDuration(200).start();
+        });
+
+        // Footer row: tap to go pray
+        view.findViewById(R.id.row_begin_prayer).setOnClickListener(v ->
                 Navigation.findNavController(v).navigate(R.id.prayerFragment));
 
         // Prayer times recycler
         RecyclerView rvPrayerTimes = view.findViewById(R.id.rv_prayer_times);
         rvPrayerTimes.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false));
-        PrayerTimeAdapter adapter = new PrayerTimeAdapter(
-                com.sanctus.christian.prayer.util.PrayerTimeCalculator.getCanonicalHours(requireContext())
-        );
+        PrayerTimeAdapter adapter = new PrayerTimeAdapter(hours);
         rvPrayerTimes.setAdapter(adapter);
 
         // Prayer of the day
