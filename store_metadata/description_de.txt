@@ -1,37 +1,37 @@
-**Sanctus: Christliches Gebet**
-*Täglicher Rosenkranz · Stundengebet · Heilige · Liturgischer Kalender · 35 Sprachen*
+Name: Sanctus: Christliches Gebet
 
----
+Short Desc: Christliche Gebets-App: Rosenkranz, Stundengebet & katholische Gebete
 
-Sanctus ist der umfassendste christliche Gebetsbegleiter — wunderschön, offline verfügbar und in 35 Sprachen für katholische, orthodoxe und protestantische Gläubige weltweit.
+Full Desc: Willkommen bei Sanctus, der besten christlichen Gebets-App für den Alltag und Ihrem Andachtsbegleiter für unterwegs — ganz ohne Internet. Egal ob Sie eine katholische Gebets-App, orthodoxe Gebete oder eine protestantische Tagesandacht suchen — Sanctus ist Ihr umfassender geistlicher Begleiter. Mit 35 verfügbaren Sprachen ist dies das einzige christliche Gebetbuch, das Sie je brauchen werden.
 
-**STUNDENGEBET — LITURGIA HORARUM**
-Beten Sie den ganzen Tag mit der Kirche. Sanctus führt Sie durch alle sechs kanonischen Horen:
-• Laudes (Morgengebet) — 6:00 Uhr
-• Terz (Mitte des Vormittags) — 9:00 Uhr
-• Sext (Mittagsgebet) — 12:00 Uhr
-• Non (Mitte des Nachmittags) — 15:00 Uhr
-• Vesper (Abendgebet) — 18:00 Uhr
-• Komplet (Nachtgebet) — 21:00 Uhr
+🙏 TÄGLICHE CHRISTLICHE GEBETE & ANDACHTEN
+Entdecken Sie die umfassendste offline verfügbare Gebetsbibliothek. Bauen Sie mit über 110 traditionellen Texten eine tägliche Gebetsgewohnheit auf. Finden Sie ganz einfach katholische Gebete, Morgenopfer, Abendgebete, das Vaterunser, das Gegrüßet seist du Maria, das Apostolische Glaubensbekenntnis und kraftvolle Gebete an Heilige wie den Erzengel Michael — dazu Favoriten wie den Barmherzigkeitsrosenkranz, den Kreuzweg, den Angelus und das Memorare. Vertiefen Sie Ihre Andacht mit Novene-Gebeten, der Lauretanischen Litanei (Litanei der Gottesmutter), geführter Lectio-Divina-Meditation über die Heilige Schrift und einer täglichen Gewissenserforschung.
 
-Intelligente Benachrichtigungen erinnern Sie zu jeder kanonischen Hore, auch nach einem Neustart des Telefons.
+📿 ROSENKRANZ-APP (GEFÜHRT)
+Sie suchen eine App, um täglich den Rosenkranz zu beten? Beten Sie den Heiligen Rosenkranz vollständig offline. Unser geführtes System wählt automatisch das richtige Geheimnis des Tages aus: Freudenreiche, Schmerzhafte, Glorreiche und Lichtreiche Geheimnisse. Verfolgen Sie Perlen, Gesätze und Geheimnisse ganz einfach. Der perfekte katholische Rosenkranz-Begleiter für Ihre tägliche Andacht.
 
-**HEILIGER ROSENKRANZ**
-Ein geführter Rosenkranz mit automatischer Mysterienauswahl nach Wochentag — Freudenreiche, Schmerzhafte, Glorreiche und Lichtreiche Geheimnisse.
+📖 STUNDENGEBET UND KANONISCHE HOREN
+Beten Sie mit der Weltkirche im ständigen Tagesgebet. Sanctus ist eine vollständige Stundengebet-App — auch bekannt als Brevier oder Officium Divinum —, die Sie offline durch alle sechs kanonischen Horen führt:
+• Laudes (Morgengebet)
+• Terz (Gebet zur dritten Stunde)
+• Sext (Mittagsgebet)
+• Non (Gebet zur neunten Stunde)
+• Vesper (Abendgebet)
+• Komplet (Nachtgebet) — ein ruhiges Abendgebet für erholsamen Schlaf
+Stellen Sie intelligente tägliche Erinnerungen für Ihre kanonischen Horen ein. Verpassen Sie nie wieder Ihre tägliche christliche Andacht.
 
-**HEILIGER DES TAGES**
-Entdecken Sie täglich einen neuen Heiligen — 30 Heilige mit vollständigen Biografien, Festtagen und Schutzpatronschaften.
+📅 LITURGISCHER KALENDER & HEILIGER DES TAGES
+Verfolgen Sie den christlichen Liturgischen Kalender mühelos. Von Advent und Weihnachten bis Fastenzeit und Ostern deckt unser katholischer Kalender 72 Hochfeste, Feste und Gedenktage ab. Lesen Sie jeden Morgen die Biografie des Heiligen des Tages. Lernen Sie heilige Gestalten wie den heiligen Franz von Assisi, Padre Pio und die heilige Teresa kennen.
 
-**LITURGISCHER KALENDER**
-Begleiten Sie das Kirchenjahr durch Advent, Weihnachten, Fastenzeit, Ostern und Jahreskreis. 72 Hochfeste, Feste und Gedenktage.
+✝️ FÜR ALLE CHRISTLICHEN TRADITIONEN
+Sanctus wurde für römisch-katholische, ostorthodoxe, griechisch-orthodoxe, russisch-orthodoxe, koptische und armenisch-apostolische Gläubige entwickelt — und wird ebenso von anglikanischen, episkopalen und lutherischen Christen geschätzt, die ein tägliches Stundengebet halten, sowie von methodistischen, baptistischen, presbyterianischen, pfingstlerischen, evangelikalen, adventistischen und konfessionslosen Christen, die eine strukturierte Art des täglichen Betens suchen.
 
-**GEBETSBIBLIOTHEK**
-Über 110 authentische Gebete in 33 Sprachen — Vaterunser, Gegrüßet seist du Maria, Ehre sei dem Vater, Salve Regina, Memorare und mehr.
+⚡ WARUM SANCTUS GEBETS-APP WÄHLEN?
+• 100 % Offline-Gebets-App: Kein Internet erforderlich. Beten Sie überall.
+• Kein Konto erforderlich: Volle Privatsphäre für Ihre täglichen Gebete.
+• Dunkelmodus: Wunderschönes, sakrales Design für nächtliche Andachten.
+• Mehrsprachig: Die beste christliche Gebets-App in 35 Sprachen (Englisch, Spanisch, Portugiesisch, Französisch, Tagalog usw.).
 
-**FUNKTIONEN**
-✦ Vollständig offline
-✦ Dunkelmodus mit heiligem Gold und tiefem Lila
-✦ Intelligente tägliche Alarme
-✦ Kein Konto erforderlich
+Ob Sie täglich den Rosenkranz beten, dem Stundengebet folgen oder einfach eine tägliche christliche Andacht lesen möchten — Sanctus ist die beste App für Ihr geistliches Wachstum. Laden Sie noch heute die beste offline katholische, orthodoxe und protestantische Gebets-App herunter.
 
-*"Betet ohne Unterlass." — 1. Thessalonicher 5:17*
+„Betet ohne Unterlass." — 1. Thessalonicher 5:17

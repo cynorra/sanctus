@@ -1,37 +1,37 @@
-**Sanctus: Prière Chrétienne**
-*Rosaire Quotidien · Liturgie des Heures · Saints · Calendrier Liturgique · 35 Langues*
+Name: Sanctus: Prière Chrétienne
 
----
+Short Desc: App de prière chrétienne : Chapelet, Liturgie des Heures, prières catholiques
 
-Sanctus est le compagnon de prière chrétienne le plus complet — magnifique, disponible hors ligne et en 35 langues pour les catholiques, orthodoxes et protestants du monde entier.
+Full Desc: Bienvenue sur Sanctus, la meilleure application de prière chrétienne quotidienne et votre compagnon dévotionnel hors ligne. Que vous recherchiez une application de prière catholique, des prières orthodoxes ou un dévotionnel quotidien protestant, Sanctus est votre guide spirituel ultime. Avec 35 langues disponibles, c'est le seul livre de prières chrétiennes dont vous aurez besoin.
 
-**LITURGIE DES HEURES**
-Priez avec l'Église tout au long de la journée. Sanctus vous guide à travers les six heures canoniales :
-• Laudes (Prière du Matin) — 6h
-• Tierce (Milieu de Matinée) — 9h
-• Sexte (Prière de Midi) — 12h
-• None (Milieu d'Après-midi) — 15h
-• Vêpres (Prière du Soir) — 18h
-• Complies (Prière de la Nuit) — 21h
+🙏 PRIÈRES ET DÉVOTIONS CHRÉTIENNES QUOTIDIENNES
+Découvrez la bibliothèque de prières hors ligne la plus complète. Instaurez une habitude de prière quotidienne avec plus de 110 textes traditionnels. Trouvez facilement des prières catholiques, des offrandes du matin, des prières du soir, le Notre Père, le Je vous salue Marie, le Symbole des Apôtres, ainsi que de puissantes prières aux saints comme Saint Michel Archange — sans oublier des favoris comme le Chapelet de la Miséricorde Divine, le Chemin de Croix, l'Angélus et le Memorare. Approfondissez votre dévotion avec des prières de neuvaine, les Litanies de la Sainte Vierge (Litanies de Lorette), une méditation guidée de Lectio Divina sur l'Écriture, et un Examen de Conscience quotidien.
 
-Des notifications intelligentes vous rappellent à chaque heure canoniale, même après le redémarrage de votre téléphone.
+📿 APPLICATION DE CHAPELET (GUIDÉE)
+Vous cherchez une application pour prier le chapelet chaque jour ? Priez le Saint Rosaire entièrement hors ligne. Notre système guidé sélectionne automatiquement le Mystère du jour : Joyeux, Douloureux, Glorieux et Lumineux. Suivez facilement vos grains, dizaines et mystères. Le compagnon catholique idéal pour votre dévotion quotidienne au chapelet.
 
-**SAINT ROSAIRE**
-Un Rosaire guidé avec sélection automatique des mystères selon le jour — Mystères Joyeux, Douloureux, Glorieux et Lumineux.
+📖 LITURGIE DES HEURES ET HEURES CANONIALES
+Rejoignez l'Église universelle dans la prière continuelle. Sanctus est une application complète de Liturgie des Heures — aussi appelée Bréviaire ou Office Divin — qui vous guide hors ligne à travers les six heures canoniales :
+• Laudes (Prière du Matin)
+• Tierce (Milieu de Matinée)
+• Sexte (Prière de Midi)
+• None (Milieu d'Après-midi)
+• Vêpres (Prière du Soir)
+• Complies (Prière de la Nuit) — une prière apaisante avant le coucher pour un sommeil réparateur
+Réglez des alarmes quotidiennes intelligentes pour vos heures canoniales. Ne manquez plus jamais votre dévotion chrétienne quotidienne.
 
-**SAINT DU JOUR**
-Découvrez un nouveau saint chaque jour — 30 saints avec biographies complètes, dates de fête et patronages.
+📅 CALENDRIER LITURGIQUE ET SAINT DU JOUR
+Suivez le Calendrier Liturgique Chrétien sans effort. De l'Avent et Noël au Carême et à Pâques, notre calendrier catholique couvre 72 solennités, fêtes et mémoires. Lisez la biographie du Saint du Jour chaque matin. Découvrez des figures saintes comme Saint François d'Assise, le Padre Pio et Sainte Thérèse.
 
-**CALENDRIER LITURGIQUE**
-Suivez l'année liturgique à travers l'Avent, Noël, le Carême, Pâques et le Temps Ordinaire. 72 solennités, fêtes et mémoires.
+✝️ POUR TOUTES LES TRADITIONS CHRÉTIENNES
+Sanctus est conçu pour les croyants catholiques romains, orthodoxes orientaux, orthodoxes grecs, orthodoxes russes, coptes et apostoliques arméniens — et il est aussi adopté par les chrétiens anglicans, épiscopaliens et luthériens qui suivent un office de prière quotidien, ainsi que par les méthodistes, baptistes, presbytériens, pentecôtistes, évangéliques, adventistes et chrétiens non confessionnels à la recherche d'une façon structurée de prier chaque jour.
 
-**BIBLIOTHÈQUE DE PRIÈRES**
-Plus de 110 prières authentiques en 33 langues — Notre Père, Je vous salue Marie, Gloire au Père, Salve Regina, Memorare et plus encore.
+⚡ POURQUOI CHOISIR L'APPLICATION DE PRIÈRE SANCTUS ?
+• Application de Prière 100 % Hors Ligne : Aucun internet requis. Priez partout.
+• Aucun Compte Requis : Confidentialité totale pour vos prières quotidiennes.
+• Mode Sombre : Un design sacré et magnifique pour vos dévotions nocturnes.
+• Multilingue : La meilleure application de prière chrétienne en 35 langues (anglais, espagnol, portugais, français, tagalog, etc.).
 
-**CARACTÉRISTIQUES**
-✦ Entièrement hors ligne
-✦ Mode sombre avec design en or sacré et violet profond
-✦ Alarmes quotidiennes intelligentes
-✦ Sans compte nécessaire
+Que vous souhaitiez prier le chapelet chaque jour, suivre la Liturgie des Heures ou simplement lire un dévotionnel chrétien quotidien, Sanctus est l'application numéro un pour votre croissance spirituelle. Téléchargez dès aujourd'hui la meilleure application de prière catholique, orthodoxe et protestante hors ligne.
 
-*"Priez sans cesse." — 1 Thessaloniciens 5:17*
+« Priez sans cesse. » — 1 Thessaloniciens 5:17

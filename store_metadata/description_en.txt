@@ -1,43 +1,37 @@
-**Sanctus: Christian Prayer**
-*Daily Rosary · Canonical Hours · Saints · Liturgical Calendar · 35 Languages*
+Name: Sanctus: Christian Prayer
 
----
+Short Desc: Daily Christian prayer app: Holy Rosary, Liturgy of the Hours & Catholic prayers
 
-Sanctus is the most complete Christian prayer companion — beautiful, offline-first, and available in 35 languages for Catholic, Orthodox, and Protestant believers worldwide.
+Full Desc: Welcome to Sanctus, the best daily Christian prayer app and offline devotional companion. Whether you are looking for a Catholic prayer app, Orthodox prayers, or a Protestant daily devotional, Sanctus is your ultimate spiritual guide. With 35 languages available, this is the only Christian prayer book you will ever need.
 
-**CANONICAL HOURS — LITURGY OF THE HOURS**
-Pray with the Church throughout the day. Sanctus guides you through all six canonical hours:
-• Lauds (Morning Prayer) — 6:00 AM
-• Terce (Mid-Morning) — 9:00 AM
-• Sext (Midday Prayer) — 12:00 PM
-• None (Mid-Afternoon) — 3:00 PM
-• Vespers (Evening Prayer) — 6:00 PM
-• Compline (Night Prayer) — 9:00 PM
+🙏 DAILY CHRISTIAN PRAYERS & DEVOTIONALS
+Discover the most complete offline prayer library. Build a daily prayer habit with over 110 traditional texts. Easily find Catholic prayers, morning offerings, evening prayers, the Lord's Prayer (Our Father), Hail Mary, the Apostles' Creed, and powerful prayers to saints like Saint Michael the Archangel — plus favorites such as the Divine Mercy Chaplet, the Stations of the Cross (Via Crucis), the Angelus, and the Memorare. Deepen your devotion with novena prayers, the Litany of the Blessed Virgin Mary, guided Lectio Divina meditation on Scripture, and a daily Examination of Conscience.
 
-Smart notifications remind you at each canonical hour, even after restarting your phone.
+📿 HOLY ROSARY APP (GUIDED)
+Looking for a daily Rosary app? Pray the Holy Rosary completely offline. Our guided Rosary system automatically selects the correct Mystery of the day: Joyful, Sorrowful, Glorious, and Luminous Mysteries. Track your beads, decades, and mysteries easily. It is the perfect Catholic Rosary companion for your daily devotion.
 
-**HOLY ROSARY**
-A guided Rosary with automatic mystery selection by day of the week — Joyful, Sorrowful, Glorious, and Luminous Mysteries. Track each bead, decade, and mystery with a single tap.
+📖 LITURGY OF THE HOURS & CANONICAL HOURS
+Join the universal Church in continuous daily prayer. Sanctus is a complete Liturgy of the Hours app — also known as the Divine Office or Breviary — guiding you through all six canonical hours offline:
+• Lauds (Morning Prayer)
+• Terce (Mid-Morning Prayer)
+• Sext (Midday Prayer)
+• None (Mid-Afternoon Prayer)
+• Vespers (Evening Prayer)
+• Compline (Night Prayer) — a peaceful bedtime prayer for restful sleep
+Set smart daily prayer reminders and alarms for your canonical hours. Never miss your daily Christian devotion.
 
-**SAINT OF THE DAY**
-Discover a new saint every day — 30 saints with full biographies, feast dates, and patronages. From Saint Francis of Assisi to Saint Teresa of Calcutta.
+📅 LITURGICAL CALENDAR & SAINT OF THE DAY
+Follow the Christian Liturgical Calendar effortlessly. From Advent and Christmas to Lent and Easter, our Catholic calendar tracks 72 solemnities, feasts, and memorials. Read the Saint of the Day biographies every morning. Learn about holy figures like Saint Francis of Assisi, Padre Pio, and Saint Teresa.
 
-**LITURGICAL CALENDAR**
-Follow the Church year through Advent, Christmas, Lent, Easter, and Ordinary Time. 72 solemnities, feasts, and memorials with full descriptions. Never miss a Holy Day of Obligation.
+✝️ FOR EVERY CHRISTIAN TRADITION
+Sanctus is built for Roman Catholic, Eastern Orthodox, Greek Orthodox, Russian Orthodox, Coptic, and Armenian Apostolic believers — and is also embraced by Anglican, Episcopalian, and Lutheran Christians who keep a daily prayer office, plus Methodist, Baptist, Presbyterian, Pentecostal, Evangelical, Adventist, and non-denominational Christians looking for a structured way to pray every day.
 
-**PRAYER LIBRARY**
-Over 110 authentic prayers in 33 languages — Our Father, Hail Mary, Glory Be, Morning Offering, Vespers, Compline, Memorare, Anima Christi, Prayer to Saint Michael, and more. Adjustable font size for comfortable reading.
+⚡ WHY CHOOSE SANCTUS PRAYER APP?
+• 100% Offline Prayer App: No internet required. Pray anywhere.
+• No Account Required: Total privacy for your daily prayers.
+• Dark Mode: Beautiful sacred design for nighttime devotionals.
+• Multilingual: The best Christian prayer app in 35 languages (English, Spanish, Portuguese, French, Tagalog, etc.).
 
-**35 LANGUAGES**
-English · Português · Español · Français · Deutsch · Italiano · Polski · Русский · Українська · Română · Nederlands · Ελληνικά · Magyar · Čeština · Slovenčina · Hrvatski · Srpski · Български · Lietuvių · Filipino · 中文 · हिन्दी · മലയാളം · தமிழ் · తెలుగు · 한국어 · Bahasa Indonesia · Tiếng Việt · Kiswahili · አማርኛ · العربية · Հայերեն · ქართული · Yorùbá · Igbo
+If you want to pray the Rosary daily, follow the Liturgy of the Hours, or simply read a daily Christian devotional, Sanctus is the top app for spiritual growth. Download the best offline Catholic, Orthodox, and Protestant prayer app today.
 
-**FEATURES**
-✦ Fully offline — all prayers available without internet
-✦ Dark mode with sacred gold & deep purple design
-✦ Smart daily alarms that survive phone restarts
-✦ Adaptive launcher icon
-✦ No account required — open and pray
-
-Whether you are Catholic, Orthodox, or Protestant — whether you pray the Rosary every day or are discovering the Liturgy of the Hours for the first time — Sanctus meets you where you are.
-
-*"Pray without ceasing." — 1 Thessalonians 5:17*
+"Pray without ceasing." — 1 Thessalonians 5:17

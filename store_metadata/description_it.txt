@@ -1,35 +1,37 @@
-**Sanctus: Preghiera Cristiana**
-*Rosario Quotidiano · Liturgia delle Ore · Santi · Calendario Liturgico · 35 Lingue*
+Name: Sanctus: Preghiera Cristiana
 
----
+Short Desc: App di preghiera cristiana: Rosario, Liturgia delle Ore, preghiere cattoliche
 
-Sanctus è il compagno di preghiera cristiana più completo — bellissimo, disponibile offline e in 35 lingue per cattolici, ortodossi e protestanti di tutto il mondo.
+Full Desc: Benvenuto su Sanctus, la migliore app di preghiera cristiana quotidiana e il tuo compagno devozionale offline. Che tu stia cercando un'app di preghiera cattolica, preghiere ortodosse o un devozionale quotidiano protestante, Sanctus è la tua guida spirituale definitiva. Con 35 lingue disponibili, è l'unico libro di preghiere cristiane di cui avrai bisogno.
 
-**LITURGIA DELLE ORE**
-Prega con la Chiesa durante tutto il giorno. Sanctus ti guida attraverso le sei ore canoniche:
-• Lodi (Preghiera del Mattino) — ore 6:00
-• Terza (Metà Mattina) — ore 9:00
-• Sesta (Preghiera di Mezzogiorno) — ore 12:00
-• Nona (Metà Pomeriggio) — ore 15:00
-• Vespri (Preghiera della Sera) — ore 18:00
-• Compieta (Preghiera della Notte) — ore 21:00
+🙏 PREGHIERE E DEVOZIONI CRISTIANE QUOTIDIANE
+Scopri la libreria di preghiere offline più completa. Costruisci l'abitudine della preghiera quotidiana con oltre 110 testi tradizionali. Trova facilmente preghiere cattoliche, offerte del mattino, preghiere della sera, il Padre Nostro, l'Ave Maria, il Credo degli Apostoli e potenti preghiere ai santi come San Michele Arcangelo — oltre a preferiti come la Coroncina della Divina Misericordia, la Via Crucis, l'Angelus e il Memorare. Approfondisci la tua devozione con le preghiere della novena, le Litanie della Beata Vergine Maria (Litanie Lauretane), la meditazione guidata di Lectio Divina sulla Scrittura e un Esame di Coscienza quotidiano.
 
-**SANTO ROSARIO**
-Un Rosario guidato con selezione automatica dei misteri in base al giorno della settimana — Misteri Gaudiosi, Dolorosi, Gloriosi e Luminosi.
+📿 APP DEL SANTO ROSARIO (GUIDATA)
+Cerchi un'app per recitare il rosario ogni giorno? Prega il Santo Rosario completamente offline. Il nostro sistema guidato seleziona automaticamente il Mistero del giorno: Gaudiosi, Dolorosi, Gloriosi e Luminosi. Segui grani, decadi e misteri con facilità. Il compagno cattolico perfetto per la tua devozione quotidiana al rosario.
 
-**SANTO DEL GIORNO**
-Scopri un nuovo santo ogni giorno — 30 santi con biografie complete, date di festa e patronati.
+📖 LITURGIA DELLE ORE E ORE CANONICHE
+Unisciti alla Chiesa universale nella preghiera continua. Sanctus è un'app completa di Liturgia delle Ore — nota anche come Breviario o Ufficio Divino — che ti guida offline attraverso tutte le sei ore canoniche:
+• Lodi (Preghiera del Mattino)
+• Terza (Metà Mattina)
+• Sesta (Preghiera di Mezzogiorno)
+• Nona (Metà Pomeriggio)
+• Vespri (Preghiera della Sera)
+• Compieta (Preghiera della Notte) — una preghiera serale rilassante per un sonno ristoratore
+Imposta sveglie giornaliere intelligenti per le tue ore canoniche. Non perdere mai più la tua devozione cristiana quotidiana.
 
-**CALENDARIO LITURGICO**
-Segui l'anno liturgico attraverso l'Avvento, il Natale, la Quaresima, la Pasqua e il Tempo Ordinario.
+📅 CALENDARIO LITURGICO E SANTO DEL GIORNO
+Segui il Calendario Liturgico Cristiano senza sforzo. Dall'Avvento e il Natale alla Quaresima e la Pasqua, il nostro calendario cattolico copre 72 solennità, feste e memorie. Leggi ogni mattina la biografia del Santo del Giorno. Scopri figure sante come San Francesco d'Assisi, Padre Pio e Santa Teresa.
 
-**LIBRERIA DI PREGHIERE**
-Oltre 110 preghiere autentiche in 33 lingue — Padre Nostro, Ave Maria, Gloria al Padre, Salve Regina, Memorare e altro.
+✝️ PER OGNI TRADIZIONE CRISTIANA
+Sanctus è pensato per i credenti cattolici romani, ortodossi orientali, ortodossi greci, ortodossi russi, copti e apostolici armeni — ed è apprezzato anche da cristiani anglicani, episcopali e luterani che seguono un ufficio di preghiera quotidiano, oltre che da metodisti, battisti, presbiteriani, pentecostali, evangelici, avventisti e cristiani non denominazionali alla ricerca di un modo strutturato per pregare ogni giorno.
 
-**CARATTERISTICHE**
-✦ Completamente offline
-✦ Modalità scura con design in oro sacro e viola profondo
-✦ Sveglie giornaliere intelligenti
-✦ Nessun account necessario
+⚡ PERCHÉ SCEGLIERE L'APP DI PREGHIERA SANCTUS?
+• App di Preghiera 100% Offline: Nessun internet richiesto. Prega ovunque.
+• Nessun Account Necessario: Privacy totale per le tue preghiere quotidiane.
+• Modalità Scura: Design sacro e bellissimo per le devozioni notturne.
+• Multilingue: La migliore app di preghiera cristiana in 35 lingue (inglese, spagnolo, portoghese, francese, tagalog, ecc.).
 
-*"Pregate incessantemente." — 1 Tessalonicesi 5:17*
+Se vuoi recitare il rosario ogni giorno, seguire la Liturgia delle Ore o semplicemente leggere un devozionale cristiano quotidiano, Sanctus è l'app numero uno per la tua crescita spirituale. Scarica oggi la migliore app di preghiera cattolica, ortodossa e protestante offline.
+
+"Pregate incessantemente." — 1 Tessalonicesi 5:17
