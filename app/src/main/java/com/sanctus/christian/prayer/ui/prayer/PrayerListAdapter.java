@@ -22,13 +22,17 @@ public class PrayerListAdapter extends ListAdapter<PrayerEntity, PrayerListAdapt
     private final OnPrayerClick listener;
     private final OnFavoriteClick favoriteListener;
 
-    public PrayerListAdapter(OnPrayerClick listener, OnFavoriteClick favoriteListener) {
+    public interface OnShareClick { void onClick(PrayerEntity prayer); }
+    private final OnShareClick shareListener;
+
+    public PrayerListAdapter(OnPrayerClick listener, OnFavoriteClick favoriteListener, OnShareClick shareListener) {
         super(new DiffUtil.ItemCallback<PrayerEntity>() {
             @Override public boolean areItemsTheSame(@NonNull PrayerEntity a, @NonNull PrayerEntity b) { return a.id == b.id; }
             @Override public boolean areContentsTheSame(@NonNull PrayerEntity a, @NonNull PrayerEntity b) { return Objects.equals(a.name, b.name) && a.isFavorite == b.isFavorite; }
         });
         this.listener = listener;
         this.favoriteListener = favoriteListener;
+        this.shareListener = shareListener;
     }
 
     @NonNull @Override
@@ -47,6 +51,7 @@ public class PrayerListAdapter extends ListAdapter<PrayerEntity, PrayerListAdapt
             AnimUtils.pressFeedback(v);
             listener.onClick(prayer);
         });
+        holder.btnShare.setOnClickListener(v -> shareListener.onClick(prayer));
         holder.btnFavorite.setOnClickListener(v -> {
             holder.btnFavorite.setSelected(!holder.btnFavorite.isSelected());
             AnimUtils.bounce(holder.btnFavorite);
@@ -56,12 +61,13 @@ public class PrayerListAdapter extends ListAdapter<PrayerEntity, PrayerListAdapt
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvName, tvCategory;
-        ImageButton btnFavorite;
+        ImageButton btnFavorite, btnShare;
         ViewHolder(View v) {
             super(v);
             tvName = v.findViewById(R.id.tv_prayer_name);
             tvCategory = v.findViewById(R.id.tv_prayer_category);
             btnFavorite = v.findViewById(R.id.btn_favorite);
+            btnShare = v.findViewById(R.id.btn_share_item);
         }
     }
 }

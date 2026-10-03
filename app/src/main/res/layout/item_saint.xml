@@ -55,9 +55,19 @@
             android:id="@+id/tv_feast_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="4dp"
             android:textSize="11sp"
             android:textColor="@color/color_accent" />
+
+        <ImageButton
+            android:id="@+id/btn_share_item"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_share"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/color_text_secondary"
+            android:contentDescription="@string/share_action" />
 
     </LinearLayout>
 

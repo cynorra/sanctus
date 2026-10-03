@@ -17,7 +17,7 @@
         android:icon="@drawable/ic_saint"
         android:title="@string/nav_saints" />
     <item
-        android:id="@+id/settingsFragment"
-        android:icon="@drawable/ic_settings"
-        android:title="@string/nav_settings" />
+        android:id="@+id/feedFragment"
+        android:icon="@drawable/ic_feed"
+        android:title="@string/nav_feed" />
 </menu>

@@ -18,12 +18,16 @@ public class SaintListAdapter extends ListAdapter<SaintEntity, SaintListAdapter.
     public interface OnSaintClick { void onClick(SaintEntity saint); }
     private final OnSaintClick listener;
 
-    public SaintListAdapter(OnSaintClick listener) {
+    public interface OnShareClick { void onClick(SaintEntity saint); }
+    private final OnShareClick shareListener;
+
+    public SaintListAdapter(OnSaintClick listener, OnShareClick shareListener) {
         super(new DiffUtil.ItemCallback<SaintEntity>() {
             @Override public boolean areItemsTheSame(@NonNull SaintEntity a, @NonNull SaintEntity b) { return a.id == b.id; }
             @Override public boolean areContentsTheSame(@NonNull SaintEntity a, @NonNull SaintEntity b) { return Objects.equals(a.name, b.name); }
         });
         this.listener = listener;
+        this.shareListener = shareListener;
     }
 
     @NonNull @Override
@@ -38,6 +42,7 @@ public class SaintListAdapter extends ListAdapter<SaintEntity, SaintListAdapter.
         holder.tvName.setText(s.name);
         holder.tvFeast.setText(s.feastDate);
         holder.tvPatron.setText(s.patronOf);
+        holder.btnShare.setOnClickListener(v -> shareListener.onClick(s));
         holder.itemView.setOnClickListener(v -> {
             AnimUtils.pressFeedback(v);
             listener.onClick(s);
@@ -46,11 +51,13 @@ public class SaintListAdapter extends ListAdapter<SaintEntity, SaintListAdapter.
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvName, tvFeast, tvPatron;
+        android.widget.ImageButton btnShare;
         ViewHolder(View v) {
             super(v);
             tvName = v.findViewById(R.id.tv_saint_name);
             tvFeast = v.findViewById(R.id.tv_feast_date);
             tvPatron = v.findViewById(R.id.tv_patron_of);
+            btnShare = v.findViewById(R.id.btn_share_item);
         }
     }
 }

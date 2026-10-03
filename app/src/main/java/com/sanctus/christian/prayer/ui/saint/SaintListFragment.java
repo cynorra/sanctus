@@ -39,7 +39,8 @@ public class SaintListFragment extends Fragment {
             Bundle args = new Bundle();
             args.putInt(SaintDetailFragment.ARG_SAINT_ID, saint.id);
             Navigation.findNavController(view).navigate(R.id.saintDetailFragment, args);
-        });
+        },
+                saint -> com.sanctus.christian.prayer.share.ShareActions.shareSaint(requireContext(), getChildFragmentManager(), saint));
         rv.setAdapter(adapter);
 
         EditText etSearch = view.findViewById(R.id.et_search_saints);

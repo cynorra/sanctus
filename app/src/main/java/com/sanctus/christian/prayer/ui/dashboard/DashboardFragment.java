@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -20,6 +21,7 @@ import androidx.transition.AutoTransition;
 import androidx.transition.TransitionManager;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.domain.model.PrayerTime;
+import com.sanctus.christian.prayer.share.ShareActions;
 import com.sanctus.christian.prayer.ui.saint.SaintViewModel;
 import com.sanctus.christian.prayer.util.AnimUtils;
 import com.sanctus.christian.prayer.util.DateUtils;
@@ -111,10 +113,15 @@ public class DashboardFragment extends Fragment {
         TextView tvPrayerOfDayName = view.findViewById(R.id.tv_prayer_of_day_name);
         TextView tvPrayerOfDayExcerpt = view.findViewById(R.id.tv_prayer_of_day_excerpt);
         View cardPrayerOfDay = view.findViewById(R.id.card_prayer_of_day);
+        ImageButton btnSharePrayer = view.findViewById(R.id.btn_share_prayer_of_day);
         viewModel.getPrayerOfTheDay().observe(getViewLifecycleOwner(), prayer -> {
             if (prayer == null) return;
             tvPrayerOfDayName.setText(prayer.name);
             tvPrayerOfDayExcerpt.setText(prayer.content);
+            btnSharePrayer.setOnClickListener(v -> {
+                AnimUtils.pressFeedback(btnSharePrayer);
+                ShareActions.sharePrayer(requireContext(), getChildFragmentManager(), prayer);
+            });
             cardPrayerOfDay.setOnClickListener(v -> {
                 Bundle args = new Bundle();
                 args.putInt(com.sanctus.christian.prayer.ui.prayer.PrayerDetailFragment.ARG_PRAYER_ID, prayer.id);
@@ -126,6 +133,9 @@ public class DashboardFragment extends Fragment {
         TextView tvSaintName = view.findViewById(R.id.tv_saint_name);
         TextView tvSaintFeast = view.findViewById(R.id.tv_saint_feast);
         TextView tvSaintDesc = view.findViewById(R.id.tv_saint_desc);
+        ImageButton btnShareSaint = view.findViewById(R.id.btn_share_saint_of_day);
+        View cardSaint = view.findViewById(R.id.card_saint_of_day);
+        cardSaint.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.saintFragment));
         String today = new SimpleDateFormat("MMMM d", Locale.ENGLISH).format(new Date());
         int dayOfYear = java.util.Calendar.getInstance().get(java.util.Calendar.DAY_OF_YEAR);
 
@@ -135,15 +145,25 @@ public class DashboardFragment extends Fragment {
                 tvSaintName.setText(saint.name);
                 tvSaintFeast.setText(getString(R.string.saint_feast_day_format, saint.feastDate));
                 tvSaintDesc.setText(saint.description);
+                cardSaint.setOnClickListener(v -> {
+                    Bundle args = new Bundle();
+                    args.putInt(com.sanctus.christian.prayer.ui.saint.SaintDetailFragment.ARG_SAINT_ID, saint.id);
+                    Navigation.findNavController(v).navigate(R.id.saintDetailFragment, args);
+                });
+                btnShareSaint.setOnClickListener(v -> {
+                    AnimUtils.pressFeedback(btnShareSaint);
+                    ShareActions.shareSaint(requireContext(), getChildFragmentManager(), saint);
+                });
             } else {
                 tvSaintName.setText(R.string.no_saint_today_title);
                 tvSaintFeast.setText("");
                 tvSaintDesc.setText(R.string.no_saint_today_desc);
+                btnShareSaint.setVisibility(View.GONE);
             }
         });
 
-        view.findViewById(R.id.card_saint_of_day).setOnClickListener(v ->
-                Navigation.findNavController(v).navigate(R.id.saintFragment));
+        view.findViewById(R.id.btn_open_settings).setOnClickListener(v ->
+                Navigation.findNavController(v).navigate(R.id.settingsFragment));
     }
 
     @Override

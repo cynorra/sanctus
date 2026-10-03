@@ -39,6 +39,46 @@ service cloud.firestore {
       allow read: if true;
       allow write: if false;
     }
+    // Community prayer intentions. amens/{uid} and reports/{uid} are one-per-user guard docs:
+    // a counter on the post may only go up by exactly 1, and only in the same batch that
+    // creates the caller's own guard doc (so nobody can amen/report twice or inflate counts).
+    match /posts/{postId} {
+      allow read: if request.auth != null;
+
+      allow create: if request.auth != null
+        && request.resource.data.keys().hasOnly(['authorUid', 'authorName', 'text', 'createdAt', 'amenCount', 'reportCount'])
+        && request.resource.data.authorUid == request.auth.uid
+        && request.resource.data.text is string
+        && request.resource.data.text.size() > 0
+        && request.resource.data.text.size() <= 280
+        && request.resource.data.amenCount == 0
+        && request.resource.data.reportCount == 0;
+
+      allow update: if request.auth != null && (
+        (
+          request.resource.data.diff(resource.data).affectedKeys().hasOnly(['amenCount']) &&
+          request.resource.data.amenCount == resource.data.amenCount + 1 &&
+          !exists(/databases/$(database)/documents/posts/$(postId)/amens/$(request.auth.uid)) &&
+          existsAfter(/databases/$(database)/documents/posts/$(postId)/amens/$(request.auth.uid))
+        ) || (
+          request.resource.data.diff(resource.data).affectedKeys().hasOnly(['reportCount']) &&
+          request.resource.data.reportCount == resource.data.reportCount + 1 &&
+          !exists(/databases/$(database)/documents/posts/$(postId)/reports/$(request.auth.uid)) &&
+          existsAfter(/databases/$(database)/documents/posts/$(postId)/reports/$(request.auth.uid))
+        )
+      );
+
+      allow delete: if request.auth != null && resource.data.authorUid == request.auth.uid;
+
+      match /amens/{uid} {
+        allow read: if request.auth != null && request.auth.uid == uid;
+        allow create: if request.auth != null && request.auth.uid == uid;
+      }
+      match /reports/{uid} {
+        allow create: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+
     match /content_meta/{docId} {
       allow read: if true;
       allow write: if false;

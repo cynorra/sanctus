@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/et_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="4"
+        android:gravity="top|start"
+        android:maxLength="280"
+        android:inputType="textMultiLine|textCapSentences"
+        android:hint="@string/feed_compose_hint"
+        android:textSize="16sp"
+        android:textColor="@color/color_on_background"
+        android:textColorHint="@color/color_text_secondary" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/feed_rules"
+        android:textSize="12sp"
+        android:textColor="@color/color_text_secondary" />
+</LinearLayout>

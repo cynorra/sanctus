@@ -49,7 +49,8 @@ public class PrayerFragment extends Fragment {
                     args.putInt(PrayerDetailFragment.ARG_PRAYER_ID, prayer.id);
                     Navigation.findNavController(view).navigate(R.id.action_prayer_to_detail, args);
                 },
-                prayer -> viewModel.toggleFavorite(prayer)
+                prayer -> viewModel.toggleFavorite(prayer),
+                prayer -> com.sanctus.christian.prayer.share.ShareActions.sharePrayer(requireContext(), getChildFragmentManager(), prayer)
         );
         recyclerView.setAdapter(adapter);
 

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.domain.model.ResolvedCalendarEvent;
+import com.sanctus.christian.prayer.util.DateUtils;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public class CalendarEventAdapter extends ListAdapter<ResolvedCalendarEvent, Cal
         ResolvedCalendarEvent item = getItem(position);
         Context context = holder.itemView.getContext();
         holder.tvTitle.setText(item.event.title);
-        SimpleDateFormat sdf = new SimpleDateFormat("MMM d", Locale.getDefault());
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM d", DateUtils.appLocale());
         holder.tvDate.setText(sdf.format(item.occursOn.getTime()));
         holder.tvType.setText(item.event.isSolemnity
                 ? context.getString(R.string.calendar_type_solemnity)

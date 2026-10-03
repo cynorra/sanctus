@@ -32,6 +32,10 @@
         <argument android:name="prayer_id" app:argType="integer" android:defaultValue="-1"/>
     </fragment>
 
+    <fragment android:id="@+id/feedFragment"
+        android:name="com.sanctus.christian.prayer.ui.feed.FeedFragment"
+        android:label="@string/nav_feed"/>
+
     <fragment android:id="@+id/rosaryFragment"
         android:name="com.sanctus.christian.prayer.ui.rosary.RosaryFragment"
         android:label="@string/nav_rosary"/>
