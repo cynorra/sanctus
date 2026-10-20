@@ -10,20 +10,34 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-import saints_daily_en_1, saints_daily_en_2, saints_daily_en_3  # noqa: E402
+import importlib  # noqa: E402
+PARTS = [importlib.import_module(m) for m in (
+    "saints_daily_en_1", "saints_daily_en_2", "saints_daily_en_3",
+    "saints_daily_en_orth_1", "saints_daily_en_orth_2",
+    "saints_daily_en_prot_1", "saints_daily_en_prot_2", "saints_daily_en_fill")]
 
 SAINTS = HERE.parent / "app" / "src" / "main" / "assets" / "seed" / "saints.json"
 
 rows = json.loads(SAINTS.read_text(encoding="utf-8"))
-have = {(r["feastDate"], r["name"], r["language"]) for r in rows}
+index = {(r["feastDate"], r["name"], r["language"]): r for r in rows}
 added = 0
-for mod in (saints_daily_en_1, saints_daily_en_2, saints_daily_en_3):
+for mod in PARTS:
     for date, name, tradition, desc, patron in mod.DATA:
-        if (date, name, "en") in have:
+        key = (date, name, "en")
+        if key in index:
+            # Same saint already listed: only widen the tradition tags.
+            row = index[key]
+            tags = row["tradition"].split(",")
+            if row["tradition"] != "all":
+                for tag in tradition.split(","):
+                    if tag not in tags:
+                        tags.append(tag)
+                row["tradition"] = "all" if tradition == "all" else ",".join(tags)
             continue
-        rows.append({"name": name, "feastDate": date, "description": desc,
-                     "patronOf": patron, "language": "en", "tradition": tradition})
-        have.add((date, name, "en"))
+        row = {"name": name, "feastDate": date, "description": desc,
+               "patronOf": patron, "language": "en", "tradition": tradition}
+        rows.append(row)
+        index[key] = row
         added += 1
 
 # Same layout as the hand-kept file: one compact object per line, CRLF, so diffs stay readable.
