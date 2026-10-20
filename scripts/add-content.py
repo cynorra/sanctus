@@ -14,12 +14,7 @@ SEED = Path(__file__).resolve().parent.parent / "app" / "src" / "main" / "assets
 SAINTS = [
     {
         "tradition": "protestant,anglican",
-        "en": ("Martin Luther", "February 18",
-               "German monk and theologian (1483–1546) whose Ninety-five Theses of 1517 opened the Protestant "
-               "Reformation. He taught that people are saved by grace through faith, translated the Bible into "
-               "German so ordinary people could read it, and wrote hymns including “A Mighty Fortress Is Our "
-               "God.” Remembered by Lutheran and Anglican churches on the day of his death.",
-               "Lutheran churches, Bible translators, hymn writers"),
+        "en": None,
         "tr": ("Martin Luther", "February 18",
                "Alman rahip ve ilahiyatçı (1483–1546). 1517’deki Doksan Beş Tez’i Protestan "
                "Reformu’nu başlattı. İnsanların iman yoluyla lütufla kurtulduğunu "
@@ -30,12 +25,7 @@ SAINTS = [
     },
     {
         "tradition": "protestant,anglican",
-        "en": ("John Wesley", "May 24",
-               "Anglican priest (1703–1791) and founder of the Methodist movement. On May 24, 1738, at a meeting "
-               "on Aldersgate Street in London, he felt his heart “strangely warmed” by trust in Christ. He "
-               "went on to preach across Britain, often outdoors, to people the church had not reached. Remembered "
-               "by Methodist and Anglican churches.",
-               "Methodist churches, traveling preachers, the poor"),
+        "en": None,
         "tr": ("John Wesley", "May 24",
                "Anglikan rahip (1703–1791) ve Metodist hareketin kurucusu. 24 Mayıs 1738’de Londra’da "
                "Aldersgate Sokağı’ndaki bir toplantıda Mesih’e güvenle yüreğinin "
@@ -46,11 +36,7 @@ SAINTS = [
     },
     {
         "tradition": "protestant,anglican",
-        "en": ("Dietrich Bonhoeffer", "April 9",
-               "German Lutheran pastor and theologian (1906–1945) who opposed the Nazi regime and helped lead the "
-               "Confessing Church. Arrested in 1943, he was executed at Flossenbürg concentration camp on April 9, "
-               "1945. His books The Cost of Discipleship and Life Together are still widely read.",
-               "Lutheran and Anglican churches, persecuted Christians, prisoners"),
+        "en": None,
         "tr": ("Dietrich Bonhoeffer", "April 9",
                "Alman Luteran papaz ve ilahiyatçı (1906–1945). Nazi rejimine karşı çıktı "
                "ve İtiraf Eden Kilise’nin önderlerinden biri oldu. 1943’te tutuklandı ve 9 "
@@ -61,11 +47,7 @@ SAINTS = [
     },
     {
         "tradition": "protestant,anglican",
-        "en": ("Charles Wesley", "March 29",
-               "English Anglican priest and hymn writer (1707–1788), brother of John Wesley. He wrote thousands of "
-               "hymns, among them “Hark! The Herald Angels Sing” and “Love Divine, All Loves "
-               "Excelling.”",
-               "Hymn writers, church musicians"),
+        "en": None,
         "tr": ("Charles Wesley", "March 29",
                "İngiliz Anglikan rahip ve ilahi yazarı (1707–1788), John Wesley’nin kardeşi. "
                "Binlerce ilahi yazdı; aralarında “Hark! The Herald Angels Sing” ve “Love "
@@ -181,13 +163,110 @@ SAINTS = [
 PRAYERS_TR_NOTE = "Scripture is added in English only; no Turkish public-domain text has been sourced yet."
 
 
-def dump(rows, seps):
+def dump_rows(rows, seps):
     body = ",\r\n".join("  " + json.dumps(o, ensure_ascii=False, separators=seps) for o in rows)
     return ("[\r\n" + body + "\r\n]\r\n").encode("utf-8")
 
 
+# Tags for rows that exist in the live Firestore content but were never in the repo seed.
+P_ALL = "all"
+ORPHAN_PRAYERS = {
+    "Benedictus (Canticle of Zechariah)": "all",
+    "Cherubic Hymn (Cherubikon) — Byzantine Divine Liturgy": "orthodox",
+    "Collect for Aid against Perils (Book of Common Prayer)": "anglican",
+    "Collect for the Second Sunday in Advent (Book of Common Prayer)": "anglican",
+    "Collect for the Sunday Next Before Advent (Book of Common Prayer)": "anglican",
+    "Ecce Agnus Dei (Behold the Lamb of God)": "catholic",
+    "Examination of Conscience According to the Seven Deadly Sins": "catholic,anglican",
+    "Examination of Conscience According to the Works of Mercy": "catholic",
+    "Examination of Conscience Based on the Lord's Prayer": "all",
+    "Examination of Conscience for the Engaged (Preparing for Marriage)": "catholic,anglican",
+    "Examination of Conscience for Those in Work and Professional Life": "all",
+    "Examination of Conscience for Young People and Students": "all",
+    "Grace Before Meals (Orthodox)": "orthodox",
+    "Kontakion of Pascha — Though Thou Didst Descend Into the Grave": "orthodox",
+    "Kontakion of the Akathist Hymn to the Theotokos": "orthodox",
+    "Litany of the Precious Blood of Jesus": "catholic",
+    "Magnificat (Canticle of Mary)": "all",
+    "Mystery of Faith (Memorial Acclamation)": "catholic",
+    "Novena Prayer to Saint Joseph": "catholic",
+    "Nunc Dimittis (Canticle of Simeon)": "all",
+    "O Only-Begotten Son (Monogenes) — Byzantine Liturgy Hymn": "orthodox",
+    "Opening Troparion of the Small Paraklesis to the Theotokos": "orthodox",
+    "Paschal Troparion — Christ is Risen (Orthodox Easter Hymn)": "orthodox",
+    "Prayer Before the Crucifix of San Damiano (Saint Francis of Assisi)": "catholic,anglican",
+    "Prayer of Saint Chrysostom (Book of Common Prayer)": "anglican",
+    "Rejoice, O Virgin Theotokos (Orthodox Troparion)": "orthodox",
+    "The Doxology (Praise God, From Whom All Blessings Flow)": "protestant,anglican",
+    "The Grace (2 Corinthians 13:14)": "all",
+    "The Great Litany (Litany of Peace) — Byzantine Divine Liturgy": "orthodox",
+    "The Heidelberg Catechism — What Is Your Only Comfort": "protestant",
+    "The Particular Examen of Saint Ignatius of Loyola": "catholic",
+    "The Westminster Shorter Catechism — Q1: Man's Chief End": "protestant",
+    "Veni Creator Spiritus (Come, Holy Ghost, Our Souls Inspire)": "catholic,anglican",
+    "Aziz Yusuf'a Dokuz Günlük Dua (Novena)": "catholic",
+}
+ORPHAN_SAINTS = {
+    "Saint Mary of Egypt": "orthodox,catholic", "Saint Anselm of Canterbury": "catholic,anglican",
+    "Saint Mark the Evangelist": "all", "Saint Louis-Marie de Montfort": "catholic",
+    "Saint Lawrence of Rome": "catholic,orthodox,anglican", "Saint Bernard of Clairvaux": "catholic,anglican",
+    "Saint Herman of Alaska": "orthodox", "Our Lady of Guadalupe": "catholic", "Saint Barbara": "catholic,orthodox",
+    "Saint Juan Diego": "catholic", "Saint Scholastica": "catholic", "Our Lady of Lourdes": "catholic",
+    "Saints Cyril and Methodius": "catholic,orthodox", "Saint Gregory of Narek": "orthodox,catholic",
+    "Saint Xenia of Saint Petersburg": "orthodox", "Saint Nino of Georgia": "orthodox",
+    "Saint Gregory Nazianzen": "all", "Saint John of Kronstadt": "orthodox", "Saint Olga of Kiev": "orthodox",
+    "Saint Paisios of Mount Athos": "orthodox", "Saint Vladimir the Great": "orthodox",
+    "Saint Charbel Makhlouf": "catholic", "Saint Cyril of Alexandria": "all", "Saint Boniface": "all",
+    "Saint Columba of Iona": "all", "Saint Ephrem the Syrian": "orthodox,catholic,anglican",
+    "Saint Cyril of Jerusalem": "all", "Saint John Climacus": "orthodox,catholic",
+    "Saints Perpetua and Felicity": "all", "Saint Charles Wesley": "protestant,anglican",
+    "Saint Gregory Palamas": "orthodox", "Saint Albert the Great": "catholic",
+    "Saint Catherine of Alexandria": "catholic,orthodox", "Saint Margaret Mary Alacoque": "catholic",
+    "Saint Cyprian of Carthage": "all", "Saint Hildegard of Bingen": "catholic",
+    "Martin Luther": "protestant,anglican", "John Wesley": "protestant,anglican",
+    "Dietrich Bonhoeffer": "protestant,anglican",
+}
+
+
+def import_orphans(dump, prayers, saints):
+    """Copies live Firestore rows missing from the seed into it, with their tradition tag, so the seed
+    stays the single source of truth and the next content sync does not overwrite them with less."""
+    have_p = {(p["language"], p["name"]) for p in prayers}
+    have_s = {(s["language"], s["feastDate"], s["name"]) for s in saints}
+    added_p = added_s = 0
+    unmapped = []
+    for r in dump["prayers"]:
+        if (r["language"], r["name"]) in have_p:
+            continue
+        tag = ORPHAN_PRAYERS.get(r["name"])
+        if tag is None and (r["name"].startswith("Lectio Divina") or "Vicdan Muhasebesi" in r["name"]):
+            tag = "all"  # scripture meditations and examinations of conscience suit every tradition
+        if tag is None:
+            unmapped.append(("prayer", r["language"], r["name"]))
+            continue
+        prayers.append({"name": r["name"], "category": r["category"], "language": r["language"],
+                        "content": r["content"], "tradition": tag})
+        added_p += 1
+    for r in dump["saints"]:
+        if (r["language"], r["feastDate"], r["name"]) in have_s:
+            continue
+        tag = ORPHAN_SAINTS.get(r["name"])
+        if tag is None:
+            unmapped.append(("saint", r["language"], r["name"]))
+            continue
+        saints.append({"name": r["name"], "feastDate": r["feastDate"], "description": r["description"],
+                       "patronOf": r.get("patronOf", ""), "language": r["language"], "tradition": tag})
+        added_s += 1
+    if unmapped:
+        for u in unmapped:
+            print("UNMAPPED", u, file=sys.stderr)
+        sys.exit(1)
+    return added_p, added_s
+
+
 def main():
     scripture = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+    dump = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
     prayers = json.loads((SEED / "prayers.json").read_text(encoding="utf-8"))
     saints = json.loads((SEED / "saints.json").read_text(encoding="utf-8"))
 
@@ -211,6 +290,8 @@ def main():
     added_s = 0
     for entry in SAINTS:
         for lang in ("en", "tr"):
+            if entry[lang] is None:
+                continue
             name, feast, desc, patron = entry[lang]
             if (lang, feast, name) in have_saints:
                 continue
@@ -218,8 +299,10 @@ def main():
                            "language": lang, "tradition": entry["tradition"]})
             added_s += 1
 
-    (SEED / "prayers.json").write_bytes(dump(prayers, (",", ":")))
-    (SEED / "saints.json").write_bytes(dump(saints, (", ", ": ")))
+    op, os_ = import_orphans(dump, prayers, saints)
+    print("imported from Firestore - prayers:", op, "saints:", os_)
+    (SEED / "prayers.json").write_bytes(dump_rows(prayers, (",", ":")))
+    (SEED / "saints.json").write_bytes(dump_rows(saints, (", ", ": ")))
     print("added prayers:", added_p, "saints:", added_s)
 
 

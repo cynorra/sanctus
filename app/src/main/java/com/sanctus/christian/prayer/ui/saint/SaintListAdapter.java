@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import com.sanctus.christian.prayer.R;
+import com.sanctus.christian.prayer.util.DateUtils;
 import com.sanctus.christian.prayer.util.MotionKit;
 import com.sanctus.christian.prayer.util.SaintNames;
 import com.sanctus.christian.prayer.data.local.entity.SaintEntity;
@@ -44,7 +45,7 @@ public class SaintListAdapter extends ListAdapter<SaintEntity, SaintListAdapter.
         holder.tvName.setText(s.name);
         holder.tvInitial.setText(SaintNames.initialOf(s.name));
         MotionKit.pressable(holder.itemView);
-        holder.tvFeast.setText(s.feastDate);
+        holder.tvFeast.setText(DateUtils.localizeFeastDate(s.feastDate));
         holder.tvPatron.setText(s.patronOf);
         holder.btnShare.setOnClickListener(v -> shareListener.onClick(s));
         holder.itemView.setOnClickListener(v -> {

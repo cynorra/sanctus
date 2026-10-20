@@ -160,7 +160,7 @@ public class DashboardFragment extends Fragment {
             if (saint != null) {
                 tvSaintName.setText(saint.name);
                 tvSaintInitial.setText(SaintNames.initialOf(saint.name));
-                tvSaintFeast.setText(getString(R.string.saint_feast_day_format, saint.feastDate));
+                tvSaintFeast.setText(getString(R.string.saint_feast_day_format, DateUtils.localizeFeastDate(saint.feastDate)));
                 tvSaintDesc.setText(saint.description);
                 cardSaint.setOnClickListener(v -> {
                     Bundle args = new Bundle();

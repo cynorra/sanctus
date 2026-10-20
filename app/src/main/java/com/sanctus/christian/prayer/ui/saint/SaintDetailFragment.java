@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 import com.sanctus.christian.prayer.BuildConfig;
 import com.sanctus.christian.prayer.R;
+import com.sanctus.christian.prayer.util.DateUtils;
 import com.sanctus.christian.prayer.util.SaintNames;
 import com.sanctus.christian.prayer.util.Tradition;
 import com.sanctus.christian.prayer.SanctusApplication;
@@ -68,13 +69,13 @@ public class SaintDetailFragment extends Fragment {
                 String traditions = traditionLabels(saint.tradition);
                 tvTraditions.setText(traditions);
                 tvTraditions.setVisibility(traditions.isEmpty() ? View.GONE : View.VISIBLE);
-                ((TextView) view.findViewById(R.id.tv_feast_date_detail)).setText(getString(R.string.saint_feast_prefix, saint.feastDate));
+                ((TextView) view.findViewById(R.id.tv_feast_date_detail)).setText(getString(R.string.saint_feast_prefix, DateUtils.localizeFeastDate(saint.feastDate)));
                 tvDesc.setText(saint.description);
                 ((TextView) view.findViewById(R.id.tv_saint_patron_detail)).setText(getString(R.string.saint_patron_prefix, saint.patronOf));
                 btnShare.setOnClickListener(v -> {
                     AnimUtils.pressFeedback(btnShare);
                     String text = getString(R.string.share_saint_text,
-                            saint.name, getString(R.string.saint_feast_prefix, saint.feastDate),
+                            saint.name, getString(R.string.saint_feast_prefix, DateUtils.localizeFeastDate(saint.feastDate)),
                             saint.description, BuildConfig.PLAY_STORE_URL);
                     com.sanctus.christian.prayer.share.ShareSheetDialogFragment
                             .create(saint.name, saint.description, text, getString(R.string.share_saint_chooser_title))

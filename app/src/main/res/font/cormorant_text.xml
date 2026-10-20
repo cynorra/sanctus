@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <font-family xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <!-- Reading weight: a touch heavier than Regular so long prayer text holds up on dark glass. -->
-    <font
-        android:font="@font/cormorant_variable"
-        android:fontStyle="normal"
-        android:fontWeight="400"
-        android:fontVariationSettings="'wght' 520"
-        app:font="@font/cormorant_variable"
-        app:fontStyle="normal"
-        app:fontWeight="400"
-        app:fontVariationSettings="'wght' 520" />
-    <font
-        android:font="@font/cormorant_variable"
-        android:fontStyle="normal"
-        android:fontWeight="700"
-        android:fontVariationSettings="'wght' 700"
-        app:font="@font/cormorant_variable"
-        app:fontStyle="normal"
-        app:fontWeight="700"
-        app:fontVariationSettings="'wght' 700" />
+    <!-- Reading weight for long prayer text. -->
+    <font android:font="@font/cormorant_semibold" android:fontStyle="normal" android:fontWeight="400"
+        app:font="@font/cormorant_semibold" app:fontStyle="normal" app:fontWeight="400" />
+    <font android:font="@font/cormorant_bold" android:fontStyle="normal" android:fontWeight="700"
+        app:font="@font/cormorant_bold" app:fontStyle="normal" app:fontWeight="700" />
 </font-family>

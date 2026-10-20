@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.sanctus.christian.prayer.R;
+import com.sanctus.christian.prayer.util.DateUtils;
 import com.sanctus.christian.prayer.data.local.entity.PrayerEntity;
 import com.sanctus.christian.prayer.data.local.entity.SaintEntity;
 import com.sanctus.christian.prayer.data.remote.CommunityPost;
@@ -90,7 +91,7 @@ class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             SaintEntity s = item.saint;
             h.kicker.setText(R.string.saint_of_day);
             h.title.setText(s.name);
-            h.subtitle.setText(h.itemView.getContext().getString(R.string.saint_feast_day_format, s.feastDate));
+            h.subtitle.setText(h.itemView.getContext().getString(R.string.saint_feast_day_format, DateUtils.localizeFeastDate(s.feastDate)));
             h.subtitle.setVisibility(View.VISIBLE);
             h.body.setText(s.description);
             h.open.setOnClickListener(v -> listener.onOpenSaint(s));

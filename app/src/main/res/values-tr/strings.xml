@@ -212,4 +212,19 @@
     <string name="settings_tradition_title">Gelenek</string>
     <string name="settings_tradition_subtitle">Dualar, azizler ve takvimi şekillendirir</string>
     <string name="category_scripture">Kutsal Kitap</string>
+    <string name="prayer_of_day">Günün Duası</string>
+    <string name="content_desc_share">Paylaş</string>
+    <string name="streak_days_format">%d günlük seri</string>
+    <string name="invite_title">Arkadaşlarını Davet Et</string>
+    <string name="invite_subtitle">Kendi davet kodunu almak ve Sanctus\'a kaç arkadaş getirdiğini görmek için giriş yap.</string>
+    <string name="sign_in_with_google">Google ile giriş yap</string>
+    <string name="your_invite_code">Davet kodun</string>
+    <string name="invite_count_format">%d arkadaş kodunla katıldı</string>
+    <string name="share_invite_link">Davet Bağlantısını Paylaş</string>
+    <string name="sign_out">Çıkış yap</string>
+    <string name="settings_section_invite">DAVET</string>
+    <string name="invite_row_title">Arkadaşlarını Davet Et</string>
+    <string name="invite_row_subtitle">Giriş yap ve davet kodunu paylaş</string>
+    <string name="invite_share_text">"Sanctus\'ta bana katıl: Tespih, azizler ve ibadet saatleriyle günlük bir dua arkadaşı. %1$s"</string>
+    <string name="sign_in_failed">Giriş başarısız oldu. Lütfen tekrar dene.</string>
 </resources>

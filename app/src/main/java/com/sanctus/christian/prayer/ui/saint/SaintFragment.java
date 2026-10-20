@@ -36,7 +36,7 @@ public class SaintFragment extends Fragment {
             if (saint != null) {
                 tvName.setText(saint.name);
                 tvDesc.setText(saint.description);
-                tvFeast.setText(getString(R.string.saint_feast_prefix, saint.feastDate));
+                tvFeast.setText(getString(R.string.saint_feast_prefix, com.sanctus.christian.prayer.util.DateUtils.localizeFeastDate(saint.feastDate)));
             } else {
                 tvName.setText(R.string.no_saint_today_title);
                 tvDesc.setText(R.string.no_saint_today_desc);
