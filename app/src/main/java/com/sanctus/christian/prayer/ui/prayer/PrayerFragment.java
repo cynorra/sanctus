@@ -14,6 +14,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
+import com.sanctus.christian.prayer.SanctusApplication;
+import com.sanctus.christian.prayer.util.MotionKit;
+import com.sanctus.christian.prayer.util.Tradition;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.chip.Chip;
@@ -53,6 +56,13 @@ public class PrayerFragment extends Fragment {
                 prayer -> com.sanctus.christian.prayer.share.ShareActions.sharePrayer(requireContext(), getChildFragmentManager(), prayer)
         );
         recyclerView.setAdapter(adapter);
+
+        TextView tvTraditionBadge = view.findViewById(R.id.tv_tradition_badge);
+        tvTraditionBadge.setText(Tradition.labelRes(
+                SanctusApplication.getInstance().getSettingsRepository().getTradition()));
+        MotionKit.pressable(tvTraditionBadge);
+        tvTraditionBadge.setOnClickListener(v ->
+                Navigation.findNavController(v).navigate(R.id.settingsFragment));
 
         ChipGroup chipGroup = view.findViewById(R.id.chip_group_categories);
         chipGroup.setOnCheckedStateChangeListener((group, checkedIds) -> {

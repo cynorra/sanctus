@@ -16,7 +16,7 @@ import com.sanctus.christian.prayer.data.local.migration.Migrations;
 
 @Database(
     entities = {PrayerEntity.class, SettingsEntity.class, SaintEntity.class, CalendarEventEntity.class},
-    version = 3,
+    version = 4,
     exportSchema = false
 )
 public abstract class SanctusDatabase extends RoomDatabase {
@@ -35,7 +35,7 @@ public abstract class SanctusDatabase extends RoomDatabase {
                             context.getApplicationContext(),
                             SanctusDatabase.class,
                             "sanctus_db"
-                    ).addMigrations(Migrations.MIGRATION_2_3)
+                    ).addMigrations(Migrations.MIGRATION_2_3, Migrations.MIGRATION_3_4)
                      .fallbackToDestructiveMigrationOnDowngrade()
                      .build();
                 }

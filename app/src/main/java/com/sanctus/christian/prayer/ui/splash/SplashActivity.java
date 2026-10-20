@@ -9,6 +9,8 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.ui.main.MainActivity;
+import com.sanctus.christian.prayer.SanctusApplication;
+import com.sanctus.christian.prayer.data.repository.SettingsRepository;
 import com.sanctus.christian.prayer.ui.onboarding.OnboardingActivity;
 
 @SuppressLint("CustomSplashScreen")
@@ -45,16 +47,12 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void navigateNext() {
-        boolean onboardingShown = getSharedPreferences("sanctus_prefs", MODE_PRIVATE)
-                .getBoolean("onboarding_shown", false);
+        // The flag is only set once the user finishes onboarding, so a first launch that is
+        // interrupted starts over instead of dropping them into the app half set up.
+        SettingsRepository settings = SanctusApplication.getInstance().getSettingsRepository();
+        boolean onboardingDone = settings != null && settings.isOnboardingDone();
 
-        if (!onboardingShown) {
-            getSharedPreferences("sanctus_prefs", MODE_PRIVATE)
-                    .edit().putBoolean("onboarding_shown", true).apply();
-            startActivity(new Intent(this, OnboardingActivity.class));
-        } else {
-            startActivity(new Intent(this, MainActivity.class));
-        }
+        startActivity(new Intent(this, onboardingDone ? MainActivity.class : OnboardingActivity.class));
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         finish();
     }

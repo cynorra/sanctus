@@ -255,4 +255,25 @@
     <string name="feed_share_post_text">"🙏 Prayer intention:\n\n%1$s\n\nPray with me on Sanctus: %2$s"</string>
     <string name="feed_post_menu">More options</string>
     <string name="languages_count_hint">40 languages</string>
+    <string name="onboarding_continue">Continue</string>
+    <string name="onboarding_begin">Begin</string>
+    <string name="onboarding_welcome_tagline">A quiet place to pray, every day.</string>
+    <string name="onboarding_welcome_body">Daily prayers, the Rosary, the saints and the hours of the day, shaped to your own tradition.</string>
+    <string name="onboarding_tradition_title">Which tradition are you?</string>
+    <string name="onboarding_tradition_subtitle">We tailor prayers, saints and the calendar to it. You can change this any time in Settings.</string>
+    <string name="onboarding_rhythm_title">A gentle daily rhythm</string>
+    <string name="onboarding_rhythm_body">Quiet reminders at the hours of prayer: morning, midday, evening and night. Turn them off whenever you like.</string>
+    <string name="tradition_catholic">Catholic</string>
+    <string name="tradition_catholic_desc">The Rosary, saints, novenas and the Liturgy of the Hours</string>
+    <string name="tradition_orthodox">Orthodox</string>
+    <string name="tradition_orthodox_desc">The Jesus Prayer, the Trisagion, the Church Fathers and ancient hymns</string>
+    <string name="tradition_protestant">Protestant &amp; Evangelical</string>
+    <string name="tradition_protestant_desc">Scripture, the Psalms, prayers of the Reformers and daily devotion</string>
+    <string name="tradition_anglican">Anglican</string>
+    <string name="tradition_anglican_desc">Book of Common Prayer collects, the daily office and the saints</string>
+    <string name="tradition_general">All of them</string>
+    <string name="tradition_general_desc">Not sure, or at home in several: show everything</string>
+    <string name="settings_section_tradition">Your tradition</string>
+    <string name="settings_tradition_title">Tradition</string>
+    <string name="settings_tradition_subtitle">Shapes prayers, saints and the calendar</string>
 </resources>

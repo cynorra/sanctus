@@ -11,21 +11,33 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <ImageView
-            android:id="@+id/iv_splash_cross"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:src="@drawable/ic_cross"
-            android:contentDescription="Cross" />
+        <FrameLayout
+            android:layout_width="180dp"
+            android:layout_height="180dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_orb_gold" />
+
+            <ImageView
+                android:id="@+id/iv_splash_cross"
+                android:layout_width="44dp"
+                android:layout_height="58dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_cross"
+                android:contentDescription="@null" />
+        </FrameLayout>
 
         <TextView
             android:id="@+id/tv_splash_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="4dp"
             android:text="@string/app_name"
-            android:textSize="40sp"
-            android:fontFamily="serif"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/cormorant"
             android:letterSpacing="0.12"
             android:textColor="@color/color_on_background" />
 

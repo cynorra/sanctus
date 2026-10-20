@@ -35,6 +35,7 @@ public class SeedJsonLoader {
                 e.category = o.getString("category");
                 e.language = o.getString("language");
                 e.content = o.getString("content");
+                e.tradition = o.optString("tradition", "all");
                 e.isFavorite = false;
                 e.lastReadAt = 0;
                 list.add(e);
@@ -57,6 +58,7 @@ public class SeedJsonLoader {
                 e.description = o.getString("description");
                 e.patronOf = o.getString("patronOf");
                 e.language = o.optString("language", "en");
+                e.tradition = o.optString("tradition", "all");
                 e.isFavorite = false;
                 list.add(e);
             } catch (JSONException ex) {

@@ -190,4 +190,25 @@
     <string name="share_prayer_text">"%1$s\n\n%2$s\n\n— Şuradan paylaşıldı: Sanctus: Christian Prayer\n%3$s"</string>
     <string name="share_saint_chooser_title">Bu azizi paylaş</string>
     <string name="share_saint_text">"%1$s\n%2$s\n\n%3$s\n\n— Şuradan paylaşıldı: Sanctus: Christian Prayer\n%4$s"</string>
+    <string name="onboarding_continue">Devam</string>
+    <string name="onboarding_begin">Başla</string>
+    <string name="onboarding_welcome_tagline">Her gün dua etmek için sakin bir yer.</string>
+    <string name="onboarding_welcome_body">Günlük dualar, Tespih, azizler ve günün ibadet saatleri; kendi geleneğinize göre.</string>
+    <string name="onboarding_tradition_title">Hangi gelenekten siz?</string>
+    <string name="onboarding_tradition_subtitle">Dualar, azizler ve takvim buna göre şekillenir. Bunu istediğiniz zaman Ayarlar\'dan değiştirebilirsiniz.</string>
+    <string name="onboarding_rhythm_title">Nazik bir günlük ritim</string>
+    <string name="onboarding_rhythm_body">İbadet saatlerinde sakin hatırlatmalar: sabah, öğle, akşam ve gece. İstediğiniz zaman kapatabilirsiniz.</string>
+    <string name="tradition_catholic">Katolik</string>
+    <string name="tradition_catholic_desc">Tespih, azizler, novenalar ve Saatler Liturjisi</string>
+    <string name="tradition_orthodox">Ortodoks</string>
+    <string name="tradition_orthodox_desc">İsa Duası, Trisagion, Kilise Babaları ve kadim ilahiler</string>
+    <string name="tradition_protestant">Protestan ve Evanjelik</string>
+    <string name="tradition_protestant_desc">Kutsal Kitap, Mezmurlar, Reformcuların duaları ve günlük ibadet</string>
+    <string name="tradition_anglican">Anglikan</string>
+    <string name="tradition_anglican_desc">Ortak Dua Kitabı kolektleri, günlük ibadet ve azizler</string>
+    <string name="tradition_general">Hepsi</string>
+    <string name="tradition_general_desc">Emin değilim ya da birkaçına yakınım: her şeyi göster</string>
+    <string name="settings_section_tradition">Geleneğiniz</string>
+    <string name="settings_tradition_title">Gelenek</string>
+    <string name="settings_tradition_subtitle">Dualar, azizler ve takvimi şekillendirir</string>
 </resources>

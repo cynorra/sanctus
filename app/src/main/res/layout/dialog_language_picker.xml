@@ -9,7 +9,7 @@
         android:orientation="horizontal">
         <TextView android:layout_width="0dp" android:layout_height="wrap_content"
             android:layout_weight="1" android:text="@string/select_language"
-            android:fontFamily="serif" android:textSize="18sp"
+            android:fontFamily="@font/cormorant" android:textSize="18sp"
             android:textColor="@color/color_on_background"/>
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:textSize="11sp" android:letterSpacing="0.08" android:textAllCaps="true"

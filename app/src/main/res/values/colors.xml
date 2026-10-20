@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Sanctus Premium Palette -->
-    <!-- Deep Royal Purple (liturgical, sacred) -->
-    <color name="color_primary">#4A148C</color>
-    <color name="color_primary_dark">#2D1B69</color>
-    <color name="color_primary_light">#7B1FA2</color>
-    <!-- Gold accent (sacred gold, divine light) -->
-    <color name="color_accent">#C9A84C</color>
-    <color name="color_gold_light">#E8D5A3</color>
-    <color name="color_gold_dark">#8B6914</color>
+    <!-- Sanctus 2026 palette: ink-black base, candlelight gold, a single violet for depth. -->
+    <color name="color_primary">#6A4DF4</color>
+    <color name="color_primary_dark">#3B2A9E</color>
+    <color name="color_primary_light">#9B86FF</color>
+    <!-- Gold accent -->
+    <color name="color_accent">#E6BC5C</color>
+    <color name="color_gold_light">#F5E3B3</color>
+    <color name="color_gold_dark">#A87C2C</color>
     <!-- Backgrounds -->
-    <color name="color_background">#0D0A1A</color>
-    <color name="color_surface">#141022</color>
-    <color name="color_surface_variant">#1E1A2E</color>
-    <color name="color_card">#1A1530</color>
+    <color name="color_background">#08080F</color>
+    <color name="color_surface">#100F1B</color>
+    <color name="color_surface_variant">#1A182E</color>
+    <color name="color_card">#15132A</color>
+    <!-- Glass layers (translucent so the aurora behind them shows through) -->
+    <color name="color_glass_fill">#0FFFFFFF</color>
+    <color name="color_glass_fill_strong">#1AFFFFFF</color>
+    <color name="color_glass_stroke">#1FFFFFFF</color>
+    <color name="color_aurora_violet">#406A4DF4</color>
+    <color name="color_aurora_gold">#2EE6BC5C</color>
     <!-- Text -->
     <color name="color_on_primary">#FFFFFF</color>
-    <color name="color_on_background">#F0EAF8</color>
-    <color name="color_on_surface">#D4C8E8</color>
-    <color name="color_text_secondary">#9985B8</color>
-    <color name="color_divider">#2A2040</color>
+    <color name="color_on_background">#F7F3FF</color>
+    <color name="color_on_surface">#DCD5EE</color>
+    <color name="color_text_secondary">#A199BD</color>
+    <color name="color_divider">#2A2742</color>
     <!-- Semantic -->
-    <color name="color_success">#4CAF50</color>
-    <color name="color_error">#CF6679</color>
+    <color name="color_success">#5FC48A</color>
+    <color name="color_error">#E5788C</color>
     <!-- Liturgical season colors -->
-    <color name="season_advent">#4A148C</color>
-    <color name="season_christmas">#C9A84C</color>
-    <color name="season_lent">#6D3B7D</color>
-    <color name="season_easter">#C9A84C</color>
-    <color name="season_ordinary">#2E7D32</color>
+    <color name="season_advent">#6A4DF4</color>
+    <color name="season_christmas">#E6BC5C</color>
+    <color name="season_lent">#8E5BB8</color>
+    <color name="season_easter">#E6BC5C</color>
+    <color name="season_ordinary">#4FA36B</color>
     <!-- Bottom nav -->
-    <color name="bottom_nav_selected">#C9A84C</color>
-    <color name="bottom_nav_unselected">#5A4E7A</color>
-    <color name="nav_indicator">#2A1F50</color>
+    <color name="bottom_nav_selected">#E6BC5C</color>
+    <color name="bottom_nav_unselected">#6F6894</color>
+    <color name="nav_indicator">#2B2547</color>
 </resources>

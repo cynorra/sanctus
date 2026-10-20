@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical" android:background="@color/color_background">
+    android:orientation="vertical" android:background="@android:color/transparent">
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
         android:paddingHorizontal="8dp" android:gravity="center_vertical"
@@ -19,7 +19,7 @@
             android:paddingTop="8dp" android:paddingBottom="48dp">
 
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="@string/invite_title" android:fontFamily="serif"
+                android:text="@string/invite_title" android:fontFamily="@font/cormorant"
                 android:textSize="28sp" android:textColor="@color/color_on_background"/>
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
 
                 <TextView android:id="@+id/tv_display_name" android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:textSize="18sp"
-                    android:fontFamily="serif" android:textColor="@color/color_on_background"/>
+                    android:fontFamily="@font/cormorant" android:textColor="@color/color_on_background"/>
 
                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                     android:orientation="vertical" android:background="@drawable/bg_card_gold"
@@ -66,7 +66,7 @@
 
                     <TextView android:id="@+id/tv_referral_code" android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:layout_marginTop="6dp"
-                        android:fontFamily="serif" android:textSize="30sp" android:letterSpacing="0.1"
+                        android:fontFamily="@font/cormorant" android:textSize="30sp" android:letterSpacing="0.1"
                         android:textColor="@color/color_on_background"/>
 
                     <TextView android:id="@+id/tv_invite_count" android:layout_width="wrap_content"

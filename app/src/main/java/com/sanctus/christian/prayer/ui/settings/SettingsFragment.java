@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.materialswitch.MaterialSwitch;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.sanctus.christian.prayer.BuildConfig;
@@ -26,6 +27,7 @@ import com.sanctus.christian.prayer.SanctusApplication;
 import com.sanctus.christian.prayer.data.repository.SettingsRepository;
 import com.sanctus.christian.prayer.service.PrayerAlarmManager;
 import com.sanctus.christian.prayer.util.LanguageManager;
+import com.sanctus.christian.prayer.util.Tradition;
 
 public class SettingsFragment extends Fragment {
     private SettingsRepository settingsRepo;
@@ -58,13 +60,25 @@ public class SettingsFragment extends Fragment {
         view.findViewById(R.id.row_invite).setOnClickListener(v ->
                 Navigation.findNavController(v).navigate(R.id.action_settings_to_invite));
 
-        // Dark mode
-        MaterialSwitch switchDark = view.findViewById(R.id.switch_dark_mode);
-        switchDark.setChecked(settingsRepo.isDarkMode());
-        switchDark.setOnCheckedChangeListener((btn, isChecked) -> {
-            settingsRepo.setDarkMode(isChecked);
-            AppCompatDelegate.setDefaultNightMode(
-                    isChecked ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO);
+        // Tradition
+        TextView tvTradition = view.findViewById(R.id.tv_current_tradition);
+        tvTradition.setText(Tradition.labelRes(settingsRepo.getTradition()));
+        view.findViewById(R.id.row_tradition).setOnClickListener(v -> {
+            String[] ids = Tradition.CHOICES;
+            CharSequence[] labels = new CharSequence[ids.length];
+            int checked = 0;
+            for (int i = 0; i < ids.length; i++) {
+                labels[i] = getString(Tradition.labelRes(ids[i]));
+                if (ids[i].equals(settingsRepo.getTradition())) checked = i;
+            }
+            new MaterialAlertDialogBuilder(requireContext())
+                    .setTitle(R.string.settings_tradition_title)
+                    .setSingleChoiceItems(labels, checked, (dialog, which) -> {
+                        settingsRepo.setTradition(ids[which]);
+                        tvTradition.setText(Tradition.labelRes(ids[which]));
+                        dialog.dismiss();
+                    })
+                    .show();
         });
 
         // Notifications

@@ -11,11 +11,11 @@ import java.util.List;
 
 @Dao
 public interface PrayerDao {
-    @Query("SELECT * FROM prayers WHERE language = :lang ORDER BY name ASC")
-    LiveData<List<PrayerEntity>> getPrayersByLanguage(String lang);
+    @Query("SELECT * FROM prayers WHERE language = :lang AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
+    LiveData<List<PrayerEntity>> getPrayersByLanguage(String lang, String tradition);
 
-    @Query("SELECT * FROM prayers WHERE category = :category AND language = :lang")
-    LiveData<List<PrayerEntity>> getPrayersByCategory(String category, String lang);
+    @Query("SELECT * FROM prayers WHERE category = :category AND language = :lang AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
+    LiveData<List<PrayerEntity>> getPrayersByCategory(String category, String lang, String tradition);
 
     @Query("SELECT * FROM prayers WHERE isFavorite = 1 AND language = :lang")
     LiveData<List<PrayerEntity>> getFavoritePrayers(String lang);
@@ -23,14 +23,18 @@ public interface PrayerDao {
     @Query("SELECT * FROM prayers WHERE id = :id")
     LiveData<PrayerEntity> getPrayerById(int id);
 
-    @Query("SELECT * FROM prayers WHERE (name LIKE '%' || :q || '%' OR content LIKE '%' || :q || '%') AND language = :lang")
-    LiveData<List<PrayerEntity>> searchPrayers(String q, String lang);
+    @Query("SELECT * FROM prayers WHERE (name LIKE '%' || :q || '%' OR content LIKE '%' || :q || '%') AND language = :lang AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
+    LiveData<List<PrayerEntity>> searchPrayers(String q, String lang, String tradition);
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insertAll(PrayerEntity... prayers);
 
     @Update
     void update(PrayerEntity prayer);
+
+    /** Applies the tradition tag from the seed file to a row that already exists on this device. */
+    @Query("UPDATE prayers SET tradition = :tradition WHERE language = :language AND name = :name")
+    int updateTradition(String language, String name, String tradition);
 
     @Query("SELECT COUNT(*) FROM prayers")
     int getCount();

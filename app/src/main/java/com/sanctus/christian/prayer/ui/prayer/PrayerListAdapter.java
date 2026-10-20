@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import com.sanctus.christian.prayer.R;
+import com.sanctus.christian.prayer.util.MotionKit;
 import com.sanctus.christian.prayer.data.local.entity.PrayerEntity;
 import com.sanctus.christian.prayer.util.AnimUtils;
 import java.util.Locale;
@@ -47,6 +48,7 @@ public class PrayerListAdapter extends ListAdapter<PrayerEntity, PrayerListAdapt
         holder.tvName.setText(prayer.name);
         holder.tvCategory.setText(prayer.category != null ? prayer.category.toUpperCase(Locale.ROOT) : "");
         holder.btnFavorite.setSelected(prayer.isFavorite);
+        MotionKit.pressable(holder.itemView);
         holder.itemView.setOnClickListener(v -> {
             AnimUtils.pressFeedback(v);
             listener.onClick(prayer);

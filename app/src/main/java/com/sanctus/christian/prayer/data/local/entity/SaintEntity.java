@@ -1,5 +1,7 @@
 package com.sanctus.christian.prayer.data.local.entity;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
@@ -15,4 +17,8 @@ public class SaintEntity {
     public String imageUrl;
     public boolean isFavorite;
     public String language = "en";
+    /** {@code "all"} or a comma-separated list of tradition ids, see util.Tradition. */
+    @NonNull
+    @ColumnInfo(defaultValue = "all")
+    public String tradition = "all";
 }

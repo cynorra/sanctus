@@ -61,14 +61,17 @@ public class ContentSyncManager {
                     if (language == null || name == null) continue;
                     String category = doc.getString("category");
                     String content = doc.getString("content");
+                    String tradition = doc.getString("tradition");
 
                     int rows = dao.updateContent(language, name, category, content);
+                    if (rows > 0 && tradition != null) dao.updateTradition(language, name, tradition);
                     if (rows == 0) {
                         PrayerEntity e = new PrayerEntity();
                         e.language = language;
                         e.name = name;
                         e.category = category;
                         e.content = content;
+                        if (tradition != null) e.tradition = tradition;
                         e.isFavorite = false;
                         e.lastReadAt = 0;
                         dao.insertAll(e);
@@ -91,8 +94,10 @@ public class ContentSyncManager {
                     if (language == null || name == null || feastDate == null) continue;
                     String description = doc.getString("description");
                     String patronOf = doc.getString("patronOf");
+                    String tradition = doc.getString("tradition");
 
                     int rows = dao.updateContent(language, feastDate, name, description, patronOf);
+                    if (rows > 0 && tradition != null) dao.updateTradition(language, feastDate, name, tradition);
                     if (rows == 0) {
                         SaintEntity e = new SaintEntity();
                         e.language = language;
@@ -100,6 +105,7 @@ public class ContentSyncManager {
                         e.feastDate = feastDate;
                         e.description = description;
                         e.patronOf = patronOf;
+                        if (tradition != null) e.tradition = tradition;
                         e.isFavorite = false;
                         dao.insertAll(java.util.Collections.singletonList(e));
                     }

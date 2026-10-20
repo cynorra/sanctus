@@ -3,12 +3,17 @@ package com.sanctus.christian.prayer.ui.main;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
+import androidx.navigation.NavOptions;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -16,6 +21,7 @@ import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.data.local.SanctusDatabase;
 import com.sanctus.christian.prayer.data.local.entity.PrayerEntity;
 import com.sanctus.christian.prayer.ui.prayer.PrayerDetailFragment;
+import com.sanctus.christian.prayer.util.MotionKit;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import java.util.concurrent.Executors;
@@ -53,6 +59,38 @@ public class MainActivity extends AppCompatActivity {
             navController = navHostFragment.getNavController();
             BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
             NavigationUI.setupWithNavController(bottomNav, navController);
+
+            // Same behaviour as NavigationUI's default tab handling (single top, restore state),
+            // plus a fade/lift transition between tabs that the default does not give us.
+            bottomNav.setOnItemSelectedListener(item -> {
+                NavDestination current = navController.getCurrentDestination();
+                if (current != null && current.getId() == item.getItemId()) return true;
+                NavOptions options = new NavOptions.Builder()
+                        .setLaunchSingleTop(true)
+                        .setRestoreState(true)
+                        .setPopUpTo(navController.getGraph().getStartDestinationId(), false, true)
+                        .setEnterAnim(R.anim.tab_enter)
+                        .setExitAnim(R.anim.tab_exit)
+                        .setPopEnterAnim(R.anim.tab_enter)
+                        .setPopExitAnim(R.anim.tab_exit)
+                        .build();
+                try {
+                    navController.navigate(item.getItemId(), null, options);
+                    return true;
+                } catch (IllegalArgumentException e) {
+                    return false;
+                }
+            });
+
+            // Every screen gets the same staggered entrance without each fragment wiring it up.
+            navHostFragment.getChildFragmentManager().registerFragmentLifecycleCallbacks(
+                    new FragmentManager.FragmentLifecycleCallbacks() {
+                        @Override
+                        public void onFragmentViewCreated(@NonNull FragmentManager fm, @NonNull Fragment f,
+                                                          @NonNull View v, Bundle savedInstanceState) {
+                            MotionKit.enterScreen(v);
+                        }
+                    }, false);
         }
 
         handleDeepLink(getIntent());

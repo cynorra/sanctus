@@ -12,7 +12,7 @@
             <TextView android:id="@+id/tv_event_title" android:layout_width="0dp"
                 android:layout_height="wrap_content" android:layout_weight="1"
                 android:textSize="15sp" android:textColor="@color/color_on_background"
-                android:fontFamily="serif"/>
+                android:fontFamily="@font/cormorant"/>
             <TextView android:id="@+id/tv_holy_day" android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:text="★"
                 android:textSize="12sp" android:textColor="@color/color_accent"

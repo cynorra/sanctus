@@ -40,6 +40,12 @@ public class SettingsRepository {
     }
 
     public LiveData<String> getLanguageLive() { return languageLive; }
+
+    /** One of the {@link com.sanctus.christian.prayer.util.Tradition} ids; GENERAL until the user picks one. */
+    public String getTradition() { return prefs.getString("tradition", com.sanctus.christian.prayer.util.Tradition.GENERAL); }
+    public void setTradition(String tradition) { prefs.edit().putString("tradition", tradition).apply(); }
+    public boolean isOnboardingDone() { return prefs.getBoolean("onboarding_done", false); }
+    public void setOnboardingDone(boolean done) { prefs.edit().putBoolean("onboarding_done", done).apply(); }
     public boolean isDarkMode() { return prefs.getBoolean("dark_mode", false); }
     public void setDarkMode(boolean dark) { prefs.edit().putBoolean("dark_mode", dark).apply(); }
     public boolean isNotificationsEnabled() { return prefs.getBoolean("notifications", true); }

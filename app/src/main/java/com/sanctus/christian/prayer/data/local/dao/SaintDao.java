@@ -11,8 +11,8 @@ import java.util.List;
 
 @Dao
 public interface SaintDao {
-    @Query("SELECT * FROM saints WHERE language = :language ORDER BY name ASC")
-    LiveData<List<SaintEntity>> getAllSaints(String language);
+    @Query("SELECT * FROM saints WHERE language = :language AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
+    LiveData<List<SaintEntity>> getAllSaints(String language, String tradition);
 
     @Query("SELECT * FROM saints WHERE feastDate = :date AND language = :language LIMIT 1")
     LiveData<SaintEntity> getSaintByFeastDate(String date, String language);
@@ -23,14 +23,18 @@ public interface SaintDao {
     @Query("SELECT * FROM saints WHERE isFavorite = 1 AND language = :language")
     LiveData<List<SaintEntity>> getFavoriteSaints(String language);
 
-    @Query("SELECT * FROM saints WHERE (name LIKE '%' || :query || '%' OR patronOf LIKE '%' || :query || '%') AND language = :language")
-    LiveData<List<SaintEntity>> searchSaints(String query, String language);
+    @Query("SELECT * FROM saints WHERE (name LIKE '%' || :query || '%' OR patronOf LIKE '%' || :query || '%') AND language = :language AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
+    LiveData<List<SaintEntity>> searchSaints(String query, String language, String tradition);
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insertAll(List<SaintEntity> saints);
 
     @Update
     void update(SaintEntity saint);
+
+    /** Applies the tradition tag from the seed file to a row that already exists on this device. */
+    @Query("UPDATE saints SET tradition = :tradition WHERE language = :language AND feastDate = :feastDate AND name = :name")
+    int updateTradition(String language, String feastDate, String name, String tradition);
 
     @Query("SELECT COUNT(*) FROM saints")
     int getCount();

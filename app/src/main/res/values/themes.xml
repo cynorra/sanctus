@@ -1,67 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.Sanctus" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="colorPrimary">@color/color_primary</item>
-        <item name="colorOnPrimary">@color/color_on_primary</item>
+        <item name="colorPrimary">@color/color_accent</item>
+        <item name="colorOnPrimary">@color/color_background</item>
         <item name="colorPrimaryContainer">@color/color_surface_variant</item>
         <item name="colorOnPrimaryContainer">@color/color_gold_light</item>
-        <item name="colorSecondary">@color/color_accent</item>
+        <item name="colorSecondary">@color/color_primary_light</item>
         <item name="colorOnSecondary">@color/color_background</item>
-        <item name="colorSecondaryContainer">@color/color_surface_variant</item>
+        <item name="colorSecondaryContainer">@color/nav_indicator</item>
+        <item name="colorOnSecondaryContainer">@color/color_gold_light</item>
         <item name="colorSurface">@color/color_surface</item>
         <item name="colorOnSurface">@color/color_on_surface</item>
         <item name="colorSurfaceVariant">@color/color_surface_variant</item>
+        <item name="colorOutline">@color/color_glass_stroke</item>
         <item name="android:colorBackground">@color/color_background</item>
+        <item name="android:windowBackground">@color/color_background</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@color/color_surface</item>
+        <item name="android:navigationBarColor">@color/color_background</item>
         <item name="android:windowLightStatusBar">false</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
         <item name="textAppearanceHeadlineLarge">@style/TextAppearance.Sanctus.HeadlineLarge</item>
         <item name="textAppearanceHeadlineMedium">@style/TextAppearance.Sanctus.HeadlineMedium</item>
         <item name="textAppearanceTitleLarge">@style/TextAppearance.Sanctus.TitleLarge</item>
         <item name="textAppearanceBodyLarge">@style/TextAppearance.Sanctus.BodyLarge</item>
         <item name="textAppearanceLabelMedium">@style/TextAppearance.Sanctus.LabelMedium</item>
+        <item name="bottomNavigationStyle">@style/Widget.Sanctus.BottomNav</item>
+        <item name="materialButtonStyle">@style/Widget.Sanctus.Button</item>
+        <item name="chipStyle">@style/Widget.Sanctus.Chip</item>
     </style>
 
     <!-- Base TextAppearance (required by sub-styles) -->
-    <style name="TextAppearance.Sanctus" parent="TextAppearance.Material3.BodyMedium"/>
+    <style name="TextAppearance.Sanctus" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
 
+    <!-- Display: Cormorant Garamond reads small at its x-height, so sizes run larger than the
+         usual Material scale. -->
+    <style name="TextAppearance.Sanctus.Display" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:fontFamily">@font/cormorant</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/color_on_background</item>
+    </style>
     <style name="TextAppearance.Sanctus.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
-        <item name="android:fontFamily">serif</item>
-        <item name="android:textSize">32sp</item>
-        <item name="android:letterSpacing">0.02</item>
+        <item name="android:fontFamily">@font/cormorant</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">36sp</item>
         <item name="android:textColor">@color/color_on_background</item>
     </style>
     <style name="TextAppearance.Sanctus.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
-        <item name="android:fontFamily">serif</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/cormorant</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">28sp</item>
         <item name="android:textColor">@color/color_on_background</item>
     </style>
     <style name="TextAppearance.Sanctus.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
-        <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:letterSpacing">0.01</item>
-        <item name="android:textColor">@color/color_on_surface</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/color_on_background</item>
     </style>
     <style name="TextAppearance.Sanctus.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
-        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:fontFamily">@font/inter</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:lineSpacingMultiplier">1.5</item>
+        <item name="android:lineSpacingMultiplier">1.45</item>
         <item name="android:textColor">@color/color_on_surface</item>
     </style>
+    <!-- Prayer text: the app's reading voice. -->
+    <style name="TextAppearance.Sanctus.Prayer" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:fontFamily">@font/cormorant_text</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:lineSpacingMultiplier">1.38</item>
+        <item name="android:textColor">@color/color_on_background</item>
+    </style>
     <style name="TextAppearance.Sanctus.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
-        <item name="android:fontFamily">sans-serif</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:letterSpacing">0.06</item>
-        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.14</item>
         <item name="android:textColor">@color/color_text_secondary</item>
+    </style>
+    <!-- Small eyebrow label above titles. -->
+    <style name="TextAppearance.Sanctus.Eyebrow" parent="TextAppearance.Sanctus.LabelMedium">
+        <item name="android:textColor">@color/color_accent</item>
     </style>
 
     <style name="Widget.Sanctus.Card" parent="Widget.Material3.CardView.Elevated">
-        <item name="cardBackgroundColor">@color/color_card</item>
-        <item name="cardCornerRadius">16dp</item>
+        <item name="cardBackgroundColor">@color/color_glass_fill</item>
+        <item name="cardCornerRadius">24dp</item>
         <item name="cardElevation">0dp</item>
         <item name="strokeWidth">1dp</item>
-        <item name="strokeColor">@color/color_divider</item>
+        <item name="strokeColor">@color/color_glass_stroke</item>
+    </style>
+
+    <style name="Widget.Sanctus.Button" parent="Widget.Material3.Button">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="backgroundTint">@color/color_accent</item>
+        <item name="android:textColor">@color/color_background</item>
+        <item name="cornerRadius">26dp</item>
+    </style>
+    <style name="Widget.Sanctus.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textColor">@color/color_accent</item>
+        <item name="strokeColor">@color/color_glass_stroke</item>
+        <item name="cornerRadius">26dp</item>
+    </style>
+
+    <style name="Widget.Sanctus.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="android:textColor">@color/selector_chip_text</item>
+        <item name="chipBackgroundColor">@color/selector_chip_bg</item>
+        <item name="chipStrokeColor">@color/color_glass_stroke</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="chipMinHeight">40dp</item>
+        <item name="chipCornerRadius">20dp</item>
+        <item name="checkedIconVisible">false</item>
+    </style>
+
+    <style name="Widget.Sanctus.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="itemIconTint">@color/selector_bottom_nav</item>
+        <item name="itemTextColor">@color/selector_bottom_nav</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.Sanctus.BottomNav.Indicator</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.Sanctus.NavLabel</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.Sanctus.NavLabel</item>
+        <item name="elevation">0dp</item>
+    </style>
+    <style name="Widget.Sanctus.BottomNav.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/nav_indicator</item>
+        <item name="android:width">56dp</item>
+        <item name="android:height">34dp</item>
+    </style>
+    <style name="TextAppearance.Sanctus.NavLabel" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">11sp</item>
     </style>
 
     <style name="Theme.Sanctus.Splash" parent="Theme.Sanctus">

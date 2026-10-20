@@ -26,6 +26,7 @@ import com.sanctus.christian.prayer.ui.saint.SaintViewModel;
 import com.sanctus.christian.prayer.util.AnimUtils;
 import com.sanctus.christian.prayer.util.DateUtils;
 import com.sanctus.christian.prayer.util.LiturgicalSeasonHelper;
+import com.sanctus.christian.prayer.util.MotionKit;
 import com.sanctus.christian.prayer.util.PrayerTimeCalculator;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -52,6 +53,19 @@ public class DashboardFragment extends Fragment {
         // Date
         TextView tvDate = view.findViewById(R.id.tv_date);
         tvDate.setText(DateUtils.getTodayFormatted());
+
+        MotionKit.shimmer(view.findViewById(R.id.tv_app_title),
+                ContextCompat.getColor(requireContext(), R.color.color_on_background),
+                ContextCompat.getColor(requireContext(), R.color.color_accent));
+        MotionKit.breathe(view.findViewById(R.id.hero_glow));
+        MotionKit.pressable(view.findViewById(R.id.card_prayer_of_day));
+        MotionKit.pressable(view.findViewById(R.id.card_saint_of_day));
+        MotionKit.pressable(view.findViewById(R.id.tile_rosary));
+        MotionKit.pressable(view.findViewById(R.id.tile_prayers));
+        view.findViewById(R.id.tile_rosary).setOnClickListener(v ->
+                Navigation.findNavController(v).navigate(R.id.rosaryFragment));
+        view.findViewById(R.id.tile_prayers).setOnClickListener(v ->
+                Navigation.findNavController(v).navigate(R.id.prayerFragment));
 
         rowStreak = view.findViewById(R.id.row_streak);
         tvStreak = view.findViewById(R.id.tv_streak);
@@ -96,7 +110,7 @@ public class DashboardFragment extends Fragment {
             TransitionManager.beginDelayedTransition((ViewGroup) cardNextHour, new AutoTransition());
             boolean expanding = expandContainer.getVisibility() != View.VISIBLE;
             expandContainer.setVisibility(expanding ? View.VISIBLE : View.GONE);
-            ivChevron.animate().rotation(expanding ? 180f : 0f).setDuration(200).start();
+            MotionKit.rotateTo(ivChevron, expanding ? 180f : 0f);
         });
 
         // Footer row: tap to go pray
@@ -130,6 +144,7 @@ public class DashboardFragment extends Fragment {
         });
 
         // Saint of the day
+        TextView tvSaintInitial = view.findViewById(R.id.tv_saint_initial);
         TextView tvSaintName = view.findViewById(R.id.tv_saint_name);
         TextView tvSaintFeast = view.findViewById(R.id.tv_saint_feast);
         TextView tvSaintDesc = view.findViewById(R.id.tv_saint_desc);
@@ -143,6 +158,7 @@ public class DashboardFragment extends Fragment {
         saintViewModel.getSaintSpotlight(today, dayOfYear).observe(getViewLifecycleOwner(), saint -> {
             if (saint != null) {
                 tvSaintName.setText(saint.name);
+                tvSaintInitial.setText(initialOf(saint.name));
                 tvSaintFeast.setText(getString(R.string.saint_feast_day_format, saint.feastDate));
                 tvSaintDesc.setText(saint.description);
                 cardSaint.setOnClickListener(v -> {
@@ -156,6 +172,7 @@ public class DashboardFragment extends Fragment {
                 });
             } else {
                 tvSaintName.setText(R.string.no_saint_today_title);
+                tvSaintInitial.setText("✝");
                 tvSaintFeast.setText("");
                 tvSaintDesc.setText(R.string.no_saint_today_desc);
                 btnShareSaint.setVisibility(View.GONE);
@@ -172,6 +189,18 @@ public class DashboardFragment extends Fragment {
         // Fragment stays alive across bottom-nav tab switches, so re-check the streak
         // whenever this tab regains focus rather than only once at view creation.
         if (viewModel != null) refreshStreak();
+    }
+
+    /** First letter of the saint's own name, skipping honorifics like "Saint" or "Aziz". */
+    private static String initialOf(String name) {
+        if (name == null) return "";
+        for (String word : name.trim().split("\\s+")) {
+            String w = word.toLowerCase(Locale.ROOT);
+            if (w.equals("saint") || w.equals("st.") || w.equals("blessed") || w.equals("archangel")
+                    || w.equals("aziz") || w.equals("azize")) continue;
+            if (!word.isEmpty()) return word.substring(0, word.offsetByCodePoints(0, 1)).toUpperCase(Locale.getDefault());
+        }
+        return name.substring(0, name.offsetByCodePoints(0, 1));
     }
 
     private void refreshStreak() {

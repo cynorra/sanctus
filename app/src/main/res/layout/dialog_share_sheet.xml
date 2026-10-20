@@ -10,7 +10,7 @@
 
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
         android:paddingHorizontal="16dp" android:paddingBottom="8dp"
-        android:text="@string/share_sheet_title" android:fontFamily="serif"
+        android:text="@string/share_sheet_title" android:fontFamily="@font/cormorant"
         android:textSize="18sp" android:textColor="@color/color_on_background"/>
 
     <LinearLayout android:id="@+id/row_whatsapp" android:layout_width="match_parent"

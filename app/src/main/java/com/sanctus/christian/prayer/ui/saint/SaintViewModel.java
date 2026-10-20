@@ -9,6 +9,7 @@ import com.sanctus.christian.prayer.SanctusApplication;
 import com.sanctus.christian.prayer.data.local.SanctusDatabase;
 import com.sanctus.christian.prayer.data.local.dao.SaintDao;
 import com.sanctus.christian.prayer.data.local.entity.SaintEntity;
+import com.sanctus.christian.prayer.util.Tradition;
 import java.util.List;
 
 public class SaintViewModel extends AndroidViewModel {
@@ -23,11 +24,16 @@ public class SaintViewModel extends AndroidViewModel {
         language = SanctusApplication.getInstance().getSettingsRepository().getLanguage();
         results = Transformations.switchMap(query, q -> {
             boolean empty = q == null || q.isEmpty();
-            LiveData<List<SaintEntity>> primary = empty ? dao.getAllSaints(language) : dao.searchSaints(q, language);
+            LiveData<List<SaintEntity>> primary = empty ? dao.getAllSaints(language, tradition()) : dao.searchSaints(q, language, tradition());
             if ("en".equals(language)) return primary;
-            LiveData<List<SaintEntity>> fallback = empty ? dao.getAllSaints("en") : dao.searchSaints(q, "en");
+            LiveData<List<SaintEntity>> fallback = empty ? dao.getAllSaints("en", tradition()) : dao.searchSaints(q, "en", tradition());
             return withListFallback(primary, fallback);
         });
+    }
+
+    /** Read per query so a change in Settings applies without recreating this ViewModel. */
+    private static String tradition() {
+        return Tradition.filterValue(SanctusApplication.getInstance().getSettingsRepository().getTradition());
     }
 
     /** Single source of truth for the saint list screen: reacts to search query changes, no duplicate observers. */
@@ -55,11 +61,11 @@ public class SaintViewModel extends AndroidViewModel {
     }
 
     private LiveData<SaintEntity> rotatingFallback(int dayOfYear) {
-        LiveData<List<SaintEntity>> primary = dao.getAllSaints(language);
+        LiveData<List<SaintEntity>> primary = dao.getAllSaints(language, tradition());
         if ("en".equals(language)) return Transformations.map(primary, list -> pickForDay(list, dayOfYear));
         return Transformations.switchMap(primary, list -> {
             if (list != null && !list.isEmpty()) return staticLiveData(pickForDay(list, dayOfYear));
-            return Transformations.map(dao.getAllSaints("en"), l -> pickForDay(l, dayOfYear));
+            return Transformations.map(dao.getAllSaints("en", tradition()), l -> pickForDay(l, dayOfYear));
         });
     }
 

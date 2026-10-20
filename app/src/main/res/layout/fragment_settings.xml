@@ -1,155 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/color_background">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:scrollbars="none">
 
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:orientation="vertical" android:paddingHorizontal="24dp"
-        android:paddingTop="52dp" android:paddingBottom="48dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="32dp">
 
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/settings_title" android:fontFamily="serif"
-            android:textSize="28sp" android:textColor="@color/color_on_background"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/settings_title"
+            android:textAppearance="@style/TextAppearance.Sanctus.HeadlineLarge" />
 
-        <!-- INVITE -->
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginTop="28dp" android:text="@string/settings_section_invite"
-            android:textSize="10sp" android:letterSpacing="0.15" android:textAllCaps="true"
-            android:textColor="@color/color_text_secondary"/>
+        <!-- PERSONAL -->
+        <TextView
+            style="@style/Sanctus.SectionLabel"
+            android:text="@string/settings_section_tradition" />
 
-        <LinearLayout android:id="@+id/row_invite"
-            android:layout_width="match_parent" android:layout_height="64dp"
-            android:orientation="horizontal" android:gravity="center_vertical"
-            android:layout_marginTop="8dp"
-            android:background="?attr/selectableItemBackground">
-            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                android:layout_weight="1" android:orientation="vertical">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="@string/invite_row_title" android:textSize="16sp"
-                    android:textColor="@color/color_on_surface"/>
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="@string/invite_row_subtitle" android:textSize="12sp"
-                    android:textColor="@color/color_text_secondary"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card">
+
+            <LinearLayout
+                android:id="@+id/row_tradition"
+                style="@style/Sanctus.SettingsRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Sanctus.SettingsRowTitle"
+                        android:text="@string/settings_tradition_title" />
+
+                    <TextView
+                        style="@style/Sanctus.SettingsRowSubtitle"
+                        android:text="@string/settings_tradition_subtitle" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_current_tradition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:textColor="@color/color_accent"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_chevron_down"
+                    android:rotation="-90"
+                    android:tint="@color/color_text_secondary"
+                    android:contentDescription="@null" />
             </LinearLayout>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="›" android:textSize="20sp"
-                android:textColor="@color/color_text_secondary"/>
-        </LinearLayout>
 
-        <View android:layout_width="match_parent" android:layout_height="0.5dp"
-            android:background="@color/color_divider"/>
+            <View style="@style/Sanctus.RowDivider" />
 
-        <!-- APPEARANCE -->
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginTop="28dp" android:text="@string/settings_section_appearance"
-            android:textSize="10sp" android:letterSpacing="0.15" android:textAllCaps="true"
-            android:textColor="@color/color_text_secondary"/>
+            <LinearLayout
+                android:id="@+id/row_language"
+                style="@style/Sanctus.SettingsRow">
 
-        <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
-            android:orientation="horizontal" android:gravity="center_vertical"
-            android:layout_marginTop="8dp">
-            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                android:layout_weight="1" android:text="@string/dark_mode"
-                android:textSize="16sp" android:textColor="@color/color_on_surface"/>
-            <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/switch_dark_mode" android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-        <View android:layout_width="match_parent" android:layout_height="0.5dp"
-            android:background="@color/color_divider"/>
+                    <TextView
+                        style="@style/Sanctus.SettingsRowTitle"
+                        android:text="@string/prayer_language_label" />
 
-        <!-- LANGUAGE -->
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginTop="28dp" android:text="@string/settings_section_language"
-            android:textSize="10sp" android:letterSpacing="0.15" android:textAllCaps="true"
-            android:textColor="@color/color_text_secondary"/>
+                    <TextView
+                        style="@style/Sanctus.SettingsRowSubtitle"
+                        android:text="@string/languages_supported" />
+                </LinearLayout>
 
-        <LinearLayout android:id="@+id/row_language"
-            android:layout_width="match_parent" android:layout_height="64dp"
-            android:orientation="horizontal" android:gravity="center_vertical"
-            android:layout_marginTop="8dp"
-            android:background="?attr/selectableItemBackground">
-            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                android:layout_weight="1" android:orientation="vertical">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="@string/prayer_language_label" android:textSize="16sp"
-                    android:textColor="@color/color_on_surface"/>
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="@string/languages_supported" android:textSize="12sp"
-                    android:textColor="@color/color_text_secondary"/>
+                <TextView
+                    android:id="@+id/tv_current_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:textColor="@color/color_accent"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_chevron_down"
+                    android:rotation="-90"
+                    android:tint="@color/color_text_secondary"
+                    android:contentDescription="@null" />
             </LinearLayout>
-            <TextView android:id="@+id/tv_current_language"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:textSize="13sp" android:textColor="@color/color_accent"
-                android:layout_marginEnd="4dp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="›" android:textSize="20sp"
-                android:textColor="@color/color_text_secondary"/>
         </LinearLayout>
-
-        <View android:layout_width="match_parent" android:layout_height="0.5dp"
-            android:background="@color/color_divider"/>
 
         <!-- NOTIFICATIONS -->
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginTop="28dp" android:text="@string/settings_section_notifications"
-            android:textSize="10sp" android:letterSpacing="0.15" android:textAllCaps="true"
-            android:textColor="@color/color_text_secondary"/>
+        <TextView
+            style="@style/Sanctus.SectionLabel"
+            android:text="@string/settings_section_notifications" />
 
-        <LinearLayout android:layout_width="match_parent" android:layout_height="64dp"
-            android:orientation="horizontal" android:gravity="center_vertical"
-            android:layout_marginTop="8dp">
-            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                android:layout_weight="1" android:orientation="vertical">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="@string/notifications" android:textSize="16sp"
-                    android:textColor="@color/color_on_surface"/>
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="@string/notification_hours_summary"
-                    android:textSize="12sp" android:textColor="@color/color_text_secondary"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card">
+
+            <LinearLayout style="@style/Sanctus.SettingsRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Sanctus.SettingsRowTitle"
+                        android:text="@string/notifications" />
+
+                    <TextView
+                        style="@style/Sanctus.SettingsRowSubtitle"
+                        android:text="@string/notification_hours_summary" />
+                </LinearLayout>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switch_notifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
-            <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/switch_notifications" android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
         </LinearLayout>
 
-        <View android:layout_width="match_parent" android:layout_height="0.5dp"
-            android:background="@color/color_divider"/>
+        <!-- COMMUNITY + ABOUT -->
+        <TextView
+            style="@style/Sanctus.SectionLabel"
+            android:text="@string/about_section_title" />
 
-        <!-- ABOUT -->
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginTop="28dp" android:text="@string/about_section_title"
-            android:textSize="10sp" android:letterSpacing="0.15" android:textAllCaps="true"
-            android:textColor="@color/color_text_secondary"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card">
 
-        <LinearLayout android:id="@+id/row_about"
-            android:layout_width="match_parent" android:layout_height="64dp"
-            android:orientation="horizontal" android:gravity="center_vertical"
-            android:layout_marginTop="8dp"
-            android:background="?attr/selectableItemBackground">
-            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                android:layout_weight="1" android:orientation="vertical">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="@string/about_title" android:textSize="16sp"
-                    android:textColor="@color/color_on_surface"/>
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="@string/about_row_subtitle" android:textSize="12sp"
-                    android:textColor="@color/color_text_secondary"/>
+            <LinearLayout
+                android:id="@+id/row_invite"
+                style="@style/Sanctus.SettingsRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Sanctus.SettingsRowTitle"
+                        android:text="@string/invite_row_title" />
+
+                    <TextView
+                        style="@style/Sanctus.SettingsRowSubtitle"
+                        android:text="@string/invite_row_subtitle" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_chevron_down"
+                    android:rotation="-90"
+                    android:tint="@color/color_text_secondary"
+                    android:contentDescription="@null" />
             </LinearLayout>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="›" android:textSize="20sp"
-                android:textColor="@color/color_text_secondary"/>
+
+            <View style="@style/Sanctus.RowDivider" />
+
+            <LinearLayout
+                android:id="@+id/row_about"
+                style="@style/Sanctus.SettingsRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Sanctus.SettingsRowTitle"
+                        android:text="@string/about_title" />
+
+                    <TextView
+                        style="@style/Sanctus.SettingsRowSubtitle"
+                        android:text="@string/about_row_subtitle" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_chevron_down"
+                    android:rotation="-90"
+                    android:tint="@color/color_text_secondary"
+                    android:contentDescription="@null" />
+            </LinearLayout>
         </LinearLayout>
 
-        <View android:layout_width="match_parent" android:layout_height="0.5dp"
-            android:background="@color/color_divider"/>
-
-        <!-- VERSION -->
-        <TextView android:id="@+id/tv_version" android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:layout_marginTop="48dp"
-            android:textSize="12sp" android:textColor="@color/color_text_secondary"
-            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:textColor="@color/color_text_secondary"
+            android:textSize="12sp" />
 
     </LinearLayout>
 </ScrollView>

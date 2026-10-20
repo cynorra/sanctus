@@ -4,84 +4,116 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/color_background">
+    android:background="@android:color/transparent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="24dp"
-        android:paddingTop="52dp"
-        android:paddingBottom="12dp">
+        android:paddingTop="20dp"
+        android:paddingBottom="4dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/prayers_title"
-            android:fontFamily="serif"
-            android:textSize="28sp"
-            android:textColor="@color/color_on_background" />
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/et_search_prayers" android:layout_width="match_parent"
-            android:layout_height="48dp" android:layout_marginTop="16dp"
-            android:background="@drawable/bg_card_gold" android:paddingHorizontal="16dp"
-            android:hint="@string/search_prayers_hint" android:textSize="14sp"
-            android:textColor="@color/color_on_surface"
-            android:textColorHint="@color/color_text_secondary"
-            android:inputType="text" android:imeOptions="actionSearch"/>
-
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/chip_group_categories"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/prayers_title"
+                android:textAppearance="@style/TextAppearance.Sanctus.HeadlineLarge" />
+
+            <TextView
+                android:id="@+id/tv_tradition_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="7dp"
+                android:background="@drawable/bg_chip_outline"
+                android:textColor="@color/color_accent"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_search_prayers"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="16dp"
-            app:singleSelection="true">
+            android:background="@drawable/bg_glass_card"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="12dp"
+            android:drawableTint="@color/color_text_secondary"
+            android:paddingHorizontal="18dp"
+            android:hint="@string/search_prayers_hint"
+            android:textSize="15sp"
+            android:textColor="@color/color_on_background"
+            android:textColorHint="@color/color_text_secondary"
+            android:inputType="text"
+            android:imeOptions="actionSearch" />
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip_all"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:tag=""
-                android:text="@string/category_all"
-                android:checked="true" />
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip_morning"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:tag="morning"
-                android:text="@string/category_morning" />
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip_evening"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:tag="evening"
-                android:text="@string/category_evening" />
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip_mass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:tag="mass"
-                android:text="@string/category_mass" />
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip_rosary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:tag="rosary"
-                android:text="@string/category_rosary" />
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip_devotional"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:tag="devotional"
-                android:text="@string/category_devotional" />
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:scrollbars="none"
+            android:clipToPadding="false"
+            android:paddingHorizontal="20dp">
 
-        </com.google.android.material.chip.ChipGroup>
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleLine="true"
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                app:chipSpacingHorizontal="8dp">
 
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag=""
+                    android:text="@string/category_all"
+                    android:checked="true" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_morning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="morning"
+                    android:text="@string/category_morning" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_evening"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="evening"
+                    android:text="@string/category_evening" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_mass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="mass"
+                    android:text="@string/category_mass" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_rosary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="rosary"
+                    android:text="@string/category_rosary" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_devotional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="devotional"
+                    android:text="@string/category_devotional" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
     </LinearLayout>
-
-    <View android:layout_width="match_parent" android:layout_height="1dp"
-        android:background="@color/color_divider"/>
 
     <TextView
         android:id="@+id/tv_fallback_notice"
@@ -102,7 +134,8 @@
             android:id="@+id/rv_prayers"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
             android:clipToPadding="false"
             android:layoutAnimation="@anim/layout_anim_fall_down" />
 
@@ -115,7 +148,6 @@
             android:textSize="14sp"
             android:textColor="@color/color_text_secondary"
             android:visibility="gone" />
-
     </FrameLayout>
 
 </LinearLayout>

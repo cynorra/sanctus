@@ -10,6 +10,15 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
  */
 public class Migrations {
 
+    /** Adds the tradition tag; existing rows stay visible to everyone until the seed tags them. */
+    public static final Migration MIGRATION_3_4 = new Migration(3, 4) {
+        @Override
+        public void migrate(@NonNull SupportSQLiteDatabase db) {
+            db.execSQL("ALTER TABLE prayers ADD COLUMN tradition TEXT NOT NULL DEFAULT 'all'");
+            db.execSQL("ALTER TABLE saints ADD COLUMN tradition TEXT NOT NULL DEFAULT 'all'");
+        }
+    };
+
     public static final Migration MIGRATION_2_3 = new Migration(2, 3) {
         @Override
         public void migrate(@NonNull SupportSQLiteDatabase db) {

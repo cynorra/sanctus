@@ -2,6 +2,7 @@ package com.sanctus.christian.prayer.data.local;
 
 import android.content.Context;
 import com.sanctus.christian.prayer.data.local.entity.PrayerEntity;
+import com.sanctus.christian.prayer.data.local.entity.SaintEntity;
 import com.sanctus.christian.prayer.data.seed.CalendarSeedData;
 import java.util.List;
 import java.util.concurrent.Executors;
@@ -24,7 +25,19 @@ public class DatabaseInitializer {
             List<PrayerEntity> prayers = SeedJsonLoader.loadPrayers(context);
             db.prayerDao().insertAll(prayers.toArray(new PrayerEntity[0]));
 
-            db.saintDao().insertAll(SeedJsonLoader.loadSaints(context));
+            List<SaintEntity> saints = SeedJsonLoader.loadSaints(context);
+            db.saintDao().insertAll(saints);
+
+            // Inserts above ignore rows that already exist, so rows seeded before the tradition
+            // tag existed (or retagged since) need the tag applied explicitly.
+            db.runInTransaction(() -> {
+                for (PrayerEntity p : prayers) {
+                    db.prayerDao().updateTradition(p.language, p.name, p.tradition);
+                }
+                for (SaintEntity s : saints) {
+                    db.saintDao().updateTradition(s.language, s.feastDate, s.name, s.tradition);
+                }
+            });
             db.calendarEventDao().insertAll(CalendarSeedData.getAll());
         });
     }
