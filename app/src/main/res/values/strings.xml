@@ -242,6 +242,10 @@
     <string name="feed_amen">Amen</string>
     <string name="feed_amen_count_format">%1$d amen</string>
     <string name="feed_report">Report</string>
+    <string name="feed_delete">Delete</string>
+    <string name="feed_delete_confirm">Delete this prayer intention?</string>
+    <string name="feed_delete_done">Post deleted.</string>
+    <string name="feed_delete_failed">Could not delete. Check your connection.</string>
     <string name="feed_block">Block user</string>
     <string name="feed_report_done">Thank you. We will review this post.</string>
     <string name="feed_block_done">User blocked. Their posts are hidden.</string>

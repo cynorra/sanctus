@@ -171,6 +171,10 @@
     <string name="feed_amen_count_format">%1$d amin</string>
     <string name="feed_report">Bildir</string>
     <string name="feed_block">Kullanıcıyı engelle</string>
+    <string name="feed_delete">Sil</string>
+    <string name="feed_delete_confirm">Bu dua niyetini silmek istiyor musun?</string>
+    <string name="feed_delete_done">Gönderi silindi.</string>
+    <string name="feed_delete_failed">Silinemedi. Bağlantını kontrol et.</string>
     <string name="feed_report_done">Teşekkürler. Bu gönderiyi inceleyeceğiz.</string>
     <string name="feed_block_done">Kullanıcı engellendi. Gönderileri gizlendi.</string>
     <string name="feed_sign_in_required">Paylaşmak ve Amin demek için Google ile giriş yap.</string>

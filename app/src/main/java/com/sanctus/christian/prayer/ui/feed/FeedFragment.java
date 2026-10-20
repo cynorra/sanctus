@@ -266,7 +266,16 @@ public class FeedFragment extends Fragment implements FeedAdapter.Listener {
     @Override public void onPostMenu(CommunityPost post, View anchor) {
         FirebaseUser user = authManager.getCurrentUser();
         if (user == null) { signIn(); return; }
-        if (user.getUid().equals(post.authorUid)) return;
+        if (user.getUid().equals(post.authorUid)) {
+            PopupMenu own = new PopupMenu(requireContext(), anchor);
+            own.getMenu().add(0, 1, 0, R.string.feed_delete);
+            own.setOnMenuItemClickListener(item -> {
+                confirmDelete(post);
+                return true;
+            });
+            own.show();
+            return;
+        }
 
         PopupMenu menu = new PopupMenu(requireContext(), anchor);
         menu.getMenu().add(0, 1, 0, R.string.feed_report);
@@ -285,5 +294,23 @@ public class FeedFragment extends Fragment implements FeedAdapter.Listener {
             return true;
         });
         menu.show();
+    }
+
+    private void confirmDelete(CommunityPost post) {
+        new AlertDialog.Builder(requireContext())
+            .setMessage(R.string.feed_delete_confirm)
+            .setNegativeButton(android.R.string.cancel, null)
+            .setPositiveButton(R.string.feed_delete, (d, w) ->
+                feedRepository.deletePost(post, success -> {
+                    if (getView() == null) return;
+                    if (success) {
+                        posts.remove(post);
+                        rebuild();
+                    }
+                    Toast.makeText(requireContext(),
+                        success ? R.string.feed_delete_done : R.string.feed_delete_failed,
+                        Toast.LENGTH_SHORT).show();
+                }))
+            .show();
     }
 }

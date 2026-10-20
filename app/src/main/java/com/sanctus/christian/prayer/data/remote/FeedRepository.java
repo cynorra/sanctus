@@ -94,6 +94,12 @@ public class FeedRepository {
             .addOnFailureListener(e -> cb.onDone(false));
     }
 
+    public void deletePost(CommunityPost post, DoneCallback cb) {
+        db.collection(POSTS).document(post.id).delete()
+            .addOnSuccessListener(v -> cb.onDone(true))
+            .addOnFailureListener(e -> cb.onDone(false));
+    }
+
     public void addAmen(String uid, CommunityPost post, DoneCallback cb) {
         guardedIncrement(uid, post, "amens", "amenCount", cb);
     }
