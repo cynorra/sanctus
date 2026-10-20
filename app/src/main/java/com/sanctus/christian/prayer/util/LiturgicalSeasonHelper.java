@@ -7,6 +7,12 @@ import java.util.Calendar;
 public class LiturgicalSeasonHelper {
     public enum Season { ADVENT, CHRISTMAS, ORDINARY, LENT, EASTER }
 
+    /** Season for the user's tradition: Orthodox follows the Julian calendar, everyone else the Gregorian one. */
+    public static Season getCurrentSeason(String tradition) {
+        if (Tradition.ORTHODOX.equals(tradition)) return OrthodoxCalendar.season(Calendar.getInstance());
+        return getCurrentSeason();
+    }
+
     public static Season getCurrentSeason() {
         Calendar today = Calendar.getInstance();
         clearTime(today);

@@ -19,7 +19,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.transition.AutoTransition;
 import androidx.transition.TransitionManager;
+import com.google.android.material.color.MaterialColors;
 import com.sanctus.christian.prayer.R;
+import com.sanctus.christian.prayer.util.Tradition;
+import com.sanctus.christian.prayer.SanctusApplication;
 import com.sanctus.christian.prayer.domain.model.PrayerTime;
 import com.sanctus.christian.prayer.share.ShareActions;
 import com.sanctus.christian.prayer.ui.saint.SaintViewModel;
@@ -57,14 +60,24 @@ public class DashboardFragment extends Fragment {
 
         MotionKit.shimmer(view.findViewById(R.id.tv_app_title),
                 ContextCompat.getColor(requireContext(), R.color.color_on_background),
-                ContextCompat.getColor(requireContext(), R.color.color_accent));
+                MaterialColors.getColor(view, R.attr.sanctusAccent));
         MotionKit.breathe(view.findViewById(R.id.hero_glow));
         MotionKit.pressable(view.findViewById(R.id.card_prayer_of_day));
         MotionKit.pressable(view.findViewById(R.id.card_saint_of_day));
         MotionKit.pressable(view.findViewById(R.id.tile_rosary));
         MotionKit.pressable(view.findViewById(R.id.tile_prayers));
-        view.findViewById(R.id.tile_rosary).setOnClickListener(v ->
-                Navigation.findNavController(v).navigate(R.id.rosaryFragment));
+        String tradition = SanctusApplication.getInstance().getSettingsRepository().getTradition();
+        View tileRosary = view.findViewById(R.id.tile_rosary);
+        int counterDestination = R.id.rosaryFragment;
+        if (Tradition.ORTHODOX.equals(tradition)) {
+            counterDestination = R.id.jesusPrayerFragment;
+            ((ImageView) view.findViewById(R.id.tile_rosary_icon)).setImageResource(R.drawable.ic_prayer_rope);
+            ((TextView) view.findViewById(R.id.tile_rosary_label)).setText(R.string.nav_jesus_prayer);
+        } else if (Tradition.PROTESTANT.equals(tradition)) {
+            tileRosary.setVisibility(View.GONE);
+        }
+        final int destination = counterDestination;
+        tileRosary.setOnClickListener(v -> Navigation.findNavController(v).navigate(destination));
         view.findViewById(R.id.tile_prayers).setOnClickListener(v ->
                 Navigation.findNavController(v).navigate(R.id.prayerFragment));
 
@@ -74,7 +87,8 @@ public class DashboardFragment extends Fragment {
 
         // Season
         TextView tvSeason = view.findViewById(R.id.tv_liturgical_season);
-        LiturgicalSeasonHelper.Season season = LiturgicalSeasonHelper.getCurrentSeason();
+        LiturgicalSeasonHelper.Season season = LiturgicalSeasonHelper.getCurrentSeason(
+                SanctusApplication.getInstance().getSettingsRepository().getTradition());
         tvSeason.setText(LiturgicalSeasonHelper.getSeasonName(requireContext(), season));
 
         // Next canonical hour
@@ -98,7 +112,7 @@ public class DashboardFragment extends Fragment {
             tvHourName.setText(hour.getNameLocalized());
             tvHourTime.setText(hour.getTime());
             if (i == nextIndex) {
-                int accent = ContextCompat.getColor(requireContext(), R.color.color_accent);
+                int accent = MaterialColors.getColor(view, R.attr.sanctusAccent);
                 tvHourName.setTextColor(accent);
                 tvHourTime.setTextColor(accent);
                 tvHourName.setTypeface(tvHourName.getTypeface(), Typeface.BOLD);

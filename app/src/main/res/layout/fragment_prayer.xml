@@ -34,7 +34,7 @@
                 android:paddingHorizontal="14dp"
                 android:paddingVertical="7dp"
                 android:background="@drawable/bg_chip_outline"
-                android:textColor="@color/color_accent"
+                android:textColor="?attr/sanctusAccent"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -129,7 +129,7 @@
         android:paddingVertical="8dp"
         android:text="@string/no_prayers_in_language"
         android:textSize="12sp"
-        android:textColor="@color/color_accent"
+        android:textColor="?attr/sanctusAccent"
         android:visibility="gone" />
 
     <FrameLayout

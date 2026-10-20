@@ -1,0 +1,156 @@
+<en-US>
+New prayers for every tradition! This update adds Novena, Litany, Lectio Divina, and Examination of Conscience guides, plus Orthodox and Protestant prayers — and refreshes the home screen with an expandable prayer schedule and redesigned prayer cards.
+</en-US>
+<af>
+Nuwe gebede vir elke tradisie! Hierdie opdatering voeg Novena-, Litanie-, Lectio Divina- en Gewetensondersoek-gidse by, plus Ortodokse en Protestantse gebede — en vernuwe die tuisskerm met 'n uitvoubare gebedskedule en herontwerpte gebedskaarte.
+</af>
+<am>
+ለእያንዳንዱ ወግ አዲስ ጸሎቶች! ይህ ዝማኔ ኖቬና፣ ሊታኒ፣ Lectio Divina እና የኅሊና ምርመራ መመሪያዎችን፣ እንዲሁም የኦርቶዶክስ እና የፕሮቴስታንት ጸሎቶችን ይጨምራል — እንዲሁም መነሻ ገጹን በሚስፋፋ የጸሎት መርሃ ግብር እና በአዲስ የጸሎት ካርዶች ያድሳል።
+</am>
+<ar>
+صلوات جديدة لكل التقاليد! يضيف هذا التحديث دليل النوفينا واللِطانية وLectio Divina وفحص الضمير، بالإضافة إلى صلوات أرثوذكسية وبروتستانتية — كما يجدد الشاشة الرئيسية بجدول صلاة قابل للتوسيع وبطاقات صلاة معاد تصميمها.
+</ar>
+<bg>
+Нови молитви за всяка традиция! Тази актуализация добавя ръководства за новена, литания, Lectio Divina и изпит на съвестта, както и православни и протестантски молитви — а началният екран е обновен с разгъващ се молитвен график и предизвикани молитвени карти.
+</bg>
+<cs-CZ>
+Nové modlitby pro každou tradici! Tato aktualizace přidává novénu, litanie, Lectio Divina a zpytování svědomí, plus pravoslavné a protestantské modlitby — a obnovuje domovskou obrazovku s rozbalitelným rozvrhem modliteb a předělanými kartami modliteb.
+</cs-CZ>
+<da-DK>
+Nye bønner til enhver tradition! Denne opdatering tilføjer novena-, litani-, Lectio Divina- og samvittighedsransagelsesguider samt ortodokse og protestantiske bønner — og fornyer startskærmen med en udvidelig bønneplan og nydesignede bønnekort.
+</da-DK>
+<de-DE>
+Neue Gebete für jede Tradition! Dieses Update fügt Anleitungen für Novene, Litanei, Lectio Divina und Gewissenserforschung hinzu, dazu orthodoxe und evangelische Gebete — und erneuert den Startbildschirm mit einem aufklappbaren Gebetsplan und neu gestalteten Gebetskarten.
+</de-DE>
+<el-GR>
+Νέες προσευχές για κάθε παράδοση! Αυτή η ενημέρωση προσθέτει οδηγούς για εννεαήμερο (novena), λιτανεία, Lectio Divina και εξέταση συνειδήσεως, καθώς και ορθόδοξες και προτεσταντικές προσευχές — και ανανεώνει την αρχική οθόνη με ένα αναπτυσσόμενο πρόγραμμα προσευχής και ανασχεδιασμένες κάρτες προσευχών.
+</el-GR>
+<en-AU>
+New prayers for every tradition! This update adds Novena, Litany, Lectio Divina, and Examination of Conscience guides, plus Orthodox and Protestant prayers — and refreshes the home screen with an expandable prayer schedule and redesigned prayer cards.
+</en-AU>
+<en-CA>
+New prayers for every tradition! This update adds Novena, Litany, Lectio Divina, and Examination of Conscience guides, plus Orthodox and Protestant prayers — and refreshes the home screen with an expandable prayer schedule and redesigned prayer cards.
+</en-CA>
+<en-GB>
+New prayers for every tradition! This update adds Novena, Litany, Lectio Divina, and Examination of Conscience guides, plus Orthodox and Protestant prayers — and refreshes the home screen with an expandable prayer schedule and redesigned prayer cards.
+</en-GB>
+<en-IN>
+New prayers for every tradition! This update adds Novena, Litany, Lectio Divina, and Examination of Conscience guides, plus Orthodox and Protestant prayers — and refreshes the home screen with an expandable prayer schedule and redesigned prayer cards.
+</en-IN>
+<en-SG>
+New prayers for every tradition! This update adds Novena, Litany, Lectio Divina, and Examination of Conscience guides, plus Orthodox and Protestant prayers — and refreshes the home screen with an expandable prayer schedule and redesigned prayer cards.
+</en-SG>
+<en-ZA>
+New prayers for every tradition! This update adds Novena, Litany, Lectio Divina, and Examination of Conscience guides, plus Orthodox and Protestant prayers — and refreshes the home screen with an expandable prayer schedule and redesigned prayer cards.
+</en-ZA>
+<es-ES>
+¡Nuevas oraciones para cada tradición! Esta actualización añade guías de Novena, Letanía, Lectio Divina y Examen de Conciencia, además de oraciones ortodoxas y protestantes — y renueva la pantalla de inicio con un horario de oración desplegable y tarjetas de oración rediseñadas.
+</es-ES>
+<es-US>
+¡Nuevas oraciones para cada tradición! Esta actualización agrega guías de Novena, Letanía, Lectio Divina y Examen de Conciencia, además de oraciones ortodoxas y protestantes — y renueva la pantalla de inicio con un horario de oración desplegable y tarjetas de oración rediseñadas.
+</es-US>
+<et>
+Uued palved igale traditsioonile! See värskendus lisab noveeni, litaania, Lectio Divina ja südametunnistuse katsumise juhised ning õigeusu ja protestantlikud palved — ja uuendab avakuva laiendatava palvegraafiku ja uue kujundusega palvekaartidega.
+</et>
+<fa>
+دعاهای جدید برای هر سنت! این به‌روزرسانی راهنمای نوونا، لیتانی، Lectio Divina و بررسی وجدان، به‌علاوه دعاهای ارتدکس و پروتستان را اضافه می‌کند — و صفحه اصلی را با یک برنامه دعای قابل گسترش و کارت‌های دعای بازطراحی‌شده تازه می‌کند.
+</fa>
+<fa-AE>
+دعاهای جدید برای هر سنت! این به‌روزرسانی راهنمای نوونا، لیتانی، Lectio Divina و بررسی وجدان، به‌علاوه دعاهای ارتدکس و پروتستان را اضافه می‌کند — و صفحه اصلی را با یک برنامه دعای قابل گسترش و کارت‌های دعای بازطراحی‌شده تازه می‌کند.
+</fa-AE>
+<fa-AF>
+دعاهای جدید برای هر سنت! این به‌روزرسانی رهنمود نوونا، لیتانی، Lectio Divina و بررسی وجدان، همچنان دعاهای ارتدکس و پروتستان را اضافه می‌کند — و صفحه اصلی را با یک برنامه دعای قابل گسترش و کارت‌های دعای بازطراحی‌شده تازه می‌کند.
+</fa-AF>
+<fa-IR>
+دعاهای جدید برای هر سنت! این به‌روزرسانی راهنمای نوونا، لیتانی، Lectio Divina و بررسی وجدان، به‌علاوه دعاهای ارتدکس و پروتستان را اضافه می‌کند — و صفحه اصلی را با یک برنامه دعای قابل گسترش و کارت‌های دعای بازطراحی‌شده تازه می‌کند.
+</fa-IR>
+<fil>
+Bagong mga panalangin para sa bawat tradisyon! Idinagdag ng update na ito ang mga gabay sa Novena, Litany, Lectio Divina, at Pagsusuri ng Budhi, kasama ang mga panalanging Orthodox at Protestante — at binago ang home screen na may maaaring palawakin na iskedyul ng panalangin at binagong disenyo ng mga prayer card.
+</fil>
+<fr-CA>
+De nouvelles prières pour chaque tradition! Cette mise à jour ajoute des guides de neuvaine, de litanies, de Lectio Divina et d'examen de conscience, ainsi que des prières orthodoxes et protestantes — et renouvelle l'écran d'accueil avec un horaire de prière extensible et des cartes de prière repensées.
+</fr-CA>
+<fr-FR>
+De nouvelles prières pour chaque tradition ! Cette mise à jour ajoute des guides de neuvaine, de litanies, de Lectio Divina et d'examen de conscience, ainsi que des prières orthodoxes et protestantes — et renouvelle l'écran d'accueil avec un horaire de prière extensible et des cartes de prière repensées.
+</fr-FR>
+<hi-IN>
+हर परंपरा के लिए नई प्रार्थनाएँ! इस अपडेट में नोवेना, लितनी, Lectio Divina और आत्म-परीक्षा गाइड, साथ ही ऑर्थोडॉक्स और प्रोटेस्टेंट प्रार्थनाएँ जोड़ी गई हैं — और होम स्क्रीन को विस्तार योग्य प्रार्थना अनुसूची और नए डिज़ाइन किए गए प्रार्थना कार्ड्स के साथ अपडेट किया गया है।
+</hi-IN>
+<hu-HU>
+Új imák minden hagyomány számára! Ez a frissítés novéna-, litánia-, Lectio Divina- és lelkiismeret-vizsgálati útmutatókat ad hozzá, valamint ortodox és protestáns imákat — és megújítja a kezdőképernyőt egy kibontható imarenddel és újratervezett imakártyákkal.
+</hu-HU>
+<id>
+Doa baru untuk setiap tradisi! Pembaruan ini menambahkan panduan Novena, Litani, Lectio Divina, dan Pemeriksaan Batin, serta doa Ortodoks dan Protestan — dan memperbarui layar utama dengan jadwal doa yang dapat diperluas dan kartu doa dengan desain baru.
+</id>
+<is-IS>
+Nýjar bænir fyrir hverja hefð! Þessi uppfærsla bætir við leiðbeiningum um nóvenu, lítaníu, Lectio Divina og samviskurannsókn, auk rétttrúnaðar- og mótmælendabæna — og endurnýjar heimaskjáinn með útvíkkanlegri bænadagskrá og endurhönnuðum bænaspjöldum.
+</is-IS>
+<it-IT>
+Nuove preghiere per ogni tradizione! Questo aggiornamento aggiunge guide su novena, litanie, Lectio Divina ed esame di coscienza, oltre a preghiere ortodosse e protestanti — e rinnova la schermata iniziale con un orario di preghiera espandibile e schede di preghiera riprogettate.
+</it-IT>
+<ja-JP>
+すべての伝統のための新しい祈り！今回のアップデートでは、ノベナ、連祷、レクティオ・ディヴィナ、良心の究明のガイドに加え、正教会とプロテスタントの祈りを追加しました。さらに、ホーム画面を展開できる祈りのスケジュールと新デザインの祈りカードで刷新しました。
+</ja-JP>
+<kk>
+Әрбір дәстүр үшін жаңа дұғалар! Бұл жаңарту новена, литания, Lectio Divina және ар-ожданды тексеру нұсқаулықтарын, сондай-ақ православие және протестант дұғаларын қосады — және басты экранды кеңейтілетін дұға кестесімен және жаңа дизайндағы дұға карталарымен жаңартады.
+</kk>
+<kn-IN>
+ಪ್ರತಿ ಸಂಪ್ರದಾಯಕ್ಕೂ ಹೊಸ ಪ್ರಾರ್ಥನೆಗಳು! ಈ ಅಪ್‌ಡೇಟ್ ನೊವೇನಾ, ಲಿಟನಿ, Lectio Divina ಮತ್ತು ಆತ್ಮಪರೀಕ್ಷೆ ಮಾರ್ಗದರ್ಶಿಗಳನ್ನು, ಜೊತೆಗೆ ಆರ್ಥೊಡಾಕ್ಸ್ ಮತ್ತು ಪ್ರೊಟೆಸ್ಟಂಟ್ ಪ್ರಾರ್ಥನೆಗಳನ್ನು ಸೇರಿಸುತ್ತದೆ — ಮತ್ತು ಮುಖಪುಟವನ್ನು ವಿಸ್ತರಿಸಬಹುದಾದ ಪ್ರಾರ್ಥನಾ ವೇಳಾಪಟ್ಟಿ ಮತ್ತು ಹೊಸ ವಿನ್ಯಾಸದ ಪ್ರಾರ್ಥನಾ ಕಾರ್ಡ್‌ಗಳೊಂದಿಗೆ ನವೀಕರಿಸುತ್ತದೆ.
+</kn-IN>
+<ko-KR>
+모든 전통을 위한 새로운 기도! 이번 업데이트에서는 9일 기도(노베나), 호칭 기도(리타니), 렉시오 디비나, 양심 성찰 가이드와 더불어 정교회 및 개신교 기도문을 추가했습니다. 또한 홈 화면을 확장 가능한 기도 일정과 새롭게 디자인된 기도 카드로 새단장했습니다.
+</ko-KR>
+<no-NO>
+Nye bønner for enhver tradisjon! Denne oppdateringen legger til guider for novene, litani, Lectio Divina og samvittighetsransakelse, samt ortodokse og protestantiske bønner — og fornyer hjemskjermen med en utvidbar bønneplan og nydesignede bønnekort.
+</no-NO>
+<pl-PL>
+Nowe modlitwy dla każdej tradycji! Ta aktualizacja dodaje przewodniki po nowennie, litanii, Lectio Divina i rachunku sumienia, a także modlitwy prawosławne i protestanckie — oraz odświeża ekran główny dzięki rozwijanemu harmonogramowi modlitw i przeprojektowanym kartom modlitw.
+</pl-PL>
+<pt-BR>
+Novas orações para cada tradição! Esta atualização adiciona guias de novena, ladainha, Lectio Divina e exame de consciência, além de orações ortodoxas e protestantes — e renova a tela inicial com uma agenda de orações expansível e cartões de oração redesenhados.
+</pt-BR>
+<pt-PT>
+Novas orações para cada tradição! Esta atualização adiciona guias de novena, ladainha, Lectio Divina e exame de consciência, além de orações ortodoxas e protestantes — e renova o ecrã principal com uma agenda de orações expansível e cartões de oração redesenhados.
+</pt-PT>
+<rm>
+Novas uraziuns per mintga tradiziun! Quest update agiunta manuals per novena, litania, Lectio Divina ed examinaziun da la conscienza, plus uraziuns ortodoxas e protestantas — e renova la surfatscha da partenza cun in plan d'uraziun extendibel e chartas d'uraziun renovadas.
+</rm>
+<ro>
+Rugăciuni noi pentru fiecare tradiție! Această actualizare adaugă ghiduri de novenă, litanie, Lectio Divina și cercetare a conștiinței, plus rugăciuni ortodoxe și protestante — și reînnoiește ecranul principal cu un program de rugăciune extensibil și carduri de rugăciune redesenate.
+</ro>
+<ru-RU>
+Новые молитвы для каждой традиции! Это обновление добавляет руководства по новенне, литании, Lectio Divina и испытанию совести, а также православные и протестантские молитвы — и обновляет главный экран с разворачиваемым расписанием молитв и переработанными карточками молитв.
+</ru-RU>
+<sk>
+Nové modlitby pre každú tradíciu! Táto aktualizácia pridáva sprievodcov novénou, litániami, Lectio Divina a spytovaním svedomia, ako aj pravoslávne a protestantské modlitby — a obnovuje domovskú obrazovku s rozbaliteľným rozvrhom modlitieb a predizajnovanými kartami modlitieb.
+</sk>
+<sq>
+Lutje të reja për çdo traditë! Ky përditësim shton udhëzues për novena, litani, Lectio Divina dhe Shqyrtimin e Ndërgjegjes, si dhe lutje ortodokse dhe protestante — dhe rifreskon ekranin kryesor me një orar lutjesh të zgjerueshëm dhe karta lutjesh të rimenduara.
+</sq>
+<sr>
+Нове молитве за сваку традицију! Ово ажурирање додаје водиче за новену, литаније, Lectio Divina и испитивање савести, као и православне и протестантске молитве — и освежава почетни екран проширивим распоредом молитава и редизајнираним картицама молитава.
+</sr>
+<sv-SE>
+Nya böner för varje tradition! Den här uppdateringen lägger till guider för novena, litania, Lectio Divina och samvetsrannsakan, samt ortodoxa och protestantiska böner — och förnyar startskärmen med ett utfällbart bönschema och nydesignade bönkort.
+</sv-SE>
+<sw>
+Sala mpya kwa kila madhehebu! Sasisho hili linaongeza miongozo ya novena, litania, Lectio Divina, na Uchunguzi wa Dhamiri, pamoja na sala za Kiorthodoksi na Kiprotestanti — na kufanya upya skrini ya nyumbani kwa ratiba ya sala inayoweza kupanuliwa na kadi za sala zilizobuniwa upya.
+</sw>
+<tr-TR>
+Her gelenek için yeni dualar! Bu güncelleme Novena, Litanya, Lectio Divina ve Vicdan Muhasebesi rehberlerini, ayrıca Ortodoks ve Protestan dualarını ekliyor — ayrıca ana ekranı genişleyebilir dua takvimi ve yenilenmiş dua kartlarıyla tazeliyor.
+</tr-TR>
+<uk>
+Нові молитви для кожної традиції! Це оновлення додає посібники з новени, літанії, Lectio Divina та іспиту сумління, а також православні й протестантські молитви — і оновлює головний екран із розгортним розкладом молитов та переробленими картками молитов.
+</uk>
+<vi>
+Kinh nguyện mới cho mọi truyền thống! Bản cập nhật này bổ sung hướng dẫn về tuần cửu nhật (novena), kinh cầu (litany), Lectio Divina và xét mình, cùng với các kinh nguyện Chính thống giáo và Tin lành — đồng thời làm mới màn hình chính với lịch cầu nguyện có thể mở rộng và các thẻ cầu nguyện được thiết kế lại.
+</vi>
+<zh-CN>
+每种传统皆有新祈祷！本次更新新增了九日敬礼（novena）、连祷（litany）、圣言诵读（Lectio Divina）与省察（Examination of Conscience）指南，以及东正教与新教祈祷文——并以可展开的祈祷时间表和全新设计的祈祷卡片焕新了主页。
+</zh-CN>
+<zh-HK>
+每種傳統皆有新祈禱！本次更新新增咗九日敬禮（novena）、連禱（litany）、Lectio Divina 同省察（Examination of Conscience）指南，以及東正教同新教祈禱文——並以可展開嘅祈禱時間表同全新設計嘅祈禱卡片為主頁換新。
+</zh-HK>
+<zh-TW>
+每種傳統皆有新禱文！本次更新新增九日敬禮（novena）、禱文連禱（litany）、Lectio Divina 與省察（Examination of Conscience）指南，以及東正教與新教禱文——並以可展開的祈禱時間表與全新設計的祈禱卡片煥新主畫面。
+</zh-TW>

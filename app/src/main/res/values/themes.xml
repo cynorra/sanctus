@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.Sanctus" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="colorPrimary">@color/color_accent</item>
+        <item name="sanctusAccent">#E6BC5C</item>
+        <item name="sanctusAccentSoft">#F5E3B3</item>
+        <item name="sanctusHeroTint">#2A2260</item>
+        <item name="sanctusCardTint">#332A6B</item>
+        <item name="sanctusSurfaceEnd">#14122A</item>
+        <item name="sanctusGoldHi">#F0CB74</item>
+        <item name="sanctusGoldLo">#C99A3B</item>
+        <item name="sanctusGoldCircle">#F5D98A</item>
+        <item name="sanctusNavIndicator">#2B2547</item>
+        <item name="sanctusNavGlass">#F0141228</item>
+        <item name="sanctusAccentA00">#00E6BC5C</item>
+        <item name="sanctusGlowA00">#006A4DF4</item>
+        <item name="sanctusAccentA1A">#1AE6BC5C</item>
+        <item name="sanctusGlowA1A">#1A6A4DF4</item>
+        <item name="sanctusAccentA1F">#1FE6BC5C</item>
+        <item name="sanctusGlowA1F">#1F6A4DF4</item>
+        <item name="sanctusAccentA22">#22E6BC5C</item>
+        <item name="sanctusGlowA22">#226A4DF4</item>
+        <item name="sanctusAccentA33">#33E6BC5C</item>
+        <item name="sanctusGlowA33">#336A4DF4</item>
+        <item name="sanctusAccentA38">#38E6BC5C</item>
+        <item name="sanctusGlowA38">#386A4DF4</item>
+        <item name="sanctusAccentA40">#40E6BC5C</item>
+        <item name="sanctusGlowA40">#406A4DF4</item>
+        <item name="sanctusAccentA55">#55E6BC5C</item>
+        <item name="sanctusGlowA55">#556A4DF4</item>
+        <item name="sanctusAccentA59">#59E6BC5C</item>
+        <item name="sanctusGlowA59">#596A4DF4</item>
+        <item name="sanctusAccentA66">#66E6BC5C</item>
+        <item name="sanctusGlowA66">#666A4DF4</item>
+        <item name="sanctusAccentAF0">#F0E6BC5C</item>
+        <item name="sanctusGlowAF0">#F06A4DF4</item>
+        <item name="colorPrimary">?attr/sanctusAccent</item>
         <item name="colorOnPrimary">@color/color_background</item>
         <item name="colorPrimaryContainer">@color/color_surface_variant</item>
-        <item name="colorOnPrimaryContainer">@color/color_gold_light</item>
+        <item name="colorOnPrimaryContainer">?attr/sanctusAccentSoft</item>
         <item name="colorSecondary">@color/color_primary_light</item>
         <item name="colorOnSecondary">@color/color_background</item>
-        <item name="colorSecondaryContainer">@color/nav_indicator</item>
-        <item name="colorOnSecondaryContainer">@color/color_gold_light</item>
+        <item name="colorSecondaryContainer">?attr/sanctusNavIndicator</item>
+        <item name="colorOnSecondaryContainer">?attr/sanctusAccentSoft</item>
         <item name="colorSurface">@color/color_surface</item>
         <item name="colorOnSurface">@color/color_on_surface</item>
         <item name="colorSurfaceVariant">@color/color_surface_variant</item>
@@ -83,7 +115,7 @@
     </style>
     <!-- Small eyebrow label above titles. -->
     <style name="TextAppearance.Sanctus.Eyebrow" parent="TextAppearance.Sanctus.LabelMedium">
-        <item name="android:textColor">@color/color_accent</item>
+        <item name="android:textColor">?attr/sanctusAccent</item>
     </style>
 
     <style name="Widget.Sanctus.Card" parent="Widget.Material3.CardView.Elevated">
@@ -101,7 +133,7 @@
         <item name="android:letterSpacing">0.02</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:minHeight">52dp</item>
-        <item name="backgroundTint">@color/color_accent</item>
+        <item name="backgroundTint">?attr/sanctusAccent</item>
         <item name="android:textColor">@color/color_background</item>
         <item name="cornerRadius">26dp</item>
     </style>
@@ -109,7 +141,7 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:minHeight">52dp</item>
-        <item name="android:textColor">@color/color_accent</item>
+        <item name="android:textColor">?attr/sanctusAccent</item>
         <item name="strokeColor">@color/color_glass_stroke</item>
         <item name="cornerRadius">26dp</item>
     </style>
@@ -135,7 +167,7 @@
         <item name="elevation">0dp</item>
     </style>
     <style name="Widget.Sanctus.BottomNav.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
-        <item name="android:color">@color/nav_indicator</item>
+        <item name="android:color">?attr/sanctusNavIndicator</item>
         <item name="android:width">56dp</item>
         <item name="android:height">34dp</item>
     </style>

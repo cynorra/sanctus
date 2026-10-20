@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13sp"
-                    android:textColor="@color/color_accent" />
+                    android:textColor="?attr/sanctusAccent" />
 
                 <TextView
                     android:id="@+id/tv_time"
@@ -51,7 +51,7 @@
                 android:layout_height="40dp"
                 android:src="@drawable/ic_more_vert"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:tint="@color/color_text_secondary"
+                app:tint="@color/color_text_secondary"
                 android:contentDescription="@string/feed_post_menu" />
         </LinearLayout>
 
@@ -87,7 +87,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/ic_favorite"
-                    android:tint="@color/selector_favorite_tint"
+                    app:tint="@color/selector_favorite_tint"
                     android:contentDescription="@string/feed_amen" />
 
                 <TextView
@@ -107,7 +107,7 @@
                 android:layout_height="40dp"
                 android:src="@drawable/ic_share"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:tint="@color/color_text_secondary"
+                app:tint="@color/color_text_secondary"
                 android:contentDescription="@string/share_action" />
         </LinearLayout>
     </LinearLayout>

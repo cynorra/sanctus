@@ -10,7 +10,7 @@
         <ImageButton android:id="@+id/btn_back" android:layout_width="44dp"
             android:layout_height="44dp" android:src="@drawable/ic_arrow_back"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:tint="@color/color_on_surface" android:contentDescription="@string/content_desc_back"/>
+            app:tint="@color/color_on_surface" android:contentDescription="@string/content_desc_back"/>
     </LinearLayout>
 
     <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
@@ -37,7 +37,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
                     android:text="@string/sign_in_with_google"
-                    app:backgroundTint="@color/color_accent"
+                    app:backgroundTint="?attr/sanctusAccent"
                     android:textColor="@color/color_background"/>
 
                 <TextView android:id="@+id/tv_sign_in_error" android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="@string/your_invite_code" android:textSize="10sp"
                         android:letterSpacing="0.15" android:textAllCaps="true"
-                        android:textColor="@color/color_accent"/>
+                        android:textColor="?attr/sanctusAccent"/>
 
                     <TextView android:id="@+id/tv_referral_code" android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:layout_marginTop="6dp"
@@ -80,7 +80,7 @@
                     android:layout_height="52dp"
                     android:layout_marginTop="20dp"
                     android:text="@string/share_invite_link"
-                    app:backgroundTint="@color/color_accent"
+                    app:backgroundTint="?attr/sanctusAccent"
                     android:textColor="@color/color_background"/>
 
                 <TextView android:id="@+id/btn_sign_out" android:layout_width="wrap_content"

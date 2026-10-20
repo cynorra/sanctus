@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
@@ -51,7 +52,7 @@
                     android:layout_width="26dp"
                     android:layout_height="26dp"
                     android:src="@drawable/ic_rosary"
-                    android:tint="@color/color_accent"
+                    app:tint="?attr/sanctusAccent"
                     android:contentDescription="@null" />
 
                 <TextView
@@ -75,7 +76,7 @@
             android:textAppearance="@style/TextAppearance.Sanctus.Prayer"
             android:textSize="19sp"
             android:textStyle="italic"
-            android:textColor="@color/color_gold_light" />
+            android:textColor="?attr/sanctusAccentSoft" />
 
         <!-- Current prayer -->
         <FrameLayout

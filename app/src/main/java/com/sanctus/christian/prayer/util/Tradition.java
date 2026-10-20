@@ -23,6 +23,14 @@ public final class Tradition {
     private Tradition() {
     }
 
+    /** Theme overlay carrying the accent, glow and surface tints of a tradition. */
+    public static int themeOverlay(String id) {
+        if (ORTHODOX.equals(id)) return R.style.ThemeOverlay_Sanctus_Orthodox;
+        if (PROTESTANT.equals(id)) return R.style.ThemeOverlay_Sanctus_Protestant;
+        if (ANGLICAN.equals(id)) return R.style.ThemeOverlay_Sanctus_Anglican;
+        return R.style.ThemeOverlay_Sanctus_Catholic;
+    }
+
     public static int labelRes(String id) {
         if (CATHOLIC.equals(id)) return R.string.tradition_catholic;
         if (ORTHODOX.equals(id)) return R.string.tradition_orthodox;

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tradition-aware palette. Defaults live in Theme.Sanctus, ThemeOverlay.Sanctus.* swap them. -->
+    <attr name="sanctusAccent" format="color"/>
+    <attr name="sanctusAccentSoft" format="color"/>
+    <attr name="sanctusHeroTint" format="color"/>
+    <attr name="sanctusCardTint" format="color"/>
+    <attr name="sanctusSurfaceEnd" format="color"/>
+    <attr name="sanctusGoldHi" format="color"/>
+    <attr name="sanctusGoldLo" format="color"/>
+    <attr name="sanctusGoldCircle" format="color"/>
+    <attr name="sanctusNavIndicator" format="color"/>
+    <attr name="sanctusNavGlass" format="color"/>
+    <attr name="sanctusAccentA00" format="color"/>
+    <attr name="sanctusGlowA00" format="color"/>
+    <attr name="sanctusAccentA1A" format="color"/>
+    <attr name="sanctusGlowA1A" format="color"/>
+    <attr name="sanctusAccentA1F" format="color"/>
+    <attr name="sanctusGlowA1F" format="color"/>
+    <attr name="sanctusAccentA22" format="color"/>
+    <attr name="sanctusGlowA22" format="color"/>
+    <attr name="sanctusAccentA33" format="color"/>
+    <attr name="sanctusGlowA33" format="color"/>
+    <attr name="sanctusAccentA38" format="color"/>
+    <attr name="sanctusGlowA38" format="color"/>
+    <attr name="sanctusAccentA40" format="color"/>
+    <attr name="sanctusGlowA40" format="color"/>
+    <attr name="sanctusAccentA55" format="color"/>
+    <attr name="sanctusGlowA55" format="color"/>
+    <attr name="sanctusAccentA59" format="color"/>
+    <attr name="sanctusGlowA59" format="color"/>
+    <attr name="sanctusAccentA66" format="color"/>
+    <attr name="sanctusGlowA66" format="color"/>
+    <attr name="sanctusAccentAF0" format="color"/>
+    <attr name="sanctusGlowAF0" format="color"/>
+</resources>

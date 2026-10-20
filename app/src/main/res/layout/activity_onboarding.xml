@@ -68,7 +68,7 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="@string/onboarding_welcome_tagline"
-                android:textColor="@color/color_accent"
+                android:textColor="?attr/sanctusAccent"
                 android:textSize="16sp"
                 android:fontFamily="@font/inter"
                 android:textStyle="bold" />

@@ -33,46 +33,46 @@
     <string name="language">Language</string>
     <string name="text_size">Text Size</string>
     <string name="location">Location</string>
-    <string name="lang_en">English</string>
-    <string name="lang_pt">Português</string>
-    <string name="lang_es">Español</string>
-    <string name="lang_ru">Русский</string>
-    <string name="lang_fil">Filipino</string>
-    <string name="lang_fr">Français</string>
-    <string name="lang_sw">Kiswahili</string>
-    <string name="lang_de">Deutsch</string>
-    <string name="lang_am">አማርኛ</string>
-    <string name="lang_zh">中文</string>
-    <string name="lang_it">Italiano</string>
-    <string name="lang_pl">Polski</string>
-    <string name="lang_uk">Українська</string>
-    <string name="lang_id">Bahasa Indonesia</string>
-    <string name="lang_ro">Română</string>
-    <string name="lang_hi">हिन्दी</string>
-    <string name="lang_ko">한국어</string>
-    <string name="lang_vi">Tiếng Việt</string>
-    <string name="lang_nl">Nederlands</string>
-    <string name="lang_el">Ελληνικά</string>
-    <string name="lang_hu">Magyar</string>
-    <string name="lang_cs">Čeština</string>
-    <string name="lang_sk">Slovenčina</string>
-    <string name="lang_hr">Hrvatski</string>
-    <string name="lang_sr">Srpski</string>
-    <string name="lang_bg">Български</string>
-    <string name="lang_lt">Lietuvių</string>
-    <string name="lang_tr">Türkçe</string>
-    <string name="lang_ar">العربية</string>
-    <string name="lang_hy">Հայերեն</string>
-    <string name="lang_ka">ქართული</string>
-    <string name="lang_ta">தமிழ்</string>
-    <string name="lang_ml">മലയാളം</string>
-    <string name="lang_te">తెలుగు</string>
-    <string name="lang_yo">Yorùbá</string>
-    <string name="lang_ig">Igbo</string>
-    <string name="lang_mg">Malagasy</string>
-    <string name="lang_zu">isiZulu</string>
-    <string name="lang_af">Afrikaans</string>
-    <string name="lang_bn">বাংলা</string>
+    <string name="lang_en" translatable="false">English</string>
+    <string name="lang_pt" translatable="false">Português</string>
+    <string name="lang_es" translatable="false">Español</string>
+    <string name="lang_ru" translatable="false">Русский</string>
+    <string name="lang_fil" translatable="false">Filipino</string>
+    <string name="lang_fr" translatable="false">Français</string>
+    <string name="lang_sw" translatable="false">Kiswahili</string>
+    <string name="lang_de" translatable="false">Deutsch</string>
+    <string name="lang_am" translatable="false">አማርኛ</string>
+    <string name="lang_zh" translatable="false">中文</string>
+    <string name="lang_it" translatable="false">Italiano</string>
+    <string name="lang_pl" translatable="false">Polski</string>
+    <string name="lang_uk" translatable="false">Українська</string>
+    <string name="lang_id" translatable="false">Bahasa Indonesia</string>
+    <string name="lang_ro" translatable="false">Română</string>
+    <string name="lang_hi" translatable="false">हिन्दी</string>
+    <string name="lang_ko" translatable="false">한국어</string>
+    <string name="lang_vi" translatable="false">Tiếng Việt</string>
+    <string name="lang_nl" translatable="false">Nederlands</string>
+    <string name="lang_el" translatable="false">Ελληνικά</string>
+    <string name="lang_hu" translatable="false">Magyar</string>
+    <string name="lang_cs" translatable="false">Čeština</string>
+    <string name="lang_sk" translatable="false">Slovenčina</string>
+    <string name="lang_hr" translatable="false">Hrvatski</string>
+    <string name="lang_sr" translatable="false">Srpski</string>
+    <string name="lang_bg" translatable="false">Български</string>
+    <string name="lang_lt" translatable="false">Lietuvių</string>
+    <string name="lang_tr" translatable="false">Türkçe</string>
+    <string name="lang_ar" translatable="false">العربية</string>
+    <string name="lang_hy" translatable="false">Հայերեն</string>
+    <string name="lang_ka" translatable="false">ქართული</string>
+    <string name="lang_ta" translatable="false">தமிழ்</string>
+    <string name="lang_ml" translatable="false">മലയാളം</string>
+    <string name="lang_te" translatable="false">తెలుగు</string>
+    <string name="lang_yo" translatable="false">Yorùbá</string>
+    <string name="lang_ig" translatable="false">Igbo</string>
+    <string name="lang_mg" translatable="false">Malagasy</string>
+    <string name="lang_zu" translatable="false">isiZulu</string>
+    <string name="lang_af" translatable="false">Afrikaans</string>
+    <string name="lang_bn" translatable="false">বাংলা</string>
     <string name="loading">Loading…</string>
     <string name="retry">Retry</string>
     <string name="close">Close</string>
@@ -277,4 +277,40 @@
     <string name="settings_tradition_title">Tradition</string>
     <string name="settings_tradition_subtitle">Shapes prayers, saints and the calendar</string>
     <string name="category_scripture">Scripture</string>
+    <!-- Orthodox calendar -->
+    <string name="orth_circumcision">Circumcision of the Lord · St. Basil</string>
+    <string name="orth_theophany">Theophany of the Lord</string>
+    <string name="orth_john_baptist_synaxis">Synaxis of St. John the Baptist</string>
+    <string name="orth_meeting">Meeting of the Lord</string>
+    <string name="orth_annunciation">Annunciation to the Theotokos</string>
+    <string name="orth_george">Great Martyr George</string>
+    <string name="orth_nativity_john">Nativity of St. John the Baptist</string>
+    <string name="orth_peter_paul">Holy Apostles Peter and Paul</string>
+    <string name="orth_transfiguration">Transfiguration of the Lord</string>
+    <string name="orth_dormition">Dormition of the Theotokos</string>
+    <string name="orth_beheading">Beheading of St. John the Baptist</string>
+    <string name="orth_nativity_theotokos">Nativity of the Theotokos</string>
+    <string name="orth_exaltation">Exaltation of the Holy Cross</string>
+    <string name="orth_protection">Protection of the Theotokos</string>
+    <string name="orth_archangels">Synaxis of the Archangels</string>
+    <string name="orth_entry_theotokos">Entry of the Theotokos into the Temple</string>
+    <string name="orth_nicholas">St. Nicholas the Wonderworker</string>
+    <string name="orth_nativity">Nativity of Christ</string>
+    <string name="orth_clean_monday">Clean Monday · Great Lent begins</string>
+    <string name="orth_orthodoxy_sunday">Sunday of Orthodoxy</string>
+    <string name="orth_palm_sunday">Palm Sunday</string>
+    <string name="orth_great_friday">Great and Holy Friday</string>
+    <string name="orth_great_saturday">Great and Holy Saturday</string>
+    <string name="orth_pascha">Holy Pascha</string>
+    <string name="orth_thomas_sunday">Thomas Sunday</string>
+    <string name="orth_ascension">Ascension of the Lord</string>
+    <string name="orth_pentecost">Pentecost</string>
+    <string name="orth_all_saints">Sunday of All Saints</string>
+    <!-- Jesus Prayer (Orthodox prayer rope) -->
+    <string name="nav_jesus_prayer">Jesus Prayer</string>
+    <string name="jesus_prayer_title">The Jesus Prayer</string>
+    <string name="jesus_prayer_tap">Tap the circle with each prayer</string>
+    <string name="jesus_prayer_text">Lord Jesus Christ, Son of God, have mercy on me, a sinner.</string>
+    <string name="jesus_prayer_again">Pray again</string>
+    <string name="jesus_prayer_of_total">of %1$d</string>
 </resources>

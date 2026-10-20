@@ -74,9 +74,12 @@ public class SettingsFragment extends Fragment {
             new MaterialAlertDialogBuilder(requireContext())
                     .setTitle(R.string.settings_tradition_title)
                     .setSingleChoiceItems(labels, checked, (dialog, which) -> {
+                        boolean changed = !ids[which].equals(settingsRepo.getTradition());
                         settingsRepo.setTradition(ids[which]);
                         tvTradition.setText(Tradition.labelRes(ids[which]));
                         dialog.dismiss();
+                        // Re-create so the new accent palette and calendar apply everywhere.
+                        if (changed) requireActivity().recreate();
                     })
                     .show();
         });

@@ -12,6 +12,9 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.sanctus.christian.prayer.R;
+import com.sanctus.christian.prayer.SanctusApplication;
+import com.sanctus.christian.prayer.util.OrthodoxCalendar;
+import com.sanctus.christian.prayer.util.Tradition;
 import com.sanctus.christian.prayer.util.CalendarResolver;
 import com.sanctus.christian.prayer.util.DateUtils;
 import com.sanctus.christian.prayer.util.LiturgicalSeasonHelper;
@@ -31,7 +34,9 @@ public class CalendarFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        LiturgicalSeasonHelper.Season season = LiturgicalSeasonHelper.getCurrentSeason();
+        String tradition = SanctusApplication.getInstance().getSettingsRepository().getTradition();
+        boolean orthodox = Tradition.ORTHODOX.equals(tradition);
+        LiturgicalSeasonHelper.Season season = LiturgicalSeasonHelper.getCurrentSeason(tradition);
         ((TextView) view.findViewById(R.id.tv_current_season)).setText(
                 LiturgicalSeasonHelper.getSeasonName(requireContext(), season));
         ((TextView) view.findViewById(R.id.tv_today_date)).setText(DateUtils.getTodayFormatted());
@@ -47,22 +52,26 @@ public class CalendarFragment extends Fragment {
 
         CalendarViewModel viewModel = new ViewModelProvider(this).get(CalendarViewModel.class);
         viewModel.getAllEvents().observe(getViewLifecycleOwner(), events -> {
-            List<com.sanctus.christian.prayer.data.local.entity.CalendarEventEntity> safeEvents =
-                    events != null ? events : Collections.emptyList();
-
-            List<com.sanctus.christian.prayer.domain.model.ResolvedCalendarEvent> todays =
-                    CalendarResolver.resolveForToday(safeEvents, today);
+            List<com.sanctus.christian.prayer.domain.model.ResolvedCalendarEvent> todays;
+            List<com.sanctus.christian.prayer.domain.model.ResolvedCalendarEvent> upcoming;
+            if (orthodox) {
+                todays = OrthodoxCalendar.today(requireContext(), today);
+                upcoming = OrthodoxCalendar.upcoming(requireContext(), today, 15);
+            } else {
+                List<com.sanctus.christian.prayer.data.local.entity.CalendarEventEntity> safeEvents =
+                        events != null ? events : Collections.emptyList();
+                todays = CalendarResolver.resolveForToday(safeEvents, today);
+                upcoming = CalendarResolver.resolveUpcomingMajorFeasts(safeEvents, today, 15);
+            }
             if (!todays.isEmpty()) {
                 tvTodayLabel.setText(todays.get(0).event.title);
                 if (todays.get(0).event.isSolemnity) {
-                    tvTodayLabel.setTextColor(requireContext().getColor(R.color.color_accent));
+                    tvTodayLabel.setTextColor(com.google.android.material.color.MaterialColors.getColor(tvTodayLabel, R.attr.sanctusAccent));
                 }
             } else {
                 tvTodayLabel.setText(R.string.feria_weekday);
             }
 
-            List<com.sanctus.christian.prayer.domain.model.ResolvedCalendarEvent> upcoming =
-                    CalendarResolver.resolveUpcomingMajorFeasts(safeEvents, today, 15);
             adapter.submitList(upcoming);
             tvEmpty.setVisibility(upcoming.isEmpty() ? View.VISIBLE : View.GONE);
         });

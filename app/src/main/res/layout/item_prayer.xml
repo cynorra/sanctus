@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="20dp"
@@ -45,7 +46,7 @@
         android:layout_height="44dp"
         android:src="@drawable/ic_share"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:tint="@color/color_text_secondary"
+        app:tint="@color/color_text_secondary"
         android:contentDescription="@string/share_action" />
 
     <ImageButton
@@ -55,6 +56,6 @@
         android:layout_marginEnd="10dp"
         android:src="@drawable/ic_favorite"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:tint="@color/selector_favorite_tint"
+        app:tint="@color/selector_favorite_tint"
         android:contentDescription="@string/favorite" />
 </LinearLayout>

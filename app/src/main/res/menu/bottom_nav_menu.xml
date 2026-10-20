@@ -13,6 +13,11 @@
         android:icon="@drawable/ic_rosary"
         android:title="@string/nav_rosary" />
     <item
+        android:id="@+id/jesusPrayerFragment"
+        android:icon="@drawable/ic_prayer_rope"
+        android:title="@string/nav_jesus_prayer"
+        android:visible="false" />
+    <item
         android:id="@+id/saintFragment"
         android:icon="@drawable/ic_saint"
         android:title="@string/nav_saints" />

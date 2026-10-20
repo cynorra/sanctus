@@ -27,6 +27,6 @@
         android:paddingHorizontal="24dp"
         android:background="@drawable/bg_chip_outline"
         android:textSize="13sp"
-        android:textColor="@color/color_accent"
+        android:textColor="?attr/sanctusAccent"
         android:visibility="gone" />
 </LinearLayout>

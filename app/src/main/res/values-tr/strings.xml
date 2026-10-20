@@ -227,4 +227,40 @@
     <string name="invite_row_subtitle">Giriş yap ve davet kodunu paylaş</string>
     <string name="invite_share_text">"Sanctus\'ta bana katıl: Tespih, azizler ve ibadet saatleriyle günlük bir dua arkadaşı. %1$s"</string>
     <string name="sign_in_failed">Giriş başarısız oldu. Lütfen tekrar dene.</string>
+    <!-- Orthodox calendar -->
+    <string name="orth_circumcision">Rab’bin Sünneti · Aziz Basil</string>
+    <string name="orth_theophany">Rab’bin Tecellisi (Teofani)</string>
+    <string name="orth_john_baptist_synaxis">Vaftizci Aziz Yahya Meclisi</string>
+    <string name="orth_meeting">Rab’bin Tapınağa Sunulması</string>
+    <string name="orth_annunciation">Tanrı Anası’na Müjde</string>
+    <string name="orth_george">Büyük Şehit Aziz Georgios</string>
+    <string name="orth_nativity_john">Vaftizci Aziz Yahya’nın Doğuşu</string>
+    <string name="orth_peter_paul">Kutsal Havariler Petrus ve Pavlus</string>
+    <string name="orth_transfiguration">Rab’bin Başkalaşımı</string>
+    <string name="orth_dormition">Tanrı Anası’nın Uykuya Dalışı</string>
+    <string name="orth_beheading">Vaftizci Aziz Yahya’nın Başının Kesilmesi</string>
+    <string name="orth_nativity_theotokos">Tanrı Anası’nın Doğuşu</string>
+    <string name="orth_exaltation">Kutsal Haç’ın Yüceltilmesi</string>
+    <string name="orth_protection">Tanrı Anası’nın Koruması</string>
+    <string name="orth_archangels">Başmelekler Meclisi</string>
+    <string name="orth_entry_theotokos">Tanrı Anası’nın Tapınağa Girişi</string>
+    <string name="orth_nicholas">Mucize Yaratan Aziz Nikolaos</string>
+    <string name="orth_nativity">Mesih’in Doğuşu</string>
+    <string name="orth_clean_monday">Temiz Pazartesi · Büyük Perhiz başlar</string>
+    <string name="orth_orthodoxy_sunday">Ortodoksluk Pazarı</string>
+    <string name="orth_palm_sunday">Palmiye Pazarı</string>
+    <string name="orth_great_friday">Büyük ve Kutsal Cuma</string>
+    <string name="orth_great_saturday">Büyük ve Kutsal Cumartesi</string>
+    <string name="orth_pascha">Kutsal Paskalya</string>
+    <string name="orth_thomas_sunday">Thomas Pazarı</string>
+    <string name="orth_ascension">Rab’bin Göğe Yükselişi</string>
+    <string name="orth_pentecost">Pentekost</string>
+    <string name="orth_all_saints">Bütün Azizler Pazarı</string>
+    <!-- Jesus Prayer -->
+    <string name="nav_jesus_prayer">İsa Duası</string>
+    <string name="jesus_prayer_title">İsa Duası</string>
+    <string name="jesus_prayer_tap">Her dua için daireye dokun</string>
+    <string name="jesus_prayer_text">Rab İsa Mesih, Tanrı’nın Oğlu, bana, günahkâra merhamet et.</string>
+    <string name="jesus_prayer_again">Yeniden dua et</string>
+    <string name="jesus_prayer_of_total">/ %1$d</string>
 </resources>

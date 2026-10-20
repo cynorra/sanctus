@@ -53,7 +53,7 @@ public class OnboardingActivity extends AppCompatActivity {
         MotionKit.breathe(findViewById(R.id.glow_rhythm));
         MotionKit.shimmer((TextView) findViewById(R.id.tv_welcome_title),
                 ContextCompat.getColor(this, R.color.color_on_background),
-                ContextCompat.getColor(this, R.color.color_gold_light));
+                com.google.android.material.color.MaterialColors.getColor(this, R.attr.sanctusAccentSoft, 0));
         MotionKit.pressable(btnContinue);
 
         btnContinue.setOnClickListener(v -> next());

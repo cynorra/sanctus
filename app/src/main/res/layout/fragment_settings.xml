@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
@@ -55,7 +56,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="6dp"
-                    android:textColor="@color/color_accent"
+                    android:textColor="?attr/sanctusAccent"
                     android:textSize="13sp" />
 
                 <ImageView
@@ -63,7 +64,7 @@
                     android:layout_height="18dp"
                     android:src="@drawable/ic_chevron_down"
                     android:rotation="-90"
-                    android:tint="@color/color_text_secondary"
+                    app:tint="@color/color_text_secondary"
                     android:contentDescription="@null" />
             </LinearLayout>
 
@@ -93,7 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="6dp"
-                    android:textColor="@color/color_accent"
+                    android:textColor="?attr/sanctusAccent"
                     android:textSize="13sp" />
 
                 <ImageView
@@ -101,7 +102,7 @@
                     android:layout_height="18dp"
                     android:src="@drawable/ic_chevron_down"
                     android:rotation="-90"
-                    android:tint="@color/color_text_secondary"
+                    app:tint="@color/color_text_secondary"
                     android:contentDescription="@null" />
             </LinearLayout>
         </LinearLayout>
@@ -176,7 +177,7 @@
                     android:layout_height="18dp"
                     android:src="@drawable/ic_chevron_down"
                     android:rotation="-90"
-                    android:tint="@color/color_text_secondary"
+                    app:tint="@color/color_text_secondary"
                     android:contentDescription="@null" />
             </LinearLayout>
 
@@ -206,7 +207,7 @@
                     android:layout_height="18dp"
                     android:src="@drawable/ic_chevron_down"
                     android:rotation="-90"
-                    android:tint="@color/color_text_secondary"
+                    app:tint="@color/color_text_secondary"
                     android:contentDescription="@null" />
             </LinearLayout>
         </LinearLayout>

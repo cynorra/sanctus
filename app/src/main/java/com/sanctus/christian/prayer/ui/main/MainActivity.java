@@ -22,6 +22,7 @@ import com.sanctus.christian.prayer.data.local.SanctusDatabase;
 import com.sanctus.christian.prayer.data.local.entity.PrayerEntity;
 import com.sanctus.christian.prayer.ui.prayer.PrayerDetailFragment;
 import com.sanctus.christian.prayer.util.MotionKit;
+import com.sanctus.christian.prayer.util.Tradition;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import java.util.concurrent.Executors;
@@ -59,6 +60,15 @@ public class MainActivity extends AppCompatActivity {
             navController = navHostFragment.getNavController();
             BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
             NavigationUI.setupWithNavController(bottomNav, navController);
+
+            // The counter tab follows the tradition: Rosary for Catholic, Anglican and "all",
+            // the Jesus Prayer rope for Orthodox, neither for Protestant.
+            String tradition = com.sanctus.christian.prayer.SanctusApplication.getInstance()
+                    .getSettingsRepository().getTradition();
+            boolean orthodox = Tradition.ORTHODOX.equals(tradition);
+            boolean protestant = Tradition.PROTESTANT.equals(tradition);
+            bottomNav.getMenu().findItem(R.id.rosaryFragment).setVisible(!orthodox && !protestant);
+            bottomNav.getMenu().findItem(R.id.jesusPrayerFragment).setVisible(orthodox);
 
             // Same behaviour as NavigationUI's default tab handling (single top, restore state),
             // plus a fade/lift transition between tabs that the default does not give us.

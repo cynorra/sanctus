@@ -1,6 +1,9 @@
 package com.sanctus.christian.prayer;
 
+import android.app.Activity;
 import android.app.Application;
+import android.os.Bundle;
+import com.sanctus.christian.prayer.util.Tradition;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
@@ -26,6 +29,22 @@ public class SanctusApplication extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+
+        registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
+            @Override public void onActivityCreated(Activity activity, Bundle state) {
+                // Runs inside super.onCreate, i.e. before the layout is inflated.
+                SettingsRepository settings = getSettingsRepository();
+                if (settings != null) {
+                    activity.getTheme().applyStyle(Tradition.themeOverlay(settings.getTradition()), true);
+                }
+            }
+            @Override public void onActivityStarted(Activity a) {}
+            @Override public void onActivityResumed(Activity a) {}
+            @Override public void onActivityPaused(Activity a) {}
+            @Override public void onActivityStopped(Activity a) {}
+            @Override public void onActivitySaveInstanceState(Activity a, Bundle s) {}
+            @Override public void onActivityDestroyed(Activity a) {}
+        });
 
         // TEMP font diagnostics: logs which font resources Android could actually load.
         for (int id : new int[]{R.font.inter, R.font.ebgaramond, R.font.ebgaramond_text, R.font.cormorant,

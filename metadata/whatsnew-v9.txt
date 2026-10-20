@@ -1,0 +1,159 @@
+<en-US>
+New prayers and saints! This update adds 8 traditional prayers and 15 canonized saints to the library, plus performance improvements.
+</en-US>
+<af>
+Nuwe gebede en heiliges! Hierdie opdatering voeg 8 tradisionele gebede en 15 heilig verklaarde heiliges by die biblioteek, plus verbeterings in werkverrigting.
+</af>
+<am>
+አዲስ ጸሎቶች እና ቅዱሳን! ይህ ዝመና 8 ባህላዊ ጸሎቶችን እና 15 የተቀደሱ ቅዱሳንን ወደ ቤተ-መጻሕፍቱ ይጨምራል፣ እንዲሁም የአፈጻጸም ማሻሻያዎችን ያካትታል።
+</am>
+<ar>
+صلوات وقديسون جدد! يضيف هذا التحديث 8 صلوات تقليدية و15 قديسًا معلنًا إلى المكتبة، بالإضافة إلى تحسينات في الأداء.
+</ar>
+<bg>
+Нови молитви и светци! Тази актуализация добавя 8 традиционни молитви и 15 канонизирани светци към библиотеката, плюс подобрения в производителността.
+</bg>
+<cs-CZ>
+Nové modlitby a svatí! Tato aktualizace přidává do knihovny 8 tradičních modliteb a 15 kanonizovaných svatých, plus vylepšení výkonu.
+</cs-CZ>
+<da-DK>
+Nye bønner og helgener! Denne opdatering tilføjer 8 traditionelle bønner og 15 kanoniserede helgener til biblioteket, samt ydeevneforbedringer.
+</da-DK>
+<de-DE>
+Neue Gebete und Heilige! Dieses Update fügt der Bibliothek 8 traditionelle Gebete und 15 heiliggesprochene Heilige hinzu, plus Leistungsverbesserungen.
+</de-DE>
+<el-GR>
+Νέες προσευχές και άγιοι! Αυτή η ενημέρωση προσθέτει 8 παραδοσιακές προσευχές και 15 αγιοποιημένους αγίους στη βιβλιοθήκη, καθώς και βελτιώσεις απόδοσης.
+</el-GR>
+<en-AU>
+New prayers and saints! This update adds 8 traditional prayers and 15 canonised saints to the library, plus performance improvements.
+</en-AU>
+<en-CA>
+New prayers and saints! This update adds 8 traditional prayers and 15 canonized saints to the library, plus performance improvements.
+</en-CA>
+<en-GB>
+New prayers and saints! This update adds 8 traditional prayers and 15 canonised saints to the library, plus performance improvements.
+</en-GB>
+<en-IN>
+New prayers and saints! This update adds 8 traditional prayers and 15 canonized saints to the library, plus performance improvements.
+</en-IN>
+<en-SG>
+New prayers and saints! This update adds 8 traditional prayers and 15 canonized saints to the library, plus performance improvements.
+</en-SG>
+<en-ZA>
+New prayers and saints! This update adds 8 traditional prayers and 15 canonised saints to the library, plus performance improvements.
+</en-ZA>
+<es-419>
+¡Nuevas oraciones y santos! Esta actualización agrega 8 oraciones tradicionales y 15 santos canonizados a la biblioteca, además de mejoras de rendimiento.
+</es-419>
+<es-ES>
+¡Nuevas oraciones y santos! Esta actualización añade 8 oraciones tradicionales y 15 santos canonizados a la biblioteca, además de mejoras de rendimiento.
+</es-ES>
+<es-US>
+¡Nuevas oraciones y santos! Esta actualización agrega 8 oraciones tradicionales y 15 santos canonizados a la biblioteca, además de mejoras de rendimiento.
+</es-US>
+<et>
+Uued palved ja pühakud! See värskendus lisab raamatukogusse 8 traditsioonilist palvet ja 15 kanoniseeritud pühakut ning parandab jõudlust.
+</et>
+<fa>
+دعاها و قدیسان جدید! این به‌روزرسانی ۸ دعای سنتی و ۱۵ قدیس تقدیس‌شده را به کتابخانه اضافه می‌کند، به‌علاوه بهبودهای عملکرد.
+</fa>
+<fa-AE>
+دعاها و قدیسان جدید! این به‌روزرسانی ۸ دعای سنتی و ۱۵ قدیس تقدیس‌شده را به کتابخانه اضافه می‌کند، به‌علاوه بهبودهای عملکرد.
+</fa-AE>
+<fa-AF>
+دعاها و اولیای جدید! این به‌روزرسانی ۸ دعای سنتی و ۱۵ ولیِ تقدیس‌شده را به کتابخانه اضافه می‌کند، همچنین بهبود کارایی.
+</fa-AF>
+<fa-IR>
+دعاها و قدیسان جدید! این به‌روزرسانی ۸ دعای سنتی و ۱۵ قدیس تقدیس‌شده را به کتابخانه اضافه می‌کند، به‌علاوه بهبودهای عملکرد.
+</fa-IR>
+<fil>
+Bagong mga panalangin at santo! Ang update na ito ay nagdaragdag ng 8 tradisyonal na panalangin at 15 kanonisadong santo sa library, kasama ang mga pagpapahusay sa performance.
+</fil>
+<fr-CA>
+Nouvelles prières et nouveaux saints! Cette mise à jour ajoute 8 prières traditionnelles et 15 saints canonisés à la bibliothèque, ainsi que des améliorations de performance.
+</fr-CA>
+<fr-FR>
+Nouvelles prières et nouveaux saints ! Cette mise à jour ajoute 8 prières traditionnelles et 15 saints canonisés à la bibliothèque, ainsi que des améliorations de performance.
+</fr-FR>
+<hi-IN>
+नई प्रार्थनाएँ और संत! इस अपडेट में लाइब्रेरी में 8 पारंपरिक प्रार्थनाएँ और 15 संत जोड़े गए हैं, साथ ही प्रदर्शन में सुधार किया गया है।
+</hi-IN>
+<hu-HU>
+Új imák és szentek! Ez a frissítés 8 hagyományos imával és 15 szentté avatott szenttel bővíti a könyvtárat, valamint teljesítményjavításokat tartalmaz.
+</hu-HU>
+<id>
+Doa dan santo baru! Pembaruan ini menambahkan 8 doa tradisional dan 15 santo/santa yang dikanonisasi ke perpustakaan, serta peningkatan performa.
+</id>
+<is-IS>
+Nýjar bænir og dýrlingar! Þessi uppfærsla bætir 8 hefðbundnum bænum og 15 helgum dýrlingum við safnið, auk frammistöðubóta.
+</is-IS>
+<it-IT>
+Nuove preghiere e nuovi santi! Questo aggiornamento aggiunge 8 preghiere tradizionali e 15 santi canonizzati alla libreria, oltre a miglioramenti delle prestazioni.
+</it-IT>
+<ja-JP>
+新しい祈りと聖人が追加されました。このアップデートでは、8つの伝統的な祈りと15人の列聖された聖人をライブラリに追加し、パフォーマンスも改善しました。
+</ja-JP>
+<kk>
+Жаңа дұғалар мен әулиелер! Бұл жаңарту кітапханаға 8 дәстүрлі дұға мен 15 канондалған әулиені қосады, сонымен қатар өнімділік жақсартылды.
+</kk>
+<kn-IN>
+ಹೊಸ ಪ್ರಾರ್ಥನೆಗಳು ಮತ್ತು ಸಂತರು! ಈ ಅಪ್‌ಡೇಟ್ 8 ಸಾಂಪ್ರದಾಯಿಕ ಪ್ರಾರ್ಥನೆಗಳು ಮತ್ತು 15 ಪವಿತ್ರ ಸಂತರನ್ನು ಗ್ರಂಥಾಲಯಕ್ಕೆ ಸೇರಿಸುತ್ತದೆ, ಜೊತೆಗೆ ಕಾರ್ಯಕ್ಷಮತೆ ಸುಧಾರಣೆಗಳು.
+</kn-IN>
+<ko-KR>
+새로운 기도와 성인들! 이번 업데이트에서는 8개의 전통 기도문과 15명의 시성된 성인을 라이브러리에 추가했으며, 성능도 개선했습니다.
+</ko-KR>
+<no-NO>
+Nye bønner og helgener! Denne oppdateringen legger til 8 tradisjonelle bønner og 15 helligkårede helgener i biblioteket, samt ytelsesforbedringer.
+</no-NO>
+<pl-PL>
+Nowe modlitwy i święci! Ta aktualizacja dodaje do biblioteki 8 tradycyjnych modlitw i 15 kanonizowanych świętych, a także usprawnienia wydajności.
+</pl-PL>
+<pt-BR>
+Novas orações e santos! Esta atualização adiciona 8 orações tradicionais e 15 santos canonizados à biblioteca, além de melhorias de desempenho.
+</pt-BR>
+<pt-PT>
+Novas orações e santos! Esta atualização adiciona à biblioteca 8 orações tradicionais e 15 santos canonizados, além de melhorias de desempenho.
+</pt-PT>
+<rm>
+Novas oraziuns e sonts! Quest update agiunta 8 oraziuns tradiziunalas e 15 sonts canonisads a la biblioteca, plus meglieraziuns da prestaziun.
+</rm>
+<ro>
+Rugăciuni și sfinți noi! Această actualizare adaugă în bibliotecă 8 rugăciuni tradiționale și 15 sfinți canonizați, plus îmbunătățiri de performanță.
+</ro>
+<ru-RU>
+Новые молитвы и святые! Это обновление добавляет в библиотеку 8 традиционных молитв и 15 канонизированных святых, а также улучшения производительности.
+</ru-RU>
+<sk>
+Nové modlitby a svätí! Táto aktualizácia pridáva do knižnice 8 tradičných modlitieb a 15 kanonizovaných svätých, ako aj vylepšenia výkonu.
+</sk>
+<sq>
+Lutje dhe shenjtorë të rinj! Ky përditësim shton në bibliotekë 8 lutje tradicionale dhe 15 shenjtorë të shenjtëruar, si dhe përmirësime të performancës.
+</sq>
+<sr>
+Нове молитве и свеци! Ово ажурирање додаје у библиотеку 8 традиционалних молитава и 15 канонизованих светаца, као и побољшања перформанси.
+</sr>
+<sv-SE>
+Nya böner och helgon! Den här uppdateringen lägger till 8 traditionella böner och 15 helgonförklarade helgon i biblioteket, plus prestandaförbättringar.
+</sv-SE>
+<sw>
+Sala na watakatifu wapya! Sasisho hili linaongeza sala 8 za jadi na watakatifu 15 walioteuliwa kwenye maktaba, pamoja na maboresho ya utendaji.
+</sw>
+<tr-TR>
+Yeni dualar ve azizler! Bu güncelleme kütüphaneye 8 geleneksel dua ve 15 kutsanmış aziz ekliyor, ayrıca performans iyileştirmeleri içeriyor.
+</tr-TR>
+<uk>
+Нові молитви та святі! Це оновлення додає до бібліотеки 8 традиційних молитов і 15 канонізованих святих, а також покращення продуктивності.
+</uk>
+<vi>
+Lời cầu nguyện và các thánh mới! Bản cập nhật này bổ sung 8 lời cầu nguyện truyền thống và 15 vị thánh được phong thánh vào thư viện, cùng với các cải tiến hiệu suất.
+</vi>
+<zh-CN>
+新增祈祷文和圣人！本次更新为资料库新增了8篇传统祈祷文和15位封圣圣人，并优化了性能。
+</zh-CN>
+<zh-HK>
+新增祈禱文同聖人！呢次更新為資料庫新增咗8篇傳統祈禱文同15位列聖聖人，並優化咗效能。
+</zh-HK>
+<zh-TW>
+新增祈禱文與聖人！本次更新為資料庫新增了8篇傳統禱文與15位封聖聖人，並優化了效能。
+</zh-TW>

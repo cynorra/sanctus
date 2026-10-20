@@ -1,0 +1,156 @@
+<en-US>
+New Feed tab! See today's prayer and saint, share prayer intentions with the community and say Amen. Share buttons now appear on every prayer and saint card, and dates and share screens now follow your app language.
+</en-US>
+<af>
+Nuwe Stroom-oortjie! Sien vandag se gebed en heilige, deel gebedsmeemgings met die gemeenskap en sê Amen. Deel-knoppies verskyn nou op elke gebed- en heiligekaart, en datums en deelskerms volg nou jou app-taal.
+</af>
+<am>
+አዲስ የምግብ ትር! የዛሬውን ጸሎትና ቅዱስ ይመልከቱ፣ የጸሎት ዓላማዎችን ከማኅበረሰቡ ጋር ያጋሩ እና አሜን ይበሉ። የማጋሪያ አዝራሮች አሁን በእያንዳንዱ የጸሎትና የቅዱስ ካርድ ላይ ይታያሉ፣ ቀኖችና የማጋሪያ ገጾችም የመተግበሪያዎን ቋንቋ ይከተላሉ።
+</am>
+<ar>
+تبويب جديد للخلاصة! شاهد صلاة اليوم وقديسه، وشارك نوايا الصلاة مع المجتمع وقل آمين. تظهر الآن أزرار المشاركة على كل بطاقة صلاة وقديس، وتتبع التواريخ وشاشات المشاركة لغة التطبيق.
+</ar>
+<bg>
+Нов раздел „Поток“! Вижте молитвата и светеца на деня, споделяйте молитвени намерения с общността и казвайте „Амин“. Бутони за споделяне вече има на всяка карта с молитва и светец, а датите и екраните за споделяне следват езика на приложението.
+</bg>
+<cs-CZ>
+Nová karta Přehled! Podívejte se na dnešní modlitbu a světce, sdílejte modlitební úmysly s komunitou a říkejte Amen. Tlačítka sdílení jsou nově na každé kartě modlitby a světce a data i obrazovky sdílení se řídí jazykem aplikace.
+</cs-CZ>
+<da-DK>
+Ny fanen Feed! Se dagens bøn og helgen, del bønneintentioner med fællesskabet og sig Amen. Der er nu delingsknapper på hvert bøne- og helgenkort, og datoer og delingsskærme følger nu appens sprog.
+</da-DK>
+<de-DE>
+Neuer Feed-Tab! Sieh dir das Gebet und den Heiligen des Tages an, teile Gebetsanliegen mit der Community und sprich Amen. Auf jeder Gebets- und Heiligenkarte gibt es jetzt Teilen-Buttons, und Datum und Teilen-Dialoge folgen der App-Sprache.
+</de-DE>
+<el-GR>
+Νέα καρτέλα Ροής! Δείτε την προσευχή και τον άγιο της ημέρας, μοιραστείτε προσευχητικές προθέσεις με την κοινότητα και πείτε Αμήν. Κουμπιά κοινοποίησης υπάρχουν πλέον σε κάθε κάρτα προσευχής και αγίου, και οι ημερομηνίες και οι οθόνες κοινοποίησης ακολουθούν τη γλώσσα της εφαρμογής.
+</el-GR>
+<en-AU>
+New Feed tab! See today's prayer and saint, share prayer intentions with the community and say Amen. Share buttons now appear on every prayer and saint card, and dates and share screens now follow your app language.
+</en-AU>
+<en-CA>
+New Feed tab! See today's prayer and saint, share prayer intentions with the community and say Amen. Share buttons now appear on every prayer and saint card, and dates and share screens now follow your app language.
+</en-CA>
+<en-GB>
+New Feed tab! See today's prayer and saint, share prayer intentions with the community and say Amen. Share buttons now appear on every prayer and saint card, and dates and share screens now follow your app language.
+</en-GB>
+<en-IN>
+New Feed tab! See today's prayer and saint, share prayer intentions with the community and say Amen. Share buttons now appear on every prayer and saint card, and dates and share screens now follow your app language.
+</en-IN>
+<en-SG>
+New Feed tab! See today's prayer and saint, share prayer intentions with the community and say Amen. Share buttons now appear on every prayer and saint card, and dates and share screens now follow your app language.
+</en-SG>
+<en-ZA>
+New Feed tab! See today's prayer and saint, share prayer intentions with the community and say Amen. Share buttons now appear on every prayer and saint card, and dates and share screens now follow your app language.
+</en-ZA>
+<es-ES>
+¡Nueva pestaña Feed! Mira la oración y el santo del día, comparte intenciones de oración con la comunidad y di Amén. Ahora hay botones de compartir en cada tarjeta de oración y santo, y las fechas y pantallas de compartir siguen el idioma de la app.
+</es-ES>
+<es-US>
+¡Nueva pestaña Feed! Mira la oración y el santo del día, comparte intenciones de oración con la comunidad y di Amén. Ahora hay botones de compartir en cada tarjeta de oración y santo, y las fechas y pantallas de compartir siguen el idioma de la app.
+</es-US>
+<et>
+Uus voo vaheleht! Vaata päeva palvet ja pühakut, jaga palvesoove kogukonnaga ja ütle aamen. Jagamisnupud on nüüd igal palve- ja pühakukaardil ning kuupäevad ja jagamiskuvad järgivad rakenduse keelt.
+</et>
+<fa>
+تب جدید فید! دعا و قدیس امروز را ببینید، نیت‌های دعا را با جامعه به اشتراک بگذارید و آمین بگویید. اکنون روی هر کارت دعا و قدیس دکمه اشتراک‌گذاری هست و تاریخ‌ها و صفحه‌های اشتراک‌گذاری از زبان برنامه پیروی می‌کنند.
+</fa>
+<fa-AE>
+تب جدید فید! دعا و قدیس امروز را ببینید، نیت‌های دعا را با جامعه به اشتراک بگذارید و آمین بگویید. اکنون روی هر کارت دعا و قدیس دکمه اشتراک‌گذاری هست و تاریخ‌ها و صفحه‌های اشتراک‌گذاری از زبان برنامه پیروی می‌کنند.
+</fa-AE>
+<fa-AF>
+تب جدید فید! دعا و قدیس امروز را ببینید، نیت‌های دعا را با جامعه به اشتراک بگذارید و آمین بگویید. اکنون روی هر کارت دعا و قدیس دکمه اشتراک‌گذاری هست و تاریخ‌ها و صفحه‌های اشتراک‌گذاری از زبان برنامه پیروی می‌کنند.
+</fa-AF>
+<fa-IR>
+تب جدید فید! دعا و قدیس امروز را ببینید، نیت‌های دعا را با جامعه به اشتراک بگذارید و آمین بگویید. اکنون روی هر کارت دعا و قدیس دکمه اشتراک‌گذاری هست و تاریخ‌ها و صفحه‌های اشتراک‌گذاری از زبان برنامه پیروی می‌کنند.
+</fa-IR>
+<fil>
+Bagong Feed tab! Tingnan ang panalangin at santo ng araw, magbahagi ng mga intensyon sa panalangin sa komunidad at magsabi ng Amen. May mga share button na sa bawat card ng panalangin at santo, at sinusunod na ng mga petsa at share screen ang wika ng app.
+</fil>
+<fr-CA>
+Nouvel onglet Fil ! Découvrez la prière et le saint du jour, partagez des intentions de prière avec la communauté et dites Amen. Des boutons de partage figurent désormais sur chaque carte de prière et de saint, et les dates et écrans de partage suivent la langue de l'application.
+</fr-CA>
+<fr-FR>
+Nouvel onglet Fil ! Découvrez la prière et le saint du jour, partagez des intentions de prière avec la communauté et dites Amen. Des boutons de partage figurent désormais sur chaque carte de prière et de saint, et les dates et écrans de partage suivent la langue de l'application.
+</fr-FR>
+<hi-IN>
+नया फ़ीड टैब! आज की प्रार्थना और संत देखें, समुदाय के साथ प्रार्थना-निवेदन साझा करें और आमीन कहें। अब हर प्रार्थना और संत कार्ड पर साझा करने के बटन हैं, और तारीखें व साझा स्क्रीन ऐप की भाषा के अनुसार दिखती हैं।
+</hi-IN>
+<hu-HU>
+Új Hírfolyam fül! Nézd meg a nap imáját és szentjét, oszd meg imaszándékaidat a közösséggel, és mondj ámenet. Minden ima- és szentkártyán van már megosztás gomb, a dátumok és a megosztási képernyők pedig az alkalmazás nyelvét követik.
+</hu-HU>
+<id>
+Tab Beranda baru! Lihat doa dan santo hari ini, bagikan intensi doa ke komunitas dan ucapkan Amin. Tombol bagikan kini ada di setiap kartu doa dan santo, serta tanggal dan layar berbagi mengikuti bahasa aplikasi.
+</id>
+<is-IS>
+Nýr flipi: Straumur! Sjáðu bæn og dýrling dagsins, deildu bænarefnum með samfélaginu og segðu amen. Nú eru deilingarhnappar á hverju bænar- og dýrlingaspjaldi og dagsetningar og deilingarskjáir fylgja tungumáli appsins.
+</is-IS>
+<it-IT>
+Nuova scheda Feed! Scopri la preghiera e il santo del giorno, condividi intenzioni di preghiera con la comunità e dì Amen. Ora ogni scheda di preghiera e di santo ha i pulsanti di condivisione, e date e schermate di condivisione seguono la lingua dell'app.
+</it-IT>
+<ja-JP>
+新しい「フィード」タブ！今日の祈りと聖人を見たり、コミュニティと祈りの意向を分かち合って「アーメン」を唱えたりできます。すべての祈りと聖人のカードに共有ボタンが付き、日付や共有画面もアプリの言語に合わせて表示されます。
+</ja-JP>
+<kk>
+Жаңа «Лента» қойындысы! Күннің дұғасы мен әулиесін көріңіз, қауымдастықпен дұға ниеттерін бөлісіп, «Аумин» деңіз. Енді әр дұға және әулие карточкасында бөлісу түймесі бар, ал күн-айлар мен бөлісу экрандары қолданба тіліне сай болады.
+</kk>
+<kn-IN>
+ಹೊಸ ಫೀಡ್ ಟ್ಯಾಬ್! ಇಂದಿನ ಪ್ರಾರ್ಥನೆ ಮತ್ತು ಸಂತರನ್ನು ನೋಡಿ, ಸಮುದಾಯದೊಂದಿಗೆ ಪ್ರಾರ್ಥನಾ ಉದ್ದೇಶಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಿ ಮತ್ತು ಆಮೆನ್ ಹೇಳಿ. ಈಗ ಪ್ರತಿ ಪ್ರಾರ್ಥನೆ ಮತ್ತು ಸಂತ ಕಾರ್ಡ್‌ನಲ್ಲಿ ಹಂಚಿಕೆ ಬಟನ್‌ಗಳಿವೆ, ದಿನಾಂಕಗಳು ಮತ್ತು ಹಂಚಿಕೆ ಪರದೆಗಳು ಆ್ಯಪ್ ಭಾಷೆಯನ್ನು ಅನುಸರಿಸುತ್ತವೆ.
+</kn-IN>
+<ko-KR>
+새로운 피드 탭! 오늘의 기도와 성인을 보고, 공동체와 기도 지향을 나누고 아멘 하세요. 이제 모든 기도와 성인 카드에 공유 버튼이 있으며, 날짜와 공유 화면도 앱 언어를 따릅니다.
+</ko-KR>
+<no-NO>
+Ny Feed-fane! Se dagens bønn og helgen, del bønneintensjoner med fellesskapet og si Amen. Det er nå delingsknapper på hvert bønne- og helgenkort, og datoer og delingsskjermer følger appens språk.
+</no-NO>
+<pl-PL>
+Nowa karta Aktualności! Zobacz modlitwę i świętego dnia, dziel się intencjami modlitewnymi ze wspólnotą i mów Amen. Przyciski udostępniania są teraz na każdej karcie modlitwy i świętego, a daty i ekrany udostępniania podążają za językiem aplikacji.
+</pl-PL>
+<pt-BR>
+Nova aba Feed! Veja a oração e o santo do dia, compartilhe intenções de oração com a comunidade e diga Amém. Agora há botões de compartilhar em cada cartão de oração e santo, e as datas e telas de compartilhamento seguem o idioma do app.
+</pt-BR>
+<pt-PT>
+Nova aba Feed! Veja a oração e o santo do dia, compartilhe intenções de oração com a comunidade e diga Amém. Agora há botões de compartilhar em cada cartão de oração e santo, e as datas e telas de compartilhamento seguem o idioma do app.
+</pt-PT>
+<rm>
+Nova tabulatura Feed! Guarda la oraziun e il sogn dal di, parta intenziuns d'oraziun cun la communitad e di Amen. Uss datti buttuns per parter sin mintga cartina d'oraziun e da sogn, ed las datas e las maletgs per parter suondan la lingua da l'app.
+</rm>
+<ro>
+Filă nouă Flux! Vezi rugăciunea și sfântul zilei, împărtășește intenții de rugăciune cu comunitatea și spune Amin. Butoanele de distribuire apar acum pe fiecare card de rugăciune și de sfânt, iar datele și ecranele de distribuire urmează limba aplicației.
+</ro>
+<ru-RU>
+Новая вкладка «Лента»! Смотрите молитву и святого дня, делитесь молитвенными нуждами с общиной и говорите «Аминь». Кнопки «Поделиться» теперь есть на каждой карточке молитвы и святого, а даты и экраны отправки следуют языку приложения.
+</ru-RU>
+<sk>
+Nová karta Prehľad! Pozrite si dnešnú modlitbu a svätca, zdieľajte modlitbové úmysly s komunitou a hovorte Amen. Tlačidlá zdieľania sú teraz na každej karte modlitby a svätca a dátumy aj obrazovky zdieľania sa riadia jazykom aplikácie.
+</sk>
+<sq>
+Skedë e re Rrjedha! Shihni lutjen dhe shenjtorin e ditës, ndani qëllime lutjeje me komunitetin dhe thoni Amen. Butonat e ndarjes tani janë në çdo kartë lutjeje e shenjtori, ndërsa datat dhe ekranet e ndarjes ndjekin gjuhën e aplikacionit.
+</sq>
+<sr>
+Нова картица Новости! Погледајте молитву и свеца дана, делите молитвене намере са заједницом и реците Амин. Дугмад за дељење су сада на свакој картици молитве и свеца, а датуми и екрани за дељење прате језик апликације.
+</sr>
+<sv-SE>
+Ny flik: Flöde! Se dagens bön och helgon, dela bönemeningar med gemenskapen och säg Amen. Det finns nu delningsknappar på varje bön- och helgonkort, och datum och delningsvyer följer appens språk.
+</sv-SE>
+<sw>
+Kichupo kipya cha Mlisho! Tazama sala na mtakatifu wa leo, shiriki nia za sala na jumuiya na useme Amina. Vitufe vya kushiriki sasa vipo kwenye kila kadi ya sala na mtakatifu, na tarehe na skrini za kushiriki zinafuata lugha ya programu.
+</sw>
+<tr-TR>
+Yeni Akış sekmesi! Günün duasını ve azizini gör, dua niyetlerini toplulukla paylaş ve Amin de. Artık her dua ve aziz kartında paylaş butonu var; tarihler ve paylaşım ekranları da uygulama dilini takip ediyor.
+</tr-TR>
+<uk>
+Нова вкладка «Стрічка»! Дивіться молитву та святого дня, діліться молитовними намірами зі спільнотою й кажіть «Амінь». Кнопки «Поділитися» тепер є на кожній картці молитви та святого, а дати й екрани надсилання дотримуються мови застосунку.
+</uk>
+<vi>
+Thẻ Bảng tin mới! Xem lời cầu nguyện và vị thánh của ngày, chia sẻ ý cầu nguyện với cộng đồng và nói Amen. Nút chia sẻ nay có trên mọi thẻ cầu nguyện và thánh, đồng thời ngày tháng và màn hình chia sẻ theo ngôn ngữ của ứng dụng.
+</vi>
+<zh-CN>
+全新“动态”标签页！查看今日祷文和圣人，与社区分享祈祷意向并说“阿们”。每张祷文和圣人卡片现在都有分享按钮，日期和分享界面也会跟随应用语言。
+</zh-CN>
+<zh-HK>
+全新「動態」分頁！查看今日禱文與聖人，與社群分享祈禱意向並說「阿們」。每張禱文和聖人卡片現在都有分享按鈕，日期與分享畫面也會跟隨應用程式語言。
+</zh-HK>
+<zh-TW>
+全新「動態」分頁！查看今日禱文與聖人，與社群分享祈禱意向並說「阿們」。每張禱文和聖人卡片現在都有分享按鈕，日期與分享畫面也會跟隨應用程式語言。
+</zh-TW>

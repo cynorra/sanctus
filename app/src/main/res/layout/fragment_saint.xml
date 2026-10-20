@@ -19,7 +19,7 @@
             android:textSize="10sp"
             android:letterSpacing="0.15"
             android:textAllCaps="true"
-            android:textColor="@color/color_accent" />
+            android:textColor="?attr/sanctusAccent" />
 
         <TextView
             android:id="@+id/tv_saint_name"
@@ -36,13 +36,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:textSize="13sp"
-            android:textColor="@color/color_accent" />
+            android:textColor="?attr/sanctusAccent" />
 
         <View
             android:layout_width="40dp"
             android:layout_height="1dp"
             android:layout_marginTop="20dp"
-            android:background="@color/color_accent" />
+            android:background="?attr/sanctusAccent" />
 
         <TextView
             android:id="@+id/tv_saint_description"

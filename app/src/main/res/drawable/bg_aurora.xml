@@ -13,8 +13,8 @@
                 android:gradientRadius="75%p"
                 android:centerX="0.1"
                 android:centerY="0.0"
-                android:startColor="#386A4DF4"
-                android:endColor="#006A4DF4"/>
+                android:startColor="?attr/sanctusGlowA38"
+                android:endColor="?attr/sanctusGlowA00"/>
         </shape>
     </item>
     <item>
@@ -24,8 +24,8 @@
                 android:gradientRadius="60%p"
                 android:centerX="1.0"
                 android:centerY="0.95"
-                android:startColor="#1FE6BC5C"
-                android:endColor="#00E6BC5C"/>
+                android:startColor="?attr/sanctusAccentA1F"
+                android:endColor="?attr/sanctusAccentA00"/>
         </shape>
     </item>
 </layer-list>

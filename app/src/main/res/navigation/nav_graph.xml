@@ -40,6 +40,10 @@
         android:name="com.sanctus.christian.prayer.ui.rosary.RosaryFragment"
         android:label="@string/nav_rosary"/>
 
+    <fragment android:id="@+id/jesusPrayerFragment"
+        android:name="com.sanctus.christian.prayer.ui.rosary.JesusPrayerFragment"
+        android:label="@string/nav_jesus_prayer"/>
+
     <fragment android:id="@+id/saintFragment"
         android:name="com.sanctus.christian.prayer.ui.saint.SaintListFragment"
         android:label="@string/nav_saints">

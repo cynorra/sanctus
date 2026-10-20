@@ -1,0 +1,156 @@
+<en-US>
+Sanctus now adapts to your tradition: Catholic, Orthodox, Protestant or Anglican. New premium design with tradition colors, the Orthodox calendar and Jesus Prayer rope, Protestant hymns and prayers, a new app icon, and every language fully updated.
+</en-US>
+<af>
+Sanctus pas nou by jou tradisie aan: Katoliek, Ortodoks, Protestants of Anglikaans. Nuwe premium-ontwerp met tradisiekleure, die Ortodokse kalender en Jesusgebed-toutjie, Protestantse liedere en gebede, 'n nuwe app-ikoon en elke taal ten volle opgedateer.
+</af>
+<am>
+ሳንክቱስ አሁን ከትውፊትህ ጋር ይስማማል፦ ካቶሊክ፣ ኦርቶዶክስ፣ ፕሮቴስታንት ወይም አንግሊካን። አዲስ ልዩ ንድፍ በትውፊት ቀለሞች፣ የኦርቶዶክስ የቀን መቁጠሪያ እና የኢየሱስ ጸሎት መቁጠሪያ፣ የፕሮቴስታንት መዝሙሮችና ጸሎቶች፣ አዲስ የመተግበሪያ አዶ እና ሁሉም ቋንቋዎች ሙሉ በሙሉ ተዘምነዋል።
+</am>
+<ar>
+يتكيّف Sanctus الآن مع تقليدك: كاثوليكي أو أرثوذكسي أو بروتستانتي أو أنجليكاني. تصميم جديد فاخر بألوان كل تقليد، التقويم الأرثوذكسي ومسبحة صلاة يسوع، ترانيم وصلوات بروتستانتية، أيقونة جديدة للتطبيق، وتحديث كامل لكل اللغات.
+</ar>
+<bg>
+Sanctus вече се адаптира към вашата традиция: католическа, православна, протестантска или англиканска. Нов премиум дизайн с цветове за всяка традиция, православен календар и броеница за Исусовата молитва, протестантски химни и молитви, нова икона и напълно обновени всички езици.
+</bg>
+<cs-CZ>
+Sanctus se nyní přizpůsobí vaší tradici: katolické, pravoslavné, protestantské nebo anglikánské. Nový prémiový design s barvami tradic, pravoslavný kalendář a čtyřky na Ježíšovu modlitbu, protestantské písně a modlitby, nová ikona aplikace a plně aktualizované všechny jazyky.
+</cs-CZ>
+<da-DK>
+Sanctus tilpasser sig nu din tradition: katolsk, ortodoks, protestantisk eller anglikansk. Nyt premium-design med traditionsfarver, den ortodokse kalender og Jesusbønnens bedesnor, protestantiske salmer og bønner, et nyt app-ikon og alle sprog fuldt opdateret.
+</da-DK>
+<de-DE>
+Sanctus passt sich jetzt deiner Tradition an: katholisch, orthodox, protestantisch oder anglikanisch. Neues Premium-Design mit Traditionsfarben, orthodoxer Kalender und Jesusgebet-Gebetsschnur, protestantische Lieder und Gebete, neues App-Symbol und alle Sprachen vollständig aktualisiert.
+</de-DE>
+<el-GR>
+Το Sanctus προσαρμόζεται πλέον στην παράδοσή σας: καθολική, ορθόδοξη, προτεσταντική ή αγγλικανική. Νέος premium σχεδιασμός με χρώματα ανά παράδοση, ορθόδοξο ημερολόγιο και κομποσχοίνι της Ευχής του Ιησού, προτεσταντικοί ύμνοι και προσευχές, νέο εικονίδιο και πλήρως ενημερωμένες όλες οι γλώσσες.
+</el-GR>
+<en-AU>
+Sanctus now adapts to your tradition: Catholic, Orthodox, Protestant or Anglican. New premium design with tradition colours, the Orthodox calendar and Jesus Prayer rope, Protestant hymns and prayers, a new app icon, and every language fully updated.
+</en-AU>
+<en-CA>
+Sanctus now adapts to your tradition: Catholic, Orthodox, Protestant or Anglican. New premium design with tradition colours, the Orthodox calendar and Jesus Prayer rope, Protestant hymns and prayers, a new app icon, and every language fully updated.
+</en-CA>
+<en-GB>
+Sanctus now adapts to your tradition: Catholic, Orthodox, Protestant or Anglican. New premium design with tradition colours, the Orthodox calendar and Jesus Prayer rope, Protestant hymns and prayers, a new app icon, and every language fully updated.
+</en-GB>
+<en-IN>
+Sanctus now adapts to your tradition: Catholic, Orthodox, Protestant or Anglican. New premium design with tradition colours, the Orthodox calendar and Jesus Prayer rope, Protestant hymns and prayers, a new app icon, and every language fully updated.
+</en-IN>
+<en-SG>
+Sanctus now adapts to your tradition: Catholic, Orthodox, Protestant or Anglican. New premium design with tradition colours, the Orthodox calendar and Jesus Prayer rope, Protestant hymns and prayers, a new app icon, and every language fully updated.
+</en-SG>
+<en-ZA>
+Sanctus now adapts to your tradition: Catholic, Orthodox, Protestant or Anglican. New premium design with tradition colours, the Orthodox calendar and Jesus Prayer rope, Protestant hymns and prayers, a new app icon, and every language fully updated.
+</en-ZA>
+<es-ES>
+Sanctus ahora se adapta a tu tradición: católica, ortodoxa, protestante o anglicana. Nuevo diseño premium con colores por tradición, calendario ortodoxo y cuerda de la Oración de Jesús, himnos y oraciones protestantes, nuevo icono y todos los idiomas totalmente actualizados.
+</es-ES>
+<es-US>
+Sanctus ahora se adapta a tu tradición: católica, ortodoxa, protestante o anglicana. Nuevo diseño premium con colores por tradición, calendario ortodoxo y cuerda de la Oración de Jesús, himnos y oraciones protestantes, nuevo ícono y todos los idiomas totalmente actualizados.
+</es-US>
+<et>
+Sanctus kohandub nüüd sinu traditsiooniga: katoliku, õigeusu, protestantliku või anglikaani. Uus premium-disain traditsioonide värvidega, õigeusu kalender ja Jeesuse palve palvepaelad, protestantlikud laulud ja palved, uus rakenduse ikoon ning kõik keeled täielikult uuendatud.
+</et>
+<fa>
+Sanctus اکنون با سنت شما سازگار می‌شود: کاتولیک، ارتدکس، پروتستان یا انگلیکن. طراحی جدید و ممتاز با رنگ‌های هر سنت، تقویم ارتدکس و تسبیح دعای عیسی، سرودها و دعاهای پروتستان، نماد جدید برنامه و به‌روزرسانی کامل همهٔ زبان‌ها.
+</fa>
+<fa-AE>
+Sanctus اکنون با سنت شما سازگار می‌شود: کاتولیک، ارتدکس، پروتستان یا انگلیکن. طراحی جدید و ممتاز با رنگ‌های هر سنت، تقویم ارتدکس و تسبیح دعای عیسی، سرودها و دعاهای پروتستان، نماد جدید برنامه و به‌روزرسانی کامل همهٔ زبان‌ها.
+</fa-AE>
+<fa-AF>
+Sanctus اکنون با سنت شما سازگار می‌شود: کاتولیک، ارتدکس، پروتستان یا انگلیکن. طراحی جدید و ممتاز با رنگ‌های هر سنت، تقویم ارتدکس و تسبیح دعای عیسی، سرودها و دعاهای پروتستان، نماد جدید برنامه و به‌روزرسانی کامل همهٔ زبان‌ها.
+</fa-AF>
+<fa-IR>
+Sanctus اکنون با سنت شما سازگار می‌شود: کاتولیک، ارتدکس، پروتستان یا انگلیکن. طراحی جدید و ممتاز با رنگ‌های هر سنت، تقویم ارتدکس و تسبیح دعای عیسی، سرودها و دعاهای پروتستان، نماد جدید برنامه و به‌روزرسانی کامل همهٔ زبان‌ها.
+</fa-IR>
+<fil>
+Umaangkop na ang Sanctus sa iyong tradisyon: Katoliko, Ortodokso, Protestante o Anglikano. Bagong premium na disenyo na may kulay ng bawat tradisyon, kalendaryong Ortodokso at lubid ng Panalangin kay Hesus, mga himno at panalanging Protestante, bagong icon ng app, at ganap na na-update ang bawat wika.
+</fil>
+<fr-CA>
+Sanctus s’adapte maintenant à votre tradition : catholique, orthodoxe, protestante ou anglicane. Nouveau design haut de gamme aux couleurs de chaque tradition, calendrier orthodoxe et chapelet de la Prière de Jésus, cantiques et prières protestants, nouvelle icône et toutes les langues entièrement mises à jour.
+</fr-CA>
+<fr-FR>
+Sanctus s’adapte maintenant à votre tradition : catholique, orthodoxe, protestante ou anglicane. Nouveau design haut de gamme aux couleurs de chaque tradition, calendrier orthodoxe et chapelet de la Prière de Jésus, cantiques et prières protestants, nouvelle icône et toutes les langues entièrement mises à jour.
+</fr-FR>
+<hi-IN>
+Sanctus अब आपकी परंपरा के अनुसार ढलता है: कैथोलिक, ऑर्थोडॉक्स, प्रोटेस्टेंट या एंग्लिकन। हर परंपरा के रंगों वाला नया प्रीमियम डिज़ाइन, ऑर्थोडॉक्स कैलेंडर और यीशु प्रार्थना की माला, प्रोटेस्टेंट भजन और प्रार्थनाएँ, नया ऐप आइकन और सभी भाषाएँ पूरी तरह अपडेट।
+</hi-IN>
+<hu-HU>
+A Sanctus mostantól alkalmazkodik a hagyományodhoz: katolikus, ortodox, protestáns vagy anglikán. Új prémium dizájn hagyományonkénti színekkel, ortodox naptár és Jézus-ima kötél, protestáns énekek és imák, új alkalmazásikon, és minden nyelv teljesen frissítve.
+</hu-HU>
+<id>
+Sanctus kini menyesuaikan diri dengan tradisi Anda: Katolik, Ortodoks, Protestan, atau Anglikan. Desain premium baru dengan warna tiap tradisi, kalender Ortodoks dan tali Doa Yesus, himne dan doa Protestan, ikon aplikasi baru, serta semua bahasa diperbarui sepenuhnya.
+</id>
+<is-IS>
+Sanctus lagar sig nú að þinni hefð: kaþólskri, rétttrúnaðar, mótmælenda eða anglíkanskri. Ný úrvalshönnun með litum hverrar hefðar, rétttrúnaðardagatal og bænaband Jesúbænarinnar, sálmar og bænir mótmælenda, nýtt app-tákn og öll tungumál uppfærð að fullu.
+</is-IS>
+<it-IT>
+Sanctus ora si adatta alla tua tradizione: cattolica, ortodossa, protestante o anglicana. Nuovo design premium con i colori di ogni tradizione, calendario ortodosso e corda della Preghiera di Gesù, inni e preghiere protestanti, nuova icona e tutte le lingue completamente aggiornate.
+</it-IT>
+<ja-JP>
+Sanctus があなたの伝統に合わせて変わります。カトリック、正教会、プロテスタント、聖公会。伝統ごとの色を使った新しいプレミアムデザイン、正教会の暦とイエスの祈りの祈祷縄、プロテスタントの賛美歌と祈り、新しいアプリアイコン、そしてすべての言語を完全に更新しました。
+</ja-JP>
+<kk>
+Sanctus енді сіздің дәстүріңізге бейімделеді: католик, православие, протестант немесе англикан. Әр дәстүрдің түстері бар жаңа премиум дизайн, православие күнтізбесі және Иса дұғасының тізбегі, протестанттық гимндер мен дұғалар, жаңа қолданба белгішесі және барлық тілдер толық жаңартылды.
+</kk>
+<kn-IN>
+Sanctus ಈಗ ನಿಮ್ಮ ಸಂಪ್ರದಾಯಕ್ಕೆ ಹೊಂದಿಕೊಳ್ಳುತ್ತದೆ: ಕ್ಯಾಥೋಲಿಕ್, ಆರ್ಥೊಡಾಕ್ಸ್, ಪ್ರೊಟೆಸ್ಟಂಟ್ ಅಥವಾ ಆಂಗ್ಲಿಕನ್. ಪ್ರತಿ ಸಂಪ್ರದಾಯದ ಬಣ್ಣಗಳ ಹೊಸ ಪ್ರೀಮಿಯಂ ವಿನ್ಯಾಸ, ಆರ್ಥೊಡಾಕ್ಸ್ ಕ್ಯಾಲೆಂಡರ್ ಮತ್ತು ಯೇಸು ಪ್ರಾರ್ಥನೆಯ ಜಪಮಾಲೆ, ಪ್ರೊಟೆಸ್ಟಂಟ್ ಗೀತೆಗಳು ಮತ್ತು ಪ್ರಾರ್ಥನೆಗಳು, ಹೊಸ ಆ್ಯಪ್ ಐಕಾನ್ ಮತ್ತು ಎಲ್ಲಾ ಭಾಷೆಗಳು ಸಂಪೂರ್ಣ ನವೀಕರಣ.
+</kn-IN>
+<ko-KR>
+Sanctus가 이제 당신의 전통에 맞춰집니다: 가톨릭, 정교회, 개신교, 성공회. 전통별 색상의 새로운 프리미엄 디자인, 정교회 달력과 예수 기도 묵주, 개신교 찬송과 기도, 새 앱 아이콘, 모든 언어의 완전한 업데이트.
+</ko-KR>
+<no-NO>
+Sanctus tilpasser seg nå din tradisjon: katolsk, ortodoks, protestantisk eller anglikansk. Nytt premium-design med tradisjonsfarger, den ortodokse kalenderen og Jesusbønnens bønnesnor, protestantiske salmer og bønner, nytt app-ikon og alle språk fullt oppdatert.
+</no-NO>
+<pl-PL>
+Sanctus dopasowuje się teraz do Twojej tradycji: katolickiej, prawosławnej, protestanckiej lub anglikańskiej. Nowy, elegancki wygląd w barwach tradycji, kalendarz prawosławny i różaniec Modlitwy Jezusowej, protestanckie pieśni i modlitwy, nowa ikona aplikacji i w pełni zaktualizowane wszystkie języki.
+</pl-PL>
+<pt-BR>
+O Sanctus agora se adapta à sua tradição: católica, ortodoxa, protestante ou anglicana. Novo design premium com as cores de cada tradição, calendário ortodoxo e corda da Oração de Jesus, hinos e orações protestantes, novo ícone e todos os idiomas totalmente atualizados.
+</pt-BR>
+<pt-PT>
+O Sanctus adapta-se agora à sua tradição: católica, ortodoxa, protestante ou anglicana. Novo design premium com as cores de cada tradição, calendário ortodoxo e corda da Oração de Jesus, hinos e orações protestantes, novo ícone e todos os idiomas totalmente atualizados.
+</pt-PT>
+<rm>
+Sanctus s’adatta uss a tia tradiziun: catolica, ortodoxa, protestanta u anglicana. Nov design premium cun colurs per mintga tradiziun, il chalender ortodox e la corda da l’oraziun da Jesus, chanzuns ed oraziuns protestantas, nova ikona da l’app e tut las linguas actualisadas cumplettamain.
+</rm>
+<ro>
+Sanctus se adaptează acum tradiției tale: catolică, ortodoxă, protestantă sau anglicană. Design premium nou, cu culorile fiecărei tradiții, calendarul ortodox și metaniile Rugăciunii lui Iisus, imnuri și rugăciuni protestante, pictogramă nouă și toate limbile complet actualizate.
+</ro>
+<ru-RU>
+Sanctus теперь подстраивается под вашу традицию: католическую, православную, протестантскую или англиканскую. Новый премиальный дизайн в цветах каждой традиции, православный календарь и чётки Иисусовой молитвы, протестантские гимны и молитвы, новая иконка и полностью обновлённые языки.
+</ru-RU>
+<sk>
+Sanctus sa teraz prispôsobí vašej tradícii: katolíckej, pravoslávnej, protestantskej alebo anglikánskej. Nový prémiový dizajn s farbami tradícií, pravoslávny kalendár a ružencové vrkoče Ježišovej modlitby, protestantské piesne a modlitby, nová ikona aplikácie a plne aktualizované všetky jazyky.
+</sk>
+<sq>
+Sanctus tani përshtatet me traditën tuaj: katolike, ortodokse, protestante ose anglikane. Dizajn i ri premium me ngjyrat e secilës traditë, kalendari ortodoks dhe litari i Lutjes së Jezusit, himne e lutje protestante, ikonë e re e aplikacionit dhe të gjitha gjuhët plotësisht të përditësuara.
+</sq>
+<sr>
+Sanctus se sada prilagođava vašoj tradiciji: katoličkoj, pravoslavnoj, protestantskoj ili anglikanskoj. Novi premium dizajn u bojama svake tradicije, pravoslavni kalendar i brojanica Isusove molitve, protestantske pesme i molitve, nova ikona aplikacije i potpuno ažurirani svi jezici.
+</sr>
+<sv-SE>
+Sanctus anpassar sig nu efter din tradition: katolsk, ortodox, protestantisk eller anglikansk. Ny premiumdesign med traditionsfärger, den ortodoxa kalendern och Jesusbönens bönsnodd, protestantiska psalmer och böner, ny appikon och alla språk fullständigt uppdaterade.
+</sv-SE>
+<sw>
+Sanctus sasa inajirekebisha kulingana na mapokeo yako: Katoliki, Othodoksi, Kiprotestanti au Kianglikana. Muundo mpya wa kifahari wenye rangi za kila mapokeo, kalenda ya Othodoksi na kamba ya Sala ya Yesu, nyimbo na sala za Kiprotestanti, ikoni mpya ya programu, na lugha zote zimesasishwa kikamilifu.
+</sw>
+<tr-TR>
+Sanctus artık geleneğinize uyum sağlıyor: Katolik, Ortodoks, Protestan veya Anglikan. Her geleneğin renklerini taşıyan yeni premium tasarım, Ortodoks takvimi ve İsa Duası tespihi, Protestan ilahileri ve duaları, yeni uygulama simgesi ve tamamen güncellenen tüm diller.
+</tr-TR>
+<uk>
+Sanctus тепер підлаштовується під вашу традицію: католицьку, православну, протестантську чи англіканську. Новий преміальний дизайн у кольорах кожної традиції, православний календар і чотки Ісусової молитви, протестантські гімни та молитви, нова іконка та повністю оновлені всі мови.
+</uk>
+<vi>
+Sanctus giờ đây thích ứng với truyền thống của bạn: Công giáo, Chính thống, Tin Lành hoặc Anh giáo. Thiết kế cao cấp mới với màu sắc theo từng truyền thống, lịch Chính thống và chuỗi Kinh Giêsu, thánh ca và lời nguyện Tin Lành, biểu tượng ứng dụng mới và mọi ngôn ngữ được cập nhật đầy đủ.
+</vi>
+<zh-CN>
+Sanctus 现在可以适配你的信仰传统：天主教、东正教、新教或圣公会。全新高级设计，按传统配色，东正教历法与耶稣祷文念珠，新教圣诗与祷文，全新应用图标，所有语言完整更新。
+</zh-CN>
+<zh-HK>
+Sanctus 現在可配合你的信仰傳統：天主教、東正教、新教或聖公宗。全新高級設計，按傳統配色，東正教曆法與耶穌禱文念珠，新教聖詩與禱文，全新應用程式圖示，所有語言完整更新。
+</zh-HK>
+<zh-TW>
+Sanctus 現在可配合你的信仰傳統：天主教、東正教、新教或聖公宗。全新高級設計，依傳統配色，東正教曆法與耶穌禱文念珠，新教聖詩與禱文，全新應用程式圖示，所有語言完整更新。
+</zh-TW>
