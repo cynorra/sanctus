@@ -10,7 +10,7 @@
         <shape android:shape="rectangle">
             <gradient
                 android:type="radial"
-                android:gradientRadius="75%p"
+                android:gradientRadius="270dp"
                 android:centerX="0.1"
                 android:centerY="0.0"
                 android:startColor="?attr/sanctusGlowA38"
@@ -21,7 +21,7 @@
         <shape android:shape="rectangle">
             <gradient
                 android:type="radial"
-                android:gradientRadius="60%p"
+                android:gradientRadius="216dp"
                 android:centerX="1.0"
                 android:centerY="0.95"
                 android:startColor="?attr/sanctusAccentA1F"
