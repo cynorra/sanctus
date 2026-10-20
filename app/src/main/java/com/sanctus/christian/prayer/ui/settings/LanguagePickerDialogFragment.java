@@ -21,6 +21,18 @@ public class LanguagePickerDialogFragment extends BottomSheetDialogFragment {
     private OnLanguageSelected listener;
     public void setListener(OnLanguageSelected l) { this.listener = l; }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        View sheet = getDialog() == null ? null : getDialog().findViewById(com.google.android.material.R.id.design_bottom_sheet);
+        if (sheet != null) {
+            com.google.android.material.bottomsheet.BottomSheetBehavior<View> b =
+                    com.google.android.material.bottomsheet.BottomSheetBehavior.from(sheet);
+            b.setSkipCollapsed(true);
+            b.setState(com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED);
+        }
+    }
+
     @Nullable @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
@@ -33,6 +45,11 @@ public class LanguagePickerDialogFragment extends BottomSheetDialogFragment {
         String current = SanctusApplication.getInstance().getSettingsRepository().getLanguage();
 
         RecyclerView rv = view.findViewById(R.id.rv_languages);
+        // The list is 420dp tall in the layout; on short screens (tablets in landscape) that pushes the
+        // last languages below the screen, so cap it to what fits under the header.
+        int maxPx = requireContext().getResources().getDisplayMetrics().heightPixels
+                - (int) (140 * requireContext().getResources().getDisplayMetrics().density);
+        if (rv.getLayoutParams().height > maxPx) rv.getLayoutParams().height = maxPx;
         rv.setLayoutManager(new LinearLayoutManager(requireContext()));
         rv.setAdapter(new LangAdapter(LanguageManager.SUPPORTED_LANGUAGES, current, code -> {
             if (listener != null) listener.onSelected(code);
