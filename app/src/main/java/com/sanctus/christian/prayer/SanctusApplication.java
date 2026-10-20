@@ -35,6 +35,9 @@ public class SanctusApplication extends Application {
                 // Runs inside super.onCreate, i.e. before the layout is inflated.
                 SettingsRepository settings = getSettingsRepository();
                 if (settings != null) {
+                    // textAllCaps uses the default locale; a Turkish device with the app set to English
+                    // would otherwise render "DEVOTIONAL" as "DEVOTİONAL".
+                    java.util.Locale.setDefault(java.util.Locale.forLanguageTag(settings.getLanguage()));
                     activity.getTheme().applyStyle(Tradition.themeOverlay(settings.getTradition()), true);
                 }
             }
@@ -45,17 +48,6 @@ public class SanctusApplication extends Application {
             @Override public void onActivitySaveInstanceState(Activity a, Bundle s) {}
             @Override public void onActivityDestroyed(Activity a) {}
         });
-
-        // TEMP font diagnostics: logs which font resources Android could actually load.
-        for (int id : new int[]{R.font.inter, R.font.ebgaramond, R.font.ebgaramond_text, R.font.cormorant,
-                R.font.cormorant_bold, R.font.cormorant_medium}) {
-            try {
-                Log.i("FontProbe", getResources().getResourceEntryName(id) + " -> "
-                        + androidx.core.content.res.ResourcesCompat.getFont(this, id));
-            } catch (Exception e) {
-                Log.e("FontProbe", getResources().getResourceEntryName(id) + " FAILED", e);
-            }
-        }
 
         // Initialize AdMob
         MobileAds.initialize(this, initializationStatus -> {});
