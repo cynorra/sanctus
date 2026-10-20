@@ -2,6 +2,7 @@ package com.sanctus.christian.prayer.ui.main;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -59,16 +60,23 @@ public class MainActivity extends AppCompatActivity {
         if (navHostFragment != null) {
             navController = navHostFragment.getNavController();
             BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
-            NavigationUI.setupWithNavController(bottomNav, navController);
-
             // The counter tab follows the tradition: Rosary for Catholic, Anglican and "all",
-            // the Jesus Prayer rope for Orthodox, neither for Protestant.
+            // the Jesus Prayer rope for Orthodox, none for Protestant. BottomNavigationView
+            // counts hidden items towards its limit of five, so the menu is built in code.
             String tradition = com.sanctus.christian.prayer.SanctusApplication.getInstance()
                     .getSettingsRepository().getTradition();
-            boolean orthodox = Tradition.ORTHODOX.equals(tradition);
-            boolean protestant = Tradition.PROTESTANT.equals(tradition);
-            bottomNav.getMenu().findItem(R.id.rosaryFragment).setVisible(!orthodox && !protestant);
-            bottomNav.getMenu().findItem(R.id.jesusPrayerFragment).setVisible(orthodox);
+            Menu menu = bottomNav.getMenu();
+            menu.clear();
+            menu.add(Menu.NONE, R.id.dashboardFragment, Menu.NONE, R.string.nav_home).setIcon(R.drawable.ic_home);
+            menu.add(Menu.NONE, R.id.prayerFragment, Menu.NONE, R.string.nav_prayers).setIcon(R.drawable.ic_prayer);
+            if (Tradition.ORTHODOX.equals(tradition)) {
+                menu.add(Menu.NONE, R.id.jesusPrayerFragment, Menu.NONE, R.string.nav_jesus_prayer).setIcon(R.drawable.ic_prayer_rope);
+            } else if (!Tradition.PROTESTANT.equals(tradition)) {
+                menu.add(Menu.NONE, R.id.rosaryFragment, Menu.NONE, R.string.nav_rosary).setIcon(R.drawable.ic_rosary);
+            }
+            menu.add(Menu.NONE, R.id.saintFragment, Menu.NONE, R.string.nav_saints).setIcon(R.drawable.ic_saint);
+            menu.add(Menu.NONE, R.id.feedFragment, Menu.NONE, R.string.nav_feed).setIcon(R.drawable.ic_feed);
+            NavigationUI.setupWithNavController(bottomNav, navController);
 
             // Same behaviour as NavigationUI's default tab handling (single top, restore state),
             // plus a fade/lift transition between tabs that the default does not give us.
