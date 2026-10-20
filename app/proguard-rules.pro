@@ -37,3 +37,9 @@
 
 # AndroidX Navigation
 -keep class androidx.navigation.** { *; }
+
+# Firestore maps these POJOs to documents by field name via reflection; renamed fields would be written
+# as keys like "a"/"b" and rejected by firestore.rules (and break reads).
+-keepattributes *Annotation*
+-keepclassmembers class com.sanctus.christian.prayer.data.remote.CommunityPost { <init>(); <fields>; }
+-keepclassmembers class com.sanctus.christian.prayer.data.remote.UserProfile { <init>(); <fields>; }
