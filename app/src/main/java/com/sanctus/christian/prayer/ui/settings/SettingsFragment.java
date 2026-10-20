@@ -78,8 +78,8 @@ public class SettingsFragment extends Fragment {
                         settingsRepo.setTradition(ids[which]);
                         tvTradition.setText(Tradition.labelRes(ids[which]));
                         dialog.dismiss();
-                        // Re-create so the new accent palette and calendar apply everywhere.
-                        if (changed) requireActivity().recreate();
+                        // Restart so the palette, calendar and every tab's cached filters apply.
+                        if (changed) restartApp();
                     })
                     .show();
         });
@@ -104,8 +104,10 @@ public class SettingsFragment extends Fragment {
         view.findViewById(R.id.row_language).setOnClickListener(v -> {
             LanguagePickerDialogFragment dialog = new LanguagePickerDialogFragment();
             dialog.setListener(code -> {
+                boolean changed = !code.equals(settingsRepo.getLanguage());
                 settingsRepo.setLanguage(code);
                 updateLangLabel(tvCurrentLang);
+                if (changed) restartApp();
             });
             dialog.show(getChildFragmentManager(), "lang_picker");
         });
@@ -144,5 +146,18 @@ public class SettingsFragment extends Fragment {
             PrayerAlarmManager.cancelAll(requireContext());
             FirebaseMessaging.getInstance().unsubscribeFromTopic(SanctusApplication.ENGAGEMENT_TOPIC);
         }
+    }
+
+    /**
+     * recreate() keeps the ViewModels, so tabs would keep the old language/tradition filters.
+     * A fresh task start drops them and also re-applies the app locale and theme overlay.
+     */
+    private void restartApp() {
+        android.app.Activity activity = requireActivity();
+        Intent intent = new Intent(activity, com.sanctus.christian.prayer.ui.main.MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        activity.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        activity.finish();
     }
 }
