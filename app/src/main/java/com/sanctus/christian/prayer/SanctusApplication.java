@@ -35,14 +35,12 @@ public class SanctusApplication extends Application {
                 // Runs inside super.onCreate, i.e. before the layout is inflated.
                 SettingsRepository settings = getSettingsRepository();
                 if (settings != null) {
-                    // textAllCaps uses the default locale; a Turkish device with the app set to English
-                    // would otherwise render "DEVOTIONAL" as "DEVOTİONAL".
-                    java.util.Locale.setDefault(java.util.Locale.forLanguageTag(settings.getLanguage()));
+                    applyAppLocale();
                     activity.getTheme().applyStyle(Tradition.themeOverlay(settings.getTradition()), true);
                 }
             }
-            @Override public void onActivityStarted(Activity a) {}
-            @Override public void onActivityResumed(Activity a) {}
+            @Override public void onActivityStarted(Activity a) { applyAppLocale(); }
+            @Override public void onActivityResumed(Activity a) { applyAppLocale(); }
             @Override public void onActivityPaused(Activity a) {}
             @Override public void onActivityStopped(Activity a) {}
             @Override public void onActivitySaveInstanceState(Activity a, Bundle s) {}
@@ -123,6 +121,22 @@ public class SanctusApplication extends Application {
     }
 
     public static final String ENGAGEMENT_TOPIC = "engagement";
+
+    /**
+     * textAllCaps uses the default locale; a Turkish device with the app set to English would otherwise render
+     * "DEVOTIONAL" as "DEVOTİONAL". Android and WebView (ads) reset the default to the device locale, so this is
+     * re-applied whenever an activity starts or the configuration changes.
+     */
+    private void applyAppLocale() {
+        SettingsRepository settings = getSettingsRepository();
+        if (settings != null) java.util.Locale.setDefault(java.util.Locale.forLanguageTag(settings.getLanguage()));
+    }
+
+    @Override
+    public void onConfigurationChanged(android.content.res.Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        applyAppLocale();
+    }
 
     public static SanctusApplication getInstance() { return instance; }
     public SanctusDatabase getDatabase() { return database; }
