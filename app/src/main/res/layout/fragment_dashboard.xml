@@ -431,6 +431,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tv_saint_kicker"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/saint_of_day"

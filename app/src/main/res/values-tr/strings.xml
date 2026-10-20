@@ -12,6 +12,11 @@
     <string name="next_hour">Sonraki İbadet</string>
     <string name="canonical_hours">Kanonik Saatler</string>
     <string name="saint_of_day">Günün Azizi</string>
+    <string name="notification_saint_today">Günün azizi: %1$s</string>
+    <string name="notification_pray_today">Bugünün duası: %1$s</string>
+    <string name="exact_alarm_title">Tam zamanlı hatırlatıcılara izin ver</string>
+    <string name="exact_alarm_desc">Hatırlatıcıların tam dakikasında çalması için dokunun. İzin olmadan birkaç dakika gecikebilir.</string>
+    <string name="saint_featured">Öne Çıkan Aziz</string>
     <string name="verse_of_day">Günün Ayeti</string>
     <string name="prayers_title">Dualar</string>
     <string name="rosary_title">Kutsal Tespih</string>

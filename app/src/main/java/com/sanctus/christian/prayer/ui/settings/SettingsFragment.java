@@ -3,6 +3,8 @@ package com.sanctus.christian.prayer.ui.settings;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.provider.Settings;
+import android.text.format.DateFormat;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,6 +22,8 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.materialswitch.MaterialSwitch;
+import com.google.android.material.timepicker.MaterialTimePicker;
+import com.google.android.material.timepicker.TimeFormat;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.sanctus.christian.prayer.BuildConfig;
 import com.sanctus.christian.prayer.R;
@@ -32,6 +36,8 @@ import com.sanctus.christian.prayer.util.Tradition;
 public class SettingsFragment extends Fragment {
     private SettingsRepository settingsRepo;
     private MaterialSwitch switchNotif;
+    private View containerHours;
+    private View rowExactAlarm;
 
     // Denial isn't silently ignored: reverting the switch re-enters the checked-change listener
     // with isChecked=false, which persists "disabled" and cancels alarms/unsubscribes the topic —
@@ -98,6 +104,22 @@ public class SettingsFragment extends Fragment {
             applyNotificationsEnabled(isChecked);
         });
 
+        // Per-hour reminder times
+        containerHours = view.findViewById(R.id.container_hour_times);
+        buildHourRows((ViewGroup) containerHours);
+        containerHours.setVisibility(switchNotif.isChecked() ? View.VISIBLE : View.GONE);
+        rowExactAlarm = view.findViewById(R.id.row_exact_alarm);
+        rowExactAlarm.setOnClickListener(v -> {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                try {
+                    startActivity(new Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM,
+                            Uri.parse("package:" + requireContext().getPackageName())));
+                } catch (Exception ignored) {
+                    // Settings screen unavailable; reminders simply stay approximate.
+                }
+            }
+        });
+
         // Language picker row
         TextView tvCurrentLang = view.findViewById(R.id.tv_current_language);
         updateLangLabel(tvCurrentLang);
@@ -126,6 +148,66 @@ public class SettingsFragment extends Fragment {
         tvVersion.setText("Sanctus v" + BuildConfig.VERSION_NAME);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateExactAlarmRow();
+    }
+
+    /** Shown only when reminders are on but the OS won't let them fire on the minute. */
+    private void updateExactAlarmRow() {
+        if (rowExactAlarm == null) return;
+        boolean show = switchNotif.isChecked() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+                && !PrayerAlarmManager.canScheduleExact(requireContext());
+        rowExactAlarm.setVisibility(show ? View.VISIBLE : View.GONE);
+    }
+
+    private void buildHourRows(ViewGroup parent) {
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        String[] names = getResources().getStringArray(R.array.hour_names_short);
+        for (int i = 0; i < SettingsRepository.HOUR_COUNT; i++) {
+            final int index = i;
+            View row = inflater.inflate(R.layout.item_hour_setting, parent, false);
+            ((TextView) row.findViewById(R.id.tv_hour_setting_name)).setText(names[i]);
+            TextView tvTime = row.findViewById(R.id.tv_hour_setting_time);
+            MaterialSwitch sw = row.findViewById(R.id.switch_hour_setting);
+            tvTime.setText(formatTime(settingsRepo.getHourMinutes(i)));
+            sw.setChecked(settingsRepo.isHourEnabled(i));
+            tvTime.setAlpha(sw.isChecked() ? 1f : 0.4f);
+            sw.setOnCheckedChangeListener((btn, on) -> {
+                settingsRepo.setHourEnabled(index, on);
+                tvTime.setAlpha(on ? 1f : 0.4f);
+                PrayerAlarmManager.scheduleAll(requireContext());
+            });
+            tvTime.setOnClickListener(v -> {
+                int minutes = settingsRepo.getHourMinutes(index);
+                MaterialTimePicker picker = new MaterialTimePicker.Builder()
+                        .setTimeFormat(DateFormat.is24HourFormat(requireContext())
+                                ? TimeFormat.CLOCK_24H : TimeFormat.CLOCK_12H)
+                        .setHour(minutes / 60)
+                        .setMinute(minutes % 60)
+                        .setTitleText(names[index])
+                        .build();
+                picker.addOnPositiveButtonClickListener(d -> {
+                    settingsRepo.setHourMinutes(index, picker.getHour() * 60 + picker.getMinute());
+                    tvTime.setText(formatTime(settingsRepo.getHourMinutes(index)));
+                    if (settingsRepo.isHourEnabled(index)) {
+                        PrayerAlarmManager.scheduleAll(requireContext());
+                    }
+                });
+                picker.show(getChildFragmentManager(), "hour_time_" + index);
+            });
+            parent.addView(row);
+        }
+    }
+
+    private String formatTime(int minutesOfDay) {
+        java.util.Calendar cal = java.util.Calendar.getInstance();
+        cal.set(java.util.Calendar.HOUR_OF_DAY, minutesOfDay / 60);
+        cal.set(java.util.Calendar.MINUTE, minutesOfDay % 60);
+        return DateFormat.getTimeFormat(requireContext()).format(cal.getTime());
+    }
+
     private void updateLangLabel(TextView tv) {
         LanguageManager.Language lang = LanguageManager.getLanguage(settingsRepo.getLanguage());
         tv.setText(lang.nativeName + " (" + lang.englishName + ")");
@@ -139,6 +221,8 @@ public class SettingsFragment extends Fragment {
 
     private void applyNotificationsEnabled(boolean enabled) {
         settingsRepo.setNotificationsEnabled(enabled);
+        containerHours.setVisibility(enabled ? View.VISIBLE : View.GONE);
+        updateExactAlarmRow();
         if (enabled) {
             PrayerAlarmManager.scheduleAll(requireContext());
             FirebaseMessaging.getInstance().subscribeToTopic(SanctusApplication.ENGAGEMENT_TOPIC);

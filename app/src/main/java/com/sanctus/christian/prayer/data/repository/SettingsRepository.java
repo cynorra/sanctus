@@ -50,6 +50,16 @@ public class SettingsRepository {
     public void setDarkMode(boolean dark) { prefs.edit().putBoolean("dark_mode", dark).apply(); }
     public boolean isNotificationsEnabled() { return prefs.getBoolean("notifications", true); }
     public void setNotificationsEnabled(boolean enabled) { prefs.edit().putBoolean("notifications", enabled).apply(); }
+    // --- Canonical-hour reminders: each of the six hours has its own time and on/off switch ---
+    public static final int HOUR_COUNT = 6;
+    private static final int[] DEFAULT_HOUR_MINUTES = {6 * 60, 9 * 60, 12 * 60, 15 * 60, 18 * 60, 21 * 60};
+
+    /** Minutes after local midnight at which hour {@code index} (0 = Lauds .. 5 = Compline) fires. */
+    public int getHourMinutes(int index) { return prefs.getInt("hour_min_" + index, DEFAULT_HOUR_MINUTES[index]); }
+    public void setHourMinutes(int index, int minutes) { prefs.edit().putInt("hour_min_" + index, minutes).apply(); }
+    public boolean isHourEnabled(int index) { return prefs.getBoolean("hour_on_" + index, true); }
+    public void setHourEnabled(int index, boolean on) { prefs.edit().putBoolean("hour_on_" + index, on).apply(); }
+
     public int getTextSize() { return prefs.getInt("text_size", 16); }
     public void setTextSize(int size) { prefs.edit().putInt("text_size", size).apply(); }
 

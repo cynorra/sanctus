@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Sanctus.SettingsRow"
+    android:minHeight="56dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
+
+    <TextView
+        android:id="@+id/tv_hour_setting_name"
+        style="@style/Sanctus.SettingsRowTitle"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_hour_setting_time"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:minWidth="88dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:textColor="@color/color_accent"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch_hour_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

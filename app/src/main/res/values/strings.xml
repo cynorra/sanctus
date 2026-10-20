@@ -12,6 +12,7 @@
     <string name="next_hour">Next Hour</string>
     <string name="canonical_hours">Canonical Hours</string>
     <string name="saint_of_day">Saint of the Day</string>
+    <string name="saint_featured">Featured Saint</string>
     <string name="prayer_of_day">Prayer of the Day</string>
     <string name="verse_of_day">Verse of the Day</string>
     <string name="prayers_title">Prayers</string>
@@ -175,6 +176,10 @@
         <item>Evening prayer — give thanks.</item>
         <item>Night prayer — rest in His peace.</item>
     </string-array>
+    <string name="notification_saint_today">Saint of the day: %1$s</string>
+    <string name="notification_pray_today">Pray today: %1$s</string>
+    <string name="exact_alarm_title">Allow exact reminders</string>
+    <string name="exact_alarm_desc">Tap to let Sanctus fire reminders on the minute. Without it they can arrive a few minutes late.</string>
     <string name="notification_default_title">Time to Pray</string>
 
     <!-- Rosary -->

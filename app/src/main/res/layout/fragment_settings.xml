@@ -140,6 +140,33 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container_hour_times"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/row_exact_alarm"
+                style="@style/Sanctus.SettingsRow"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Sanctus.SettingsRowTitle"
+                        android:text="@string/exact_alarm_title" />
+
+                    <TextView
+                        style="@style/Sanctus.SettingsRowSubtitle"
+                        android:text="@string/exact_alarm_desc" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
         <!-- COMMUNITY + ABOUT -->

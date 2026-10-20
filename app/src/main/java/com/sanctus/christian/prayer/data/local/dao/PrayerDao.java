@@ -18,6 +18,10 @@ public interface PrayerDao {
     @Query("SELECT * FROM prayers WHERE category = :category AND (language = :lang OR (:lang != 'en' AND category = 'scripture' AND language = 'en')) AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
     LiveData<List<PrayerEntity>> getPrayersByCategory(String category, String lang, String tradition);
 
+    /** Blocking list for background callers (the reminder receiver); exact language, no scripture fallback. */
+    @Query("SELECT * FROM prayers WHERE category = :category AND language = :lang AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
+    List<PrayerEntity> listByCategory(String category, String lang, String tradition);
+
     @Query("SELECT * FROM prayers WHERE isFavorite = 1 AND language = :lang")
     LiveData<List<PrayerEntity>> getFavoritePrayers(String lang);
 

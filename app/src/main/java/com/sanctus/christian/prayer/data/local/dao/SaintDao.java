@@ -14,8 +14,16 @@ public interface SaintDao {
     @Query("SELECT * FROM saints WHERE language = :language AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
     LiveData<List<SaintEntity>> getAllSaints(String language, String tradition);
 
-    @Query("SELECT * FROM saints WHERE feastDate = :date AND language = :language LIMIT 1")
-    LiveData<SaintEntity> getSaintByFeastDate(String date, String language);
+    /**
+     * The saint for a feast date, restricted to the user's tradition. When several match, the one
+     * tagged for exactly that tradition wins over one shared with others, which wins over "all".
+     */
+    @Query("SELECT * FROM saints WHERE feastDate = :date AND language = :language AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY CASE WHEN tradition = :tradition THEN 0 WHEN tradition = 'all' THEN 2 ELSE 1 END, name ASC LIMIT 1")
+    LiveData<SaintEntity> getSaintByFeastDate(String date, String language, String tradition);
+
+    /** Blocking twin of {@link #getSaintByFeastDate} for background callers such as the reminder receiver. */
+    @Query("SELECT * FROM saints WHERE feastDate = :date AND language = :language AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY CASE WHEN tradition = :tradition THEN 0 WHEN tradition = 'all' THEN 2 ELSE 1 END, name ASC LIMIT 1")
+    SaintEntity findForDate(String date, String language, String tradition);
 
     @Query("SELECT * FROM saints WHERE id = :id")
     LiveData<SaintEntity> getSaintById(int id);

@@ -89,7 +89,7 @@ class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             h.share.setOnClickListener(v -> { AnimUtils.pressFeedback(h.share); listener.onSharePrayer(p); });
         } else {
             SaintEntity s = item.saint;
-            h.kicker.setText(R.string.saint_of_day);
+            h.kicker.setText(DateUtils.isFeastToday(s.feastDate) ? R.string.saint_of_day : R.string.saint_featured);
             h.title.setText(s.name);
             h.subtitle.setText(h.itemView.getContext().getString(R.string.saint_feast_day_format, DateUtils.localizeFeastDate(s.feastDate)));
             h.subtitle.setVisibility(View.VISIBLE);

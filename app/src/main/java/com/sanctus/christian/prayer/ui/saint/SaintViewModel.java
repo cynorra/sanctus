@@ -43,17 +43,16 @@ public class SaintViewModel extends AndroidViewModel {
 
     /** Falls back to English when the selected language has no saint for this feast date yet. */
     public LiveData<SaintEntity> getSaintByFeastDate(String date) {
-        LiveData<SaintEntity> primary = dao.getSaintByFeastDate(date, language);
+        LiveData<SaintEntity> primary = dao.getSaintByFeastDate(date, language, tradition());
         if ("en".equals(language)) return primary;
         return Transformations.switchMap(primary, saint ->
-                saint == null ? dao.getSaintByFeastDate(date, "en") : staticLiveData(saint));
+                saint == null ? dao.getSaintByFeastDate(date, "en", tradition()) : staticLiveData(saint));
     }
 
     /**
-     * Only ~60 of the 365 feast days have a matching saint, so most days getSaintByFeastDate()
-     * falls through to the same static "no saint today" message. This picks a rotating spotlight
-     * (deterministic by day-of-year, not random) from the full list instead, so there's always
-     * something different to show.
+     * Days without a saint for the user's tradition fall back to a rotating spotlight
+     * (deterministic by day-of-year, not random) from the full list, so there's always something
+     * to show. Callers label that one "Featured Saint" via DateUtils.isFeastToday().
      */
     public LiveData<SaintEntity> getSaintSpotlight(String date, int dayOfYear) {
         return Transformations.switchMap(getSaintByFeastDate(date), exact ->

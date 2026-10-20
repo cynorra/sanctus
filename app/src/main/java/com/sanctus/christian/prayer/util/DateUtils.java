@@ -55,4 +55,10 @@ public class DateUtils {
     public static int getDayOfWeekInt() {
         return Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
     }
+
+    /** Whether a feast date stored as "MMMM d" (English month) is today. */
+    public static boolean isFeastToday(String feastDate) {
+        return feastDate != null
+                && feastDate.equals(new java.text.SimpleDateFormat("MMMM d", java.util.Locale.ENGLISH).format(new java.util.Date()));
+    }
 }
