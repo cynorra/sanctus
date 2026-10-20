@@ -38,7 +38,8 @@
         <item name="colorOnPrimary">@color/color_background</item>
         <item name="colorPrimaryContainer">@color/color_surface_variant</item>
         <item name="colorOnPrimaryContainer">?attr/sanctusAccentSoft</item>
-        <item name="colorSecondary">@color/color_primary_light</item>
+        <item name="colorSecondary">?attr/sanctusAccent</item>
+        <item name="colorControlActivated">?attr/sanctusAccent</item>
         <item name="colorOnSecondary">@color/color_background</item>
         <item name="colorSecondaryContainer">?attr/sanctusNavIndicator</item>
         <item name="colorOnSecondaryContainer">?attr/sanctusAccentSoft</item>

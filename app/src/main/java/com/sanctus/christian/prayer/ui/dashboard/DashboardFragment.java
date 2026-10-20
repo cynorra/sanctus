@@ -90,6 +90,9 @@ public class DashboardFragment extends Fragment {
         LiturgicalSeasonHelper.Season season = LiturgicalSeasonHelper.getCurrentSeason(
                 SanctusApplication.getInstance().getSettingsRepository().getTradition());
         tvSeason.setText(LiturgicalSeasonHelper.getSeasonName(requireContext(), season));
+        // The season chip opens the liturgical calendar (Julian for Orthodox).
+        MotionKit.pressable(tvSeason);
+        tvSeason.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.calendarFragment));
 
         // Next canonical hour
         TextView tvNextHour = view.findViewById(R.id.tv_next_hour);
