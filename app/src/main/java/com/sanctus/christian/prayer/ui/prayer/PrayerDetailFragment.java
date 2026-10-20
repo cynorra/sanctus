@@ -51,19 +51,19 @@ public class PrayerDetailFragment extends Fragment {
         int[] fontSize = {
             SanctusApplication.getInstance().getSettingsRepository().getTextSize()
         };
-        tvContent.setTextSize(fontSize[0]);
+        tvContent.setTextSize(fontSize[0] + 6);
 
         btnFontIncrease.setOnClickListener(v -> {
             if (fontSize[0] < 26) {
                 fontSize[0] += 2;
-                tvContent.setTextSize(fontSize[0]);
+                tvContent.setTextSize(fontSize[0] + 6);
                 SanctusApplication.getInstance().getSettingsRepository().setTextSize(fontSize[0]);
             }
         });
         btnFontDecrease.setOnClickListener(v -> {
             if (fontSize[0] > 12) {
                 fontSize[0] -= 2;
-                tvContent.setTextSize(fontSize[0]);
+                tvContent.setTextSize(fontSize[0] + 6);
                 SanctusApplication.getInstance().getSettingsRepository().setTextSize(fontSize[0]);
             }
         });
@@ -73,7 +73,7 @@ public class PrayerDetailFragment extends Fragment {
             repo.getPrayerById(prayerId).observe(getViewLifecycleOwner(), prayer -> {
                 if (prayer == null) return;
                 tvTitle.setText(prayer.name);
-                tvCategory.setText(prayer.category != null ? prayer.category.toUpperCase(java.util.Locale.ROOT) : "");
+                tvCategory.setText(com.sanctus.christian.prayer.util.CategoryLabels.label(requireContext(), prayer.category));
                 tvContent.setText(prayer.content);
                 SanctusApplication.getInstance().getSettingsRepository().recordPrayerActivityToday();
                 AnalyticsLogger.logPrayerCompleted(requireContext(), prayer.category);

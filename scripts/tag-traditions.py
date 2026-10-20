@@ -137,8 +137,12 @@ def main():
     prayers = json.loads((SEED / "prayers.json").read_text(encoding="utf-8"))
     saints = json.loads((SEED / "saints.json").read_text(encoding="utf-8"))
     missing = []
+    # Rows added later by scripts/add-content.py already carry their own tag; only --force retags them.
+    force = "--force" in sys.argv
     for p in prayers:
         lang, name = p["language"], p["name"]
+        if "tradition" in p and not force:
+            continue
         if lang == "en":
             if name not in PRAYERS_EN:
                 missing.append(("prayer", lang, name))
@@ -153,6 +157,8 @@ def main():
             p["tradition"] = classify_other_prayer(p)
     for s in saints:
         lang, name = s["language"], s["name"]
+        if "tradition" in s and not force:
+            continue
         if lang == "en":
             s["tradition"] = ALL if name in SAINTS_ALL else SAINTS_MAP.get(name, C)
         elif lang == "tr":

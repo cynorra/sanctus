@@ -5,11 +5,11 @@
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
         android:orientation="vertical" android:paddingHorizontal="24dp"
-        android:paddingTop="52dp" android:paddingBottom="12dp">
+        android:paddingTop="20dp" android:paddingBottom="12dp">
 
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/nav_calendar" android:fontFamily="@font/cormorant"
-            android:textSize="28sp" android:textColor="@color/color_on_background"/>
+            android:text="@string/nav_calendar"
+            android:textAppearance="@style/TextAppearance.Sanctus.HeadlineLarge"/>
 
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
             android:orientation="horizontal" android:layout_marginTop="16dp"
@@ -33,13 +33,10 @@
         </LinearLayout>
     </LinearLayout>
 
-    <View android:layout_width="match_parent" android:layout_height="1dp"
-        android:background="@color/color_divider"/>
-
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/upcoming_solemnities" android:textSize="10sp" android:letterSpacing="0.15"
-        android:textAllCaps="true" android:textColor="@color/color_text_secondary"
-        android:paddingHorizontal="24dp" android:paddingTop="16dp" android:paddingBottom="8dp"/>
+        android:text="@string/upcoming_solemnities"
+        android:textAppearance="@style/TextAppearance.Sanctus.LabelMedium" android:textAllCaps="true"
+        android:paddingHorizontal="26dp" android:paddingTop="16dp" android:paddingBottom="8dp"/>
 
     <FrameLayout
         android:layout_width="match_parent"

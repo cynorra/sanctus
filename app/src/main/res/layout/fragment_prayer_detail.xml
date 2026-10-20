@@ -42,22 +42,21 @@
 
             <TextView android:id="@+id/tv_detail_category"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:textSize="11sp" android:letterSpacing="0.15" android:textAllCaps="true"
-                android:textColor="@color/color_accent"/>
+                android:textAppearance="@style/TextAppearance.Sanctus.Eyebrow" android:textAllCaps="true"/>
 
             <TextView android:id="@+id/tv_detail_title"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_marginTop="6dp" android:fontFamily="@font/cormorant"
-                android:textSize="28sp" android:textColor="@color/color_on_background"/>
+                android:layout_marginTop="6dp"
+                android:textAppearance="@style/TextAppearance.Sanctus.HeadlineLarge"/>
 
             <View android:layout_width="36dp" android:layout_height="1dp"
                 android:layout_marginTop="20dp" android:background="@color/color_accent"/>
 
             <TextView android:id="@+id/tv_detail_content"
                 android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="24dp" android:textSize="17sp"
-                android:lineSpacingMultiplier="1.8" android:fontFamily="@font/cormorant"
-                android:textColor="@color/color_on_surface"/>
+                android:layout_marginTop="24dp" android:padding="24dp"
+                android:background="@drawable/bg_glass_card"
+                android:textAppearance="@style/TextAppearance.Sanctus.Prayer"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

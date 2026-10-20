@@ -5,18 +5,20 @@
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
         android:orientation="vertical" android:paddingHorizontal="24dp"
-        android:paddingTop="52dp" android:paddingBottom="12dp">
+        android:paddingTop="20dp" android:paddingBottom="12dp">
 
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/nav_saints" android:fontFamily="@font/cormorant"
-            android:textSize="28sp" android:textColor="@color/color_on_background"/>
+            android:text="@string/nav_saints"
+            android:textAppearance="@style/TextAppearance.Sanctus.HeadlineLarge"/>
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/et_search_saints" android:layout_width="match_parent"
-            android:layout_height="48dp" android:layout_marginTop="16dp"
-            android:background="@drawable/bg_card_gold" android:paddingHorizontal="16dp"
-            android:hint="@string/search_saints_hint" android:textSize="14sp"
-            android:textColor="@color/color_on_surface"
+            android:layout_height="52dp" android:layout_marginTop="16dp"
+            android:background="@drawable/bg_glass_card" android:paddingHorizontal="18dp"
+            android:drawableStart="@drawable/ic_search" android:drawablePadding="12dp"
+            android:drawableTint="@color/color_text_secondary"
+            android:hint="@string/search_saints_hint" android:textSize="15sp"
+            android:textColor="@color/color_on_background"
             android:textColorHint="@color/color_text_secondary"
             android:inputType="text" android:imeOptions="actionSearch"/>
     </LinearLayout>

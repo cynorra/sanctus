@@ -35,21 +35,33 @@
             android:orientation="vertical" android:paddingHorizontal="24dp"
             android:paddingTop="8dp" android:paddingBottom="48dp">
 
+            <TextView android:id="@+id/tv_saint_initial_detail"
+                android:layout_width="72dp" android:layout_height="72dp" android:gravity="center"
+                android:background="@drawable/bg_gold_circle" android:fontFamily="@font/cormorant"
+                android:textStyle="bold" android:textSize="36sp"
+                android:textColor="@color/color_background"/>
+
             <TextView android:id="@+id/tv_saint_name_detail" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:fontFamily="@font/cormorant"
-                android:textSize="30sp" android:textColor="@color/color_on_background"/>
+                android:layout_height="wrap_content" android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.Sanctus.HeadlineLarge"/>
 
             <TextView android:id="@+id/tv_feast_date_detail" android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:layout_marginTop="6dp"
-                android:textSize="13sp" android:textColor="@color/color_accent"/>
+                android:textSize="13sp" android:textStyle="bold" android:textColor="@color/color_accent"/>
+
+            <TextView android:id="@+id/tv_saint_traditions" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                android:paddingHorizontal="12dp" android:paddingVertical="5dp"
+                android:background="@drawable/bg_chip_outline" android:textSize="11.5sp"
+                android:textColor="@color/color_gold_light"/>
 
             <View android:layout_width="36dp" android:layout_height="1dp"
                 android:layout_marginTop="20dp" android:background="@color/color_accent"/>
 
             <TextView android:id="@+id/tv_saint_desc_detail" android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:layout_marginTop="20dp"
-                android:textSize="16sp" android:lineSpacingMultiplier="1.7"
-                android:textColor="@color/color_on_surface"/>
+                android:padding="22dp" android:background="@drawable/bg_glass_card"
+                android:textAppearance="@style/TextAppearance.Sanctus.Prayer"/>
 
             <TextView android:id="@+id/tv_saint_patron_detail" android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:layout_marginTop="24dp"

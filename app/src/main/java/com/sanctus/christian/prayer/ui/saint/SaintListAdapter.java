@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import com.sanctus.christian.prayer.R;
+import com.sanctus.christian.prayer.util.MotionKit;
+import com.sanctus.christian.prayer.util.SaintNames;
 import com.sanctus.christian.prayer.data.local.entity.SaintEntity;
 import com.sanctus.christian.prayer.util.AnimUtils;
 import java.util.Objects;
@@ -40,6 +42,8 @@ public class SaintListAdapter extends ListAdapter<SaintEntity, SaintListAdapter.
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         SaintEntity s = getItem(position);
         holder.tvName.setText(s.name);
+        holder.tvInitial.setText(SaintNames.initialOf(s.name));
+        MotionKit.pressable(holder.itemView);
         holder.tvFeast.setText(s.feastDate);
         holder.tvPatron.setText(s.patronOf);
         holder.btnShare.setOnClickListener(v -> shareListener.onClick(s));
@@ -50,11 +54,12 @@ public class SaintListAdapter extends ListAdapter<SaintEntity, SaintListAdapter.
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvName, tvFeast, tvPatron;
+        TextView tvName, tvFeast, tvPatron, tvInitial;
         android.widget.ImageButton btnShare;
         ViewHolder(View v) {
             super(v);
             tvName = v.findViewById(R.id.tv_saint_name);
+            tvInitial = v.findViewById(R.id.tv_saint_initial);
             tvFeast = v.findViewById(R.id.tv_feast_date);
             tvPatron = v.findViewById(R.id.tv_patron_of);
             btnShare = v.findViewById(R.id.btn_share_item);

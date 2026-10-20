@@ -276,4 +276,5 @@
     <string name="settings_section_tradition">Your tradition</string>
     <string name="settings_tradition_title">Tradition</string>
     <string name="settings_tradition_subtitle">Shapes prayers, saints and the calendar</string>
+    <string name="category_scripture">Scripture</string>
 </resources>

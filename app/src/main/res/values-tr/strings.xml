@@ -211,4 +211,5 @@
     <string name="settings_section_tradition">Geleneğiniz</string>
     <string name="settings_tradition_title">Gelenek</string>
     <string name="settings_tradition_subtitle">Dualar, azizler ve takvimi şekillendirir</string>
+    <string name="category_scripture">Kutsal Kitap</string>
 </resources>

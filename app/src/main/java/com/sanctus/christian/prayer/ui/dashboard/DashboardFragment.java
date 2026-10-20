@@ -27,6 +27,7 @@ import com.sanctus.christian.prayer.util.AnimUtils;
 import com.sanctus.christian.prayer.util.DateUtils;
 import com.sanctus.christian.prayer.util.LiturgicalSeasonHelper;
 import com.sanctus.christian.prayer.util.MotionKit;
+import com.sanctus.christian.prayer.util.SaintNames;
 import com.sanctus.christian.prayer.util.PrayerTimeCalculator;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -158,7 +159,7 @@ public class DashboardFragment extends Fragment {
         saintViewModel.getSaintSpotlight(today, dayOfYear).observe(getViewLifecycleOwner(), saint -> {
             if (saint != null) {
                 tvSaintName.setText(saint.name);
-                tvSaintInitial.setText(initialOf(saint.name));
+                tvSaintInitial.setText(SaintNames.initialOf(saint.name));
                 tvSaintFeast.setText(getString(R.string.saint_feast_day_format, saint.feastDate));
                 tvSaintDesc.setText(saint.description);
                 cardSaint.setOnClickListener(v -> {
@@ -189,18 +190,6 @@ public class DashboardFragment extends Fragment {
         // Fragment stays alive across bottom-nav tab switches, so re-check the streak
         // whenever this tab regains focus rather than only once at view creation.
         if (viewModel != null) refreshStreak();
-    }
-
-    /** First letter of the saint's own name, skipping honorifics like "Saint" or "Aziz". */
-    private static String initialOf(String name) {
-        if (name == null) return "";
-        for (String word : name.trim().split("\\s+")) {
-            String w = word.toLowerCase(Locale.ROOT);
-            if (w.equals("saint") || w.equals("st.") || w.equals("blessed") || w.equals("archangel")
-                    || w.equals("aziz") || w.equals("azize")) continue;
-            if (!word.isEmpty()) return word.substring(0, word.offsetByCodePoints(0, 1)).toUpperCase(Locale.getDefault());
-        }
-        return name.substring(0, name.offsetByCodePoints(0, 1));
     }
 
     private void refreshStreak() {

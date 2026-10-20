@@ -14,12 +14,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
-            android:paddingTop="52dp"
+            android:paddingTop="20dp"
             android:paddingBottom="12dp"
             android:text="@string/nav_feed"
-            android:fontFamily="@font/cormorant"
-            android:textSize="28sp"
-            android:textColor="@color/color_on_background" />
+            android:textAppearance="@style/TextAppearance.Sanctus.HeadlineLarge" />
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/swipe_refresh"

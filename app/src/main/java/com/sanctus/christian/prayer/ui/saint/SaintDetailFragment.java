@@ -13,6 +13,8 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 import com.sanctus.christian.prayer.BuildConfig;
 import com.sanctus.christian.prayer.R;
+import com.sanctus.christian.prayer.util.SaintNames;
+import com.sanctus.christian.prayer.util.Tradition;
 import com.sanctus.christian.prayer.SanctusApplication;
 import com.sanctus.christian.prayer.util.AnimUtils;
 
@@ -40,19 +42,19 @@ public class SaintDetailFragment extends Fragment {
         ImageButton btnShare = view.findViewById(R.id.btn_share_saint);
 
         int[] fontSize = {SanctusApplication.getInstance().getSettingsRepository().getTextSize()};
-        tvDesc.setTextSize(fontSize[0]);
+        tvDesc.setTextSize(fontSize[0] + 6);
 
         btnFontIncrease.setOnClickListener(v -> {
             if (fontSize[0] < 26) {
                 fontSize[0] += 2;
-                tvDesc.setTextSize(fontSize[0]);
+                tvDesc.setTextSize(fontSize[0] + 6);
                 SanctusApplication.getInstance().getSettingsRepository().setTextSize(fontSize[0]);
             }
         });
         btnFontDecrease.setOnClickListener(v -> {
             if (fontSize[0] > 12) {
                 fontSize[0] -= 2;
-                tvDesc.setTextSize(fontSize[0]);
+                tvDesc.setTextSize(fontSize[0] + 6);
                 SanctusApplication.getInstance().getSettingsRepository().setTextSize(fontSize[0]);
             }
         });
@@ -61,6 +63,11 @@ public class SaintDetailFragment extends Fragment {
             vm.getSaintById(saintId).observe(getViewLifecycleOwner(), saint -> {
                 if (saint == null) return;
                 ((TextView) view.findViewById(R.id.tv_saint_name_detail)).setText(saint.name);
+                ((TextView) view.findViewById(R.id.tv_saint_initial_detail)).setText(SaintNames.initialOf(saint.name));
+                TextView tvTraditions = view.findViewById(R.id.tv_saint_traditions);
+                String traditions = traditionLabels(saint.tradition);
+                tvTraditions.setText(traditions);
+                tvTraditions.setVisibility(traditions.isEmpty() ? View.GONE : View.VISIBLE);
                 ((TextView) view.findViewById(R.id.tv_feast_date_detail)).setText(getString(R.string.saint_feast_prefix, saint.feastDate));
                 tvDesc.setText(saint.description);
                 ((TextView) view.findViewById(R.id.tv_saint_patron_detail)).setText(getString(R.string.saint_patron_prefix, saint.patronOf));
@@ -75,5 +82,16 @@ public class SaintDetailFragment extends Fragment {
                 });
             });
         }
+    }
+
+    /** "Catholic · Orthodox" for a saint tagged with specific traditions; empty when shared by all. */
+    private String traditionLabels(String tag) {
+        if (tag == null || Tradition.ALL.equals(tag)) return "";
+        StringBuilder out = new StringBuilder();
+        for (String id : tag.split(",")) {
+            if (out.length() > 0) out.append(" · ");
+            out.append(getString(Tradition.labelRes(id.trim())));
+        }
+        return out.toString();
     }
 }
