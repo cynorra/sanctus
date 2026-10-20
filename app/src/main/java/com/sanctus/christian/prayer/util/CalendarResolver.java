@@ -47,6 +47,12 @@ public class CalendarResolver {
             result.add(new ResolvedCalendarEvent(ev, occurs));
         }
         Collections.sort(result, (a, b) -> a.occursOn.compareTo(b.occursOn));
-        return result.size() > limit ? result.subList(0, limit) : result;
+        // The seed can hold the same feast twice (e.g. a fixed date and a synced copy).
+        List<ResolvedCalendarEvent> unique = new ArrayList<>();
+        java.util.Set<String> seen = new java.util.HashSet<>();
+        for (ResolvedCalendarEvent r : result) {
+            if (seen.add(r.event.title + "|" + r.occursOn.get(Calendar.DAY_OF_YEAR))) unique.add(r);
+        }
+        return unique.size() > limit ? unique.subList(0, limit) : unique;
     }
 }
