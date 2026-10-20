@@ -82,4 +82,14 @@ DATA = [
      "Bless us, O Lord, and these thy gifts,\nwhich we are about to receive from thy bounty,\nthrough Christ our Lord.\nAmen."),
     ("Grace After Meals", "devotional", CA,
      "We give thee thanks, almighty God,\nfor all thy benefits,\nwho livest and reignest world without end.\nAmen."),
+
+    # ---- Evening: Compline and ancient evening prayers (public domain) ----
+    ("Into Thy Hands, O Lord (Compline Responsory)", "evening", ALL,
+     "Into thy hands, O Lord, I commend my spirit.\nFor thou hast redeemed me, O Lord, thou God of truth.\n\nKeep me as the apple of an eye.\nHide me under the shadow of thy wings.\n\nGlory to the Father, and to the Son, and to the Holy Spirit.\nInto thy hands, O Lord, I commend my spirit.\nAmen."),
+    ("Keep Watch, Dear Lord (Evening Prayer attributed to Saint Augustine)", "evening", ALL,
+     "Watch thou, dear Lord, with those who wake, or watch, or weep tonight,\nand give thine angels charge over those who sleep.\nTend the sick, Lord Christ; give rest to the weary,\nbless the dying, soothe the suffering, pity the afflicted,\nshield the joyous; and all for thy love's sake.\nAmen."),
+    ("Visit This Place, O Lord (Compline Collect)", "evening", ALL,
+     "Visit this place, O Lord, we beseech thee,\nand drive far from it all snares of the enemy;\nlet thy holy angels dwell with us to preserve us in peace;\nand let thy blessing be upon us always;\nthrough Jesus Christ our Lord.\nAmen."),
+    ("Before the Ending of the Day (Te Lucis ante Terminum)", "evening", CA,
+     "Before the ending of the day,\nCreator of the world, we pray\nthat thou, with thy accustomed grace,\nwouldst be our guard and keeper now.\n\nFrom all ill dreams defend our sight,\nfrom fears and terrors of the night;\nwithhold from us our ghostly foe,\nthat spot of sin we may not know.\n\nO Father, that we ask be done,\nthrough Jesus Christ, thine only Son;\nwho, with the Holy Ghost and thee,\ndoth live and reign eternally.\nAmen."),
 ]
