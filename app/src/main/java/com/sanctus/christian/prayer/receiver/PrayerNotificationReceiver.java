@@ -14,6 +14,7 @@ import com.sanctus.christian.prayer.data.local.entity.SaintEntity;
 import com.sanctus.christian.prayer.data.repository.SettingsRepository;
 import com.sanctus.christian.prayer.service.PrayerAlarmManager;
 import com.sanctus.christian.prayer.ui.main.MainActivity;
+import com.sanctus.christian.prayer.util.LanguageManager;
 import com.sanctus.christian.prayer.util.Tradition;
 import com.sanctus.christian.prayer.widget.PrayerWidgetProvider;
 import java.text.SimpleDateFormat;
@@ -57,8 +58,10 @@ public class PrayerNotificationReceiver extends BroadcastReceiver {
         });
     }
 
-    private void post(Context context, SettingsRepository settings, int index) {
+    private void post(Context appContext, SettingsRepository settings, int index) {
         String language = settings.getLanguage();
+        // A receiver's context follows the device language; the text must follow the in-app one.
+        Context context = LanguageManager.applyLanguage(appContext, language);
         String tradition = Tradition.filterValue(settings.getTradition());
         SanctusDatabase db = SanctusDatabase.getInstance(context);
 
