@@ -1,6 +1,7 @@
 package com.sanctus.christian.prayer.ui.rosary;
 
 import android.app.Application;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import androidx.annotation.ArrayRes;
 import androidx.annotation.StringRes;
@@ -15,6 +16,7 @@ import com.sanctus.christian.prayer.util.DateUtils;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 public class RosaryViewModel extends AndroidViewModel {
     private static final int DECADE_COUNT = 5;
@@ -30,6 +32,17 @@ public class RosaryViewModel extends AndroidViewModel {
     public RosaryViewModel(Application app) {
         super(app);
         loadTodayMystery();
+    }
+
+    /**
+     * Application-context resources follow the device language, not the in-app one, so the
+     * rosary text came out in a different language than the rest of the screen.
+     */
+    private Resources localizedResources() {
+        String lang = SanctusApplication.getInstance().getSettingsRepository().getLanguage();
+        Configuration config = new Configuration(getApplication().getResources().getConfiguration());
+        config.setLocale(new Locale(lang));
+        return getApplication().createConfigurationContext(config).getResources();
     }
 
     // Traditional weekday schedule: Mon/Sat Joyful, Tue/Fri Sorrowful, Wed/Sun Glorious, Thu Luminous
@@ -69,7 +82,7 @@ public class RosaryViewModel extends AndroidViewModel {
     }
 
     private void loadTodayMystery() {
-        Resources res = getApplication().getResources();
+        Resources res = localizedResources();
         int day = DateUtils.getDayOfWeekInt();
         RosaryMystery.Type type = typeForDay(day);
         currentMystery.setValue(new RosaryMystery(
@@ -82,7 +95,7 @@ public class RosaryViewModel extends AndroidViewModel {
     }
 
     private void updatePrayer() {
-        Resources res = getApplication().getResources();
+        Resources res = localizedResources();
 
         RosaryMystery mystery = currentMystery.getValue();
         if (mystery != null) {
@@ -113,7 +126,7 @@ public class RosaryViewModel extends AndroidViewModel {
     }
 
     private void showClosingPrayer() {
-        Resources res = getApplication().getResources();
+        Resources res = localizedResources();
         currentMysteryLine.setValue("");
         currentPrayer.setValue(res.getString(R.string.prayer_hail_holy_queen));
         progress.setValue(res.getString(R.string.rosary_complete));
