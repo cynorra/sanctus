@@ -37,7 +37,7 @@
 
             <TextView android:id="@+id/tv_saint_initial_detail"
                 android:layout_width="72dp" android:layout_height="72dp" android:gravity="center"
-                android:background="@drawable/bg_gold_circle" android:fontFamily="@font/cormorant"
+                android:background="@drawable/bg_gold_circle" android:fontFamily="@font/ebgaramond"
                 android:textStyle="bold" android:textSize="36sp"
                 android:textColor="@color/color_background"/>
 
@@ -65,7 +65,7 @@
 
             <TextView android:id="@+id/tv_saint_patron_detail" android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:layout_marginTop="24dp"
-                android:textSize="13sp" android:fontFamily="@font/cormorant" android:fontStyle="italic"
+                android:textSize="13sp" android:fontFamily="@font/ebgaramond" android:fontStyle="italic"
                 android:textColor="@color/color_accent"/>
         </LinearLayout>
     </ScrollView>

@@ -5,6 +5,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
 import android.util.Log;
+import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.data.local.DatabaseInitializer;
 import com.sanctus.christian.prayer.data.local.SanctusDatabase;
 import com.sanctus.christian.prayer.data.remote.ContentSyncManager;
@@ -25,6 +26,17 @@ public class SanctusApplication extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+
+        // TEMP font diagnostics: logs which font resources Android could actually load.
+        for (int id : new int[]{R.font.inter, R.font.ebgaramond, R.font.ebgaramond_text, R.font.cormorant,
+                R.font.cormorant_bold, R.font.cormorant_medium}) {
+            try {
+                Log.i("FontProbe", getResources().getResourceEntryName(id) + " -> "
+                        + androidx.core.content.res.ResourcesCompat.getFont(this, id));
+            } catch (Exception e) {
+                Log.e("FontProbe", getResources().getResourceEntryName(id) + " FAILED", e);
+            }
+        }
 
         // Initialize AdMob
         MobileAds.initialize(this, initializationStatus -> {});

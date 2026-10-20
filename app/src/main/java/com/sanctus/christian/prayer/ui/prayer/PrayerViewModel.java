@@ -26,7 +26,7 @@ public class PrayerViewModel extends AndroidViewModel {
         LiveData<List<PrayerEntity>> primary = repository.getPrayers(language);
         if ("en".equals(language)) return primary;
         return Transformations.switchMap(primary, list -> {
-            if (list == null || list.isEmpty()) {
+            if (list == null || list.isEmpty() || onlyScripture(list)) {
                 usingFallbackLanguage.setValue(true);
                 return repository.getPrayers("en");
             }
@@ -47,6 +47,14 @@ public class PrayerViewModel extends AndroidViewModel {
 
     public void toggleFavorite(PrayerEntity prayer) {
         repository.toggleFavorite(prayer);
+    }
+
+    /** English Bible passages are shown in every language, so they alone do not mean the language has content. */
+    private static boolean onlyScripture(List<PrayerEntity> list) {
+        for (PrayerEntity p : list) {
+            if (!"scripture".equals(p.category)) return false;
+        }
+        return true;
     }
 
     private static LiveData<List<PrayerEntity>> staticLiveData(List<PrayerEntity> list) {

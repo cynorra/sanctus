@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:layout_marginEnd="8dp"
-            android:fontFamily="@font/cormorant"
+            android:fontFamily="@font/ebgaramond"
             android:textSize="16sp"
             android:lineSpacingMultiplier="1.4"
             android:textColor="@color/color_on_background" />

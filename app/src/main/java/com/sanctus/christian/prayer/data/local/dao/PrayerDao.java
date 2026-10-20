@@ -11,10 +11,11 @@ import java.util.List;
 
 @Dao
 public interface PrayerDao {
-    @Query("SELECT * FROM prayers WHERE language = :lang AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
+    /** Bible passages exist only in English (public-domain KJV), so every language sees them. */
+    @Query("SELECT * FROM prayers WHERE (language = :lang OR (:lang != 'en' AND category = 'scripture' AND language = 'en')) AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
     LiveData<List<PrayerEntity>> getPrayersByLanguage(String lang, String tradition);
 
-    @Query("SELECT * FROM prayers WHERE category = :category AND language = :lang AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
+    @Query("SELECT * FROM prayers WHERE category = :category AND (language = :lang OR (:lang != 'en' AND category = 'scripture' AND language = 'en')) AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
     LiveData<List<PrayerEntity>> getPrayersByCategory(String category, String lang, String tradition);
 
     @Query("SELECT * FROM prayers WHERE isFavorite = 1 AND language = :lang")
@@ -23,7 +24,7 @@ public interface PrayerDao {
     @Query("SELECT * FROM prayers WHERE id = :id")
     LiveData<PrayerEntity> getPrayerById(int id);
 
-    @Query("SELECT * FROM prayers WHERE (name LIKE '%' || :q || '%' OR content LIKE '%' || :q || '%') AND language = :lang AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
+    @Query("SELECT * FROM prayers WHERE (name LIKE '%' || :q || '%' OR content LIKE '%' || :q || '%') AND (language = :lang OR (:lang != 'en' AND category = 'scripture' AND language = 'en')) AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
     LiveData<List<PrayerEntity>> searchPrayers(String q, String lang, String tradition);
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)

@@ -38,19 +38,19 @@
     <!-- Display: Cormorant Garamond reads small at its x-height, so sizes run larger than the
          usual Material scale. -->
     <style name="TextAppearance.Sanctus.Display" parent="TextAppearance.Material3.DisplaySmall">
-        <item name="android:fontFamily">@font/cormorant</item>
+        <item name="android:fontFamily">@font/ebgaramond</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">40sp</item>
         <item name="android:textColor">@color/color_on_background</item>
     </style>
     <style name="TextAppearance.Sanctus.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
-        <item name="android:fontFamily">@font/cormorant</item>
+        <item name="android:fontFamily">@font/ebgaramond</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">36sp</item>
         <item name="android:textColor">@color/color_on_background</item>
     </style>
     <style name="TextAppearance.Sanctus.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
-        <item name="android:fontFamily">@font/cormorant</item>
+        <item name="android:fontFamily">@font/ebgaramond</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">28sp</item>
         <item name="android:textColor">@color/color_on_background</item>
@@ -69,7 +69,7 @@
     </style>
     <!-- Prayer text: the app's reading voice. -->
     <style name="TextAppearance.Sanctus.Prayer" parent="TextAppearance.Material3.BodyLarge">
-        <item name="android:fontFamily">@font/cormorant_text</item>
+        <item name="android:fontFamily">@font/ebgaramond_text</item>
         <item name="android:textSize">22sp</item>
         <item name="android:lineSpacingMultiplier">1.38</item>
         <item name="android:textColor">@color/color_on_background</item>

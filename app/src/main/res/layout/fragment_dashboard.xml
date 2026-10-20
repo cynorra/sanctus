@@ -160,7 +160,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:fontFamily="@font/cormorant"
+                                android:fontFamily="@font/ebgaramond"
                                 android:textStyle="bold"
                                 android:textSize="32sp"
                                 android:textColor="@color/color_on_background" />
@@ -416,7 +416,7 @@
                     android:layout_height="52dp"
                     android:gravity="center"
                     android:background="@drawable/bg_gold_circle"
-                    android:fontFamily="@font/cormorant"
+                    android:fontFamily="@font/ebgaramond"
                     android:textStyle="bold"
                     android:textSize="26sp"
                     android:textColor="@color/color_background" />
@@ -440,7 +440,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:fontFamily="@font/cormorant"
+                        android:fontFamily="@font/ebgaramond"
                         android:textStyle="bold"
                         android:textSize="23sp"
                         android:textColor="@color/color_on_background" />

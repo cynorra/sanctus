@@ -20,7 +20,7 @@
             android:id="@+id/tv_tradition_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/cormorant"
+            android:fontFamily="@font/ebgaramond"
             android:textStyle="bold"
             android:textColor="@color/color_on_background"
             android:textSize="24sp" />
