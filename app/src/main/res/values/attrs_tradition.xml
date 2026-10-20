@@ -2,6 +2,7 @@
 <resources>
     <!-- Tradition-aware palette. Defaults live in Theme.Sanctus, ThemeOverlay.Sanctus.* swap them. -->
     <attr name="sanctusAccent" format="color"/>
+    <attr name="sanctusGlow" format="color"/>
     <attr name="sanctusAccentSoft" format="color"/>
     <attr name="sanctusHeroTint" format="color"/>
     <attr name="sanctusCardTint" format="color"/>

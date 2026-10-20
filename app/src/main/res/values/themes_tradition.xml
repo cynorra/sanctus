@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="ThemeOverlay.Sanctus.Catholic" parent="">
+        <item name="sanctusGlow">#6A4DF4</item>
         <item name="sanctusAccent">#E6BC5C</item>
         <item name="sanctusAccentSoft">#F5E3B3</item>
         <item name="sanctusHeroTint">#2A2260</item>
@@ -35,6 +36,7 @@
         <item name="sanctusGlowAF0">#F06A4DF4</item>
     </style>
     <style name="ThemeOverlay.Sanctus.Orthodox" parent="">
+        <item name="sanctusGlow">#B3243C</item>
         <item name="sanctusAccent">#E2B04A</item>
         <item name="sanctusAccentSoft">#F6E1AE</item>
         <item name="sanctusHeroTint">#4A1626</item>
@@ -69,6 +71,7 @@
         <item name="sanctusGlowAF0">#F0B3243C</item>
     </style>
     <style name="ThemeOverlay.Sanctus.Protestant" parent="">
+        <item name="sanctusGlow">#2F6FD6</item>
         <item name="sanctusAccent">#8DB8F2</item>
         <item name="sanctusAccentSoft">#D6E6FB</item>
         <item name="sanctusHeroTint">#14284F</item>
@@ -103,6 +106,7 @@
         <item name="sanctusGlowAF0">#F02F6FD6</item>
     </style>
     <style name="ThemeOverlay.Sanctus.Anglican" parent="">
+        <item name="sanctusGlow">#1E8F74</item>
         <item name="sanctusAccent">#6FCFB0</item>
         <item name="sanctusAccentSoft">#CDEFE4</item>
         <item name="sanctusHeroTint">#0F3A33</item>

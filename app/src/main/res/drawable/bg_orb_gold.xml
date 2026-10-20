@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+<!-- White-alpha radial glow tinted with the tradition accent. Themed colours inside a radial
+     gradient lose their radius on Android 9 and older, so the colour comes from the tint instead. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:tint="?attr/sanctusAccent">
     <gradient
         android:type="radial"
         android:gradientRadius="90dp"
-        android:startColor="?attr/sanctusAccentA66"
-        android:centerColor="?attr/sanctusAccentA22"
-        android:endColor="?attr/sanctusAccentA00"/>
+        android:startColor="#66FFFFFF"
+        android:centerColor="#22FFFFFF"
+        android:endColor="#00FFFFFF"/>
 </shape>

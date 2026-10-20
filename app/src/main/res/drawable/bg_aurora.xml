@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Screen backdrop: ink black with two soft glows (violet top-left, gold lower-right). -->
+<!-- Screen backdrop: ink black with two soft glows (tradition glow top-left, accent lower-right).
+     Glows are white-alpha gradients tinted by theme colour (see bg_orb_gold). -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
@@ -7,25 +8,25 @@
         </shape>
     </item>
     <item>
-        <shape android:shape="rectangle">
+        <shape android:shape="rectangle" android:tint="?attr/sanctusGlow">
             <gradient
                 android:type="radial"
                 android:gradientRadius="270dp"
                 android:centerX="0.1"
                 android:centerY="0.0"
-                android:startColor="?attr/sanctusGlowA38"
-                android:endColor="?attr/sanctusGlowA00"/>
+                android:startColor="#38FFFFFF"
+                android:endColor="#00FFFFFF"/>
         </shape>
     </item>
     <item>
-        <shape android:shape="rectangle">
+        <shape android:shape="rectangle" android:tint="?attr/sanctusAccent">
             <gradient
                 android:type="radial"
                 android:gradientRadius="216dp"
                 android:centerX="1.0"
                 android:centerY="0.95"
-                android:startColor="?attr/sanctusAccentA1F"
-                android:endColor="?attr/sanctusAccentA00"/>
+                android:startColor="#1FFFFFFF"
+                android:endColor="#00FFFFFF"/>
         </shape>
     </item>
 </layer-list>

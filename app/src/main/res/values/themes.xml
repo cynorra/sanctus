@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.Sanctus" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="sanctusGlow">#6A4DF4</item>
         <item name="sanctusAccent">#E6BC5C</item>
         <item name="sanctusAccentSoft">#F5E3B3</item>
         <item name="sanctusHeroTint">#2A2260</item>
