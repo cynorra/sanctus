@@ -3,77 +3,105 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
-        android:padding="32dp">
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/rosary_title"
-            android:fontFamily="@font/cormorant"
-            android:textSize="28sp"
-            android:textColor="@color/color_on_background" />
+            android:textAppearance="@style/TextAppearance.Sanctus.HeadlineLarge" />
 
         <TextView
             android:id="@+id/tv_mystery_title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textSize="13sp"
-            android:letterSpacing="0.06"
-            android:textAllCaps="true"
-            android:textColor="@color/color_accent" />
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.Sanctus.Eyebrow"
+            android:textAllCaps="true" />
+
+        <!-- The ring of beads with the running count in its center -->
+        <FrameLayout
+            android:layout_width="284dp"
+            android:layout_height="284dp"
+            android:layout_marginTop="18dp">
+
+            <com.sanctus.christian.prayer.ui.rosary.RosaryRingView
+                android:id="@+id/rosary_ring"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/ic_rosary"
+                    android:tint="@color/color_accent"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:id="@+id/tv_bead_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_on_surface"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </FrameLayout>
 
         <TextView
             android:id="@+id/tv_mystery_line"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="14dp"
             android:gravity="center"
-            android:textSize="15sp"
-            android:fontFamily="@font/cormorant"
+            android:textAppearance="@style/TextAppearance.Sanctus.Prayer"
+            android:textSize="19sp"
             android:textStyle="italic"
-            android:textColor="@color/color_on_surface" />
+            android:textColor="@color/color_gold_light" />
 
-        <View
-            android:layout_width="40dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="24dp"
-            android:background="@color/color_divider" />
-
-        <TextView
-            android:id="@+id/tv_current_prayer"
+        <!-- Current prayer -->
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:fontFamily="@font/cormorant"
-            android:textSize="22sp"
-            android:gravity="center"
-            android:textColor="@color/color_on_background" />
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_glass_card"
+            android:minHeight="110dp"
+            android:padding="22dp">
 
-        <TextView
-            android:id="@+id/tv_bead_progress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:textSize="12sp"
-            android:textColor="@color/color_text_secondary" />
+            <TextView
+                android:id="@+id/tv_current_prayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.Sanctus.Prayer"
+                android:textColor="@color/color_on_background" />
+        </FrameLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_next_bead"
-            android:layout_width="wrap_content"
-            android:layout_height="56dp"
-            android:layout_marginTop="40dp"
-            android:text="@string/next_bead"
-            android:paddingHorizontal="40dp"
-            android:letterSpacing="0.08"
-            android:textAllCaps="true" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/next_bead" />
 
     </LinearLayout>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Small caps-style label above a group of settings rows or a list section. -->
-    <style name="Sanctus.SectionLabel">
+    <style name="Sanctus.SectionLabel" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">6dp</item>
@@ -11,7 +11,7 @@
         <item name="android:textAllCaps">true</item>
     </style>
 
-    <style name="Sanctus.SettingsRow">
+    <style name="Sanctus.SettingsRow" parent="">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">68dp</item>
@@ -23,7 +23,7 @@
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
     </style>
-    <style name="Sanctus.SettingsRowTitle">
+    <style name="Sanctus.SettingsRowTitle" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_on_background</item>
@@ -31,14 +31,14 @@
         <item name="android:fontFamily">@font/inter</item>
         <item name="android:textStyle">bold</item>
     </style>
-    <style name="Sanctus.SettingsRowSubtitle">
+    <style name="Sanctus.SettingsRowSubtitle" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">2dp</item>
         <item name="android:textColor">@color/color_text_secondary</item>
         <item name="android:textSize">12.5sp</item>
     </style>
-    <style name="Sanctus.RowDivider">
+    <style name="Sanctus.RowDivider" parent="">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
         <item name="android:layout_marginHorizontal">20dp</item>

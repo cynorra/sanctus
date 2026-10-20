@@ -26,6 +26,8 @@ public class RosaryViewModel extends AndroidViewModel {
     private final MutableLiveData<String> currentPrayer = new MutableLiveData<>();
     private final MutableLiveData<String> progress = new MutableLiveData<>();
     private final MutableLiveData<Boolean> finished = new MutableLiveData<>(false);
+    /** {decade 0-4, bead 0-11}; decade 5 once the closing prayer is reached. */
+    private final MutableLiveData<int[]> position = new MutableLiveData<>();
     private int beadIndex = 0;
     private int decadeIndex = 0;
 
@@ -108,6 +110,7 @@ public class RosaryViewModel extends AndroidViewModel {
         else if (beadIndex <= 10) currentPrayer.setValue(res.getString(R.string.rosary_hail_mary_progress, beadIndex));
         else currentPrayer.setValue(res.getString(R.string.prayer_glory_be));
         progress.setValue(res.getString(R.string.rosary_progress, decadeIndex + 1, beadIndex));
+        position.setValue(new int[]{decadeIndex, beadIndex});
     }
 
     public void nextBead() {
@@ -130,6 +133,7 @@ public class RosaryViewModel extends AndroidViewModel {
         currentMysteryLine.setValue("");
         currentPrayer.setValue(res.getString(R.string.prayer_hail_holy_queen));
         progress.setValue(res.getString(R.string.rosary_complete));
+        position.setValue(new int[]{DECADE_COUNT, 0});
         finished.setValue(true);
         SanctusApplication.getInstance().getSettingsRepository().recordPrayerActivityToday();
         AnalyticsLogger.logRosaryCompleted(getApplication());
@@ -140,4 +144,5 @@ public class RosaryViewModel extends AndroidViewModel {
     public LiveData<String> getCurrentPrayer() { return currentPrayer; }
     public LiveData<String> getProgress() { return progress; }
     public LiveData<Boolean> getFinished() { return finished; }
+    public LiveData<int[]> getPosition() { return position; }
 }

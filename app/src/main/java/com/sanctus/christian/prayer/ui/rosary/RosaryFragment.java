@@ -2,6 +2,7 @@ package com.sanctus.christian.prayer.ui.rosary;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -12,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.SanctusApplication;
+import com.sanctus.christian.prayer.util.MotionKit;
 
 public class RosaryFragment extends Fragment {
     private RosaryViewModel viewModel;
@@ -32,9 +34,11 @@ public class RosaryFragment extends Fragment {
         TextView tvPrayer = view.findViewById(R.id.tv_current_prayer);
         TextView tvProgress = view.findViewById(R.id.tv_bead_progress);
         Button btnNext = view.findViewById(R.id.btn_next_bead);
+        RosaryRingView ring = view.findViewById(R.id.rosary_ring);
+        MotionKit.pressable(btnNext);
 
         int textSize = SanctusApplication.getInstance().getSettingsRepository().getTextSize();
-        tvPrayer.setTextSize(textSize + 5); // prayer text stays visually larger than the base body size
+        tvPrayer.setTextSize(textSize + 7); // prayer text stays visually larger than the base body size
 
         viewModel.getCurrentMystery().observe(getViewLifecycleOwner(), mystery -> {
             if (mystery != null) tvMystery.setText(mystery.getTitle());
@@ -45,11 +49,22 @@ public class RosaryFragment extends Fragment {
         });
 
         viewModel.getCurrentPrayer().observe(getViewLifecycleOwner(), prayer -> {
-            if (prayer != null) tvPrayer.setText(prayer);
+            if (prayer == null) return;
+            if (prayer.contentEquals(tvPrayer.getText())) return;
+            tvPrayer.animate().cancel();
+            tvPrayer.animate().alpha(0f).setDuration(110).withEndAction(() -> {
+                tvPrayer.setText(prayer);
+                tvPrayer.animate().alpha(1f).setDuration(240).start();
+            }).start();
         });
 
         viewModel.getProgress().observe(getViewLifecycleOwner(), progress -> {
             tvProgress.setText(progress);
+        });
+
+        viewModel.getPosition().observe(getViewLifecycleOwner(), pos -> {
+            if (pos == null) return;
+            ring.setPosition(pos[0], pos[1], pos[0] >= 5);
         });
 
         viewModel.getFinished().observe(getViewLifecycleOwner(), finished -> {
@@ -58,6 +73,9 @@ public class RosaryFragment extends Fragment {
             }
         });
 
-        btnNext.setOnClickListener(v -> viewModel.nextBead());
+        btnNext.setOnClickListener(v -> {
+            v.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
+            viewModel.nextBead();
+        });
     }
 }
