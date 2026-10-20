@@ -14,6 +14,7 @@
     <string name="saint_of_day">Günün Azizi</string>
     <string name="notification_saint_today">Günün azizi: %1$s</string>
     <string name="notification_pray_today">Bugünün duası: %1$s</string>
+    <string name="notification_saint_featured">Öne çıkan aziz: %1$s</string>
     <string name="exact_alarm_title">Tam zamanlı hatırlatıcılara izin ver</string>
     <string name="exact_alarm_desc">Hatırlatıcıların tam dakikasında çalması için dokunun. İzin olmadan birkaç dakika gecikebilir.</string>
     <string name="saint_featured">Öne Çıkan Aziz</string>

@@ -14,6 +14,10 @@ public interface SaintDao {
     @Query("SELECT * FROM saints WHERE language = :language AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
     LiveData<List<SaintEntity>> getAllSaints(String language, String tradition);
 
+    /** Blocking twin of {@link #getAllSaints} for the reminder receiver's featured-saint fallback. */
+    @Query("SELECT * FROM saints WHERE language = :language AND (:tradition = '' OR tradition = 'all' OR (',' || tradition || ',') LIKE '%,' || :tradition || ',%') ORDER BY name ASC")
+    List<SaintEntity> listAll(String language, String tradition);
+
     /**
      * The saint for a feast date, restricted to the user's tradition. When several match, the one
      * tagged for exactly that tradition wins over one shared with others, which wins over "all".

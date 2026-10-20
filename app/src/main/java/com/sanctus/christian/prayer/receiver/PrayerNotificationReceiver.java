@@ -14,6 +14,7 @@ import com.sanctus.christian.prayer.data.local.entity.SaintEntity;
 import com.sanctus.christian.prayer.data.repository.SettingsRepository;
 import com.sanctus.christian.prayer.service.PrayerAlarmManager;
 import com.sanctus.christian.prayer.ui.main.MainActivity;
+import com.sanctus.christian.prayer.util.DateUtils;
 import com.sanctus.christian.prayer.util.LanguageManager;
 import com.sanctus.christian.prayer.util.Tradition;
 import com.sanctus.christian.prayer.widget.PrayerWidgetProvider;
@@ -67,6 +68,7 @@ public class PrayerNotificationReceiver extends BroadcastReceiver {
 
         PrayerEntity prayer = pickPrayer(db, index, language, tradition);
         SaintEntity saint = index == 0 ? pickSaint(db, language, tradition) : null;
+        boolean saintIsToday = saint != null && DateUtils.isFeastToday(saint.feastDate);
 
         String[] titles = {
             context.getString(R.string.hour_lauds), context.getString(R.string.hour_terce),
@@ -76,7 +78,7 @@ public class PrayerNotificationReceiver extends BroadcastReceiver {
 
         StringBuilder body = new StringBuilder(subtitles[index]);
         if (saint != null) {
-            body.append('\n').append(context.getString(R.string.notification_saint_today, saint.name));
+            body.append('\n').append(context.getString(saintIsToday ? R.string.notification_saint_today : R.string.notification_saint_featured, saint.name));
         }
         if (prayer != null) {
             body.append('\n').append(context.getString(R.string.notification_pray_today, prayer.name));
@@ -120,6 +122,11 @@ public class PrayerNotificationReceiver extends BroadcastReceiver {
         String today = new SimpleDateFormat("MMMM d", Locale.ENGLISH).format(new Date());
         SaintEntity saint = db.saintDao().findForDate(today, language, tradition);
         if (saint == null && !"en".equals(language)) saint = db.saintDao().findForDate(today, "en", tradition);
-        return saint;
+        if (saint != null) return saint;
+        // No feast for this tradition today: same rotating spotlight the dashboard shows.
+        List<SaintEntity> all = db.saintDao().listAll(language, tradition);
+        if (all.isEmpty() && !"en".equals(language)) all = db.saintDao().listAll("en", tradition);
+        if (all.isEmpty()) return null;
+        return all.get(Calendar.getInstance().get(Calendar.DAY_OF_YEAR) % all.size());
     }
 }
