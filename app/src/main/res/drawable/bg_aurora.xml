@@ -11,7 +11,7 @@
         <shape android:shape="rectangle" android:tint="?attr/sanctusGlow">
             <gradient
                 android:type="radial"
-                android:gradientRadius="270dp"
+                android:gradientRadius="75%p"
                 android:centerX="0.1"
                 android:centerY="0.0"
                 android:startColor="#38FFFFFF"
@@ -22,7 +22,7 @@
         <shape android:shape="rectangle" android:tint="?attr/sanctusAccent">
             <gradient
                 android:type="radial"
-                android:gradientRadius="216dp"
+                android:gradientRadius="60%p"
                 android:centerX="1.0"
                 android:centerY="0.95"
                 android:startColor="#1FFFFFFF"
