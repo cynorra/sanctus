@@ -36,6 +36,19 @@ public class ShareSheetDialogFragment extends BottomSheetDialogFragment {
         return f;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Short screens (tablets in landscape) would otherwise open collapsed with only the title visible.
+        View sheet = getDialog() == null ? null : getDialog().findViewById(com.google.android.material.R.id.design_bottom_sheet);
+        if (sheet != null) {
+            com.google.android.material.bottomsheet.BottomSheetBehavior<View> b =
+                    com.google.android.material.bottomsheet.BottomSheetBehavior.from(sheet);
+            b.setSkipCollapsed(true);
+            b.setState(com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED);
+        }
+    }
+
     @Nullable @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                               @Nullable Bundle savedInstanceState) {
