@@ -65,6 +65,13 @@ public class PrayerFragment extends Fragment {
                 Navigation.findNavController(v).navigate(R.id.settingsFragment));
 
         ChipGroup chipGroup = view.findViewById(R.id.chip_group_categories);
+        // Rosary and Mass filters only make sense for some traditions.
+        String tradition = SanctusApplication.getInstance().getSettingsRepository().getTradition();
+        boolean protestant = com.sanctus.christian.prayer.util.Tradition.PROTESTANT.equals(tradition);
+        if (protestant || com.sanctus.christian.prayer.util.Tradition.ORTHODOX.equals(tradition)) {
+            view.findViewById(R.id.chip_rosary).setVisibility(View.GONE);
+        }
+        if (protestant) view.findViewById(R.id.chip_mass).setVisibility(View.GONE);
         chipGroup.setOnCheckedStateChangeListener((group, checkedIds) -> {
             currentCategory = "";
             if (!checkedIds.isEmpty()) {
