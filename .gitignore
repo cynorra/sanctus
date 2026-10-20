@@ -13,3 +13,5 @@
 # local tooling / backups
 graphify-out/
 play_console_assets/_original_backup/
+
+__pycache__/
