@@ -40,7 +40,7 @@ differently, so uninstall it once before the first install.
 - **Tradition palettes.** Accent, glow and surface tints are theme attributes (`values/attrs_tradition.xml`,
   overlays in `values/themes_tradition.xml`): Catholic/general gold + violet, Orthodox gold + crimson,
   Protestant sky blue, Anglican emerald. `SanctusApplication` applies the overlay to every activity;
-  changing the tradition in Settings recreates the activity. Widget layouts keep static colours.
+  changing the tradition in Settings recreates the activity. The widget uses `bg_widget_card` with static colours, because the launcher inflates it outside the app theme.
 - **Orthodox calendar.** `OrthodoxCalendar` (Julian Pascha, fixed feasts shifted by the Julian gap, Nativity fast
   and Great Lent seasons). The calendar screen, dashboard season chip and upcoming feasts use it for Orthodox.
 - **Counter tab per tradition.** Rosary for Catholic/Anglican/general, the Jesus Prayer rope
@@ -63,7 +63,7 @@ differently, so uninstall it once before the first install.
    ignore the new field, but they will list the new Scripture rows under the "Devotional" filter. Check this is fine.
 2. A tag `v*` runs `release-build.yml` and produces the Play Store AAB. Bump `versionCode` and `versionName` first.
 3. Play Store screenshots in `play_console_assets/` show an older four-tab layout and must be regenerated.
-4. `metadata/whatsnew-v14.txt` still has to be written (limit 500 characters per locale).
+4. `metadata/whatsnew-v14.txt` exists; re-read it once before upload (limit 500 characters per locale).
 
 ## Known gaps
 
