@@ -13,7 +13,7 @@ sys.path.insert(0, str(HERE))
 import importlib  # noqa: E402
 PARTS = [importlib.import_module(m) for m in (
     "saints_daily_en_1", "saints_daily_en_2", "saints_daily_en_3",
-    "saints_daily_en_orth_1", "saints_daily_en_orth_2",
+    "saints_daily_en_orth_1", "saints_daily_en_orth_2", "saints_daily_en_orth_fix",
     "saints_daily_en_prot_1", "saints_daily_en_prot_2", "saints_daily_en_fill")]
 
 SAINTS = HERE.parent / "app" / "src" / "main" / "assets" / "seed" / "saints.json"

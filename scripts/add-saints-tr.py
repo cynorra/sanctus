@@ -14,7 +14,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 SAINTS = HERE.parent / "app" / "src" / "main" / "assets" / "seed" / "saints.json"
-MODULES = ["saints_tr_1", "saints_tr_2", "saints_tr_3", "saints_tr_orth_1", "saints_tr_orth_2",
+MODULES = ["saints_tr_1", "saints_tr_2", "saints_tr_3", "saints_tr_orth_1", "saints_tr_orth_2", "saints_tr_orth_fix",
            "saints_tr_prot_1", "saints_tr_prot_2", "saints_tr_old_1", "saints_tr_old_2", "saints_tr_old_3"]
 
 rows = json.loads(SAINTS.read_text(encoding="utf-8"))

@@ -1,0 +1,13 @@
+# Orthodox entries added after checking every date against oca.org (see saints-review.md).
+O = "orthodox"
+DATA = [
+    ("February 13", "Venerable Symeon the Myrrh-Gusher (Stefan Nemanja)", O, "Grand Prince of Serbia (c. 1113-1199) who gave up his throne in 1196 to become a monk on Mount Athos, where he and his son Saint Sava founded the monastery of Hilandar. Myrrh is said to have flowed from his relics.", "Serbia, rulers who step down, monks"),
+    ("March 24", "The Forefeast of the Annunciation", O, "The day before the Annunciation the Church begins to celebrate the announcement by the angel Gabriel that Mary would bear the Son of God, preparing the faithful for the feast.", "Those who prepare for Christ's coming"),
+    ("March 29", "Hieromartyr Mark, Bishop of Arethusa", O, "Bishop of Arethusa in Syria who suffered cruel torture under Julian the Apostate in the fourth century for refusing to rebuild a pagan temple he had destroyed.", "Bishops, the persecuted"),
+    ("April 14", "Martin the Confessor, Pope of Rome", O, "Pope Martin I (d. 655), arrested by the emperor for rejecting an imperial decree on Christ's wills, mistreated and exiled to Crimea, where he died. The Orthodox Church honours him as a confessor.", "Confessors, those who suffer for the truth"),
+    ("May 27", "Hieromartyr Therapon, Bishop of Sardis", O, "Bishop of Sardis in Lydia, one of three saints of the same name in the Church's calendar, honoured as a pastor who confessed Christ and suffered for the faith.", "Bishops, pastors"),
+    ("June 6", "Venerable Bessarion of Egypt", O, "Egyptian desert father of the fourth and fifth centuries who lived as a wanderer, owning only a Gospel book and the clothes he wore, and who was known for his compassion and tears of repentance.", "Hermits, those who live simply"),
+    ("July 23", "Hieromartyr Apollinaris, Bishop of Ravenna", O, "Tradition holds that he was a disciple of Saint Peter who became the first bishop of Ravenna, evangelised the region and was beaten and exiled for his faith.", "Ravenna, bishops"),
+    ("October 13", "Martyrs Carpus, Papylus, Agathodorus and Agathonike of Pergamum", O, "Early Christians of Pergamum put to death for confessing Christ: Carpus and Papylus, a deacon and a physician, Agathodorus and Agathonike, who joined them and chose to die with them.", "Martyrs of Asia Minor"),
+    ("November 24", "Great Martyr Catherine of Alexandria", O, "Learned young woman of Alexandria who, tradition says, debated pagan philosophers and was martyred in the early fourth century. The monastery at the foot of Mount Sinai bears her name.", "Philosophers, students, unmarried women"),
+]
