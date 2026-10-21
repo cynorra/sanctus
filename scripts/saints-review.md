@@ -29,3 +29,19 @@ English calendar now covers all 366 days for catholic, orthodox, protestant and 
 - Some descriptions are short on detail where little is known about the person.
 - "Saint Xenia of Saint Petersburg" and similar later Orthodox saints may be lent to other traditions on
   days where nothing else was eligible.
+
+## Verification log (2026-10-21)
+
+- **Orthodox dates:** every entry checked against oca.org daily pages (9 fixed, see above).
+- **Catholic/shared dates:** every entry checked against the catholic.org monthly pages
+  (jan.php ... dec.php). That site omits many feasts of Christ/Mary, blesseds and obscure saints, so
+  "not found" there was judged one by one. Fixed: Ivo of Kermartin (May 19), Raphael Kalinowski (Nov 15),
+  duplicate Cabrini on Dec 22 removed, Charles de Foucauld is now "Saint" (canonised 2022), Henry of
+  Treviso is "Blessed". Left as is on purpose where the Roman calendar differs from catholic.org's older one
+  (Hyacinth Aug 17, Stephen of Hungary Aug 16, Apollinaris Jul 20, Sixtus III Mar 28, Heribert Mar 16).
+- **Protestant/Anglican dates:** Lutheran and Episcopal list dates come from Wikipedia's calendar pages;
+  the 44 birth/death dates added separately were each checked against the person's Wikipedia page.
+  One fix: John Newton was born July 24 Old Style (August 4 today); the text now says so.
+- **NOT verified:** the biographical text of each description (only dates were checked; a random sample of
+  48 descriptions was read through and no factual error was seen), and the Turkish translations (written
+  by the assistant, not reviewed by a Turkish-speaking theologian or translator).
