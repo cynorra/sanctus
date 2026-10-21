@@ -1,11 +1,7 @@
 name: Test build (APK + AAB)
 
-# Branch builds only: main is deliberately excluded so this never runs alongside the
-# seed-content sync, and the tag-triggered release workflow stays the only path to a release.
 on:
   push:
-    branches-ignore:
-      - main
   workflow_dispatch: {}
 
 permissions:
