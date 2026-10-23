@@ -22,10 +22,16 @@ import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.data.local.SanctusDatabase;
 import com.sanctus.christian.prayer.data.local.entity.PrayerEntity;
 import com.sanctus.christian.prayer.ui.prayer.PrayerDetailFragment;
+import com.sanctus.christian.prayer.util.AdManager;
 import com.sanctus.christian.prayer.util.MotionKit;
 import com.sanctus.christian.prayer.util.Tradition;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+import android.util.DisplayMetrics;
+import android.widget.FrameLayout;
 import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
@@ -113,12 +119,58 @@ public class MainActivity extends AppCompatActivity {
 
         handleDeepLink(getIntent());
 
-        // Load AdMob Banner
-        adView = findViewById(R.id.adView);
-        if (adView != null) {
-            AdRequest adRequest = new AdRequest.Builder().build();
-            adView.loadAd(adRequest);
+        // Preload Interstitial Ad in background (Strict Rule: Official ID, Preload before action)
+        AdManager.getInstance().preloadInterstitial(this);
+
+        // Load Adaptive Banner (Strict Rules: Official ID, Anchored Adaptive, Silent Fail)
+        loadAdaptiveBanner();
+    }
+
+    private void loadAdaptiveBanner() {
+        FrameLayout adContainerView = findViewById(R.id.adContainerView);
+        if (adContainerView == null) return;
+
+        adView = new AdView(this);
+        adView.setAdUnitId(getString(R.string.admob_banner_ad_unit_id));
+        adContainerView.removeAllViews();
+        adContainerView.addView(adView);
+
+        // Determine adaptive ad size based on window width (Universal support: phones, tablets, foldables)
+        int adWidthPixels;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
+            android.view.WindowMetrics windowMetrics = getWindowManager().getCurrentWindowMetrics();
+            android.graphics.Insets insets = windowMetrics.getWindowInsets()
+                    .getInsetsIgnoringVisibility(android.view.WindowInsets.Type.systemBars());
+            adWidthPixels = windowMetrics.getBounds().width() - insets.left - insets.right;
+        } else {
+            DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+            adWidthPixels = displayMetrics.widthPixels;
         }
+        float density = getResources().getDisplayMetrics().density;
+        int adWidth = (int) (adWidthPixels / density);
+        AdSize adSize = AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth);
+        adView.setAdSize(adSize);
+
+        adView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Show container only when ad is successfully loaded
+                if (adContainerView != null) {
+                    adContainerView.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                // Silent fail: hide container completely, leave no blank or broken box
+                if (adContainerView != null) {
+                    adContainerView.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     @Override

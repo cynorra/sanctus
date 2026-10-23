@@ -323,4 +323,7 @@
     <string name="jesus_prayer_text">Lord Jesus Christ, Son of God, have mercy on me, a sinner.</string>
     <string name="jesus_prayer_again">Pray again</string>
     <string name="jesus_prayer_of_total">of %1$d</string>
+    <!-- AdMob Ad Units (Canlı Resmi ID'ler) -->
+    <string name="admob_banner_ad_unit_id" translatable="false">ca-app-pub-4674211063760769/1808931333</string>
+    <string name="admob_interstitial_ad_unit_id" translatable="false">ca-app-pub-4674211063760769/3089405607</string>
 </resources>

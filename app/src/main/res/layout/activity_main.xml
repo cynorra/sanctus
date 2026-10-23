@@ -17,15 +17,15 @@
         android:layout_weight="1"
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph" />
-
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
+    <!-- Adaptive Banner Container: starts GONE so it leaves no blank space when no fill -->
+    <FrameLayout
+        android:id="@+id/adContainerView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-4674211063760769/1808931333" />
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:visibility="gone" />
 
     <!-- Floating glass pill rather than a full-bleed bar. -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
