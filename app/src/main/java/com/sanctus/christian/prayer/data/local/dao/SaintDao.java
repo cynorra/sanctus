@@ -32,6 +32,11 @@ public interface SaintDao {
     @Query("SELECT * FROM saints WHERE id = :id")
     LiveData<SaintEntity> getSaintById(int id);
 
+    /** Synchronous lookup (call off the main thread) — resolves a push notification's saint deep
+     *  link, which only knows the saint's name/feast date/language, not the local row id. */
+    @Query("SELECT * FROM saints WHERE name = :name AND feastDate = :feastDate AND language = :language LIMIT 1")
+    SaintEntity findByNameFeastAndLanguage(String name, String feastDate, String language);
+
     @Query("SELECT * FROM saints WHERE isFavorite = 1 AND language = :language")
     LiveData<List<SaintEntity>> getFavoriteSaints(String language);
 

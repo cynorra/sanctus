@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_DEEP_LINK_PRAYER_NAME = "deep_link_prayer_name";
     public static final String EXTRA_DEEP_LINK_PRAYER_LANGUAGE = "deep_link_prayer_language";
+    public static final String EXTRA_DEEP_LINK_SAINT_NAME = "deep_link_saint_name";
+    public static final String EXTRA_DEEP_LINK_SAINT_FEAST = "deep_link_saint_feast";
 
     private NavController navController;
     private AdView adView;
@@ -208,6 +210,24 @@ public class MainActivity extends AppCompatActivity {
         if (intent == null || navController == null) return;
         String name = intent.getStringExtra(EXTRA_DEEP_LINK_PRAYER_NAME);
         String language = intent.getStringExtra(EXTRA_DEEP_LINK_PRAYER_LANGUAGE);
+        String saintName = intent.getStringExtra(EXTRA_DEEP_LINK_SAINT_NAME);
+        String saintFeast = intent.getStringExtra(EXTRA_DEEP_LINK_SAINT_FEAST);
+        if (saintName != null && saintFeast != null && language != null) {
+            intent.removeExtra(EXTRA_DEEP_LINK_SAINT_NAME);
+            intent.removeExtra(EXTRA_DEEP_LINK_SAINT_FEAST);
+            intent.removeExtra(EXTRA_DEEP_LINK_PRAYER_LANGUAGE);
+            Executors.newSingleThreadExecutor().execute(() -> {
+                com.sanctus.christian.prayer.data.local.entity.SaintEntity saint = SanctusDatabase.getInstance(this)
+                        .saintDao().findByNameFeastAndLanguage(saintName, saintFeast, language);
+                if (saint == null) return;
+                runOnUiThread(() -> {
+                    Bundle args = new Bundle();
+                    args.putInt(com.sanctus.christian.prayer.ui.saint.SaintDetailFragment.ARG_SAINT_ID, saint.id);
+                    navController.navigate(R.id.saintDetailFragment, args);
+                });
+            });
+            return;
+        }
         if (name == null || language == null) return;
 
         // Consume so a config change / re-entry into this activity doesn't re-navigate.

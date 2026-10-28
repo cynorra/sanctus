@@ -53,7 +53,7 @@ public class SanctusFirebaseMessagingService extends FirebaseMessagingService {
         // Check if message contains data payload. Deep-link fields (prayer_name/language) only
         // ever arrive this way — see the important note on onMessageReceived's doc comment about
         // why the daily engagement push is sent as data-only, never with a top-level "notification".
-        String prayerName = null, language = null;
+        String prayerName = null, language = null, saintName = null, saintFeast = null;
         if (remoteMessage.getData().size() > 0) {
             if (title == null && remoteMessage.getData().containsKey("title")) {
                 title = remoteMessage.getData().get("title");
@@ -63,15 +63,18 @@ public class SanctusFirebaseMessagingService extends FirebaseMessagingService {
             }
             prayerName = remoteMessage.getData().get("prayer_name");
             language = remoteMessage.getData().get("language");
+            saintName = remoteMessage.getData().get("saint_name");
+            saintFeast = remoteMessage.getData().get("saint_feast_date");
         }
 
         if (title != null || body != null) {
             sendNotification(title != null ? title : getString(R.string.app_name), body != null ? body : "",
-                    prayerName, language);
+                    prayerName, language, saintName, saintFeast);
         }
     }
 
-    private void sendNotification(String title, String messageBody, String deepLinkPrayerName, String deepLinkLanguage) {
+    private void sendNotification(String title, String messageBody, String deepLinkPrayerName, String deepLinkLanguage,
+                                  String deepLinkSaintName, String deepLinkSaintFeast) {
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         if (notificationManager == null) return;
 
@@ -88,7 +91,11 @@ public class SanctusFirebaseMessagingService extends FirebaseMessagingService {
 
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        if (deepLinkPrayerName != null && deepLinkLanguage != null) {
+        if (deepLinkSaintName != null && deepLinkSaintFeast != null && deepLinkLanguage != null) {
+            intent.putExtra(MainActivity.EXTRA_DEEP_LINK_SAINT_NAME, deepLinkSaintName);
+            intent.putExtra(MainActivity.EXTRA_DEEP_LINK_SAINT_FEAST, deepLinkSaintFeast);
+            intent.putExtra(MainActivity.EXTRA_DEEP_LINK_PRAYER_LANGUAGE, deepLinkLanguage);
+        } else if (deepLinkPrayerName != null && deepLinkLanguage != null) {
             intent.putExtra(MainActivity.EXTRA_DEEP_LINK_PRAYER_NAME, deepLinkPrayerName);
             intent.putExtra(MainActivity.EXTRA_DEEP_LINK_PRAYER_LANGUAGE, deepLinkLanguage);
         }
