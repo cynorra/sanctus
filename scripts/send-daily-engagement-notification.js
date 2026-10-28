@@ -15,13 +15,13 @@ const PROJECT_ID = process.env.FIREBASE_PROJECT_ID || 'sanctus-b5259';
 const TOPIC = 'engagement';
 
 const TITLES = [
-  'Bugün dua etmek için bir an ayır 🙏',
-  'Günün duası seni bekliyor',
-  'Sanctus ile bugüne huzurla başla',
-  'Bir dakikanı Tanrı\'ya ayır',
-  'Bugünün duasını okudun mu?',
-  'Haftanın bu günü, dua zamanı',
-  'Kalbini bugün de O\'na aç',
+  'Take a moment to pray today 🙏',
+  'Your prayer of the day is waiting',
+  'Start your day in peace with Sanctus',
+  'Give God one minute today',
+  'Have you read today\'s prayer?',
+  'A new day, a new moment for prayer',
+  'Open your heart to Him today',
 ];
 
 function getAccessToken() {
