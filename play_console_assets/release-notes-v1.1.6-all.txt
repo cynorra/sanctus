@@ -1,0 +1,261 @@
+<en-US>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</en-US>
+<af>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</af>
+<am>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</am>
+<ar>
+تمت إضافة صلوات تقليدية، وأدلة تأمل Lectio Divina، وقديسين من تقاليد مسيحية متنوعة. أيقونة تطبيق مجددة وتحسينات عامة في الاستقرار.
+</ar>
+<az-AZ>
+Geleneksel dualar, Lectio Divina tefekkür rehberleri ve farklı Hristiyan geleneklerinden azizler eklendi. Yenilenen uygulama simgesi, daha akıcı dua gezintisi ve kararlılık iyileştirmeleri.
+</az-AZ>
+<be>
+Добавлены традиционные молитвы, руководства Lectio Divina и святые различных христианских традиций. Обновлена иконка приложения и улучшена стабильность.
+</be>
+<bg>
+Добавени са традиционни молитви, ръководства за Lectio Divina и светци от различни християнски традиции. Обновена икона на приложението и подобрена стабилност.
+</bg>
+<bn-BD>
+ঐতিহ্যবাহী প্রার্থনা, লেকটিও ডিভিনা নির্দেশিকা এবং বিভিন্ন খ্রিস্টান ঐতিহ্যের সাধু যোগ করা হয়েছে। নতুন অ্যাপ আইকন এবং সাধারণ স্থিতিশীলতার উন্নতি।
+</bn-BD>
+<ca>
+Se agregaron oraciones tradicionales, guías de Lectio Divina y santos de diversas tradiciones cristianas. Icono de app renovado y mejoras de estabilidad.
+</ca>
+<cs-CZ>
+Přidány tradiční modlitby, průvodci Lectio Divina a svatí z různých křesťanských tradicí. Nová ikona aplikace a vylepšení stability.
+</cs-CZ>
+<da-DK>
+Tilføjet traditionelle bønner, Lectio Divina-vejledninger og helgener fra forskellige kristne traditioner. Nyt app-ikon og stabilitetsforbedringer.
+</da-DK>
+<de-DE>
+Traditionelle Gebete, Lectio Divina-Leitfäden und Heilige aus verschiedenen christlichen Traditionen hinzugefügt. Neues App-Symbol und verbesserte Stabilität.
+</de-DE>
+<el-GR>
+Προστέθηκαν παραδοσιακές προσευχές, οδηγοί Lectio Divina και άγιοι από διάφορες χριστιανικές παραδόσεις. Ανανεωμένο εικονίδιο εφαρμογής και βελτιώσεις σταθερότητας.
+</el-GR>
+<en-AU>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</en-AU>
+<en-CA>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</en-CA>
+<en-GB>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</en-GB>
+<en-IN>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</en-IN>
+<en-SG>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</en-SG>
+<en-ZA>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</en-ZA>
+<es-419>
+Se agregaron oraciones tradicionales, guías de Lectio Divina y santos de diversas tradiciones cristianas. Icono de app renovado y mejoras de estabilidad.
+</es-419>
+<es-ES>
+Se agregaron oraciones tradicionales, guías de Lectio Divina y santos de diversas tradiciones cristianas. Icono de app renovado y mejoras de estabilidad.
+</es-ES>
+<es-US>
+Se agregaron oraciones tradicionales, guías de Lectio Divina y santos de diversas tradiciones cristianas. Icono de app renovado y mejoras de estabilidad.
+</es-US>
+<et>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</et>
+<eu-ES>
+Se agregaron oraciones tradicionales, guías de Lectio Divina y santos de diversas tradiciones cristianas. Icono de app renovado y mejoras de estabilidad.
+</eu-ES>
+<fa>
+دعاهای سنتی، راهنماهای Lectio Divina و قدیسان سنن مختلف مسیحی اضافه شدند. آیکون برنامه به‌روزرسانی شد و پایداری کلی ارتقا یافت.
+</fa>
+<fa-AE>
+دعاهای سنتی، راهنماهای Lectio Divina و قدیسان سنن مختلف مسیحی اضافه شدند. آیکون برنامه به‌روزرسانی شد و پایداری کلی ارتقا یافت.
+</fa-AE>
+<fa-AF>
+دعاهای سنتی، راهنماهای Lectio Divina و قدیسان سنن مختلف مسیحی اضافه شدند. آیکون برنامه به‌روزرسانی شد و پایداری کلی ارتقا یافت.
+</fa-AF>
+<fa-IR>
+دعاهای سنتی، راهنماهای Lectio Divina و قدیسان سنن مختلف مسیحی اضافه شدند. آیکون برنامه به‌روزرسانی شد و پایداری کلی ارتقا یافت.
+</fa-IR>
+<fi-FI>
+Lisätty perinteisiä rukouksia, Lectio Divina -oppaita ja eri kristillisten perinteiden pyhimyksiä. Uudistettu sovelluskuvake ja parannettu vakautta.
+</fi-FI>
+<fil>
+Nagdagdag ng tradisyonal na mga panalangin, gabay sa Lectio Divina, at mga santo mula sa iba't ibang tradisyong Kristiyano. Bagong icon at mga pagpapabuti sa katatagan.
+</fil>
+<fr-CA>
+Ajout de prières traditionnelles, de guides de Lectio Divina et de saints de diverses traditions chrétiennes. Nouvelle icône et améliorations de stabilité.
+</fr-CA>
+<fr-FR>
+Ajout de prières traditionnelles, de guides de Lectio Divina et de saints de diverses traditions chrétiennes. Nouvelle icône et améliorations de stabilité.
+</fr-FR>
+<gl-ES>
+Se agregaron oraciones tradicionales, guías de Lectio Divina y santos de diversas tradiciones cristianas. Icono de app renovado y mejoras de estabilidad.
+</gl-ES>
+<gu>
+पारंपरिक प्रार्थनाएं, लेक्टियो डिविना ध्यान गाइड और विभिन्न ईसाई परंपराओं के संत जोड़े गए। ताज़ा ऐप आइकन और सामान्य स्थिरता में सुधार।
+</gu>
+<hi-IN>
+पारंपरिक प्रार्थनाएं, लेक्टियो डिविना ध्यान गाइड और विभिन्न ईसाई परंपराओं के संत जोड़े गए। ताज़ा ऐप आइकन और सामान्य स्थिरता में सुधार।
+</hi-IN>
+<hr>
+Dodane tradicionalne molitve, vodiči za Lectio Divina i sveci iz različitih kršćanskih tradicija. Osvježena ikona aplikacije i poboljšanja stabilnosti.
+</hr>
+<hu-HU>
+Hagyományos imák, Lectio Divina útmutatók és különböző keresztény hagyományok szentjei hozzáadva. Megújult alkalmazásikon és stabilitási javítások.
+</hu-HU>
+<hy-AM>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</hy-AM>
+<id>
+Menambahkan doa tradisional, panduan refleksi Lectio Divina, dan orang kudus dari berbagai tradisi Kristen. Ikon aplikasi baru dan peningkatan stabilitas.
+</id>
+<is-IS>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</is-IS>
+<it-IT>
+Aggiunte preghiere tradizionali, guide di Lectio Divina e santi di diverse tradizioni cristiane. Icona dell'app rinnovata e miglioramenti della stabilità.
+</it-IT>
+<iw-IL>
+נוספו תפילות מסורתיות, מדריכי Lectio Divina וקדושים ממסורות נוצריות מגוונות. סמל אפליקציה מחודש ושיפורי יציבות כלליים.
+</iw-IL>
+<ja-JP>
+伝統的な祈り、レクティオ・ディヴィナの黙想ガイド、様々なキリスト教伝統の聖人を追加しました。アプリアイコンの刷新と全般的な安定性の向上。
+</ja-JP>
+<ka-GE>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</ka-GE>
+<kk>
+Добавлены традиционные молитвы, руководства Lectio Divina и святые различных христианских традиций. Обновлена иконка приложения и улучшена стабильность.
+</kk>
+<km-KH>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</km-KH>
+<kn-IN>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</kn-IN>
+<ko-KR>
+전통 기도문, 렉시오 디비나 묵상 가이드, 다양한 기독교 전통의 성인들이 추가되었습니다. 새로워진 앱 아이콘과 전반적인 안정성 향상.
+</ko-KR>
+<ky-KG>
+Добавлены традиционные молитвы, руководства Lectio Divina и святые различных христианских традиций. Обновлена иконка приложения и улучшена стабильность.
+</ky-KG>
+<lo-LA>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</lo-LA>
+<lt>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</lt>
+<lv>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</lv>
+<mk-MK>
+Добавени са традиционни молитви, ръководства за Lectio Divina и светци от различни християнски традиции. Обновена икона на приложението и подобрена стабилност.
+</mk-MK>
+<ml-IN>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</ml-IN>
+<mn-MN>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</mn-MN>
+<mr-IN>
+पारंपरिक प्रार्थनाएं, लेक्टियो डिविना ध्यान गाइड और विभिन्न ईसाई परंपराओं के संत जोड़े गए। ताज़ा ऐप आइकन और सामान्य स्थिरता में सुधार।
+</mr-IN>
+<ms>
+Menambah doa tradisional, panduan refleksi Lectio Divina, dan santo daripada pelbagai tradisi Kristian. Ikon aplikasi baharu dan peningkatan kestabilan.
+</ms>
+<ms-MY>
+Menambah doa tradisional, panduan refleksi Lectio Divina, dan santo daripada pelbagai tradisi Kristian. Ikon aplikasi baharu dan peningkatan kestabilan.
+</ms-MY>
+<my-MM>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</my-MM>
+<ne-NP>
+पारंपरिक प्रार्थनाएं, लेक्टियो डिविना ध्यान गाइड और विभिन्न ईसाई परंपराओं के संत जोड़े गए। ताज़ा ऐप आइकन और सामान्य स्थिरता में सुधार।
+</ne-NP>
+<nl-NL>
+Traditionele gebeden, Lectio Divina-gidsen en heiligen uit verschillende christelijke tradities toegevoegd. Vernieuwd app-icoon en stabiliteitsverbeteringen.
+</nl-NL>
+<no-NO>
+Lagt til tradisjonelle bønner, Lectio Divina-veiledninger og helgener fra ulike kristne tradisjoner. Nytt app-ikon og stabilitetsforbedringer.
+</no-NO>
+<pa>
+पारंपरिक प्रार्थनाएं, लेक्टियो डिविना ध्यान गाइड और विभिन्न ईसाई परंपराओं के संत जोड़े गए। ताज़ा ऐप आइकन और सामान्य स्थिरता में सुधार।
+</pa>
+<pl-PL>
+Dodano tradycyjne modlitwy, przewodniki Lectio Divina i świętych z różnych tradycji chrześcijańskich. Odświeżona ikona aplikacji i poprawki stabilności.
+</pl-PL>
+<pt-BR>
+Adicionadas orações tradicionais, guias de Lectio Divina e santos de diversas tradições cristãs. Ícone do app renovado e melhorias gerais de estabilidade.
+</pt-BR>
+<pt-PT>
+Adicionadas orações tradicionais, guias de Lectio Divina e santos de diversas tradições cristãs. Ícone da app renovado e melhorias gerais de estabilidade.
+</pt-PT>
+<rm>
+Traditionelle Gebete, Lectio Divina-Leitfäden und Heilige aus verschiedenen christlichen Traditionen hinzugefügt. Neues App-Symbol und verbesserte Stabilität.
+</rm>
+<ro>
+S-au adăugat rugăciuni tradiționale, ghiduri Lectio Divina și sfinți din diverse tradiții creștine. Pictogramă reîmprospătată și îmbunătățiri de stabilitate.
+</ro>
+<ru-RU>
+Добавлены традиционные молитвы, руководства Lectio Divina и святые различных христианских традиций. Обновлена иконка приложения и улучшена стабильность.
+</ru-RU>
+<si-LK>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</si-LK>
+<sk>
+Přidány tradiční modlitby, průvodci Lectio Divina a svatí z různých křesťanských tradicí. Nová ikona aplikace a vylepšení stability.
+</sk>
+<sl>
+Dodane tradicionalne molitve, vodiči za Lectio Divina i sveci iz različitih kršćanskih tradicija. Osvježena ikona aplikacije i poboljšanja stabilnosti.
+</sl>
+<sq>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</sq>
+<sr>
+Dodane tradicionalne molitve, vodiči za Lectio Divina i sveci iz različitih kršćanskih tradicija. Osvježena ikona aplikacije i poboljšanja stabilnosti.
+</sr>
+<sv-SE>
+Lagt till traditionella böner, Lectio Divina-guider och helgon från olika kristna traditioner. Ny appikon och allmänna stabilitetsförbättringar.
+</sv-SE>
+<sw>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</sw>
+<ta-IN>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</ta-IN>
+<te-IN>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</te-IN>
+<th>
+เพิ่มบทสวดดั้งเดิม คู่มือ Lectio Divina และนักบุญจากประเพณีคริสเตียนที่หลากหลาย ไอคอนแอปใหม่และการปรับปรุงความเสถียรทั่วไป
+</th>
+<tr-TR>
+Geleneksel dualar, Lectio Divina tefekkür rehberleri ve farklı Hristiyan geleneklerinden azizler eklendi. Yenilenen uygulama simgesi, daha akıcı dua gezintisi ve kararlılık iyileştirmeleri.
+</tr-TR>
+<uk>
+Додано традиційні молитви, посібники Lectio Divina та святих різних християнських традицій. Оновлено піктограму додатка та покращено стабільність.
+</uk>
+<ur>
+روایتی دعائیں، لیکٹیو ڈیوینا گائیڈز، اور مختلف مسیحی روایات کے اولیاء شامل کیے گئے۔ نیا ایپ آئیکن اور عمومی استحکام میں بہتری۔
+</ur>
+<vi>
+Đã thêm các lời cầu nguyện truyền thống, hướng dẫn Lectio Divina và các vị thánh từ nhiều truyền thống Kitô giáo. Biểu tượng ứng dụng mới và cải thiện độ ổn định.
+</vi>
+<zh-CN>
+新增了传统祈祷文、圣言诵读（Lectio Divina）反思指南以及来自不同基督教传统的圣人。更新了应用图标并提升了整体稳定性。
+</zh-CN>
+<zh-HK>
+新增了傳統祈禱文、聖言誦讀（Lectio Divina）默想指南以及來自不同基督教傳統的聖人。更新了應用程式圖示並提升了整體穩定性。
+</zh-HK>
+<zh-TW>
+新增了傳統祈禱文、聖言誦讀（Lectio Divina）默想指南以及來自不同基督教傳統的聖人。更新了應用程式圖示並提升了整體穩定性。
+</zh-TW>
+<zu>
+Added traditional prayers, Lectio Divina reflection guides, and saints from diverse Christian traditions. Refreshed app icon, smoother prayer navigation, and general stability improvements.
+</zu>
