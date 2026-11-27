@@ -46,14 +46,14 @@ public final class PeaceSanctuaryDialog {
 
         GradientDrawable sheetBg = new GradientDrawable(
                 GradientDrawable.Orientation.TL_BR,
-                new int[]{0xFF171429, 0xFF0B0A14, 0xFF131020});
+                new int[]{0xFF171B28, 0xFF07090E, 0xFF131622});
         sheetBg.setCornerRadius(28f * dp);
-        sheetBg.setStroke((int) (1.2f * dp), 0x44E6BC5C);
+        sheetBg.setStroke((int) (1.2f * dp), 0x44D4AF37);
         root.setBackground(sheetBg);
 
         TextView tvTitle = new TextView(ctx);
         tvTitle.setText(title);
-        tvTitle.setTextColor(0xFFF5E3B3);
+        tvTitle.setTextColor(0xFFF3C068);
         tvTitle.setTextSize(20f);
         tvTitle.setGravity(Gravity.CENTER);
         tvTitle.setLetterSpacing(0.03f);
@@ -70,20 +70,20 @@ public final class PeaceSanctuaryDialog {
         View outerRing = new View(ctx);
         GradientDrawable outerGd = new GradientDrawable();
         outerGd.setShape(GradientDrawable.OVAL);
-        outerGd.setColor(0x22E6BC5C);
-        outerGd.setStroke((int) (1.2f * dp), 0x55E6BC5C);
+        outerGd.setColor(0x22F3C068);
+        outerGd.setStroke((int) (1.2f * dp), 0x55D4AF37);
         outerRing.setBackground(outerGd);
         FrameLayout.LayoutParams outerLp = new FrameLayout.LayoutParams((int) (136 * dp), (int) (136 * dp), Gravity.CENTER);
         haloBox.addView(outerRing, outerLp);
 
         TextView halo = new TextView(ctx);
         halo.setGravity(Gravity.CENTER);
-        halo.setTextColor(0xFF0E0C18);
+        halo.setTextColor(0xFF07090E);
         halo.setTextSize(13.5f);
         halo.setText(R.string.peace_breathe_in);
         GradientDrawable innerGd = new GradientDrawable(
                 GradientDrawable.Orientation.TL_BR,
-                new int[]{0xFFF5E3B3, 0xFFE6BC5C});
+                new int[]{0xFFF3C068, 0xFFD4AF37});
         innerGd.setShape(GradientDrawable.OVAL);
         halo.setBackground(innerGd);
         FrameLayout.LayoutParams innerLp = new FrameLayout.LayoutParams((int) (104 * dp), (int) (104 * dp), Gravity.CENTER);
@@ -91,7 +91,7 @@ public final class PeaceSanctuaryDialog {
 
         TextView tvVerse = new TextView(ctx);
         tvVerse.setText(verse);
-        tvVerse.setTextColor(0xFFF7F3FF);
+        tvVerse.setTextColor(0xFFF5F2EB);
         tvVerse.setTextSize(15f);
         tvVerse.setGravity(Gravity.CENTER);
         tvVerse.setLineSpacing(4f * dp, 1.0f);
@@ -100,7 +100,7 @@ public final class PeaceSanctuaryDialog {
         if (prayerText != null && !prayerText.isEmpty()) {
             TextView tvPrayer = new TextView(ctx);
             tvPrayer.setText(prayerText);
-            tvPrayer.setTextColor(0xFFA199BD);
+            tvPrayer.setTextColor(0xFF9E988D);
             tvPrayer.setTextSize(13.5f);
             tvPrayer.setGravity(Gravity.CENTER);
             tvPrayer.setPadding(0, (int) (12 * dp), 0, 0);
@@ -119,9 +119,9 @@ public final class PeaceSanctuaryDialog {
         btnListen.setText(R.string.peace_listen_audio);
         btnListen.setGravity(Gravity.CENTER);
         btnListen.setTextSize(13.5f);
-        btnListen.setTextColor(0xFF0E0C18);
+        btnListen.setTextColor(0xFF07090E);
         GradientDrawable listenBg = new GradientDrawable(
-                GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xFFF5E3B3, 0xFFE6BC5C});
+                GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xFFF3C068, 0xFFD4AF37});
         listenBg.setCornerRadius(22f * dp);
         btnListen.setBackground(listenBg);
         LinearLayout.LayoutParams btnLp1 = new LinearLayout.LayoutParams(0, (int) (44 * dp), 1f);
@@ -133,10 +133,10 @@ public final class PeaceSanctuaryDialog {
         btnAmen.setText(R.string.peace_amen_close);
         btnAmen.setGravity(Gravity.CENTER);
         btnAmen.setTextSize(13.5f);
-        btnAmen.setTextColor(0xFFF7F3FF);
+        btnAmen.setTextColor(0xFFF5F2EB);
         GradientDrawable amenBg = new GradientDrawable();
-        amenBg.setColor(0x18FFFFFF);
-        amenBg.setStroke((int) dp, 0x33FFFFFF);
+        amenBg.setColor(0xFF11141E);
+        amenBg.setStroke((int) dp, 0x20FFFFFF);
         amenBg.setCornerRadius(22f * dp);
         btnAmen.setBackground(amenBg);
         LinearLayout.LayoutParams btnLp2 = new LinearLayout.LayoutParams(0, (int) (44 * dp), 1f);

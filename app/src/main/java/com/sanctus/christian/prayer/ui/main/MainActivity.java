@@ -32,6 +32,9 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.LoadAdError;
 import android.util.DisplayMetrics;
 import android.widget.FrameLayout;
+import android.widget.TextView;
+import com.sanctus.christian.prayer.SanctusApplication;
+import com.sanctus.christian.prayer.util.LiturgicalSeasonHelper;
 import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
     private NavController navController;
     private AdView adView;
+    private TextView tvHeaderStreak;
+    private TextView tvHeaderSeason;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,8 +88,10 @@ public class MainActivity extends AppCompatActivity {
                 menu.add(Menu.NONE, R.id.rosaryFragment, Menu.NONE, R.string.nav_rosary).setIcon(R.drawable.ic_rosary);
             }
             menu.add(Menu.NONE, R.id.saintFragment, Menu.NONE, R.string.nav_saints).setIcon(R.drawable.ic_saint);
-            menu.add(Menu.NONE, R.id.feedFragment, Menu.NONE, R.string.nav_feed).setIcon(R.drawable.ic_feed);
+            menu.add(Menu.NONE, R.id.settingsFragment, Menu.NONE, R.string.nav_more).setIcon(R.drawable.ic_settings);
             NavigationUI.setupWithNavController(bottomNav, navController);
+
+            setupSanctuaryHeader();
 
             // Same behaviour as NavigationUI's default tab handling (single top, restore state),
             // plus a fade/lift transition between tabs that the default does not give us.
@@ -182,6 +189,41 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if (adView != null) adView.resume();
+        refreshHeaderStatus();
+    }
+
+    private void setupSanctuaryHeader() {
+        tvHeaderSeason = findViewById(R.id.tv_header_season);
+        tvHeaderStreak = findViewById(R.id.tv_header_streak);
+        if (tvHeaderSeason != null) {
+            MotionKit.pressable(tvHeaderSeason);
+            tvHeaderSeason.setOnClickListener(v -> {
+                if (navController != null) {
+                    NavDestination cur = navController.getCurrentDestination();
+                    if (cur == null || cur.getId() != R.id.calendarFragment) {
+                        navController.navigate(R.id.calendarFragment);
+                    }
+                }
+            });
+        }
+        refreshHeaderStatus();
+    }
+
+    public void refreshHeaderStatus() {
+        if (tvHeaderSeason != null) {
+            String tradition = SanctusApplication.getInstance().getSettingsRepository().getTradition();
+            LiturgicalSeasonHelper.Season season = LiturgicalSeasonHelper.getCurrentSeason(tradition);
+            tvHeaderSeason.setText(LiturgicalSeasonHelper.getSeasonName(this, season));
+        }
+        if (tvHeaderStreak != null) {
+            int streak = SanctusApplication.getInstance().getSettingsRepository().getStreak();
+            if (streak > 0) {
+                tvHeaderStreak.setText(getString(R.string.streak_days_short_fmt, streak));
+                tvHeaderStreak.setVisibility(View.VISIBLE);
+            } else {
+                tvHeaderStreak.setVisibility(View.GONE);
+            }
+        }
     }
 
     @Override

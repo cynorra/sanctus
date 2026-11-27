@@ -355,4 +355,47 @@
     <string name="review_rate">Değerlendir</string>
     <string name="review_later">Daha sonra</string>
     <string name="review_never">Tekrar sorma</string>
+
+    <!-- Design System: Sanctuary Header, Navigation & Settings -->
+    <string name="nav_more">Daha Fazla</string>
+    <string name="sanctus_brand_mark">☧ SANCTUS</string>
+    <string name="streak_days_short_fmt">✦ %1$d Gün</string>
+    <string name="greeting_morning">Günaydın</string>
+    <string name="greeting_afternoon">İyi Günler</string>
+    <string name="greeting_evening">İyi Akşamlar</string>
+    <string name="sanctuary_settings_title">Sanctuary Ayarları</string>
+    <string name="settings_canonical_reminders">Kanonik Hatırlatmalar</string>
+    <string name="settings_scripture_translation">Kutsal Kitap Çevirisi</string>
+    <string name="settings_language_header">Dil / Language</string>
+    <string name="settings_all_languages">Tüm 40 Dil →</string>
+    <string name="settings_data_privacy">Veri &amp; Gizlilik</string>
+    <string name="settings_data_privacy_desc">Yerel dua günlüğünüzü ve önbelleği yönetin veya hesabınızı ve tüm verilerinizi kalıcı olarak silin.</string>
+    <string name="settings_clear_cache_title">Yerel Günlüğü ve Önbelleği Temizle</string>
+    <string name="settings_clear_cache_sub">Yerel dua niyetleri, planlar ve önbellek sıfırlanır</string>
+    <string name="settings_clear_cache_done">Yerel günlük ve önbellek temizlendi</string>
+    <string name="settings_delete_account_title">Hesabı ve Tüm Bulut Verilerini Sil</string>
+    <string name="settings_delete_account_sub">Hesabı ve tüm verileri kalıcı olarak sil</string>
+    <string name="delete_step1_eyebrow">Geri Alınamaz İşlem</string>
+    <string name="delete_step1_title">Hesabı ve Verileri Kalıcı Olarak Sil</string>
+    <string name="delete_step1_desc">Hesabınızı kapatmak buluttaki ve cihazdaki tüm kayıtlarınızı kalıcı olarak siler. Bu işlem geri alınamaz.</string>
+    <string name="delete_step1_item1">Tüm özel dua günlüğü kayıtları ve niyetler silinir.</string>
+    <string name="delete_step1_item2">Dua seriniz, plan ilerlemeniz ve tercihleriniz sıfırlanır.</string>
+    <string name="delete_step1_item3">Bulut oturumunuz ve yerel önbellek kalıcı olarak temizlenir.</string>
+    <string name="delete_continue">Kalıcı Silmeye Devam Et →</string>
+    <string name="delete_clear_local_only">Yalnızca Yerel Önbelleği Temizle</string>
+    <string name="delete_keep_account">Hesabı Koru</string>
+    <string name="delete_step2_eyebrow">Son Onay · 2. Adım</string>
+    <string name="delete_step2_title">Kalıcı Silmeyi Onayla</string>
+    <string name="delete_step2_desc">Sanctus hesabınızı ve tüm dua geçmişinizi geri döndürülemez biçimde silmek için aşağıya DELETE yazın.</string>
+    <string name="delete_input_hint">DELETE yazın</string>
+    <string name="delete_irreversible_note">Onaylandığında geri alınamaz</string>
+    <string name="delete_confirm_btn">Hesabı Kalıcı Olarak Sil ✕</string>
+    <string name="delete_back_btn">← Özete Dön</string>
+    <string name="delete_done_toast">Hesap ve tüm veriler silindi</string>
+    <string name="settings_community_feed_title">Topluluk Dua Duvarı</string>
+    <string name="settings_community_feed_sub">Dua niyetlerini paylaş ve birlikte Amin de</string>
+    <string name="dashboard_divine_office">İlahi Saatler</string>
+    <string name="dashboard_chant_hour">Saati Oku →</string>
+    <string name="dashboard_tap_to_pray">Dua için dokun</string>
+    <string name="dashboard_read_chapter">Duayı Oku →</string>
 </resources>

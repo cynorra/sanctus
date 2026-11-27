@@ -11,24 +11,447 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingHorizontal="20dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="32dp">
+        android:paddingTop="16dp"
+        android:paddingBottom="28dp">
 
+        <!-- Title: Sanctuary Settings -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:text="@string/settings_title"
-            android:textAppearance="@style/TextAppearance.Sanctus.HeadlineLarge" />
+            android:text="@string/sanctuary_settings_title"
+            android:fontFamily="@font/ebgaramond"
+            android:textSize="30sp"
+            android:textColor="@color/color_on_background" />
 
-        <!-- PERSONAL -->
-        <TextView
-            style="@style/Sanctus.SectionLabel"
-            android:text="@string/settings_section_tradition" />
-
+        <!-- CARD 1: CANONICAL REMINDERS -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/bg_glass_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/settings_canonical_reminders"
+                    android:fontFamily="@font/ebgaramond"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.16"
+                    android:textSize="11.5sp"
+                    android:textColor="@color/color_text_secondary" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switch_notifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:thumbTint="@color/color_background"
+                    app:trackTint="@color/selector_switch_track"
+                    app:trackDecorationTint="@android:color/transparent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container_hour_times"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/row_exact_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="@drawable/bg_surface_row"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exact_alarm_title"
+                    android:textColor="?attr/sanctusAccent"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/exact_alarm_desc"
+                    android:textColor="@color/color_text_secondary"
+                    android:textSize="11.5sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- CARD 2: SACRED SCRIPTURE TRANSLATION (2x2 Grid) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/bg_glass_card">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_scripture_translation"
+                android:fontFamily="@font/ebgaramond"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:letterSpacing="0.16"
+                android:textSize="11.5sp"
+                android:textColor="@color/color_text_secondary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tile_trans_rsv"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="8dp"
+                    android:text="RSV-2CE (Ignatius)"
+                    android:textSize="12sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:background="@drawable/bg_tile_selected"
+                    android:textColor="?attr/sanctusAccent"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/tile_trans_vulgate"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingHorizontal="8dp"
+                    android:text="Clementine Vulgate"
+                    android:textSize="12sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:background="@drawable/bg_tile_unselected"
+                    android:textColor="@color/color_text_secondary"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tile_trans_drb"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="8dp"
+                    android:text="Douay-Rheims 1899"
+                    android:textSize="12sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:background="@drawable/bg_tile_unselected"
+                    android:textColor="@color/color_text_secondary"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/tile_trans_esv"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingHorizontal="8dp"
+                    android:text="ESV-CE Catholic"
+                    android:textSize="12sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:background="@drawable/bg_tile_unselected"
+                    android:textColor="@color/color_text_secondary"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- CARD 3: LANGUAGE / DİL (2x2 Quick Grid + All 40 Languages) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/bg_glass_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/settings_language_header"
+                    android:fontFamily="@font/ebgaramond"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.16"
+                    android:textSize="11.5sp"
+                    android:textColor="@color/color_text_secondary" />
+
+                <TextView
+                    android:id="@+id/tv_current_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ebgaramond"
+                    android:textStyle="italic"
+                    android:textSize="12.5sp"
+                    android:textColor="?attr/sanctusAccent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tile_lang_en"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp"
+                    android:text="English"
+                    android:textSize="12.5sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:background="@drawable/bg_tile_unselected"
+                    android:textColor="@color/color_text_secondary"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/tile_lang_tr"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp"
+                    android:text="Türkçe"
+                    android:textSize="12.5sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:background="@drawable/bg_tile_unselected"
+                    android:textColor="@color/color_text_secondary"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tile_lang_es"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp"
+                    android:text="Español"
+                    android:textSize="12.5sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:background="@drawable/bg_tile_unselected"
+                    android:textColor="@color/color_text_secondary"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/tile_lang_fr"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp"
+                    android:text="Français"
+                    android:textSize="12.5sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:background="@drawable/bg_tile_unselected"
+                    android:textColor="@color/color_text_secondary"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/row_language"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:background="@drawable/bg_surface_row"
+                android:text="@string/settings_all_languages"
+                android:textColor="?attr/sanctusAccent"
+                android:textSize="12.5sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- CARD 4: DATA & PRIVACY -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/bg_glass_card">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_data_privacy"
+                android:fontFamily="@font/ebgaramond"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:letterSpacing="0.16"
+                android:textSize="11.5sp"
+                android:textColor="@color/color_text_secondary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/settings_data_privacy_desc"
+                android:textColor="@color/color_text_secondary"
+                android:textSize="12sp"
+                android:lineSpacingMultiplier="1.35" />
+
+            <!-- Clear Local Cache -->
+            <LinearLayout
+                android:id="@+id/row_clear_cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="13dp"
+                android:background="@drawable/bg_surface_row"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_clear_cache_title"
+                        android:textColor="@color/color_on_background"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/settings_clear_cache_sub"
+                        android:textColor="@color/color_stone_faint"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🧹"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Delete Account & Cloud Data -->
+            <LinearLayout
+                android:id="@+id/row_delete_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="13dp"
+                android:background="@drawable/bg_danger_card"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_delete_account_title"
+                        android:textColor="@color/color_liturgical_red"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/settings_delete_account_sub"
+                        android:textColor="@color/color_text_secondary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✕"
+                    android:textColor="@color/color_liturgical_red"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- CARD 5: TRADITION, COMMUNITY & ABOUT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
             android:orientation="vertical"
             android:background="@drawable/bg_glass_card">
 
@@ -71,7 +494,7 @@
             <View style="@style/Sanctus.RowDivider" />
 
             <LinearLayout
-                android:id="@+id/row_language"
+                android:id="@+id/row_community_feed"
                 style="@style/Sanctus.SettingsRow">
 
                 <LinearLayout
@@ -82,20 +505,12 @@
 
                     <TextView
                         style="@style/Sanctus.SettingsRowTitle"
-                        android:text="@string/prayer_language_label" />
+                        android:text="@string/settings_community_feed_title" />
 
                     <TextView
                         style="@style/Sanctus.SettingsRowSubtitle"
-                        android:text="@string/languages_supported" />
+                        android:text="@string/settings_community_feed_sub" />
                 </LinearLayout>
-
-                <TextView
-                    android:id="@+id/tv_current_language"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:textColor="?attr/sanctusAccent"
-                    android:textSize="13sp" />
 
                 <ImageView
                     android:layout_width="18dp"
@@ -105,80 +520,8 @@
                     app:tint="@color/color_text_secondary"
                     android:contentDescription="@null" />
             </LinearLayout>
-        </LinearLayout>
 
-        <!-- NOTIFICATIONS -->
-        <TextView
-            style="@style/Sanctus.SectionLabel"
-            android:text="@string/settings_section_notifications" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/bg_glass_card">
-
-            <LinearLayout style="@style/Sanctus.SettingsRow">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/Sanctus.SettingsRowTitle"
-                        android:text="@string/notifications" />
-
-                    <TextView
-                        style="@style/Sanctus.SettingsRowSubtitle"
-                        android:text="@string/notification_hours_summary" />
-                </LinearLayout>
-
-                <com.google.android.material.materialswitch.MaterialSwitch
-                    android:id="@+id/switch_notifications"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/container_hour_times"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-
-            <LinearLayout
-                android:id="@+id/row_exact_alarm"
-                style="@style/Sanctus.SettingsRow"
-                android:visibility="gone">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/Sanctus.SettingsRowTitle"
-                        android:text="@string/exact_alarm_title" />
-
-                    <TextView
-                        style="@style/Sanctus.SettingsRowSubtitle"
-                        android:text="@string/exact_alarm_desc" />
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- COMMUNITY + ABOUT -->
-        <TextView
-            style="@style/Sanctus.SectionLabel"
-            android:text="@string/about_section_title" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/bg_glass_card">
+            <View style="@style/Sanctus.RowDivider" />
 
             <LinearLayout
                 android:id="@+id/row_invite"
@@ -243,9 +586,9 @@
             android:id="@+id/tv_version"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="24dp"
             android:gravity="center"
-            android:textColor="@color/color_text_secondary"
+            android:textColor="@color/color_stone_faint"
             android:textSize="12sp" />
 
     </LinearLayout>

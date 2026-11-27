@@ -1,0 +1,1449 @@
+<!DOCTYPE html><html class="h-full bg-[#030406]" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Sanctus: Daily Prayer &amp; Liturgy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Cinzel:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#07090E',
+            surface: '#11141E',
+            surfaceElevated: '#171B28',
+            surfaceCard: '#131622',
+            parchment: '#F6F2E9',
+            parchmentMuted: '#ECE5D6',
+            sepiaInk: '#1C1814',
+            sepiaSub: '#484239',
+            brass: '#D4AF37',
+            brassHover: '#E5C158',
+            brassMuted: 'rgba(212, 175, 55, 0.14)',
+            candleGold: '#F3C068',
+            liturgicalGreen: '#1E6B48',
+            liturgicalPurple: '#5E2B7A',
+            liturgicalRed: '#8F1D1D',
+            liturgicalWhite: '#E8ECF2',
+            alabaster: '#F5F2EB',
+            stoneMuted: '#9E988D',
+            stoneFaint: '#5C564E'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            cinzel: ['"Cinzel"', 'Georgia', 'serif'],
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .tabular { font-variant-numeric: tabular-nums; }
+    
+    /* Candlelight ambient flickering glow */
+    @keyframes candleFlicker {
+      0%, 100% { opacity: 0.55; transform: scale(1) translate(0, 0); }
+      25% { opacity: 0.72; transform: scale(1.04) translate(-1px, 2px); }
+      50% { opacity: 0.48; transform: scale(0.97) translate(2px, -1px); }
+      75% { opacity: 0.65; transform: scale(1.02) translate(1px, 1px); }
+    }
+    .animate-candle {
+      animation: candleFlicker 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    /* Equalizer Soundwave Animation */
+    @keyframes barDance {
+      0%, 100% { height: 4px; }
+      50% { height: 18px; }
+    }
+    .equalizer-bar {
+      animation: barDance 1.2s ease-in-out infinite;
+    }
+    .equalizer-bar:nth-child(2) { animation-delay: 0.15s; }
+    .equalizer-bar:nth-child(3) { animation-delay: 0.3s; }
+    .equalizer-bar:nth-child(4) { animation-delay: 0.45s; }
+    .equalizer-bar:nth-child(5) { animation-delay: 0.25s; }
+
+    /* Spring-feel tactile touch */
+    .spring-press {
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+    }
+    .spring-press:active {
+      transform: scale(0.965);
+    }
+
+    /* Deckle & Dropcap */
+    .dropcap::first-letter {
+      float: left;
+      font-size: 3.8rem;
+      line-height: 0.82;
+      padding-top: 4px;
+      padding-right: 10px;
+      padding-bottom: 2px;
+      font-family: "Cinzel", "Cormorant Garamond", serif;
+      color: #9E3824;
+      font-weight: 600;
+    }
+
+    /* Soft golden aura pulse for breathing sanctuary */
+    @keyframes sacredAura {
+      0%, 100% { transform: scale(0.92); opacity: 0.25; filter: blur(12px); }
+      50% { transform: scale(1.18); opacity: 0.65; filter: blur(18px); }
+    }
+    .aura-pulse {
+      animation: sacredAura 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+  </style>
+</head>
+<body class="h-full w-full bg-[#030406] text-alabaster font-sans antialiased flex items-center justify-center p-0 sm:p-4 overflow-hidden select-none">
+<!-- Mobile Viewport Frame (390 x 844) with Realistic Glass Bezel & Depth -->
+<div class="relative w-full max-w-[390px] h-[844px] max-h-[844px] bg-obsidian border sm:border-[#1E2333] sm:rounded-[52px] shadow-[0_25px_70px_rgba(0,0,0,0.85),0_0_0_1px_rgba(255,255,255,0.06)] overflow-hidden flex flex-col justify-between">
+<!-- Candlelight Ambient Glow Backdrop Layer -->
+<div class="absolute -top-16 -right-16 w-80 h-80 rounded-full bg-candleGold/10 blur-[80px] pointer-events-none animate-candle z-0"></div>
+<div class="absolute bottom-10 -left-20 w-72 h-72 rounded-full bg-brass/10 blur-[90px] pointer-events-none animate-candle z-0" style="animation-delay: -3.5s;"></div>
+<!-- Top System Header / Notch & Status -->
+<header class="pt-3 px-6 pb-2.5 z-30 flex-shrink-0 bg-obsidian/85 backdrop-blur-xl border-b border-white/[0.05]">
+<!-- Status bar icons & time -->
+<div class="flex items-center justify-between text-[11px] font-medium tracking-tight text-stoneMuted pt-0.5 mb-2.5">
+<span class="tabular text-alabaster font-semibold tracking-tight">9:41</span>
+<div class="flex items-center space-x-1.5 opacity-80">
+<svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.28 19.57 10.59 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"></path></svg>
+<svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98A16.88 16.88 0 0 0 12 4z"></path></svg>
+<div class="w-5 h-2.5 border border-stoneMuted rounded-sm p-0.5 flex items-center">
+<div class="h-full bg-stoneMuted w-3/4 rounded-2xs"></div>
+</div>
+</div>
+</div>
+<!-- App Sanctuary Eyebrow with Liturgical Color Badge -->
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<!-- Chi-Rho Sacramental Glyph -->
+<span class="text-brass font-cinzel text-xs tracking-wider font-semibold opacity-95">☧ SANCTUS</span>
+<span class="text-stoneFaint text-[10px]">•</span>
+<!-- Interactive Liturgical Season Gem Tooltip Button -->
+<button class="flex items-center space-x-1.5 bg-[#121F17] hover:bg-[#16271D] border border-emerald-500/25 px-2 py-0.5 rounded-full transition group" onclick="toggleSeasonModal()">
+
+<span class="text-[9.5px] tracking-wide text-emerald-300 font-serif italic">Tempus per Annum</span>
+</button>
+</div>
+<!-- Sacred Habit Tracker / 12-Day Streak with Incense Thurible icon -->
+<div class="flex items-center space-x-1.5 bg-surface px-2.5 py-0.5 rounded-full border border-white/[0.06] shadow-sm">
+<span class="text-[10px] text-brass">✦</span>
+<span class="text-[10px] text-alabaster font-medium tracking-tight tabular">12 Days</span>
+</div>
+</div>
+</header>
+<!-- MAIN SCROLLABLE VIEWPORT CONTAINER -->
+<main class="flex-1 relative overflow-y-auto no-scrollbar scroll-smooth z-10" id="appViewport">
+<!-- ========================================================== -->
+<!-- VIEW 1: HOME SANCTUARY -->
+<!-- ========================================================== -->
+<section class="px-5 pt-3 pb-24 space-y-5 transition-opacity duration-300 hidden" id="viewHome">
+<!-- Salutation, Latin Subtitle & Rosary Mystery Fast Link -->
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<h1 class="text-3xl font-serif font-light text-alabaster tracking-tight">Good Morning</h1>
+<p class="text-xs text-stoneMuted mt-0.5 font-light flex items-center space-x-1">
+<span>Thursday of the Third Week</span>
+<span class="text-stoneFaint">·</span>
+<span class="italic font-serif text-stoneMuted">Feria V</span>
+</p>
+</div>
+<button class="spring-press text-stoneMuted hover:text-brass text-xs transition flex items-center space-x-1 border border-white/[0.08] hover:border-brass/40 px-2.5 py-1 rounded-full bg-surface shadow-sm" onclick="switchTab('rosary')">
+<span class="font-serif italic text-brass">Luminous</span>
+<span class="text-[10px]">→</span>
+</button>
+</div>
+<!-- Canonical Liturgy of the Hours Timeline Strip (Dynamic Breviary) -->
+<div class="bg-surfaceCard rounded-3xl p-3.5 border border-white/[0.07] shadow-lg relative overflow-hidden">
+<div class="flex items-center justify-between mb-2.5 px-0.5">
+<div class="flex items-center space-x-1.5">
+<span class="text-[10px] uppercase font-cinzel tracking-[0.18em] text-stoneMuted">Canonical Hours</span>
+<span class="text-stoneFaint">•</span>
+<span class="text-[9.5px] text-stoneMuted font-serif italic">Divine Office</span>
+</div>
+<!-- Angelus Quick Chime Reminder -->
+<button class="text-[10px] text-candleGold hover:text-brass flex items-center space-x-1 border border-candleGold/25 bg-candleGold/10 px-2 py-0.5 rounded-full transition" onclick="playBellChime('The Angelus &amp; Midday Rest')">
+<span>🔔</span>
+<span>Angelus 12pm</span>
+</button>
+</div>
+<!-- Horizontal Canonical Hours Track -->
+<div class="flex items-center justify-between space-x-1 overflow-x-auto no-scrollbar py-1 text-center">
+<!-- Matins -->
+<div class="flex-1 min-w-[42px] cursor-pointer py-1.5 rounded-xl border border-white/[0.04] bg-obsidian/50 opacity-60 hover:opacity-100 transition" onclick="selectHour('Matins', 'Night Watch · Readings')">
+<span class="text-[9px] font-cinzel text-stoneMuted block">MAT</span>
+<span class="text-[9px] text-stoneFaint tabular">3am</span>
+</div>
+<!-- Lauds -->
+<div class="flex-1 min-w-[42px] cursor-pointer py-1.5 rounded-xl border border-white/[0.04] bg-obsidian/50 opacity-60 hover:opacity-100 transition" onclick="selectHour('Lauds', 'Morning Praise · Benedictus')">
+<span class="text-[9px] font-cinzel text-stoneMuted block">LAU</span>
+<span class="text-[9px] text-stoneFaint tabular">6am</span>
+</div>
+<!-- Terce (Mid-Morning) -->
+<div class="flex-1 min-w-[42px] cursor-pointer py-1.5 rounded-xl border border-white/[0.04] bg-obsidian/50 opacity-60 hover:opacity-100 transition" onclick="selectHour('Terce', 'Third Hour · Descent of the Spirit')">
+<span class="text-[9px] font-cinzel text-stoneMuted block">TER</span>
+<span class="text-[9px] text-stoneFaint tabular">9am</span>
+</div>
+<!-- Sext (ACTIVE CANDLELIGHT GLOW) -->
+<div class="flex-1 min-w-[48px] cursor-pointer py-1.5 rounded-xl border border-brass/50 bg-brass/10 shadow-[0_0_12px_rgba(212,175,55,0.25)] relative" onclick="selectHour('Sext', 'Midday Light · Christus Crucifixus')">
+<span class="absolute -top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-candleGold shadow-[0_0_6px_#F3C068]"></span>
+<span class="text-[9px] font-cinzel text-brass font-bold block mt-0.5">SEXT</span>
+<span class="text-[9px] text-candleGold tabular font-medium">12pm</span>
+</div>
+<!-- None -->
+<div class="flex-1 min-w-[42px] cursor-pointer py-1.5 rounded-xl border border-white/[0.04] bg-obsidian/50 opacity-60 hover:opacity-100 transition" onclick="selectHour('None', 'Ninth Hour · Consummatum Est')">
+<span class="text-[9px] font-cinzel text-stoneMuted block">NON</span>
+<span class="text-[9px] text-stoneFaint tabular">3pm</span>
+</div>
+<!-- Vespers -->
+<div class="flex-1 min-w-[42px] cursor-pointer py-1.5 rounded-xl border border-white/[0.04] bg-obsidian/50 opacity-80 hover:opacity-100 transition" onclick="selectHour('Vespers', 'Evening Prayer · Magnificat')">
+<span class="text-[9px] font-cinzel text-alabaster/90 block">VES</span>
+<span class="text-[9px] text-stoneMuted tabular">6pm</span>
+</div>
+<!-- Compline -->
+<div class="flex-1 min-w-[42px] cursor-pointer py-1.5 rounded-xl border border-white/[0.04] bg-obsidian/50 opacity-60 hover:opacity-100 transition" onclick="selectHour('Compline', 'Night Prayer · Nunc Dimittis')">
+<span class="text-[9px] font-cinzel text-stoneMuted block">COM</span>
+<span class="text-[9px] text-stoneFaint tabular">9pm</span>
+</div>
+</div>
+<!-- Active Hour Preview -->
+<div class="mt-2.5 pt-2 border-t border-white/[0.05] flex items-center justify-between text-xs" id="activeHourSummary">
+<div class="flex items-center space-x-2">
+<span class="text-candleGold">🕯</span>
+<span class="text-alabaster font-serif text-[12.5px]">Sext: Midday Stillness</span>
+<span class="text-[10px] text-stoneMuted font-serif italic">(Psalm 121)</span>
+</div>
+<button class="text-brass hover:underline text-[11px] font-medium" onclick="openReadingScreen('Sext: Midday Prayer', 'The Lord is thy keeper; the Lord is thy shade upon thy right hand. The sun shall not smite thee by day, nor the moon by night. The Lord shall preserve thee from all evil: He shall preserve thy soul. Amen.')">Chant Hour →</button>
+</div>
+</div>
+<!-- Heart / Mood Pill Selector with Sacramental Themes -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="text-[11px] uppercase tracking-[0.16em] text-stoneMuted font-medium flex items-center space-x-1.5">
+<span>Sacred Intentions</span>
+<span class="text-[10px] text-stoneFaint">☩</span>
+</span>
+<span class="text-[10px] text-stoneFaint">Tap to open prayer</span>
+</div>
+<div class="flex space-x-2 overflow-x-auto no-scrollbar py-0.5">
+<button class="spring-press flex-shrink-0 px-3 py-1.5 rounded-full border border-white/[0.09] bg-surface text-xs text-alabaster/90 hover:border-brass/70 hover:text-brass transition duration-200" onclick="openMoodPrayer('Anxious', 'Peace in the Storm', 'Lord, calm the restless waves within my chest. Teach me to cast all care upon You, for You care for me. Pax Christi tecum.')">
+              Anxious
+            </button>
+<button class="spring-press flex-shrink-0 px-3 py-1.5 rounded-full border border-white/[0.09] bg-surface text-xs text-alabaster/90 hover:border-brass/70 hover:text-brass transition duration-200" onclick="openMoodPrayer('Contrite', 'Act of Contrition', 'O my God, I am heartily sorry for having offended Thee, and I detest all my sins because of Thy just punishments, but most of all because they offend Thee, my God, who art all-good and deserving of all my love.')">
+              Contrite
+            </button>
+<button class="spring-press flex-shrink-0 px-3 py-1.5 rounded-full border border-white/[0.09] bg-surface text-xs text-alabaster/90 hover:border-brass/70 hover:text-brass transition duration-200" onclick="openMoodPrayer('Grateful', 'Hymn of Praise (Te Deum)', 'We praise You, O God; we acknowledge You to be the Lord. All the earth doth worship You, the Father everlasting. To You all Angels cry aloud; the Heavens and all the Powers therein.')">
+              Grateful
+            </button>
+<button class="spring-press flex-shrink-0 px-3 py-1.5 rounded-full border border-candleGold/40 bg-candleGold/10 text-xs text-candleGold hover:bg-candleGold/20 transition duration-200 flex items-center space-x-1" onclick="switchTab('breathing')">
+<span>Seeking Peace</span>
+<span class="text-[10px]">✨</span>
+</button>
+<button class="spring-press flex-shrink-0 px-3 py-1.5 rounded-full border border-white/[0.09] bg-surface text-xs text-alabaster/90 hover:border-brass/70 hover:text-brass transition duration-200" onclick="openMoodPrayer('Bedtime', 'Compline Blessing', 'Now into Your hands, Lord, I commend my spirit. Keep me as the apple of Your eye under the shadow of Your wings. Amen.')">
+              Bedtime
+            </button>
+</div>
+</div>
+<!-- Saint of the Day Spotlight Card (Sanctorale) -->
+<div class="spring-press cursor-pointer p-4 rounded-3xl bg-surfaceCard border border-white/[0.08] hover:border-brass/40 relative overflow-hidden group shadow-md transition-all" onclick="openSaintModal()">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center space-x-2">
+<span class="w-1.5 h-1.5 rounded-full bg-brass"></span>
+<span class="text-[9.5px] uppercase tracking-[0.2em] text-brass font-cinzel font-semibold">Sanctorale · Memorial</span>
+</div>
+<span class="text-[11px] text-stoneMuted font-serif italic">July 11 Feast</span>
+</div>
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-2xl bg-surfaceElevated border border-brass/30 flex items-center justify-center text-brass font-cinzel text-lg flex-shrink-0 shadow-inner">
+              ☩
+            </div>
+<div class="flex-1">
+<h2 class="text-sm font-serif font-semibold text-alabaster group-hover:text-brass transition">
+                Saint Benedict of Nursia
+              </h2>
+<p class="text-[11px] text-stoneMuted font-light italic mt-0.5">
+                “Ora et Labora” · Father of Western Monasticism
+              </p>
+<p class="text-[11.5px] text-alabaster/80 font-serif leading-relaxed mt-2 pt-2 border-t border-white/[0.04]">
+                “Listen and attend with the ear of your heart to the precepts of the master.”
+              </p>
+</div>
+</div>
+</div>
+<!-- Verse of the Day Card (Warm Antique Parchment #F6F2E9) -->
+<div class="spring-press relative bg-parchment text-sepiaInk rounded-3xl p-6 shadow-xl border border-[#E3DEC3] transition duration-200">
+<!-- Subtle corner cross accent -->
+<span class="absolute top-3 right-3 text-sepiaSub/30 text-xs font-serif">☩</span>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center space-x-1.5">
+<span class="text-[9.5px] uppercase font-cinzel font-bold tracking-[0.22em] text-stoneFaint">Verse of the Day</span>
+</div>
+<div class="flex items-center space-x-3 text-sepiaSub">
+<button class="hover:text-sepiaInk transition" id="bookmarkBtn" onclick="bookmarkVerse()" title="Save Verse">
+<svg class="w-4 h-4" fill="none" id="bookmarkIcon" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<button class="hover:text-sepiaInk transition" onclick="shareVerse()" title="Share Verse">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+</div>
+</div>
+<blockquote class="font-serif text-[23px] leading-[1.35] text-sepiaInk font-normal tracking-tight">
+            “Be still, and know that I am God.”
+          </blockquote>
+<p class="text-[12px] font-serif italic text-sepiaSub/80 mt-1">“Vacate et videte quoniam ego sum Deus.”</p>
+<div class="mt-4 pt-3 border-t border-[#E5E0D0] flex items-center justify-between text-xs font-serif">
+<span class="font-medium text-sepiaSub italic text-sm">Psalm 46:10 · Vulgate</span>
+<button class="text-xs font-sans tracking-wide text-sepiaInk font-medium hover:underline flex items-center space-x-1" onclick="openReadingScreen('Psalm 46: The Lord Our Fortress', 'God is our refuge and strength, a very present help in trouble. Therefore will not we fear, though the earth be removed, and though the mountains be carried into the midst of the sea... Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth. The Lord of hosts is with us; the God of Jacob is our refuge.')">
+<span>Read Chapter</span>
+<span class="text-[10px]">→</span>
+</button>
+</div>
+</div>
+<!-- 3-Column Quiet Sanctuary Dock -->
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Dock 1: Peace Sanctuary -->
+<button class="spring-press bg-surfaceCard hover:bg-surfaceElevated border border-white/[0.08] hover:border-candleGold/40 rounded-2xl p-3 flex flex-col justify-between text-left transition duration-200 group" onclick="switchTab('breathing')">
+<div class="w-7 h-7 rounded-full bg-candleGold/10 flex items-center justify-center text-candleGold mb-3 group-hover:scale-105 transition">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle></svg>
+</div>
+<div>
+<h2 class="text-xs font-medium text-alabaster">Peace</h2>
+<p class="text-[10px] text-stoneMuted font-light mt-0.5">4-4-4 Breath</p>
+</div>
+</button>
+<!-- Dock 2: Prayer Journal -->
+<button class="spring-press bg-surfaceCard hover:bg-surfaceElevated border border-white/[0.08] hover:border-brass/40 rounded-2xl p-3 flex flex-col justify-between text-left transition duration-200 group" onclick="switchTab('journal')">
+<div class="w-7 h-7 rounded-full bg-white/[0.05] flex items-center justify-center text-alabaster/80 mb-3 group-hover:scale-105 transition">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<div>
+<h2 class="text-xs font-medium text-alabaster">Intentions</h2>
+<p class="text-[10px] text-stoneMuted font-light mt-0.5">Private Intercession</p>
+</div>
+</button>
+<!-- Dock 3: 7-Day Plans -->
+<button class="spring-press bg-surfaceCard hover:bg-surfaceElevated border border-white/[0.08] hover:border-brass/40 rounded-2xl p-3 flex flex-col justify-between text-left transition duration-200 group" onclick="switchTab('plans')">
+<div class="w-7 h-7 rounded-full bg-white/[0.05] flex items-center justify-center text-alabaster/80 mb-3 group-hover:scale-105 transition">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<div>
+<h2 class="text-xs font-medium text-alabaster">Novena</h2>
+<p class="text-[10px] text-stoneMuted font-light mt-0.5">Surrender Day 3</p>
+</div>
+</button>
+</div>
+<!-- Curated Daily Prayers List with Latin Subtitles -->
+<div class="space-y-2.5">
+<div class="flex items-center justify-between">
+<h2 class="text-[11px] uppercase tracking-[0.16em] text-stoneMuted font-medium flex items-center space-x-1">
+<span>Daily Liturgy &amp; Devotions</span>
+</h2>
+<button class="text-xs text-brass font-medium hover:underline" onclick="switchTab('prayers')">View All</button>
+</div>
+<!-- Prayer Item 1: Pater Noster -->
+<div class="spring-press p-3.5 rounded-2xl bg-surfaceCard border border-white/[0.06] hover:border-brass/40 flex items-center justify-between cursor-pointer transition" onclick="openPrayer('The Lord\'s Prayer (Pater Noster)', 'Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.', 'Pater noster, qui es in caelis, sanctificetur nomen tuum. Adveniat regnum tuum. Fiat voluntas tua, sicut in caelo et in terra. Panem nostrum quotidianum da nobis hodie...', 'Matthew 6:9-13', 'Dominical Devotion')">
+<div class="flex items-center space-x-3">
+<span class="text-brass/70 font-cinzel text-sm">☧</span>
+<div>
+<h3 class="text-xs font-serif font-medium text-alabaster">The Lord’s Prayer</h3>
+<p class="text-[10.5px] text-stoneMuted font-serif italic">Pater Noster · Traditional Latin &amp; English</p>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-stoneMuted text-xs">
+<span class="tabular text-[10px]">2 min</span>
+<svg class="w-3.5 h-3.5 text-stoneFaint" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+</div>
+<!-- Prayer Item 2: Prayer of St. Francis -->
+<div class="spring-press p-3.5 rounded-2xl bg-surfaceCard border border-white/[0.06] hover:border-brass/40 flex items-center justify-between cursor-pointer transition" onclick="openPrayer('Prayer of St. Francis', 'Lord, make me an instrument of your peace: where there is hatred, let me sow love; where there is injury, pardon; where there is doubt, faith; where there is despair, hope; where there is darkness, light; where there is sadness, joy. O divine Master, grant that I may not so much seek to be consoled as to console, to be understood as to understand, to be loved as to love.', 'Domine, fac me instrumentum pacis tuae...', 'St. Francis of Assisi · 12th Century', 'Seraphic Peace')">
+<div class="flex items-center space-x-3">
+<span class="text-brass/70 font-cinzel text-sm">☩</span>
+<div>
+<h3 class="text-xs font-serif font-medium text-alabaster">Prayer of St. Francis</h3>
+<p class="text-[10.5px] text-stoneMuted font-serif italic">Instrument of Thy Peace · Assisi</p>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-stoneMuted text-xs">
+<span class="tabular text-[10px]">3 min</span>
+<svg class="w-3.5 h-3.5 text-stoneFaint" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+</div>
+<!-- Prayer Item 3: Suscipe of St. Ignatius -->
+<div class="spring-press p-3.5 rounded-2xl bg-surfaceCard border border-white/[0.06] hover:border-brass/40 flex items-center justify-between cursor-pointer transition" onclick="openPrayer('Suscipe (Take, Lord, and Receive)', 'Take, Lord, and receive all my liberty, my memory, my understanding, and my entire will, all I have and call my own. You have given all to me. To you, Lord, I return it. Everything is yours; do with it what you will. Give me only your love and your grace, that is enough for me. Amen.', 'Suscipe, Domine, universam meam libertatem. Accipe memoriam, intellectum, atque voluntatem omnem...', 'St. Ignatius of Loyola', 'Total Surrender')">
+<div class="flex items-center space-x-3">
+<span class="text-brass/70 font-cinzel text-sm">✦</span>
+<div>
+<h3 class="text-xs font-serif font-medium text-alabaster">Suscipe of St. Ignatius</h3>
+<p class="text-[10.5px] text-stoneMuted font-serif italic">Radical Contemplative Surrender</p>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-stoneMuted text-xs">
+<span class="tabular text-[10px]">2 min</span>
+<svg class="w-3.5 h-3.5 text-stoneFaint" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================== -->
+<!-- VIEW 2: PRAYERS ARCHIVE & DEVOTIONALS -->
+<!-- ========================================================== -->
+<section class="px-5 pt-3 pb-24 space-y-4 hidden" id="viewPrayers">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="text-2xl font-serif text-alabaster font-light">Sanctuary of Prayers</h1>
+<p class="text-xs text-stoneMuted font-serif italic">Thesaurus Precum Christianarum</p>
+</div>
+<span class="text-xs text-brass font-serif italic">142 Devotions</span>
+</div>
+<!-- Filter tabs -->
+<div class="flex space-x-2 overflow-x-auto no-scrollbar pb-1 text-xs">
+<button class="px-3 py-1 rounded-full bg-brass text-obsidian font-medium" onclick="filterPrayers('all', this)">All</button>
+<button class="px-3 py-1 rounded-full bg-surface border border-white/[0.08] text-stoneMuted hover:text-alabaster" onclick="filterPrayers('ancient', this)">Ancient Latin</button>
+<button class="px-3 py-1 rounded-full bg-surface border border-white/[0.08] text-stoneMuted hover:text-alabaster" onclick="filterPrayers('marian', this)">Marian ℳ</button>
+<button class="px-3 py-1 rounded-full bg-surface border border-white/[0.08] text-stoneMuted hover:text-alabaster" onclick="filterPrayers('protection', this)">Protection</button>
+<button class="px-3 py-1 rounded-full bg-surface border border-white/[0.08] text-stoneMuted hover:text-alabaster" onclick="filterPrayers('eucharistic', this)">Eucharistic</button>
+</div>
+<!-- Prayer List -->
+<div class="space-y-2.5" id="prayersArchiveList">
+<!-- St. Michael -->
+<div class="spring-press p-4 rounded-2xl bg-surfaceCard border border-white/[0.06] hover:border-brass/40 cursor-pointer" onclick="openPrayer('Saint Michael the Archangel', 'Saint Michael the Archangel, defend us in battle. Be our protection against the wickedness and snares of the devil. May God rebuke him, we humbly pray; and do thou, O Prince of the Heavenly Host, by the power of God, cast into hell Satan and all the evil spirits who prowl about the world seeking the ruin of souls. Amen.', 'Sancte Michael Archangele, defende nos in proelio...', 'Pope Leo XIII · 1886', 'Spiritual Warfare')">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-[9.5px] uppercase tracking-wider text-brass font-cinzel font-semibold">Spiritual Armor</span>
+<h2 class="text-sm font-serif font-medium text-alabaster mt-0.5">Prayer to St. Michael</h2>
+<p class="text-xs text-stoneMuted font-light mt-1">Sancte Michael Archangele • Pope Leo XIII</p>
+</div>
+<span class="text-[11px] tabular text-stoneFaint">1 min</span>
+</div>
+</div>
+<!-- Marian Memorare -->
+<div class="spring-press p-4 rounded-2xl bg-surfaceCard border border-white/[0.06] hover:border-brass/40 cursor-pointer" onclick="openPrayer('The Memorare', 'Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thy intercession was left unaided. Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother; to thee do I come, before thee I stand, sinful and sorrowful. Amen.', 'Memorare, o piissima Virgo Maria, a saeculo non esse auditum...', 'St. Bernard of Clairvaux', 'Marian Shelter')">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-[9.5px] uppercase tracking-wider text-stoneMuted font-cinzel font-semibold">Marian Intercession</span>
+<h2 class="text-sm font-serif font-medium text-alabaster mt-0.5">The Memorare</h2>
+<p class="text-xs text-stoneMuted font-light mt-1">Memorare, O Piissima Virgo • Mother of Grace</p>
+</div>
+<span class="text-[11px] tabular text-stoneFaint">2 min</span>
+</div>
+</div>
+<!-- Anima Christi -->
+<div class="spring-press p-4 rounded-2xl bg-surfaceCard border border-white/[0.06] hover:border-brass/40 cursor-pointer" onclick="openPrayer('Anima Christi', 'Soul of Christ, sanctify me. Body of Christ, save me. Blood of Christ, inebriate me. Water from the side of Christ, wash me. Passion of Christ, strengthen me. O good Jesus, hear me. Within your wounds hide me. Suffer me not to be separated from you. From the malicious enemy defend me. Amen.', 'Anima Christi, sanctifica me. Corpus Christi, salva me. Sanguis Christi, inebria me...', '14th Century Ancient Liturgy', 'Ancient Eucharistic')">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-[9.5px] uppercase tracking-wider text-brass font-cinzel font-semibold">Eucharistic Sanctification</span>
+<h2 class="text-sm font-serif font-medium text-alabaster mt-0.5">Anima Christi</h2>
+<p class="text-xs text-stoneMuted font-light mt-1">Sanctifying stillness and communion</p>
+</div>
+<span class="text-[11px] tabular text-stoneFaint">2 min</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================== -->
+<!-- VIEW 3: HOLY ROSARY SANCTUARY -->
+<!-- ========================================================== -->
+<section class="px-5 pt-3 pb-24 space-y-4 hidden" id="viewRosary">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="text-2xl font-serif text-alabaster font-light">The Holy Rosary</h1>
+<p class="text-xs text-stoneMuted mt-0.5 font-serif italic">Thursday · Luminous Mysteries (Lux Mundi)</p>
+</div>
+<span class="text-[11px] bg-brass/10 border border-brass/30 text-brass px-2.5 py-0.5 rounded-full font-medium">
+            Decade 2 / 5
+          </span>
+</div>
+<!-- Rosary Interactive Beads Tracker -->
+<div class="bg-surfaceCard rounded-3xl p-5 border border-white/[0.08] relative overflow-hidden flex flex-col items-center shadow-xl">
+<div class="text-[10px] tracking-[0.2em] uppercase text-brass font-cinzel font-semibold mb-1">Mystery of Light</div>
+<h2 class="text-lg font-serif text-alabaster text-center font-medium" id="currentMysteryTitle">
+            The Wedding at Cana
+          </h2>
+<p class="text-[11.5px] text-stoneMuted font-serif italic text-center max-w-[270px] mt-1" id="currentMysteryScripture">
+            “Do whatever He tells you.” — John 2:5
+          </p>
+<!-- Interactive Bead Circle Diagram -->
+<div class="relative w-52 h-52 my-4 flex items-center justify-center">
+<!-- Subtle dashed orbit & gold aura glow -->
+<div class="absolute inset-0 rounded-full border border-dashed border-white/[0.12]"></div>
+<div class="absolute w-36 h-36 rounded-full bg-brass/10 blur-xl pointer-events-none"></div>
+<!-- Center Crucifix & Counter -->
+<div class="text-center z-10 flex flex-col items-center">
+<span class="text-brass text-2xl font-cinzel leading-none select-none">✝</span>
+<span class="text-xl font-serif font-medium text-alabaster mt-1 tabular" id="beadCounterText">7 / 10</span>
+<span class="text-[9px] uppercase tracking-widest text-stoneMuted font-cinzel">Ave Maria</span>
+</div>
+<!-- 10 Beads dynamically plotted around ring -->
+<div class="absolute inset-0 pointer-events-none" id="rosaryBeadsContainer"><div class="absolute w-3.5 h-3.5 -ml-[7px] -mt-[7px] rounded-full transition-all duration-300 border bg-brass border-brass shadow-[0_0_8px_rgba(212,175,55,0.7)]" style="left: 104px; top: 18px;"></div><div class="absolute w-3.5 h-3.5 -ml-[7px] -mt-[7px] rounded-full transition-all duration-300 border bg-brass border-brass shadow-[0_0_8px_rgba(212,175,55,0.7)]" style="left: 154.55px; top: 34.4245px;"></div><div class="absolute w-3.5 h-3.5 -ml-[7px] -mt-[7px] rounded-full transition-all duration-300 border bg-brass border-brass shadow-[0_0_8px_rgba(212,175,55,0.7)]" style="left: 185.791px; top: 77.4245px;"></div><div class="absolute w-3.5 h-3.5 -ml-[7px] -mt-[7px] rounded-full transition-all duration-300 border bg-brass border-brass shadow-[0_0_8px_rgba(212,175,55,0.7)]" style="left: 185.791px; top: 130.575px;"></div><div class="absolute w-3.5 h-3.5 -ml-[7px] -mt-[7px] rounded-full transition-all duration-300 border bg-brass border-brass shadow-[0_0_8px_rgba(212,175,55,0.7)]" style="left: 154.55px; top: 173.575px;"></div><div class="absolute w-3.5 h-3.5 -ml-[7px] -mt-[7px] rounded-full transition-all duration-300 border bg-brass border-brass shadow-[0_0_8px_rgba(212,175,55,0.7)]" style="left: 104px; top: 190px;"></div><div class="absolute w-3.5 h-3.5 -ml-[7px] -mt-[7px] rounded-full transition-all duration-300 border bg-candleGold border-candleGold shadow-[0_0_12px_#F3C068] scale-125 z-10" style="left: 53.4505px; top: 173.575px;"></div><div class="absolute w-3.5 h-3.5 -ml-[7px] -mt-[7px] rounded-full transition-all duration-300 border bg-obsidian border-white/[0.2] opacity-60" style="left: 22.2091px; top: 130.575px;"></div><div class="absolute w-3.5 h-3.5 -ml-[7px] -mt-[7px] rounded-full transition-all duration-300 border bg-obsidian border-white/[0.2] opacity-60" style="left: 22.2091px; top: 77.4245px;"></div><div class="absolute w-3.5 h-3.5 -ml-[7px] -mt-[7px] rounded-full transition-all duration-300 border bg-obsidian border-white/[0.2] opacity-60" style="left: 53.4505px; top: 34.4245px;"></div></div>
+</div>
+<!-- Controls: Previous, Tap Bead, Next Decade -->
+<div class="w-full flex items-center justify-between pt-2 border-t border-white/[0.06]">
+<button class="spring-press text-xs text-stoneMuted hover:text-alabaster px-3 py-1.5 rounded-full border border-white/[0.06]" onclick="prevBead()">
+              Previous
+            </button>
+<button class="spring-press px-5 py-2.5 rounded-full bg-brass text-obsidian text-xs font-semibold hover:bg-brassHover transition flex items-center space-x-1.5 shadow-[0_0_15px_rgba(212,175,55,0.3)]" onclick="nextBead()">
+<span>Pray Ave Maria</span>
+<span class="text-[11px]">📿</span>
+</button>
+<button class="spring-press text-xs text-stoneMuted hover:text-brass px-3 py-1.5 rounded-full border border-white/[0.06]" onclick="nextDecade()">
+              Next Dec.
+            </button>
+</div>
+</div>
+<!-- Meditative Scriptural Prompt -->
+<div class="bg-obsidian/80 border border-white/[0.06] rounded-2xl p-4">
+<div class="flex items-center justify-between mb-1.5">
+<span class="text-[10px] tracking-wider uppercase text-brass font-cinzel font-medium">Contemplation Fruit</span>
+<span class="text-[10px] text-stoneMuted font-serif italic">Fidelity &amp; Surrender</span>
+</div>
+<p class="text-xs font-serif text-alabaster/90 leading-relaxed font-light">
+            Bring before Our Lady your quiet needs, dried wells, and hidden concerns. Trust in the quiet hour of transformation.
+          </p>
+</div>
+</section>
+<!-- ========================================================== -->
+<!-- VIEW 4: PEACE SANCTUARY (4-4-4 BREATHING WITH AURA) -->
+<!-- ========================================================== -->
+<section class="hidden px-5 pt-3 pb-24 h-full flex flex-col justify-between" id="viewBreathing">
+<div class="text-center pt-2">
+<div class="inline-block text-[9.5px] tracking-[0.24em] uppercase text-candleGold font-cinzel font-semibold border border-candleGold/30 bg-candleGold/10 px-3 py-0.5 rounded-full mb-2">
+            Sacred Pause · Hesychasm
+          </div>
+<h1 class="text-2xl font-serif text-alabaster font-light">Peace Sanctuary</h1>
+<p class="text-xs text-stoneMuted font-light mt-0.5">4-4-4 Contemplative Christian Rhythm</p>
+</div>
+<!-- Visual Ring Expansion Area -->
+<div class="relative flex-1 flex flex-col items-center justify-center my-6">
+<!-- Outer Golden Aura Glow -->
+<div class="absolute w-56 h-56 rounded-full bg-candleGold/15 pointer-events-none"></div>
+<div class="absolute w-64 h-64 rounded-full border border-candleGold/15 pointer-events-none"></div>
+<!-- Expanding Brass Breathing Ring -->
+<div class="relative w-44 h-44 rounded-full border-[1.5px] border-candleGold/80 flex items-center justify-center transition-all duration-1000 ease-in-out shadow-[0_0_40px_rgba(243,192,104,0.18)] bg-surfaceCard/40 backdrop-blur-sm" id="breathingRing" style="transform: scale(0.88); border-color: rgba(212, 175, 55, 0.4);">
+<!-- Central guidance text -->
+<div class="text-center z-10">
+<span class="text-lg font-serif text-alabaster font-medium tracking-wide block" id="breathActionText">Breathe Out</span>
+<span class="text-3xl font-serif text-candleGold tabular font-light mt-0.5 block" id="breathTimerNum">4</span>
+<span class="text-[9px] uppercase tracking-[0.2em] text-stoneMuted mt-1 block" id="breathSubText">Surrendering All Care</span>
+</div>
+</div>
+<!-- Scripture anchor below ring -->
+<p class="mt-8 text-xs font-serif italic text-stoneMuted text-center max-w-[270px] leading-relaxed" id="breathScripture">
+            “The Lord will give strength unto His people; the Lord will bless His people with peace.”
+          </p>
+</div>
+<!-- Breathing Interactive Bottom Actions -->
+<div class="space-y-3 pb-2">
+<div class="flex items-center justify-center space-x-3">
+<button class="spring-press px-6 py-2.5 rounded-full bg-brass text-obsidian text-xs font-semibold tracking-wide hover:bg-brassHover transition shadow-lg" id="toggleBreathBtn" onclick="toggleBreathingLoop()">
+              Pause Rhythm
+            </button>
+<button class="spring-press px-4 py-2.5 rounded-full bg-surface border border-white/[0.08] text-stoneMuted hover:text-brass text-xs transition flex items-center space-x-1.5" onclick="playBellChime('Temple Sanctus Bell')">
+<span>Sanctus Bell</span>
+<span class="text-xs">🔔</span>
+</button>
+</div>
+<p class="text-center text-[10px] text-stoneFaint font-serif italic">Rest here before silent contemplative mental prayer.</p>
+</div>
+</section>
+<!-- ========================================================== -->
+<!-- VIEW 5: GUIDED 7-DAY PLANS & NOVENAS -->
+<!-- ========================================================== -->
+<section class="hidden px-5 pt-3 pb-24 space-y-4" id="viewPlans">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="text-2xl font-serif text-alabaster font-light">Spiritual Journeys</h1>
+<p class="text-xs text-stoneMuted font-serif italic">Novenas &amp; Guided Retreats</p>
+</div>
+<span class="text-xs text-brass font-serif italic">Guided Paths</span>
+</div>
+<!-- Plan Card 1: Active 9-Day Novena of Surrender -->
+<div class="p-5 rounded-3xl bg-surfaceCard border border-brass/40 relative overflow-hidden shadow-md">
+<div class="flex justify-between items-start mb-3">
+<div>
+<span class="text-[9px] uppercase tracking-[0.2em] text-brass font-cinzel font-semibold bg-brass/10 px-2 py-0.5 rounded">Active Novena</span>
+<h2 class="text-base font-serif font-medium text-alabaster mt-1.5">9-Day Novena of Surrender</h2>
+<p class="text-xs text-stoneMuted font-light mt-0.5">Don Dolindo Ruotolo · “O Jesus, I surrender myself to You”</p>
+</div>
+<span class="text-xs font-serif italic text-brass">Day 3 of 9</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-obsidian h-1.5 rounded-full overflow-hidden my-3 border border-white/[0.04]">
+<div class="bg-brass h-full rounded-full w-[33%]"></div>
+</div>
+<div class="flex items-center justify-between text-xs pt-1">
+<span class="text-stoneMuted text-[11px]">Today: Surrender of Anxious Thoughts</span>
+<button class="spring-press px-3.5 py-1.5 rounded-full bg-brass text-obsidian font-semibold text-xs hover:bg-brassHover transition" onclick="openPrayer('Novena Day 3: Surrender of Control', 'O Jesus, I surrender myself to You, take care of everything! Close your eyes and let the creative energy of my love do the work. Rest in my peace.', 'Don Dolindo Ruotolo · Surrender Novena', 'Spiritual Surrender')">
+              Begin Day 3
+            </button>
+</div>
+</div>
+<!-- Plan Card 2: 7-Day Peace in the Storm -->
+<div class="p-5 rounded-3xl bg-surfaceCard border border-white/[0.08] hover:border-brass/30 transition shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<div>
+<span class="text-[9px] uppercase tracking-[0.2em] text-stoneMuted font-cinzel font-semibold">Scripture Path</span>
+<h2 class="text-base font-serif font-medium text-alabaster mt-1">7-Day Peace in the Storm</h2>
+<p class="text-xs text-stoneMuted font-light mt-0.5">Anchoring the anxious heart in Christ</p>
+</div>
+<span class="text-xs text-stoneMuted font-serif">7 Days</span>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-white/[0.04] mt-3">
+<span class="text-[11px] text-stoneFaint">Completed 1 time</span>
+<button class="text-xs text-brass hover:underline" onclick="startPlan('Peace in the Storm')">Start Anew →</button>
+</div>
+</div>
+</section>
+<!-- ========================================================== -->
+<!-- VIEW 6: PRIVATE PRAYER JOURNAL & INTENTIONS -->
+<!-- ========================================================== -->
+<section class="hidden px-5 pt-3 pb-24 space-y-4" id="viewJournal">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="text-2xl font-serif text-alabaster font-light">Prayer Intentions</h1>
+<p class="text-xs text-stoneMuted mt-0.5">Offline &amp; Private to this sanctuary</p>
+</div>
+<button class="spring-press px-3 py-1.5 rounded-full bg-brass text-obsidian text-xs font-semibold hover:bg-brassHover transition flex items-center space-x-1" onclick="openNewIntentionModal()">
+<span>+ New</span>
+</button>
+</div>
+<!-- Journal Entries List -->
+<div class="space-y-3" id="journalEntriesList">
+<!-- Item 1: Active praying -->
+<div class="p-4 rounded-2xl bg-surfaceCard border border-white/[0.08] relative">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] tracking-wider uppercase font-semibold text-brass bg-brass/10 px-2 py-0.5 rounded-full">Praying</span>
+<span class="text-[10px] text-stoneMuted tabular">Oct 24</span>
+</div>
+<h2 class="text-sm font-serif font-medium text-alabaster">Healing for Mother’s surgery</h2>
+<p class="text-xs text-stoneMuted font-light mt-1 leading-relaxed">
+              Praying for the hands of the medical team, calm spirits, and quick recovery. “He heals the brokenhearted.”
+            </p>
+<div class="mt-3 pt-2.5 border-t border-white/[0.04] flex items-center justify-between text-xs">
+<span class="text-[11px] text-stoneFaint">Prayed 8 times</span>
+<button class="text-stoneMuted hover:text-brass text-[11px] transition" onclick="markAnswered(this)">Mark as Answered ✓</button>
+</div>
+</div>
+<!-- Item 2: Answered prayer -->
+<div class="p-4 rounded-2xl bg-surfaceCard/60 border border-white/[0.04] relative">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] tracking-wider uppercase font-semibold text-emerald-400/90 bg-emerald-500/10 px-2 py-0.5 rounded-full">Answered</span>
+<span class="text-[10px] text-stoneMuted tabular">Oct 12</span>
+</div>
+<h2 class="text-sm font-serif font-medium text-alabaster">Clarity on work vocation</h2>
+<p class="text-xs text-stoneMuted font-light mt-1 leading-relaxed">
+              Thankful for an unexpected door opening in ethical design mentorship. Gratitude Psalm recited.
+            </p>
+</div>
+</div>
+</section>
+<!-- ========================================================== -->
+<!-- VIEW 7: SAINTS & DAILY READINGS -->
+<!-- ========================================================== -->
+<section class="px-5 pt-3 pb-24 space-y-4 hidden" id="viewSaints">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="text-2xl font-serif text-alabaster font-light">Saints &amp; Calendar</h1>
+<p class="text-xs text-stoneMuted mt-0.5 font-serif italic">Sanctorale &amp; Missale Romanum</p>
+</div>
+<span class="text-xs text-stoneMuted font-serif">Year II</span>
+</div>
+<!-- Saint of the Day Spotlight -->
+<div class="p-5 rounded-3xl bg-surfaceCard border border-brass/30 relative">
+<div class="flex items-center space-x-2 mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-brass"></span>
+<span class="text-[10px] uppercase tracking-[0.2em] text-brass font-cinzel font-semibold">Doctor of the Church</span>
+</div>
+<h2 class="text-lg font-serif text-alabaster font-medium">Saint Anthony of Padua</h2>
+<p class="text-xs text-stoneMuted font-serif italic mt-0.5">Patron of Lost Things &amp; Travelers · 1195–1231</p>
+<blockquote class="font-serif italic text-xs text-alabaster/90 mt-3 pt-3 border-t border-white/[0.06] leading-relaxed">
+            “Actions speak louder than words; let your words teach and your actions speak.”
+          </blockquote>
+<div class="mt-4 flex items-center justify-between pt-1">
+<span class="text-[11px] text-stoneFaint">Feast Day: June 13</span>
+<button class="text-xs text-brass font-medium hover:underline" onclick="openPrayer('Saint Anthony of Padua Intercession', 'O holy St. Anthony, gentlest of Saints, your love for God and charity for His creatures made you worthy when on earth to possess miraculous powers. Encouraged by this, I implore you to obtain for me the grace I now request in quiet sincerity. Amen.', 'Si quaeris miracula, mors, error, calamitas, daemon, lepra fugiunt...', 'St. Anthony of Padua', 'Sanctuary Intercession')">Read Life &amp; Prayer →</button>
+</div>
+</div>
+<!-- Canonical Readings Strip -->
+<div class="space-y-2">
+<span class="text-[11px] uppercase tracking-[0.16em] text-stoneMuted font-cinzel font-semibold">Daily Lectionary</span>
+<div class="spring-press p-3.5 rounded-2xl bg-surfaceCard border border-white/[0.06] hover:border-brass/30 cursor-pointer flex justify-between items-center" onclick="openReadingScreen('First Reading: Ephesians 3:14-21', 'For this cause I bow my knees unto the Father of our Lord Jesus Christ, of whom the whole family in heaven and earth is named, that he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man...')">
+<div>
+<h3 class="text-xs font-serif font-medium text-alabaster">First Reading</h3>
+<p class="text-[10px] text-stoneMuted">Ephesians 3:14-21 · Paul’s Prayer for Wisdom</p>
+</div>
+<span class="text-xs text-stoneFaint">→</span>
+</div>
+<div class="spring-press p-3.5 rounded-2xl bg-surfaceCard border border-white/[0.06] hover:border-brass/30 cursor-pointer flex justify-between items-center" onclick="openReadingScreen('Responsorial Psalm: Psalm 33', 'The earth is full of the goodness of the Lord. Rejoice in the Lord, O ye righteous: for praise is comely for the upright. Praise the Lord with harp: sing unto him with the psaltery and an instrument of ten strings.')">
+<div>
+<h3 class="text-xs font-serif font-medium text-alabaster">Responsorial Psalm</h3>
+<p class="text-[10px] text-stoneMuted">Psalm 33:1-2, 4-5 · The Word of the Lord</p>
+</div>
+<span class="text-xs text-stoneFaint">→</span>
+</div>
+</div>
+</section>
+<!-- ========================================================== -->
+<!-- VIEW 8: SETTINGS & SANCTUARY PREFERENCES -->
+<!-- ========================================================== -->
+<section class="px-5 pt-3 pb-24 space-y-4" id="viewSettings">
+<h1 class="text-2xl font-serif text-alabaster font-light">Sanctuary Settings</h1>
+<div class="space-y-3">
+<!-- Notification Preferences -->
+<div class="bg-surfaceCard rounded-2xl p-4 border border-white/[0.06] space-y-3">
+<h2 class="text-xs uppercase tracking-[0.16em] text-stoneMuted font-cinzel font-semibold">Canonical Reminders</h2>
+<div class="flex items-center justify-between text-xs">
+<div>
+<span class="text-alabaster font-light block">Morning Angelus (6:00 AM)</span>
+<span class="text-[10px] text-stoneMuted font-serif italic">The Angel of the Lord</span>
+</div>
+<button class="w-9 h-5 bg-brass rounded-full relative transition-colors duration-200" onclick="toggleSwitch(this)">
+<span class="w-3.5 h-3.5 bg-obsidian rounded-full absolute right-1 top-[3px] transition-transform"></span>
+</button>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div>
+<span class="text-alabaster font-light block">Vespers Bell (6:00 PM)</span>
+<span class="text-[10px] text-stoneMuted font-serif italic">Evening Canticle</span>
+</div>
+<button class="w-9 h-5 bg-brass rounded-full relative transition-colors duration-200" onclick="toggleSwitch(this)">
+<span class="w-3.5 h-3.5 bg-obsidian rounded-full absolute right-1 top-[3px] transition-transform"></span>
+</button>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div>
+<span class="text-alabaster font-light block">Silent Night Examen (9:30 PM)</span>
+<span class="text-[10px] text-stoneMuted font-serif italic">Ignatian Review of Day</span>
+</div>
+<button class="w-9 h-5 bg-stoneFaint rounded-full relative transition-colors duration-200" onclick="toggleSwitch(this)">
+<span class="w-3.5 h-3.5 bg-obsidian rounded-full absolute left-1 top-[3px] transition-transform"></span>
+</button>
+</div>
+</div>
+<!-- Scripture Translation -->
+<div class="bg-surfaceCard rounded-2xl p-4 border border-white/[0.06] space-y-2">
+<h2 class="text-xs uppercase tracking-[0.16em] text-stoneMuted font-cinzel font-semibold">Sacred Scripture Translation</h2>
+<div class="grid grid-cols-2 gap-2 text-xs">
+<button class="p-2.5 rounded-xl border border-brass text-brass bg-brass/10 font-medium" onclick="selectTranslation('RSV-2CE', this)">RSV-2CE (Ignatius)</button>
+<button class="p-2.5 rounded-xl border border-white/[0.08] text-stoneMuted hover:text-alabaster" onclick="selectTranslation('Vulgate', this)">Clementine Vulgate</button>
+<button class="p-2.5 rounded-xl border border-white/[0.08] text-stoneMuted hover:text-alabaster" onclick="selectTranslation('Douay-Rheims', this)">Douay-Rheims 1899</button>
+<button class="p-2.5 rounded-xl border border-white/[0.08] text-stoneMuted hover:text-alabaster" onclick="selectTranslation('ESV-CE', this)">ESV-CE Catholic</button>
+</div>
+</div>
+<!-- Language & Liturgical Dialect Selection --><div class="bg-surfaceCard rounded-2xl p-4 border border-white/[0.06] space-y-3"><div class="flex items-center justify-between"><h2 class="text-xs uppercase tracking-[0.16em] text-stoneMuted font-cinzel font-semibold">Language / Dil</h2><span class="text-[10px] text-brass font-serif italic">English (Traditional)</span></div><div class="grid grid-cols-2 gap-2 text-xs"><button class="p-2.5 rounded-xl border border-brass text-brass bg-brass/10 font-medium text-left flex items-center justify-between" onclick="showToast('Language set: English (Traditional)')"><span>English (Liturgical)</span><span class="text-[10px] text-brass">✓</span></button><button class="p-2.5 rounded-xl border border-white/[0.08] text-stoneMuted hover:text-alabaster text-left flex items-center justify-between" onclick="showToast('Lingua: Latina')"><span>Latina (Ecclesiastica)</span></button><button class="p-2.5 rounded-xl border border-white/[0.08] text-stoneMuted hover:text-alabaster text-left flex items-center justify-between" onclick="showToast('Dil seçildi: Türkçe')"><span>Türkçe</span></button><button class="p-2.5 rounded-xl border border-white/[0.08] text-stoneMuted hover:text-alabaster text-left flex items-center justify-between" onclick="showToast('Idioma: Español')"><span>Español</span></button></div></div><!-- Data & Account Deletion Section --><div class="bg-surfaceCard rounded-2xl p-4 border border-white/[0.06] space-y-3"><h2 class="text-xs uppercase tracking-[0.16em] text-stoneMuted font-cinzel font-semibold">Data &amp; Privacy (Veri &amp; Gizlilik)</h2><p class="text-[11px] text-stoneMuted font-light leading-relaxed">Manage local devotions, downloaded liturgical audio chant cache, or permanently remove your private sanctuary record.</p><div class="pt-1 space-y-2"><button class="w-full p-2.5 rounded-xl border border-white/[0.08] hover:border-white/[0.2] bg-surface text-stoneMuted hover:text-alabaster text-xs flex items-center justify-between transition" onclick="showToast('Local chant cache &amp; journal cleared')"><div class="text-left"><span class="block text-alabaster font-normal">Clear Local Journal &amp; Audio Cache</span><span class="text-[10px] text-stoneFaint">Yerel Verileri ve Günlüğü Temizle (14.2 MB)</span></div><span class="text-xs text-stoneMuted">🧹</span></button><button class="w-full p-2.5 rounded-xl border border-liturgicalRed/30 hover:border-liturgicalRed/60 bg-liturgicalRed/5 text-xs flex items-center justify-between transition group" onclick="openDeleteAccountModal()"><div class="text-left"><span class="block text-liturgicalRed/90 group-hover:text-liturgicalRed font-medium">Delete Account &amp; All Cloud Data</span><span class="text-[10px] text-stoneMuted">Hesabı ve Tüm Verileri Kalıcı Olarak Sil</span></div><span class="text-xs text-liturgicalRed/70 font-cinzel">✕</span></button></div></div></div>
+</section>
+</main>
+<!-- ========================================================== -->
+<!-- SLIDE-OVER SHEET: PRAYER DETAIL & GUIDED AUDIO SCREEN -->
+<!-- ========================================================== -->
+<div class="absolute inset-0 bg-obsidian/95 backdrop-blur-2xl z-40 translate-y-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-hidden" id="prayerDetailModal">
+<!-- Modal Header -->
+<div class="pt-4 px-5 pb-3 border-b border-white/[0.06] flex items-center justify-between flex-shrink-0 bg-obsidian/90">
+<button class="w-8 h-8 rounded-full bg-surface border border-white/[0.08] flex items-center justify-center text-stoneMuted hover:text-alabaster transition" onclick="closePrayerModal()">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<span class="text-[10px] uppercase tracking-[0.2em] text-brass font-cinzel font-semibold" id="prayerModalCategory">Dominical Devotion</span>
+<div class="flex items-center space-x-1.5">
+<button class="px-2 py-1 rounded-full bg-surface border border-white/[0.08] text-[10px] text-brass font-cinzel hover:bg-brass/10 transition" id="latinToggleBtn" onclick="toggleLatinLayer()">LAT</button>
+<button class="w-7 h-7 rounded-full bg-surface text-stoneMuted hover:text-alabaster text-xs flex items-center justify-center font-serif" onclick="adjustFontSize(-1)">A-</button>
+<button class="w-7 h-7 rounded-full bg-surface text-stoneMuted hover:text-alabaster text-xs flex items-center justify-center font-serif" onclick="adjustFontSize(1)">A+</button>
+</div>
+</div>
+<!-- Scrollable Prayer Body -->
+<div class="flex-1 overflow-y-auto px-6 py-5 space-y-5 no-scrollbar">
+<!-- Title & Sub -->
+<div>
+<h1 class="text-2xl font-serif text-alabaster font-normal tracking-tight" id="prayerModalTitle">The Lord’s Prayer</h1>
+<p class="text-xs text-stoneMuted font-serif italic mt-1" id="prayerModalSource">Matthew 6:9-13 · Traditional Latin &amp; English</p>
+</div>
+<!-- Audio Player with Live Equalizer Animation -->
+<div class="p-3.5 rounded-2xl bg-surfaceCard border border-white/[0.08] space-y-3 shadow-lg">
+<div class="flex items-center justify-between">
+<!-- Audio Play/Pause Button Pill -->
+<button class="spring-press flex items-center space-x-2 bg-brass text-obsidian px-3.5 py-1.5 rounded-full text-xs font-semibold hover:bg-brassHover transition" id="audioPlayBtn" onclick="toggleAudioPlayback()">
+<svg class="w-3 h-3 fill-current" id="audioIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+<span id="audioBtnLabel">Chant Hymn</span>
+</button>
+<!-- Live Audio Equalizer Waveform -->
+<div class="hidden items-end space-x-1 h-5 px-2" id="soundWaveform">
+<span class="equalizer-bar w-1 bg-brass rounded-full inline-block"></span>
+<span class="equalizer-bar w-1 bg-candleGold rounded-full inline-block"></span>
+<span class="equalizer-bar w-1 bg-brass rounded-full inline-block"></span>
+<span class="equalizer-bar w-1 bg-candleGold rounded-full inline-block"></span>
+<span class="equalizer-bar w-1 bg-brass rounded-full inline-block"></span>
+</div>
+<!-- 1-Min Contemplative Silence Timer Pill -->
+<button class="spring-press flex items-center space-x-1.5 border border-white/[0.12] text-stoneMuted hover:text-brass px-3 py-1.5 rounded-full text-xs transition" id="silenceTimerBtn" onclick="toggleSilenceTimer()">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 6v6l4 2"></path></svg>
+<span id="silenceTimerText">1-Min Silence</span>
+</button>
+</div>
+<!-- Progress track -->
+<div class="w-full bg-obsidian h-1 rounded-full overflow-hidden">
+<div class="bg-brass h-full w-0 transition-all duration-300" id="audioProgressBar"></div>
+</div>
+<div class="flex justify-between text-[10px] text-stoneFaint tabular">
+<span id="audioTimeCurrent">0:00</span>
+<span id="audioTimeTotal">2:14</span>
+</div>
+</div>
+<!-- Optional Latin Text Layer (Toggleable) -->
+<div class="hidden p-3.5 rounded-xl bg-surfaceElevated border border-brass/20 text-xs font-serif italic text-brass leading-relaxed" id="prayerModalLatin">
+          Pater noster, qui es in caelis, sanctificetur nomen tuum...
+        </div>
+<!-- Prayer Body Copy (Generous Serif) -->
+<div class="font-serif text-lg leading-[1.62] text-alabaster/90 space-y-4 font-light transition-all duration-150" id="prayerModalBody">
+          Our Father, who art in heaven, hallowed be thy name...
+        </div>
+<!-- Amen affirmation -->
+<div class="pt-6 pb-4 text-center">
+<button class="spring-press px-7 py-2.5 rounded-full border border-brass/50 bg-brass/10 text-brass text-xs font-serif italic hover:bg-brass/20 transition shadow-md" onclick="recordAmen()">
+            Amen &amp; Recite Gloria Patri ☩
+          </button>
+</div>
+</div>
+</div>
+<!-- ========================================================== -->
+<!-- SLIDE-OVER SHEET: SCRIPTURE READING MODAL (Apple Books Style) -->
+<!-- ========================================================== -->
+<div class="absolute inset-0 bg-parchment text-sepiaInk z-40 translate-y-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-hidden shadow-2xl" id="scriptureDetailModal">
+<!-- Modal Header -->
+<div class="pt-4 px-5 pb-3 border-b border-[#E3DEC3] flex items-center justify-between flex-shrink-0 bg-parchment/90 backdrop-blur-md">
+<button class="w-8 h-8 rounded-full bg-[#EAE4D6] flex items-center justify-center text-sepiaInk hover:bg-[#DDD5C3] transition" onclick="closeScriptureModal()">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<span class="text-[10px] uppercase tracking-[0.2em] text-stoneFaint font-cinzel font-bold">Biblia Sacra · Lectio</span>
+<button class="text-xs text-sepiaInk font-medium" onclick="shareVerse()">Share</button>
+</div>
+<!-- Scrollable Scripture Content with Dropcap & Deckle Feel -->
+<div class="flex-1 overflow-y-auto px-7 py-6 space-y-5 no-scrollbar">
+<div class="text-center pb-2">
+<span class="text-xs uppercase font-cinzel text-stoneFaint tracking-widest">Liber Psalmorum</span>
+<h1 class="text-2xl font-serif font-normal text-sepiaInk mt-1" id="scriptureTitle">Psalm 46</h1>
+<div class="w-12 h-[1px] bg-stoneFaint/40 mx-auto mt-2"></div>
+</div>
+<div class="dropcap font-serif text-[18px] leading-[1.72] text-sepiaInk/95 font-normal space-y-4" id="scriptureBody">
+<!-- Text inserted via JS -->
+</div>
+<div class="text-center pt-6 pb-2 text-stoneFaint font-serif italic text-xs">
+          “Verbum Domini. Deo Gratias.”
+        </div>
+</div>
+</div>
+<!-- ========================================================== -->
+<!-- MODAL: LITURGICAL SEASONS GUIDE -->
+<!-- ========================================================== -->
+<div class="absolute inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-end hidden" id="seasonModal">
+<div class="w-full bg-surfaceCard border-t border-white/[0.1] rounded-t-3xl p-6 space-y-4">
+<div class="flex justify-between items-center pb-1 border-b border-white/[0.06]">
+<h2 class="text-sm font-cinzel font-semibold text-alabaster">Liturgical Seasons of the Church</h2>
+<button class="text-xs text-stoneMuted" onclick="toggleSeasonModal()">Close</button>
+</div>
+<div class="space-y-2.5 text-xs">
+<div class="flex items-center space-x-3 p-2 rounded-xl bg-white/[0.03]">
+<span class="w-3 h-3 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span>
+<div class="flex-1">
+<span class="font-medium text-alabaster">Ordinary Time (Tempus per Annum)</span>
+<p class="text-[10px] text-stoneMuted">Growth in faith, hope, and daily discipleship (Current Season)</p>
+</div>
+</div>
+<div class="flex items-center space-x-3 p-2 rounded-xl bg-white/[0.03]">
+<span class="w-3 h-3 rounded-full bg-purple-600"></span>
+<div class="flex-1">
+<span class="font-medium text-alabaster">Advent &amp; Lent</span>
+<p class="text-[10px] text-stoneMuted">Penance, preparation, contemplation, and conversion</p>
+</div>
+</div>
+<div class="flex items-center space-x-3 p-2 rounded-xl bg-white/[0.03]">
+<span class="w-3 h-3 rounded-full bg-amber-200"></span>
+<div class="flex-1">
+<span class="font-medium text-alabaster">Easter &amp; Christmas</span>
+<p class="text-[10px] text-stoneMuted">Joy, triumph of the Resurrection, and the Incarnation</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================================== -->
+<!-- MODAL: SAINT BIOGRAPHY & MEDITATION -->
+<!-- ========================================================== -->
+<div class="absolute inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-end" id="saintModal">
+<div class="w-full bg-surfaceCard border-t border-brass/30 rounded-t-3xl p-6 space-y-4">
+<div class="flex justify-between items-start pb-2 border-b border-white/[0.06]">
+<div>
+<span class="text-[9px] uppercase tracking-widest text-brass font-cinzel">Saint of the Day</span>
+<h2 class="text-base font-serif font-semibold text-alabaster mt-0.5">Saint Benedict of Nursia</h2>
+<p class="text-xs text-stoneMuted font-serif italic">Abbot, Patriarch of Western Monks · c. 480 – 548</p>
+</div>
+<button class="text-xs text-stoneMuted hover:text-alabaster" onclick="closeSaintModal()">✕</button>
+</div>
+<p class="text-xs font-serif text-alabaster/90 leading-relaxed font-light">
+          Saint Benedict founded the great monastery of Monte Cassino and wrote the famous Rule of Saint Benedict. His motto, <em class="text-brass">“Ora et Labora”</em> (Pray and Work), balances contemplation with diligent sacred service.
+        </p>
+<div class="p-3 rounded-2xl bg-surfaceElevated border border-white/[0.06] text-xs">
+<span class="text-brass font-serif font-medium">Saint Benedict Medal Inscription:</span>
+<p class="text-[11px] text-stoneMuted font-serif italic mt-0.5">“Crux Sacra Sit Mihi Lux! Non Draco Sit Mihi Dux!” (May the Holy Cross be my light! Let not the dragon be my guide!)</p>
+</div>
+<button class="spring-press w-full py-2.5 rounded-full bg-brass text-obsidian text-xs font-semibold hover:bg-brassHover transition" onclick="closeSaintModal(); openPrayer('Prayer to St. Benedict', 'Gracious Father, who made Saint Benedict a wise master in the school of Your divine service, grant that putting nothing before love of Christ, we may advance with open hearts on the path of Your commandments. Amen.', 'Sancte Benedicte, ora pro nobis', 'Saint Benedict', 'Benedictine Grace');">
+          Pray Saint Benedict Collect
+        </button>
+</div>
+</div>
+<!-- ========================================================== -->
+<!-- MODAL: ADD INTENTION MODAL -->
+<!-- ========================================================== -->
+<div class="absolute inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-end" id="newIntentionModal">
+<div class="w-full bg-surfaceCard border-t border-white/[0.1] rounded-t-3xl p-5 space-y-4">
+<div class="flex justify-between items-center">
+<h2 class="text-sm font-serif font-medium text-alabaster">New Prayer Intention</h2>
+<button class="text-xs text-stoneMuted" onclick="closeNewIntentionModal()">Cancel</button>
+</div>
+<input class="w-full bg-obsidian border border-white/[0.08] rounded-xl px-3.5 py-2.5 text-xs text-alabaster placeholder-stoneMuted focus:outline-none focus:border-brass" id="intentionInputTitle" placeholder="Who or what are you praying for?" type="text">
+<textarea class="w-full bg-obsidian border border-white/[0.08] rounded-xl px-3.5 py-2.5 text-xs text-alabaster placeholder-stoneMuted focus:outline-none focus:border-brass" id="intentionInputNotes" placeholder="Add Scripture verse or personal note..." rows="3"></textarea>
+<button class="spring-press w-full py-2.5 rounded-full bg-brass text-obsidian text-xs font-semibold hover:bg-brassHover transition" onclick="saveNewIntention()">Save to Private Sanctuary</button>
+</div>
+</div><div class="absolute inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-end transition-opacity duration-300" id="deleteAccountModal"><div class="w-full bg-surfaceCard border-t border-liturgicalRed/30 rounded-t-3xl p-5 space-y-4 max-h-[90%] overflow-y-auto no-scrollbar shadow-2xl"><div id="deleteModalStep1" class="space-y-4"><div class="flex justify-between items-start pb-2 border-b border-white/[0.06]"><div><span class="text-[9px] uppercase tracking-[0.2em] text-liturgicalRed/90 font-cinzel font-semibold">Irreversible Action</span><h2 class="text-base font-serif font-semibold text-alabaster mt-0.5">Close Sanctuary &amp; Delete Account</h2></div><button class="text-xs text-stoneMuted hover:text-alabaster p-1" onclick="closeDeleteAccountModal()">✕</button></div><p class="text-xs text-stoneMuted leading-relaxed font-light">Closing your sanctuary permanently erases all consecrated records from cloud storage and local caches. This action cannot be undone.</p><div class="bg-surfaceElevated rounded-2xl p-3.5 border border-white/[0.06] space-y-2.5 text-xs"><div class="flex items-start space-x-2.5"><span class="text-liturgicalRed/70 text-xs mt-0.5">✕</span><span class="text-stoneMuted font-light text-[11.5px]">All private prayer journal entries, reflections, and intentions erased.</span></div><div class="flex items-start space-x-2.5"><span class="text-liturgicalRed/70 text-xs mt-0.5">✕</span><span class="text-stoneMuted font-light text-[11.5px]">Your 12-day prayer streak and saved scripture bookmarks removed.</span></div><div class="flex items-start space-x-2.5"><span class="text-liturgicalRed/70 text-xs mt-0.5">✕</span><span class="text-stoneMuted font-light text-[11.5px]">Downloaded audio chant cache and liturgical dial preferences reset.</span></div></div><div class="space-y-2 pt-1"><button class="spring-press w-full py-2.5 rounded-full bg-liturgicalRed/5 hover:bg-liturgicalRed/10 border border-liturgicalRed/30 text-liturgicalRed/90 hover:text-liturgicalRed text-xs font-medium flex items-center justify-center space-x-1.5 transition" onclick="goToDeleteStep(2)"><span>Continue to Final Deletion</span><span class="text-[10px]">→</span></button><button class="spring-press w-full py-2.5 rounded-full bg-surface hover:bg-surfaceElevated border border-white/[0.08] text-stoneMuted hover:text-alabaster text-xs transition" onclick="clearLocalCacheOnly()">Clear Local Cache Only (Keep Account)</button><button class="w-full py-1 text-center text-xs text-stoneFaint hover:text-stoneMuted transition" onclick="closeDeleteAccountModal()">Keep Sanctuary Account</button></div></div><div id="deleteModalStep2" class="space-y-4 hidden"><div class="flex justify-between items-start pb-2 border-b border-white/[0.06]"><div><span class="text-[9px] uppercase tracking-[0.2em] text-liturgicalRed/90 font-cinzel font-semibold">Final Barrier · Step 2</span><h2 class="text-base font-serif font-semibold text-alabaster mt-0.5">Confirm Permanent Deletion</h2></div><button class="text-xs text-stoneMuted hover:text-alabaster p-1" onclick="closeDeleteAccountModal()">✕</button></div><p class="text-xs text-stoneMuted leading-relaxed font-light">Type <span class="text-alabaster font-mono font-medium">DELETE</span> below to confirm that you wish to irrevocably remove your Sanctus sanctuary and all prayer history.</p><div class="space-y-2"><input type="text" id="deleteConfirmationInput" oninput="handleDeleteInput(this)" placeholder="Type DELETE" class="w-full bg-obsidian border border-white/[0.09] focus:border-liturgicalRed/60 rounded-xl px-3.5 py-2.5 text-xs text-alabaster placeholder-stoneMuted focus:outline-none transition tracking-wide"><div class="flex items-center space-x-2"><span class="w-1.5 h-1.5 rounded-full bg-liturgicalRed/70"></span><span class="text-[10px] text-stoneMuted font-serif italic">Irreversible upon confirmation</span></div></div><div class="space-y-2 pt-1"><button id="finalDeleteBtn" disabled="" onclick="executeAccountDeletion()" class="spring-press w-full py-2.5 rounded-full bg-liturgicalRed/20 border border-liturgicalRed/30 text-liturgicalRed/40 text-xs font-semibold flex items-center justify-center space-x-1.5 transition cursor-not-allowed"><span>Permanently Delete Account</span><span class="text-[11px]">✕</span></button><button class="spring-press w-full py-2 rounded-full bg-surface hover:bg-surfaceElevated border border-white/[0.08] text-stoneMuted hover:text-alabaster text-xs transition" onclick="goToDeleteStep(1)">← Back to Overview</button></div></div></div></div>
+<!-- ========================================================== -->
+<!-- MINIMALIST FLOATING BOTTOM NAVIGATION BAR -->
+<!-- ========================================================== -->
+<nav class="absolute bottom-3 left-4 right-4 z-30 bg-surface/90 backdrop-blur-xl border border-white/[0.08] rounded-full px-3 py-2 flex items-center justify-between shadow-[0_10px_30px_rgba(0,0,0,0.6)]">
+<!-- Nav 1: Home -->
+<button class="spring-press flex-1 flex flex-col items-center py-1 transition text-stoneMuted" id="navHome" onclick="switchTab('home')">
+<svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-[9px] font-medium tracking-tight">Home</span>
+</button>
+<!-- Nav 2: Prayers -->
+<button class="spring-press flex-1 flex flex-col items-center py-1 hover:text-alabaster transition text-stoneMuted" id="navPrayers" onclick="switchTab('prayers')">
+<svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-[9px] font-medium tracking-tight">Prayers</span>
+</button>
+<!-- Nav 3: Rosary (Center Prominent) -->
+<button class="spring-press flex-1 flex flex-col items-center py-1 hover:text-brass transition text-stoneMuted" id="navRosary" onclick="switchTab('rosary')">
+<div class="w-5 h-5 rounded-full border border-current flex items-center justify-center mb-0.5">
+<span class="text-[10px] font-serif">📿</span>
+</div>
+<span class="text-[9px] font-medium tracking-tight">Rosary</span>
+</button>
+<!-- Nav 4: Saints & Calendar -->
+<button class="spring-press flex-1 flex flex-col items-center py-1 hover:text-alabaster transition text-stoneMuted" id="navSaints" onclick="switchTab('saints')">
+<svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-[9px] font-medium tracking-tight">Saints</span>
+</button>
+<!-- Nav 5: Settings -->
+<button class="spring-press flex-1 flex flex-col items-center py-1 hover:text-alabaster transition text-brass" id="navSettings" onclick="switchTab('settings')">
+<svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="12" cy="12" r="3"></circle></svg>
+<span class="text-[9px] font-medium tracking-tight">More</span>
+</button>
+</nav>
+<!-- Floating Feedback Toast Notification -->
+<div class="absolute top-16 left-1/2 -translate-x-1/2 bg-surfaceElevated border border-brass/50 px-4 py-1.5 rounded-full text-xs text-alabaster shadow-2xl pointer-events-none transition-opacity duration-300 z-50 flex items-center space-x-2 opacity-0" id="toastNotification">
+<span class="text-brass text-xs">☩</span>
+<span id="toastMessage">Ave Maria #7 · Gratia Plena</span>
+</div>
+</div>
+<!-- Interactive JavaScript Application Engine -->
+<script>
+    // Tab Navigation State
+    const views = ['home', 'prayers', 'rosary', 'breathing', 'plans', 'journal', 'saints', 'settings'];
+    let currentTab = 'home';
+
+    function switchTab(tabName) {
+      currentTab = tabName;
+      
+      views.forEach(v => {
+        const el = document.getElementById('view' + v.charAt(0).toUpperCase() + v.slice(1));
+        if (el) {
+          if (v === tabName) {
+            el.classList.remove('hidden');
+          } else {
+            el.classList.add('hidden');
+          }
+        }
+      });
+
+      const navButtons = ['navHome', 'navPrayers', 'navRosary', 'navSaints', 'navSettings'];
+      navButtons.forEach(btnId => {
+        const btn = document.getElementById(btnId);
+        if (btn) {
+          btn.classList.remove('text-brass');
+          btn.classList.add('text-stoneMuted');
+        }
+      });
+
+      const activeNavMapping = {
+        'home': 'navHome',
+        'prayers': 'navPrayers',
+        'rosary': 'navRosary',
+        'saints': 'navSaints',
+        'settings': 'navSettings'
+      };
+
+      if (activeNavMapping[tabName] && document.getElementById(activeNavMapping[tabName])) {
+        document.getElementById(activeNavMapping[tabName]).classList.add('text-brass');
+        document.getElementById(activeNavMapping[tabName]).classList.remove('text-stoneMuted');
+      }
+
+      document.getElementById('appViewport').scrollTop = 0;
+
+      if (tabName === 'rosary') {
+        renderRosaryBeads();
+      }
+    }
+
+    // Liturgical Season Modal
+    function toggleSeasonModal() {
+      const m = document.getElementById('seasonModal');
+      m.classList.toggle('hidden');
+    }
+
+    // Saint of the Day Modal
+    function openSaintModal() {
+      document.getElementById('saintModal').classList.remove('hidden');
+    }
+
+    function closeSaintModal() {
+      document.getElementById('saintModal').classList.add('hidden');
+    }
+
+    // Canonical Hours Select
+    function selectHour(hourName, description) {
+      const summary = document.getElementById('activeHourSummary');
+      summary.innerHTML = `
+        <div class="flex items-center space-x-2">
+          <span class="text-candleGold">🕯</span>
+          <span class="text-alabaster font-serif text-[12.5px]">${hourName}: ${description}</span>
+        </div>
+        <button onclick="openReadingScreen('${hourName}: Canonical Liturgy', 'O God, come to my assistance: O Lord, make haste to help me. Glory be to the Father, and to the Son, and to the Holy Spirit: as it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.')" class="text-brass hover:underline text-[11px] font-medium">Chant Hour →</button>
+      `;
+      showToast(`${hourName} canonical office selected`);
+    }
+
+    // Toast notification utility
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      const text = document.getElementById('toastMessage');
+      text.innerText = msg;
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 2400);
+    }
+
+    // Bell chime simulator
+    function playBellChime(desc) {
+      showToast(`${desc || 'Sanctus Bell'} chiming reverently 🔔`);
+    }
+
+    // Verse Bookmark Action
+    let verseBookmarked = false;
+    function bookmarkVerse() {
+      verseBookmarked = !verseBookmarked;
+      const icon = document.getElementById('bookmarkIcon');
+      if (verseBookmarked) {
+        icon.setAttribute('fill', 'currentColor');
+        showToast('Verse preserved in your Sanctuary');
+      } else {
+        icon.setAttribute('fill', 'none');
+        showToast('Verse removed from saved Sanctuary');
+      }
+    }
+
+    function shareVerse() {
+      showToast('Scripture verse copied to clipboard');
+    }
+
+    // Heart Mood Selector
+    function openMoodPrayer(mood, title, text) {
+      openPrayer(title, text, 'Domine Deus meus, in te speravi', 'Sacred Intention · ' + mood, 'Tailored Grace');
+    }
+
+    // Prayer Detail Modal Logic
+    let currentFontSizeRem = 1.125;
+    let latinVisible = false;
+
+    function openPrayer(title, body, latin, source, category) {
+      document.getElementById('prayerModalTitle').innerText = title;
+      document.getElementById('prayerModalBody').innerText = body;
+      document.getElementById('prayerModalSource').innerText = source || 'Liturgical Devotion';
+      document.getElementById('prayerModalCategory').innerText = category || 'Prayer';
+      
+      const latinEl = document.getElementById('prayerModalLatin');
+      if (latin) {
+        latinEl.innerText = latin;
+        latinVisible = false;
+        latinEl.classList.add('hidden');
+      }
+      
+      resetAudio();
+      
+      const modal = document.getElementById('prayerDetailModal');
+      modal.classList.remove('translate-y-full');
+    }
+
+    function toggleLatinLayer() {
+      latinVisible = !latinVisible;
+      const latinEl = document.getElementById('prayerModalLatin');
+      const btn = document.getElementById('latinToggleBtn');
+      if (latinVisible) {
+        latinEl.classList.remove('hidden');
+        btn.classList.add('bg-brass', 'text-obsidian');
+        btn.classList.remove('bg-surface', 'text-brass');
+      } else {
+        latinEl.classList.add('hidden');
+        btn.classList.remove('bg-brass', 'text-obsidian');
+        btn.classList.add('bg-surface', 'text-brass');
+      }
+    }
+
+    function closePrayerModal() {
+      resetAudio();
+      const modal = document.getElementById('prayerDetailModal');
+      modal.classList.add('translate-y-full');
+    }
+
+    function adjustFontSize(delta) {
+      currentFontSizeRem = Math.min(Math.max(currentFontSizeRem + (delta * 0.125), 0.95), 1.55);
+      document.getElementById('prayerModalBody').style.fontSize = currentFontSizeRem + 'rem';
+    }
+
+    // Scripture Reading Modal Logic (Apple Books Style)
+    function openReadingScreen(title, body) {
+      document.getElementById('scriptureTitle').innerText = title;
+      document.getElementById('scriptureBody').innerText = body;
+      const modal = document.getElementById('scriptureDetailModal');
+      modal.classList.remove('translate-y-full');
+    }
+
+    function closeScriptureModal() {
+      const modal = document.getElementById('scriptureDetailModal');
+      modal.classList.add('translate-y-full');
+    }
+
+    // Audio Playback Simulation with Equalizer waveform
+    let isPlayingAudio = false;
+    let audioInterval = null;
+    let audioSecs = 0;
+    const totalSecs = 134;
+
+    function toggleAudioPlayback() {
+      isPlayingAudio = !isPlayingAudio;
+      const btnLabel = document.getElementById('audioBtnLabel');
+      const icon = document.getElementById('audioIcon');
+      const waveform = document.getElementById('soundWaveform');
+      
+      if (isPlayingAudio) {
+        btnLabel.innerText = 'Chanting...';
+        waveform.classList.remove('hidden');
+        waveform.classList.add('flex');
+        icon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+        audioInterval = setInterval(() => {
+          if (audioSecs < totalSecs) {
+            audioSecs++;
+            updateAudioProgress();
+          } else {
+            resetAudio();
+          }
+        }, 1000);
+      } else {
+        btnLabel.innerText = 'Resume';
+        waveform.classList.add('hidden');
+        waveform.classList.remove('flex');
+        icon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+        clearInterval(audioInterval);
+      }
+    }
+
+    function updateAudioProgress() {
+      const pct = (audioSecs / totalSecs) * 100;
+      document.getElementById('audioProgressBar').style.width = pct + '%';
+      const m = Math.floor(audioSecs / 60);
+      const s = audioSecs % 60;
+      document.getElementById('audioTimeCurrent').innerText = m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    function resetAudio() {
+      isPlayingAudio = false;
+      clearInterval(audioInterval);
+      audioSecs = 0;
+      const bar = document.getElementById('audioProgressBar');
+      if (bar) bar.style.width = '0%';
+      const cur = document.getElementById('audioTimeCurrent');
+      if (cur) cur.innerText = '0:00';
+      const label = document.getElementById('audioBtnLabel');
+      if (label) label.innerText = 'Chant Hymn';
+      const icon = document.getElementById('audioIcon');
+      if (icon) icon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+      const wave = document.getElementById('soundWaveform');
+      if (wave) {
+        wave.classList.add('hidden');
+        wave.classList.remove('flex');
+      }
+    }
+
+    // 1-Min Contemplative Silence Timer
+    let silenceTimerInterval = null;
+    let silenceSecs = 60;
+    function toggleSilenceTimer() {
+      const btnText = document.getElementById('silenceTimerText');
+      if (silenceTimerInterval) {
+        clearInterval(silenceTimerInterval);
+        silenceTimerInterval = null;
+        btnText.innerText = '1-Min Silence';
+        showToast('Silent contemplation paused');
+      } else {
+        silenceSecs = 60;
+        btnText.innerText = '60s Silence';
+        silenceTimerInterval = setInterval(() => {
+          silenceSecs--;
+          if (silenceSecs > 0) {
+            btnText.innerText = silenceSecs + 's Silence';
+          } else {
+            clearInterval(silenceTimerInterval);
+            silenceTimerInterval = null;
+            btnText.innerText = '1-Min Silence';
+            showToast('Quiet contemplation sealed 🕊️');
+          }
+        }, 1000);
+      }
+    }
+
+    function recordAmen() {
+      showToast('Gloria Patri et Filio et Spiritui Sancto ☩');
+      setTimeout(closePrayerModal, 800);
+    }
+
+    // ==========================================================
+    // Interactive Holy Rosary Bead Engine with Tactile Glow
+    // ==========================================================
+    let currentBeadIndex = 4;
+    const mysteries = [
+      { title: 'The Baptism in the Jordan', scripture: '“This is my beloved Son, with whom I am well pleased.” — Matt 3:17' },
+      { title: 'The Wedding at Cana', scripture: '“Do whatever He tells you.” — John 2:5' },
+      { title: 'The Proclamation of the Kingdom', scripture: '“Repent, for the kingdom of heaven is at hand.” — Matt 4:17' },
+      { title: 'The Transfiguration', scripture: '“And he was transfigured before them, and his face shone like the sun.” — Matt 17:2' },
+      { title: 'The Institution of the Eucharist', scripture: '“This is my body, which is given for you.” — Luke 22:19' }
+    ];
+    let currentMysteryIdx = 1;
+
+    function renderRosaryBeads() {
+      const container = document.getElementById('rosaryBeadsContainer');
+      if (!container) return;
+      container.innerHTML = '';
+      
+      const totalBeads = 10;
+      const radius = 86;
+      const centerX = 104; // 208 / 2
+      const centerY = 104;
+
+      for (let i = 1; i <= totalBeads; i++) {
+        const angle = ((i - 1) / totalBeads) * 2 * Math.PI - Math.PI / 2;
+        const x = centerX + radius * Math.cos(angle);
+        const y = centerY + radius * Math.sin(angle);
+
+        const bead = document.createElement('div');
+        const isActive = i <= currentBeadIndex;
+        const isCurrent = i === currentBeadIndex;
+
+        bead.className = `absolute w-3.5 h-3.5 -ml-[7px] -mt-[7px] rounded-full transition-all duration-300 border ${
+          isCurrent 
+            ? 'bg-candleGold border-candleGold shadow-[0_0_12px_#F3C068] scale-125 z-10'
+            : isActive 
+              ? 'bg-brass border-brass shadow-[0_0_8px_rgba(212,175,55,0.7)]' 
+              : 'bg-obsidian border-white/[0.2] opacity-60'
+        }`;
+        bead.style.left = `${x}px`;
+        bead.style.top = `${y}px`;
+        container.appendChild(bead);
+      }
+
+      document.getElementById('beadCounterText').innerText = `${currentBeadIndex} / 10`;
+    }
+
+    function nextBead() {
+      if (currentBeadIndex < 10) {
+        currentBeadIndex++;
+        renderRosaryBeads();
+        showToast(`Ave Maria #${currentBeadIndex} · Gratia Plena`);
+      } else {
+        currentBeadIndex = 1;
+        nextDecade();
+      }
+    }
+
+    function prevBead() {
+      if (currentBeadIndex > 1) {
+        currentBeadIndex--;
+        renderRosaryBeads();
+      }
+    }
+
+    function nextDecade() {
+      currentMysteryIdx = (currentMysteryIdx + 1) % mysteries.length;
+      document.getElementById('currentMysteryTitle').innerText = mysteries[currentMysteryIdx].title;
+      document.getElementById('currentMysteryScripture').innerText = mysteries[currentMysteryIdx].scripture;
+      currentBeadIndex = 1;
+      renderRosaryBeads();
+      showToast(`Next Mystery: ${mysteries[currentMysteryIdx].title}`);
+    }
+
+    // ==========================================================
+    // Interactive 4-4-4 Breathing Engine with Golden Aura
+    // ==========================================================
+    let breathingActive = true;
+    let breathPhase = 'in';
+    let breathCount = 4;
+    let breathInterval = null;
+
+    function runBreathingTick() {
+      if (!breathingActive) return;
+
+      const timerNum = document.getElementById('breathTimerNum');
+      const actionText = document.getElementById('breathActionText');
+      const subText = document.getElementById('breathSubText');
+      const ring = document.getElementById('breathingRing');
+
+      timerNum.innerText = breathCount;
+
+      if (breathCount === 4) {
+        if (breathPhase === 'in') {
+          actionText.innerText = 'Breathe In';
+          subText.innerText = 'Receiving Grace';
+          ring.style.transform = 'scale(1.22)';
+          ring.style.borderColor = '#F3C068';
+        } else if (breathPhase === 'hold') {
+          actionText.innerText = 'Hold Still';
+          subText.innerText = 'Resting in His Presence';
+          ring.style.transform = 'scale(1.22)';
+          ring.style.borderColor = '#F5F2EB';
+        } else if (breathPhase === 'out') {
+          actionText.innerText = 'Breathe Out';
+          subText.innerText = 'Surrendering All Care';
+          ring.style.transform = 'scale(0.88)';
+          ring.style.borderColor = 'rgba(212, 175, 55, 0.4)';
+        }
+      }
+
+      breathCount--;
+
+      if (breathCount < 1) {
+        breathCount = 4;
+        if (breathPhase === 'in') breathPhase = 'hold';
+        else if (breathPhase === 'hold') breathPhase = 'out';
+        else if (breathPhase === 'out') breathPhase = 'in';
+      }
+    }
+
+    function toggleBreathingLoop() {
+      breathingActive = !breathingActive;
+      const btn = document.getElementById('toggleBreathBtn');
+      if (breathingActive) {
+        btn.innerText = 'Pause Rhythm';
+        btn.classList.add('bg-brass', 'text-obsidian');
+        btn.classList.remove('bg-surface', 'text-stoneMuted');
+        showToast('Hesychasm breathing resumed');
+      } else {
+        btn.innerText = 'Resume Rhythm';
+        btn.classList.remove('bg-brass', 'text-obsidian');
+        btn.classList.add('bg-surface', 'text-stoneMuted');
+        showToast('Peace rhythm paused');
+      }
+    }
+
+    breathInterval = setInterval(runBreathingTick, 1000);
+
+    // ==========================================================
+    // Journal & Plans Engine
+    // ==========================================================
+    function openNewIntentionModal() {
+      document.getElementById('newIntentionModal').classList.remove('hidden');
+    }
+
+    function closeNewIntentionModal() {
+      document.getElementById('newIntentionModal').classList.add('hidden');
+    }
+
+    function saveNewIntention() {
+      const title = document.getElementById('intentionInputTitle').value.trim();
+      const notes = document.getElementById('intentionInputNotes').value.trim();
+
+      if (!title) {
+        showToast('Please specify an intention title');
+        return;
+      }
+
+      const list = document.getElementById('journalEntriesList');
+      const card = document.createElement('div');
+      card.className = 'spring-press p-4 rounded-2xl bg-surfaceCard border border-white/[0.08] relative';
+      card.innerHTML = `
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] tracking-wider uppercase font-semibold text-brass bg-brass/10 px-2 py-0.5 rounded-full">Praying</span>
+          <span class="text-[10px] text-stoneMuted tabular">Just Now</span>
+        </div>
+        <h2 class="text-sm font-serif font-medium text-alabaster">${title}</h2>
+        <p class="text-xs text-stoneMuted font-light mt-1 leading-relaxed">${notes || 'Quiet intercession remembered before the Lord.'}</p>
+        <div class="mt-3 pt-2.5 border-t border-white/[0.04] flex items-center justify-between text-xs">
+          <span class="text-[11px] text-stoneFaint">Prayed 1 time</span>
+          <button onclick="markAnswered(this)" class="text-stoneMuted hover:text-brass text-[11px] transition">Mark as Answered ✓</button>
+        </div>
+      `;
+      list.prepend(card);
+      
+      document.getElementById('intentionInputTitle').value = '';
+      document.getElementById('intentionInputNotes').value = '';
+      closeNewIntentionModal();
+      showToast('Intention consecrated in prayer');
+    }
+
+    function markAnswered(btn) {
+      const container = btn.closest('.p-4');
+      const badge = container.querySelector('span');
+      badge.innerText = 'Answered';
+      badge.className = 'text-[10px] tracking-wider uppercase font-semibold text-emerald-400/90 bg-emerald-500/10 px-2 py-0.5 rounded-full';
+      btn.remove();
+      showToast('Answered · Deo Gratias!');
+    }
+
+    function startPlan(planTitle) {
+      showToast(`Commenced path: ${planTitle}`);
+    }
+
+    function toggleSwitch(btn) {
+      const knob = btn.querySelector('span');
+      const isRight = knob.classList.contains('right-1');
+      if (isRight) {
+        knob.classList.remove('right-1');
+        knob.classList.add('left-1');
+        btn.classList.remove('bg-brass');
+        btn.classList.add('bg-stoneFaint');
+        showToast('Notification quieted');
+      } else {
+        knob.classList.remove('left-1');
+        knob.classList.add('right-1');
+        btn.classList.remove('bg-stoneFaint');
+        btn.classList.add('bg-brass');
+        showToast('Notification scheduled with sacred bell');
+      }
+    }
+
+    function selectTranslation(code, btn) {
+      const siblings = btn.parentElement.querySelectorAll('button');
+      siblings.forEach(s => {
+        s.className = 'p-2.5 rounded-xl border border-white/[0.08] text-stoneMuted hover:text-alabaster';
+      });
+      btn.className = 'p-2.5 rounded-xl border border-brass text-brass bg-brass/10 font-medium';
+      showToast(`Scripture text updated to ${code}`);
+    }
+
+    // Initialize Rosary on first boot
+    renderRosaryBeads();
+  </script>
+
+
+</body></html>

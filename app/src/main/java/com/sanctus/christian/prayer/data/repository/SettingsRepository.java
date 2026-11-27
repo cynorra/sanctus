@@ -63,6 +63,13 @@ public class SettingsRepository {
     public int getTextSize() { return prefs.getInt("text_size", 16); }
     public void setTextSize(int size) { prefs.edit().putInt("text_size", size).apply(); }
 
+    public String getScriptureTranslation() { return prefs.getString("scripture_translation", "RSV-2CE"); }
+    public void setScriptureTranslation(String code) { prefs.edit().putString("scripture_translation", code).apply(); }
+
+    public void clearAllPreferences() {
+        prefs.edit().clear().apply();
+    }
+
     // --- Prayer streak ---
     // "Day index" = local calendar day number, timezone-adjusted, so a streak survives
     // DST/timezone changes without needing java.time (minSdk 24 has no desugaring configured).

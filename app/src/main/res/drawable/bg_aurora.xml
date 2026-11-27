@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 2027+ Celestial Sanctuary Backdrop: deep cathedral obsidian with layered ambient aurora & candlelight veil -->
+<!-- Obsidian Sanctuary Backdrop with subtle ambient candlelight glow -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <gradient
-                android:type="linear"
-                android:angle="270"
-                android:startColor="#0A0D1C"
-                android:centerColor="#070812"
-                android:endColor="#05060D"/>
+            <solid android:color="#07090E" />
         </shape>
     </item>
     <item>
         <shape android:shape="rectangle" android:tint="?attr/sanctusGlow">
             <gradient
                 android:type="radial"
-                android:gradientRadius="82%p"
-                android:centerX="0.12"
-                android:centerY="0.02"
-                android:startColor="#42FFFFFF"
-                android:centerColor="#16FFFFFF"
+                android:gradientRadius="65%p"
+                android:centerX="0.92"
+                android:centerY="0.04"
+                android:startColor="#1EFFFFFF"
+                android:centerColor="#0AFFFFFF"
                 android:endColor="#00FFFFFF"/>
         </shape>
     </item>
@@ -27,22 +22,11 @@
         <shape android:shape="rectangle" android:tint="?attr/sanctusAccent">
             <gradient
                 android:type="radial"
-                android:gradientRadius="68%p"
-                android:centerX="0.95"
-                android:centerY="0.92"
-                android:startColor="#26FFFFFF"
-                android:centerColor="#0CFFFFFF"
-                android:endColor="#00FFFFFF"/>
-        </shape>
-    </item>
-    <item>
-        <shape android:shape="rectangle" android:tint="?attr/sanctusAccent">
-            <gradient
-                android:type="radial"
-                android:gradientRadius="45%p"
-                android:centerX="0.5"
-                android:centerY="0.22"
-                android:startColor="#12FFFFFF"
+                android:gradientRadius="62%p"
+                android:centerX="0.08"
+                android:centerY="0.90"
+                android:startColor="#1AFFFFFF"
+                android:centerColor="#08FFFFFF"
                 android:endColor="#00FFFFFF"/>
         </shape>
     </item>

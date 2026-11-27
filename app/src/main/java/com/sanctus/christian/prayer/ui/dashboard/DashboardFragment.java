@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
@@ -21,18 +20,19 @@ import androidx.transition.AutoTransition;
 import androidx.transition.TransitionManager;
 import com.google.android.material.color.MaterialColors;
 import com.sanctus.christian.prayer.R;
-import com.sanctus.christian.prayer.util.Tradition;
 import com.sanctus.christian.prayer.SanctusApplication;
 import com.sanctus.christian.prayer.domain.model.PrayerTime;
 import com.sanctus.christian.prayer.share.ShareActions;
+import com.sanctus.christian.prayer.ui.main.MainActivity;
 import com.sanctus.christian.prayer.ui.saint.SaintViewModel;
 import com.sanctus.christian.prayer.util.AnimUtils;
 import com.sanctus.christian.prayer.util.DateUtils;
-import com.sanctus.christian.prayer.util.LiturgicalSeasonHelper;
 import com.sanctus.christian.prayer.util.MotionKit;
-import com.sanctus.christian.prayer.util.SaintNames;
 import com.sanctus.christian.prayer.util.PrayerTimeCalculator;
+import com.sanctus.christian.prayer.util.SaintNames;
+import com.sanctus.christian.prayer.util.Tradition;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -40,8 +40,6 @@ import java.util.Locale;
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel viewModel;
-    private View rowStreak;
-    private TextView tvStreak;
 
     @Nullable
     @Override
@@ -54,18 +52,25 @@ public class DashboardFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         viewModel = new ViewModelProvider(this).get(DashboardViewModel.class);
 
-        // Date
+        // Greeting & Date
+        TextView tvGreeting = view.findViewById(R.id.tv_app_title);
+        int hourOfDay = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+        if (hourOfDay < 12) {
+            tvGreeting.setText(R.string.greeting_morning);
+        } else if (hourOfDay < 18) {
+            tvGreeting.setText(R.string.greeting_afternoon);
+        } else {
+            tvGreeting.setText(R.string.greeting_evening);
+        }
+
         TextView tvDate = view.findViewById(R.id.tv_date);
         tvDate.setText(DateUtils.getTodayFormatted());
 
-        MotionKit.shimmer(view.findViewById(R.id.tv_app_title),
-                ContextCompat.getColor(requireContext(), R.color.color_on_background),
-                MaterialColors.getColor(view, R.attr.sanctusAccent));
-        MotionKit.breathe(view.findViewById(R.id.hero_glow));
         MotionKit.pressable(view.findViewById(R.id.card_prayer_of_day));
         MotionKit.pressable(view.findViewById(R.id.card_saint_of_day));
         MotionKit.pressable(view.findViewById(R.id.tile_rosary));
         MotionKit.pressable(view.findViewById(R.id.tile_prayers));
+
         String tradition = SanctusApplication.getInstance().getSettingsRepository().getTradition();
         View tileRosary = view.findViewById(R.id.tile_rosary);
         int counterDestination = R.id.rosaryFragment;
@@ -81,26 +86,12 @@ public class DashboardFragment extends Fragment {
         view.findViewById(R.id.tile_prayers).setOnClickListener(v ->
                 Navigation.findNavController(v).navigate(R.id.prayerFragment));
 
-        rowStreak = view.findViewById(R.id.row_streak);
-        tvStreak = view.findViewById(R.id.tv_streak);
-        refreshStreak();
-
         setupSanctuary2027Tools(view);
-
-        // Season
-        TextView tvSeason = view.findViewById(R.id.tv_liturgical_season);
-        LiturgicalSeasonHelper.Season season = LiturgicalSeasonHelper.getCurrentSeason(
-                SanctusApplication.getInstance().getSettingsRepository().getTradition());
-        tvSeason.setText(LiturgicalSeasonHelper.getSeasonName(requireContext(), season));
-        // The season chip opens the liturgical calendar (Julian for Orthodox).
-        MotionKit.pressable(tvSeason);
-        tvSeason.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.calendarFragment));
 
         // Next canonical hour
         TextView tvNextHour = view.findViewById(R.id.tv_next_hour);
         tvNextHour.setText(PrayerTimeCalculator.getNextHour(requireContext()));
 
-        // Expandable header: reveals today's full canonical-hour schedule in place, next hour highlighted.
         View cardNextHour = view.findViewById(R.id.card_next_hour);
         View rowHeader = view.findViewById(R.id.row_next_hour_header);
         View expandContainer = view.findViewById(R.id.container_hours_expand);
@@ -133,17 +124,16 @@ public class DashboardFragment extends Fragment {
             MotionKit.rotateTo(ivChevron, expanding ? 180f : 0f);
         });
 
-        // Footer row: tap to go pray
         view.findViewById(R.id.row_begin_prayer).setOnClickListener(v ->
                 Navigation.findNavController(v).navigate(R.id.prayerFragment));
 
-        // Prayer times recycler
+        // Prayer times horizontal strip
         RecyclerView rvPrayerTimes = view.findViewById(R.id.rv_prayer_times);
         rvPrayerTimes.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false));
         PrayerTimeAdapter adapter = new PrayerTimeAdapter(hours);
         rvPrayerTimes.setAdapter(adapter);
 
-        // Prayer of the day
+        // Prayer of the day (Warm Parchment Card)
         TextView tvPrayerOfDayName = view.findViewById(R.id.tv_prayer_of_day_name);
         TextView tvPrayerOfDayExcerpt = view.findViewById(R.id.tv_prayer_of_day_excerpt);
         View cardPrayerOfDay = view.findViewById(R.id.card_prayer_of_day);
@@ -173,7 +163,7 @@ public class DashboardFragment extends Fragment {
         View cardSaint = view.findViewById(R.id.card_saint_of_day);
         cardSaint.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.saintFragment));
         String today = new SimpleDateFormat("MMMM d", Locale.ENGLISH).format(new Date());
-        int dayOfYear = java.util.Calendar.getInstance().get(java.util.Calendar.DAY_OF_YEAR);
+        int dayOfYear = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
 
         SaintViewModel saintViewModel = new ViewModelProvider(this).get(SaintViewModel.class);
         saintViewModel.getSaintSpotlight(today, dayOfYear).observe(getViewLifecycleOwner(), saint -> {
@@ -194,23 +184,20 @@ public class DashboardFragment extends Fragment {
                 });
             } else {
                 tvSaintName.setText(R.string.no_saint_today_title);
-                tvSaintInitial.setText("✝");
+                tvSaintInitial.setText("☩");
                 tvSaintFeast.setText("");
                 tvSaintDesc.setText(R.string.no_saint_today_desc);
                 btnShareSaint.setVisibility(View.GONE);
             }
         });
-
-        view.findViewById(R.id.btn_open_settings).setOnClickListener(v ->
-                Navigation.findNavController(v).navigate(R.id.settingsFragment));
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        // Fragment stays alive across bottom-nav tab switches, so re-check the streak
-        // whenever this tab regains focus rather than only once at view creation.
-        if (viewModel != null) refreshStreak();
+        if (getActivity() instanceof MainActivity) {
+            ((MainActivity) getActivity()).refreshHeaderStatus();
+        }
     }
 
     private void setupSanctuary2027Tools(View view) {
@@ -248,16 +235,5 @@ public class DashboardFragment extends Fragment {
         MotionKit.pressable(chip);
         chip.setOnClickListener(v -> PeaceSanctuaryDialog.show(
                 requireContext(), getString(titleRes), getString(verseRes), getString(prayerRes)));
-    }
-
-    private void refreshStreak() {
-        if (viewModel == null || rowStreak == null) return;
-        int streak = viewModel.getStreak();
-        if (streak > 0) {
-            tvStreak.setText(getString(R.string.streak_days_format, streak));
-            rowStreak.setVisibility(View.VISIBLE);
-        } else {
-            rowStreak.setVisibility(View.GONE);
-        }
     }
 }

@@ -113,4 +113,8 @@ public final class SanctuaryStore {
     public static void resetPlan(Context ctx, String planId) {
         prefs(ctx).edit().putInt(K_PLAN_PREFIX + planId, 0).apply();
     }
+
+    public static void clearAll(Context ctx) {
+        prefs(ctx).edit().clear().apply();
+    }
 }

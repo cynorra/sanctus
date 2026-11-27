@@ -231,11 +231,10 @@ public final class GuidedPlansDialog {
         root.setOrientation(LinearLayout.VERTICAL);
         int pad = (int) (22 * dp);
         root.setPadding(pad, pad, pad, pad);
-        GradientDrawable bg = new GradientDrawable(
-                GradientDrawable.Orientation.TL_BR,
-                new int[]{0xFA14122B, 0xFA0B0A17});
-        bg.setCornerRadius(28 * dp);
-        bg.setStroke((int) (1.2f * dp), 0x4DE6BC5C);
+        GradientDrawable bg = new GradientDrawable();
+        bg.setColor(0xFF131622);
+        bg.setCornerRadius(26 * dp);
+        bg.setStroke((int) (1.2f * dp), 0x44D4AF37);
         root.setBackground(bg);
         return root;
     }
@@ -245,11 +244,11 @@ public final class GuidedPlansDialog {
         tv.setText(text);
         tv.setTextSize(14f);
         tv.setTypeface(Typeface.DEFAULT_BOLD);
-        tv.setTextColor(0xFF0A0914);
+        tv.setTextColor(0xFF07090E);
         tv.setGravity(Gravity.CENTER);
         GradientDrawable bg = new GradientDrawable(
                 GradientDrawable.Orientation.LEFT_RIGHT,
-                new int[]{0xFFF4D584, 0xFFD9A640});
+                new int[]{0xFFF3C068, 0xFFD4AF37});
         bg.setCornerRadius(24 * dp);
         tv.setBackground(bg);
         return tv;
@@ -260,12 +259,12 @@ public final class GuidedPlansDialog {
         tv.setText(text);
         tv.setTextSize(13.5f);
         tv.setTypeface(Typeface.DEFAULT_BOLD);
-        tv.setTextColor(0xFFDCD5EE);
+        tv.setTextColor(0xFFE6E1D6);
         tv.setGravity(Gravity.CENTER);
         GradientDrawable bg = new GradientDrawable();
-        bg.setColor(0x16FFFFFF);
+        bg.setColor(0xFF11141E);
         bg.setCornerRadius(22 * dp);
-        bg.setStroke((int) (1 * dp), 0x2EFFFFFF);
+        bg.setStroke((int) (1 * dp), 0x1EFFFFFF);
         tv.setBackground(bg);
         return tv;
     }

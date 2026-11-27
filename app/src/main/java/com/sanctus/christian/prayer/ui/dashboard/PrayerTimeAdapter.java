@@ -5,15 +5,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.color.MaterialColors;
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.domain.model.PrayerTime;
+import com.sanctus.christian.prayer.util.PrayerTimeCalculator;
 import java.util.List;
 
 public class PrayerTimeAdapter extends RecyclerView.Adapter<PrayerTimeAdapter.ViewHolder> {
     private final List<PrayerTime> items;
+    private final int activeIndex;
 
-    public PrayerTimeAdapter(List<PrayerTime> items) { this.items = items; }
+    public PrayerTimeAdapter(List<PrayerTime> items) {
+        this.items = items;
+        this.activeIndex = PrayerTimeCalculator.getNextHourIndex();
+    }
 
     @NonNull
     @Override
@@ -27,6 +34,13 @@ public class PrayerTimeAdapter extends RecyclerView.Adapter<PrayerTimeAdapter.Vi
         PrayerTime pt = items.get(position);
         holder.tvName.setText(pt.getNameLocalized());
         holder.tvTime.setText(pt.getTime());
+        boolean isActive = (position == activeIndex);
+        holder.itemView.setBackgroundResource(isActive ? R.drawable.bg_tile_selected : R.drawable.bg_tile_unselected);
+        int accent = MaterialColors.getColor(holder.itemView, R.attr.sanctusAccent);
+        int muted = ContextCompat.getColor(holder.itemView.getContext(), R.color.color_text_secondary);
+        holder.tvName.setTextColor(isActive ? accent : ContextCompat.getColor(holder.itemView.getContext(), R.color.color_on_surface));
+        holder.tvTime.setTextColor(isActive ? ContextCompat.getColor(holder.itemView.getContext(), R.color.color_gold_light) : muted);
+        holder.itemView.setAlpha(isActive ? 1.0f : 0.78f);
     }
 
     @Override

@@ -1,41 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Sanctus 2026 palette: ink-black base, candlelight gold, a single violet for depth. -->
-    <color name="color_primary">#6A4DF4</color>
-    <color name="color_primary_dark">#3B2A9E</color>
-    <color name="color_primary_light">#9B86FF</color>
-    <!-- Gold accent -->
-    <color name="color_accent">#E6BC5C</color>
-    <color name="color_gold_light">#F5E3B3</color>
-    <color name="color_gold_dark">#A87C2C</color>
-    <!-- Backgrounds -->
-    <color name="color_background">#08080F</color>
-    <color name="color_surface">#100F1B</color>
-    <color name="color_surface_variant">#1A182E</color>
-    <color name="color_card">#15132A</color>
-    <!-- Glass layers (translucent so the aurora behind them shows through) -->
-    <color name="color_glass_fill">#0FFFFFFF</color>
-    <color name="color_glass_fill_strong">#1AFFFFFF</color>
-    <color name="color_glass_stroke">#1FFFFFFF</color>
-    <color name="color_aurora_violet">#406A4DF4</color>
-    <color name="color_aurora_gold">#2EE6BC5C</color>
-    <!-- Text -->
-    <color name="color_on_primary">#FFFFFF</color>
-    <color name="color_on_background">#F7F3FF</color>
-    <color name="color_on_surface">#DCD5EE</color>
-    <color name="color_text_secondary">#A199BD</color>
-    <color name="color_divider">#2A2742</color>
-    <!-- Semantic -->
-    <color name="color_success">#5FC48A</color>
-    <color name="color_error">#E5788C</color>
+    <!-- Sanctus Obsidian & Brass Sanctuary Palette (from design/) -->
+    <color name="color_primary">#D4AF37</color>
+    <color name="color_primary_dark">#9A7B22</color>
+    <color name="color_primary_light">#F3C068</color>
+    <!-- Antique Brass & Candlelight Gold -->
+    <color name="color_accent">#D4AF37</color>
+    <color name="color_gold_light">#F3C068</color>
+    <color name="color_gold_dark">#9A7B22</color>
+    <color name="color_brass_muted">#24D4AF37</color>
+    <!-- Obsidian Backgrounds & Surfaces -->
+    <color name="color_background">#07090E</color>
+    <color name="color_surface">#11141E</color>
+    <color name="color_surface_variant">#171B28</color>
+    <color name="color_card">#131622</color>
+    <!-- Subtle Glass & Borders -->
+    <color name="color_glass_fill">#131622</color>
+    <color name="color_glass_fill_strong">#171B28</color>
+    <color name="color_glass_stroke">#14FFFFFF</color>
+    <color name="color_aurora_violet">#1AD4AF37</color>
+    <color name="color_aurora_gold">#1FF3C068</color>
+    <!-- Warm Alabaster & Stone Typography -->
+    <color name="color_on_primary">#07090E</color>
+    <color name="color_on_background">#F5F2EB</color>
+    <color name="color_on_surface">#E6E1D6</color>
+    <color name="color_text_secondary">#9E988D</color>
+    <color name="color_stone_faint">#5C564E</color>
+    <color name="color_divider">#12FFFFFF</color>
+    <!-- Warm Antique Parchment (Verse / Scripture Card) -->
+    <color name="color_parchment">#F6F2E9</color>
+    <color name="color_parchment_muted">#ECE5D6</color>
+    <color name="color_parchment_border">#E3DEC3</color>
+    <color name="color_sepia_ink">#1C1814</color>
+    <color name="color_sepia_sub">#484239</color>
+    <!-- Semantic & Liturgical -->
+    <color name="color_success">#6EE7B7</color>
+    <color name="color_error">#D9534F</color>
+    <color name="color_liturgical_red">#C94A4A</color>
+    <color name="color_liturgical_red_bg">#128F1D1D</color>
+    <color name="color_liturgical_red_stroke">#558F1D1D</color>
+    <color name="color_liturgical_green_bg">#121F17</color>
+    <color name="color_liturgical_green_stroke">#4010B981</color>
+    <color name="color_liturgical_green_text">#6EE7B7</color>
     <!-- Liturgical season colors -->
-    <color name="season_advent">#6A4DF4</color>
-    <color name="season_christmas">#E6BC5C</color>
-    <color name="season_lent">#8E5BB8</color>
-    <color name="season_easter">#E6BC5C</color>
-    <color name="season_ordinary">#4FA36B</color>
+    <color name="season_advent">#5E2B7A</color>
+    <color name="season_christmas">#D4AF37</color>
+    <color name="season_lent">#5E2B7A</color>
+    <color name="season_easter">#F3C068</color>
+    <color name="season_ordinary">#1E6B48</color>
     <!-- Bottom nav -->
-    <color name="bottom_nav_selected">#E6BC5C</color>
-    <color name="bottom_nav_unselected">#6F6894</color>
-    <color name="nav_indicator">#2B2547</color>
+    <color name="bottom_nav_selected">#D4AF37</color>
+    <color name="bottom_nav_unselected">#9E988D</color>
+    <color name="nav_indicator">#1FD4AF37</color>
 </resources>

@@ -408,4 +408,47 @@
     <string name="review_rate">Rate App</string>
     <string name="review_later">Later</string>
     <string name="review_never">Don\'t ask again</string>
+
+    <!-- Design System: Sanctuary Header, Navigation & Settings -->
+    <string name="nav_more">More</string>
+    <string name="sanctus_brand_mark">☧ SANCTUS</string>
+    <string name="streak_days_short_fmt">✦ %1$d Days</string>
+    <string name="greeting_morning">Good Morning</string>
+    <string name="greeting_afternoon">Good Afternoon</string>
+    <string name="greeting_evening">Good Evening</string>
+    <string name="sanctuary_settings_title">Sanctuary Settings</string>
+    <string name="settings_canonical_reminders">Canonical Reminders</string>
+    <string name="settings_scripture_translation">Sacred Scripture Translation</string>
+    <string name="settings_language_header">Language / Dil</string>
+    <string name="settings_all_languages">All 40 Languages →</string>
+    <string name="settings_data_privacy">Data &amp; Privacy</string>
+    <string name="settings_data_privacy_desc">Manage local devotions, journal entries, or permanently remove your private sanctuary record.</string>
+    <string name="settings_clear_cache_title">Clear Local Journal &amp; Cache</string>
+    <string name="settings_clear_cache_sub">Reset local prayer journal, plans &amp; cached files</string>
+    <string name="settings_clear_cache_done">Local journal &amp; cache cleared</string>
+    <string name="settings_delete_account_title">Delete Account &amp; All Cloud Data</string>
+    <string name="settings_delete_account_sub">Permanently erase account and all records</string>
+    <string name="delete_step1_eyebrow">Irreversible Action</string>
+    <string name="delete_step1_title">Close Sanctuary &amp; Delete Account</string>
+    <string name="delete_step1_desc">Closing your sanctuary permanently erases all consecrated records from cloud storage and local caches. This action cannot be undone.</string>
+    <string name="delete_step1_item1">All private prayer journal entries, reflections, and intentions erased.</string>
+    <string name="delete_step1_item2">Your prayer streak, plans, and saved preferences removed.</string>
+    <string name="delete_step1_item3">Cloud account sign-in and local sanctuary cache permanently cleared.</string>
+    <string name="delete_continue">Continue to Final Deletion →</string>
+    <string name="delete_clear_local_only">Clear Local Cache Only (Keep Account)</string>
+    <string name="delete_keep_account">Keep Sanctuary Account</string>
+    <string name="delete_step2_eyebrow">Final Barrier · Step 2</string>
+    <string name="delete_step2_title">Confirm Permanent Deletion</string>
+    <string name="delete_step2_desc">Type DELETE below to confirm that you wish to irrevocably remove your Sanctus sanctuary and all prayer history.</string>
+    <string name="delete_input_hint">Type DELETE</string>
+    <string name="delete_irreversible_note">Irreversible upon confirmation</string>
+    <string name="delete_confirm_btn">Permanently Delete Account ✕</string>
+    <string name="delete_back_btn">← Back to Overview</string>
+    <string name="delete_done_toast">Sanctuary data &amp; account removed</string>
+    <string name="settings_community_feed_title">Community Prayer Wall</string>
+    <string name="settings_community_feed_sub">Share intentions and pray Amen with others</string>
+    <string name="dashboard_divine_office">Divine Office</string>
+    <string name="dashboard_chant_hour">Chant Hour →</string>
+    <string name="dashboard_tap_to_pray">Tap to open prayer</string>
+    <string name="dashboard_read_chapter">Read Prayer →</string>
 </resources>
