@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 2027+ Brushed Champagne-Gold Pill CTA -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
     <gradient
         android:type="linear"
-        android:angle="0"
+        android:angle="135"
         android:startColor="?attr/sanctusGoldHi"
+        android:centerColor="?attr/sanctusAccent"
         android:endColor="?attr/sanctusGoldLo"/>
-    <corners android:radius="20dp"/>
+    <stroke android:width="1dp" android:color="#66FFF6DA"/>
+    <corners android:radius="24dp"/>
 </shape>

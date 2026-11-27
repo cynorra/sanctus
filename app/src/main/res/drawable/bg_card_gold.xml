@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
-    <gradient
-        android:type="linear"
-        android:angle="135"
-        android:startColor="?attr/sanctusCardTint"
-        android:endColor="?attr/sanctusSurfaceEnd"/>
-    <stroke android:width="1dp" android:color="#33FFFFFF"/>
-    <corners android:radius="28dp"/>
-</shape>
+<!-- 2027+ Luminous Gold-Glazed Card -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="135"
+                android:startColor="?attr/sanctusCardTint"
+                android:centerColor="#181530"
+                android:endColor="?attr/sanctusSurfaceEnd"/>
+            <stroke android:width="1dp" android:color="?attr/sanctusAccentA40"/>
+            <corners android:radius="26dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="135"
+                android:startColor="#18FFFFFF"
+                android:endColor="#00FFFFFF"/>
+            <corners android:radius="26dp"/>
+        </shape>
+    </item>
+</layer-list>

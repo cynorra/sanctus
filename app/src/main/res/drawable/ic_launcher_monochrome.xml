@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Themed (Material You) launcher icon: one flat shape, the system supplies the colour. -->
+<!-- 2027+ Refined Sacred Halo + Sculpted Cross Monochrome Icon (Material You Themed Icons) -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
-    <path android:fillColor="#FFFFFF"
-        android:pathData="M49,26 H59 V40 H73 V50 H59 V82 H49 V50 H35 V40 H49 Z"/>
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Thin luminous halo ring -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.4"
+        android:pathData="M54,28 A26,26 0 1,1 53.99,28 Z" />
+    <!-- Refined tapered liturgical cross inside safe zone -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M51.5,24 L56.5,24 L56,43 L73,43.5 L73,48.5 L56,49 L56.5,84 L51.5,84 L52,49 L35,48.5 L35,43.5 L52,43 Z" />
 </vector>
