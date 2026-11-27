@@ -85,6 +85,8 @@ public class DashboardFragment extends Fragment {
         tvStreak = view.findViewById(R.id.tv_streak);
         refreshStreak();
 
+        setupSanctuary2027Tools(view);
+
         // Season
         TextView tvSeason = view.findViewById(R.id.tv_liturgical_season);
         LiturgicalSeasonHelper.Season season = LiturgicalSeasonHelper.getCurrentSeason(
@@ -209,6 +211,43 @@ public class DashboardFragment extends Fragment {
         // Fragment stays alive across bottom-nav tab switches, so re-check the streak
         // whenever this tab regains focus rather than only once at view creation.
         if (viewModel != null) refreshStreak();
+    }
+
+    private void setupSanctuary2027Tools(View view) {
+        View btnPeace = view.findViewById(R.id.btn_sanctuary_peace);
+        View btnJournal = view.findViewById(R.id.btn_sanctuary_journal);
+        View btnPlans = view.findViewById(R.id.btn_sanctuary_plans);
+
+        if (btnPeace != null) {
+            MotionKit.pressable(btnPeace);
+            btnPeace.setOnClickListener(v -> PeaceSanctuaryDialog.show(
+                    requireContext(),
+                    getString(R.string.mood_peace_title),
+                    getString(R.string.mood_peace_verse),
+                    getString(R.string.mood_peace_prayer)));
+        }
+        if (btnJournal != null) {
+            MotionKit.pressable(btnJournal);
+            btnJournal.setOnClickListener(v -> PrayerJournalDialog.show(requireContext()));
+        }
+        if (btnPlans != null) {
+            MotionKit.pressable(btnPlans);
+            btnPlans.setOnClickListener(v -> GuidedPlansDialog.show(requireContext()));
+        }
+
+        bindMood(view, R.id.mood_peace, R.string.mood_peace_title, R.string.mood_peace_verse, R.string.mood_peace_prayer);
+        bindMood(view, R.id.mood_anxiety, R.string.mood_anxiety_title, R.string.mood_anxiety_verse, R.string.mood_anxiety_prayer);
+        bindMood(view, R.id.mood_gratitude, R.string.mood_gratitude_title, R.string.mood_gratitude_verse, R.string.mood_gratitude_prayer);
+        bindMood(view, R.id.mood_strength, R.string.mood_strength_title, R.string.mood_strength_verse, R.string.mood_strength_prayer);
+        bindMood(view, R.id.mood_sleep, R.string.mood_sleep_title, R.string.mood_sleep_verse, R.string.mood_sleep_prayer);
+    }
+
+    private void bindMood(View root, int id, int titleRes, int verseRes, int prayerRes) {
+        View chip = root.findViewById(id);
+        if (chip == null) return;
+        MotionKit.pressable(chip);
+        chip.setOnClickListener(v -> PeaceSanctuaryDialog.show(
+                requireContext(), getString(titleRes), getString(verseRes), getString(prayerRes)));
     }
 
     private void refreshStreak() {

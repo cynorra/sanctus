@@ -273,4 +273,80 @@
     <string name="jesus_prayer_text">Rab İsa Mesih, Tanrı’nın Oğlu, bana, günahkâra merhamet et.</string>
     <string name="jesus_prayer_again">Yeniden dua et</string>
     <string name="jesus_prayer_of_total">/ %1$d</string>
+
+    <!-- Sanctus 2.0: Sesli Dua, Huzur & Nefes Modu, Ruh Halleri, Dua Günlüğü & Planlar -->
+    <string name="sanctuary_mood_header">Bugün kalbin nasıl hissediyor?</string>
+    <string name="mood_peace">🕊 Huzur</string>
+    <string name="mood_anxiety">🌊 Kaygı</string>
+    <string name="mood_gratitude">✨ Şükür</string>
+    <string name="mood_strength">🔥 Güç</string>
+    <string name="mood_sleep">🌙 Uyku</string>
+    <string name="sanctuary_btn_peace">🕯 Huzur Anı</string>
+    <string name="sanctuary_btn_journal">📖 Günlüğüm</string>
+    <string name="sanctuary_btn_plans">✨ Planlar</string>
+
+    <string name="mood_peace_title">Huzur Anı</string>
+    <string name="mood_peace_verse">“Size esenlik bırakıyorum, size kendi esenliğimi veriyorum. Yüreğiniz sıkılmasın ve korkmasın.” — Yuhanna 14:27</string>
+    <string name="mood_peace_prayer">Rab, zihnimdeki gürültüyü dindir ve bu anı esenliğinle doldur. Amin.</string>
+
+    <string name="mood_anxiety_title">Kaygıda Sükûnet</string>
+    <string name="mood_anxiety_verse">“Bütün kaygılarınızı O’na yükleyin, çünkü O sizi kayırır.” — 1. Petrus 5:7</string>
+    <string name="mood_anxiety_prayer">Taşıyamadığım her endişeyi Senin ellerine bırakıyorum. Yüreğimi esenlikte koru. Amin.</string>
+
+    <string name="mood_gratitude_title">Şükür Yüreği</string>
+    <string name="mood_gratitude_verse">“Rab’be şükredin, çünkü O iyidir; sevgisi sonsuza dek sürer.” — Mezmur 107:1</string>
+    <string name="mood_gratitude_prayer">Bugün beni saran her nefes, lütuf ve sessiz bereket için Sana şükrediyorum. Amin.</string>
+
+    <string name="mood_strength_title">Yenilenen Güç</string>
+    <string name="mood_strength_verse">“Beni güçlendirenin aracılığıyla her şeyi yapabilirim.” — Filipililer 4:13</string>
+    <string name="mood_strength_prayer">Rab, adımlarımı sağlamlaştır ve önümdeki gün için bana cesaret ver. Amin.</string>
+
+    <string name="mood_sleep_title">Gece Huzuru &amp; Koruma</string>
+    <string name="mood_sleep_verse">“Esenlik içinde yatar uyurum; çünkü yalnız Sen, ya Rab, beni güvenlik içinde yaşatırsın.” — Mezmur 4:8</string>
+    <string name="mood_sleep_prayer">Bu gece dinlenmemi koru ya Rab, yarın için ruhumu yenile. Amin.</string>
+
+    <string name="peace_breathe_in">Nefes Al…</string>
+    <string name="peace_breathe_hold">Tut…</string>
+    <string name="peace_breathe_out">Nefes Ver…</string>
+    <string name="peace_listen_audio">🔊 Sesli Dinle</string>
+    <string name="peace_amen_close">Amin</string>
+
+    <string name="prayer_audio_listen">🔊 Sesli Dinle</string>
+    <string name="prayer_audio_stop">⏹ Durdur</string>
+    <string name="prayer_silence_timer">🕯 1dk Sessizlik</string>
+    <string name="prayer_silence_countdown_fmt">🕯 %1$dsn…</string>
+    <string name="prayer_silence_done">✓ Amin</string>
+
+    <string name="journal_title">Dua Günlüğüm</string>
+    <string name="journal_add_new">+ Yeni Dua Niyeti Ekle</string>
+    <string name="journal_add_title">Yeni Dua Niyeti</string>
+    <string name="journal_input_hint">Kişisel duanı veya niyetini yaz…</string>
+    <string name="journal_save">Kaydet</string>
+    <string name="journal_saved_toast">Dua günlüğüne kaydedildi</string>
+    <string name="journal_status_answered">Kabul Edilen Dua ✓</string>
+    <string name="journal_status_praying">Dua Ediliyor 🕯</string>
+    <string name="journal_mark_answered">Kabul Edildi İşaretle ✓</string>
+    <string name="journal_mark_praying">Tekrar Aktif Yap</string>
+    <string name="journal_delete">Sil</string>
+
+    <string name="plans_dialog_title">Rehberli Dua Planları</string>
+    <string name="plan_peace_title_fmt">🕊 7 Günlük Huzur Planı (%1$d/%2$d)</string>
+    <string name="plan_gratitude_title_fmt">✨ 7 Günlük Şükür Mezmurları (%1$d/%2$d)</string>
+    <string name="plan_novena_title_fmt">🕯 9 Günlük Novena (%1$d/%2$d)</string>
+    <string name="plan_peace_name">7 Günlük Huzur Planı</string>
+    <string name="plan_peace_reflection">Üç yavaş nefes al. Mezmur 23’ü sakince oku ve bugün tek bir endişeni sessizlikte Tanrı’ya bırak.</string>
+    <string name="plan_gratitude_name">7 Günlük Şükür Mezmurları</string>
+    <string name="plan_gratitude_reflection">Bugün hayatındaki üç küçük nimeti an ve her biri için şükret.</string>
+    <string name="plan_novena_name">9 Günlük Novena</string>
+    <string name="plan_novena_reflection">Ana niyetini yüreğinde tut, duanı acele etmeden oku ve güven içinde dinlen.</string>
+    <string name="plan_day_progress_fmt">%1$d. Gün / %2$d</string>
+    <string name="plan_complete_day_fmt">%1$d. Günü Tamamla ✓</string>
+    <string name="plan_day_completed_toast">%1$d/%2$d. gün tamamlandı! Amin.</string>
+    <string name="plan_restart">Planı Sıfırla</string>
+
+    <string name="review_title">Sanctus\'u beğendin mi?</string>
+    <string name="review_message">Deneyimini Google Play\'de paylaşmak ister misin? Geri bildirimin uygulamayı geliştirmemize yardımcı oluyor.</string>
+    <string name="review_rate">Değerlendir</string>
+    <string name="review_later">Daha sonra</string>
+    <string name="review_never">Tekrar sorma</string>
 </resources>

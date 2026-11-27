@@ -23,6 +23,10 @@ import java.util.concurrent.Executors;
 public class PrayerDetailFragment extends Fragment {
 
     public static final String ARG_PRAYER_ID = "prayer_id";
+    private android.speech.tts.TextToSpeech tts;
+    private android.os.CountDownTimer silenceTimer;
+    private boolean isSpeaking = false;
+    private String currentSpeechText = "";
 
     @Nullable
     @Override
@@ -75,6 +79,8 @@ public class PrayerDetailFragment extends Fragment {
                 tvTitle.setText(prayer.name);
                 tvCategory.setText(com.sanctus.christian.prayer.util.CategoryLabels.label(requireContext(), prayer.category));
                 tvContent.setText(prayer.content);
+                currentSpeechText = prayer.name + ". " + prayer.content;
+                setupAudioAndTimer(view);
                 SanctusApplication.getInstance().getSettingsRepository().recordPrayerActivityToday();
                 AnalyticsLogger.logPrayerCompleted(requireContext(), prayer.category);
                 btnFavorite.setSelected(prayer.isFavorite);
@@ -98,5 +104,82 @@ public class PrayerDetailFragment extends Fragment {
                 });
             });
         }
+    }
+
+    private void setupAudioAndTimer(View root) {
+        TextView btnListen = root.findViewById(R.id.btn_audio_listen);
+        TextView btnTimer = root.findViewById(R.id.btn_silence_timer);
+        if (btnListen != null) {
+            btnListen.setOnClickListener(v -> {
+                AnimUtils.pressFeedback(btnListen);
+                if (isSpeaking && tts != null) {
+                    tts.stop();
+                    isSpeaking = false;
+                    btnListen.setText(R.string.prayer_audio_listen);
+                    return;
+                }
+                if (tts == null) {
+                    tts = new android.speech.tts.TextToSpeech(requireContext().getApplicationContext(), status -> {
+                        if (status == android.speech.tts.TextToSpeech.SUCCESS && isAdded() && tts != null) {
+                            tts.setLanguage(java.util.Locale.getDefault());
+                            tts.setSpeechRate(0.85f);
+                            tts.speak(currentSpeechText, android.speech.tts.TextToSpeech.QUEUE_FLUSH, null, "sanctus_prayer");
+                            isSpeaking = true;
+                            btnListen.setText(R.string.prayer_audio_stop);
+                        }
+                    });
+                } else {
+                    tts.speak(currentSpeechText, android.speech.tts.TextToSpeech.QUEUE_FLUSH, null, "sanctus_prayer");
+                    isSpeaking = true;
+                    btnListen.setText(R.string.prayer_audio_stop);
+                }
+            });
+        }
+        if (btnTimer != null) {
+            btnTimer.setOnClickListener(v -> {
+                AnimUtils.pressFeedback(btnTimer);
+                if (silenceTimer != null) {
+                    silenceTimer.cancel();
+                    silenceTimer = null;
+                    btnTimer.setText(R.string.prayer_silence_timer);
+                    return;
+                }
+                silenceTimer = new android.os.CountDownTimer(60_000L, 1000L) {
+                    @Override
+                    public void onTick(long ms) {
+                        if (isAdded()) {
+                            btnTimer.setText(getString(R.string.prayer_silence_countdown_fmt, (int) (ms / 1000L)));
+                        }
+                    }
+
+                    @Override
+                    public void onFinish() {
+                        silenceTimer = null;
+                        if (isAdded()) {
+                            btnTimer.setText(R.string.prayer_silence_done);
+                            btnTimer.performHapticFeedback(android.view.HapticFeedbackConstants.LONG_PRESS);
+                        }
+                    }
+                }.start();
+            });
+        }
+    }
+
+    @Override
+    public void onDestroyView() {
+        if (silenceTimer != null) {
+            silenceTimer.cancel();
+            silenceTimer = null;
+        }
+        if (tts != null) {
+            try {
+                tts.stop();
+                tts.shutdown();
+            } catch (Exception ignored) {
+            }
+            tts = null;
+        }
+        isSpeaking = false;
+        super.onDestroyView();
     }
 }

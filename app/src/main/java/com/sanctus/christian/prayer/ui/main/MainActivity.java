@@ -126,6 +126,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Load Adaptive Banner (Strict Rules: Official ID, Anchored Adaptive, Silent Fail)
         loadAdaptiveBanner();
+
+        // Play-policy-compliant In-App Review prompt
+        com.sanctus.christian.prayer.util.ReviewPromptHelper.trackLaunchAndMaybePrompt(this);
     }
 
     private void loadAdaptiveBanner() {

@@ -326,4 +326,80 @@
     <!-- AdMob Ad Units (Canlı Resmi ID'ler) -->
     <string name="admob_banner_ad_unit_id" translatable="false">ca-app-pub-4674211063760769/1808931333</string>
     <string name="admob_interstitial_ad_unit_id" translatable="false">ca-app-pub-4674211063760769/3089405607</string>
+
+    <!-- Sanctus 2.0: Guided Audio Prayer, Breathing Peace Sanctuary, Moods, Journal & Plans -->
+    <string name="sanctuary_mood_header">How is your heart today?</string>
+    <string name="mood_peace">🕊 Peace</string>
+    <string name="mood_anxiety">🌊 Anxiety</string>
+    <string name="mood_gratitude">✨ Gratitude</string>
+    <string name="mood_strength">🔥 Strength</string>
+    <string name="mood_sleep">🌙 Sleep</string>
+    <string name="sanctuary_btn_peace">🕯 Peace Mode</string>
+    <string name="sanctuary_btn_journal">📖 Journal</string>
+    <string name="sanctuary_btn_plans">✨ Plans</string>
+
+    <string name="mood_peace_title">Peace Sanctuary</string>
+    <string name="mood_peace_verse">“Peace I leave with you; my peace I give unto you: let not your heart be troubled, neither let it be afraid.” — John 14:27</string>
+    <string name="mood_peace_prayer">Lord, quiet the noise within my mind and fill this moment with Your stillness. Amen.</string>
+
+    <string name="mood_anxiety_title">Calm in Anxiety</string>
+    <string name="mood_anxiety_verse">“Cast all your anxiety on Him because He cares for you.” — 1 Peter 5:7</string>
+    <string name="mood_anxiety_prayer">Father, I release every worry I cannot carry into Your hands. Guard my heart in peace. Amen.</string>
+
+    <string name="mood_gratitude_title">Heart of Gratitude</string>
+    <string name="mood_gratitude_verse">“Give thanks to the Lord, for He is good; His love endures forever.” — Psalm 107:1</string>
+    <string name="mood_gratitude_prayer">Thank You for breath, grace, and every quiet blessing surrounding me today. Amen.</string>
+
+    <string name="mood_strength_title">Renewed Strength</string>
+    <string name="mood_strength_verse">“I can do all things through Christ who strengthens me.” — Philippians 4:13</string>
+    <string name="mood_strength_prayer">Lord, steady my steps and grant me courage for what lies ahead today. Amen.</string>
+
+    <string name="mood_sleep_title">Night Rest &amp; Protection</string>
+    <string name="mood_sleep_verse">“In peace I will lie down and sleep, for You alone, Lord, make me dwell in safety.” — Psalm 4:8</string>
+    <string name="mood_sleep_prayer">Watch over my rest tonight, O Lord, and renew my spirit for tomorrow. Amen.</string>
+
+    <string name="peace_breathe_in">Breathe In…</string>
+    <string name="peace_breathe_hold">Hold…</string>
+    <string name="peace_breathe_out">Breathe Out…</string>
+    <string name="peace_listen_audio">🔊 Listen</string>
+    <string name="peace_amen_close">Amen</string>
+
+    <string name="prayer_audio_listen">🔊 Listen</string>
+    <string name="prayer_audio_stop">⏹ Stop Audio</string>
+    <string name="prayer_silence_timer">🕯 1m Silence</string>
+    <string name="prayer_silence_countdown_fmt">🕯 %1$ds…</string>
+    <string name="prayer_silence_done">✓ Amen</string>
+
+    <string name="journal_title">My Prayer Journal</string>
+    <string name="journal_add_new">+ Add New Prayer Intention</string>
+    <string name="journal_add_title">New Prayer Intention</string>
+    <string name="journal_input_hint">Write a personal prayer or intention…</string>
+    <string name="journal_save">Save</string>
+    <string name="journal_saved_toast">Saved to your prayer journal</string>
+    <string name="journal_status_answered">Answered Prayer ✓</string>
+    <string name="journal_status_praying">Praying 🕯</string>
+    <string name="journal_mark_answered">Mark Answered ✓</string>
+    <string name="journal_mark_praying">Move to Praying</string>
+    <string name="journal_delete">Delete</string>
+
+    <string name="plans_dialog_title">Guided Prayer Plans</string>
+    <string name="plan_peace_title_fmt">🕊 7-Day Peace in Anxiety (%1$d/%2$d)</string>
+    <string name="plan_gratitude_title_fmt">✨ 7-Day Psalms of Gratitude (%1$d/%2$d)</string>
+    <string name="plan_novena_title_fmt">🕯 9-Day Sacred Novena (%1$d/%2$d)</string>
+    <string name="plan_peace_name">7-Day Peace in Anxiety</string>
+    <string name="plan_peace_reflection">Take three slow breaths. Read Psalm 23 slowly and offer one worry to God in silence today.</string>
+    <string name="plan_gratitude_name">7-Day Psalms of Gratitude</string>
+    <string name="plan_gratitude_reflection">Name three ordinary gifts from today and thank God for His faithfulness in each one.</string>
+    <string name="plan_novena_name">9-Day Sacred Novena</string>
+    <string name="plan_novena_reflection">Hold your primary intention in your heart, pray the Our Father and Hail Mary slowly, and rest in trust.</string>
+    <string name="plan_day_progress_fmt">Day %1$d of %2$d</string>
+    <string name="plan_complete_day_fmt">Complete Day %1$d ✓</string>
+    <string name="plan_day_completed_toast">Day %1$d/%2$d completed! Amen.</string>
+    <string name="plan_restart">Restart Plan</string>
+
+    <string name="review_title">Enjoying Sanctus?</string>
+    <string name="review_message">Would you like to share your experience on Google Play? Your feedback helps us improve.</string>
+    <string name="review_rate">Rate App</string>
+    <string name="review_later">Later</string>
+    <string name="review_never">Don\'t ask again</string>
 </resources>
