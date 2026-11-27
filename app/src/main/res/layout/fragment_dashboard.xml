@@ -189,61 +189,139 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!-- 2027+ Sanctuary Quick Tools: Peace Mode, Prayer Journal, 7/9-Day Plans -->
+        <!-- 2027+ Luxury Sanctuary Quick Tiles: Peace Mode, Prayer Journal, 7/9-Day Plans -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="14dp"
             android:orientation="horizontal">
 
-            <TextView
+            <LinearLayout
                 android:id="@+id/btn_sanctuary_peace"
                 android:layout_width="0dp"
-                android:layout_height="44dp"
+                android:layout_height="84dp"
                 android:layout_weight="1"
                 android:layout_marginEnd="6dp"
-                android:background="@drawable/bg_glass_card"
-                android:ellipsize="end"
+                android:background="@drawable/bg_sanctuary_tile_gold"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center"
-                android:maxLines="1"
-                android:paddingHorizontal="6dp"
-                android:text="@string/sanctuary_btn_peace"
-                android:textColor="?attr/sanctusAccent"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🕯"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/sanctuary_tile_peace"
+                    android:textColor="?attr/sanctusAccent"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/sanctuary_tile_peace_sub"
+                    android:textColor="@color/color_text_secondary"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/btn_sanctuary_journal"
                 android:layout_width="0dp"
-                android:layout_height="44dp"
+                android:layout_height="84dp"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="3dp"
                 android:background="@drawable/bg_glass_card"
-                android:ellipsize="end"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center"
-                android:maxLines="1"
-                android:paddingHorizontal="6dp"
-                android:text="@string/sanctuary_btn_journal"
-                android:textColor="@color/color_on_surface"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📖"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/sanctuary_tile_journal"
+                    android:textColor="@color/color_on_background"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/sanctuary_tile_journal_sub"
+                    android:textColor="@color/color_text_secondary"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/btn_sanctuary_plans"
                 android:layout_width="0dp"
-                android:layout_height="44dp"
+                android:layout_height="84dp"
                 android:layout_weight="1"
                 android:layout_marginStart="6dp"
                 android:background="@drawable/bg_glass_card"
-                android:ellipsize="end"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center"
-                android:maxLines="1"
-                android:paddingHorizontal="6dp"
-                android:text="@string/sanctuary_btn_plans"
-                android:textColor="@color/color_on_surface"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✨"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/sanctuary_tile_plans"
+                    android:textColor="@color/color_on_background"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/sanctuary_tile_plans_sub"
+                    android:textColor="@color/color_text_secondary"
+                    android:textSize="10sp" />
+            </LinearLayout>
         </LinearLayout>
 
         <!-- Hero: next canonical hour (header expands today's schedule, footer starts praying) -->

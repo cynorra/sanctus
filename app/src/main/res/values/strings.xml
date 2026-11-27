@@ -337,6 +337,12 @@
     <string name="sanctuary_btn_peace">🕯 Peace Mode</string>
     <string name="sanctuary_btn_journal">📖 Journal</string>
     <string name="sanctuary_btn_plans">✨ Plans</string>
+    <string name="sanctuary_tile_peace">Peace Mode</string>
+    <string name="sanctuary_tile_peace_sub">Guided breath</string>
+    <string name="sanctuary_tile_journal">Journal</string>
+    <string name="sanctuary_tile_journal_sub">My intentions</string>
+    <string name="sanctuary_tile_plans">Plans</string>
+    <string name="sanctuary_tile_plans_sub">7 &amp; 9-day paths</string>
 
     <string name="mood_peace_title">Peace Sanctuary</string>
     <string name="mood_peace_verse">“Peace I leave with you; my peace I give unto you: let not your heart be troubled, neither let it be afraid.” — John 14:27</string>

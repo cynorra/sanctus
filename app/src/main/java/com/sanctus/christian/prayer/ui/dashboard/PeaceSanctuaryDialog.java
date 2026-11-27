@@ -5,6 +5,8 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Handler;
 import android.os.Looper;
@@ -12,6 +14,7 @@ import android.speech.tts.TextToSpeech;
 import android.view.Gravity;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,12 +22,13 @@ import androidx.appcompat.app.AlertDialog;
 
 import com.sanctus.christian.prayer.R;
 import com.sanctus.christian.prayer.SanctusApplication;
+import com.sanctus.christian.prayer.util.MotionKit;
 
 import java.util.Locale;
 
 /**
- * 2027+ Guided Breathing & Instant Peace Sanctuary ("Need Peace Now?" / Mood Comfort).
- * Features a 4s Inhale -> 4s Hold -> 6s Exhale golden breathing halo + Scripture + offline TTS.
+ * 2027+ Luxury Glass Breathing & Instant Peace Sanctuary.
+ * Custom frameless rounded dark-gold container with dual concentric breathing halos + offline TTS.
  */
 public final class PeaceSanctuaryDialog {
 
@@ -38,35 +42,56 @@ public final class PeaceSanctuaryDialog {
         LinearLayout root = new LinearLayout(ctx);
         root.setOrientation(LinearLayout.VERTICAL);
         root.setGravity(Gravity.CENTER_HORIZONTAL);
-        root.setPadding(pad, pad, pad, (int) (14 * dp));
-        root.setBackgroundColor(0xFF0E1016);
+        root.setPadding(pad, (int) (26 * dp), pad, (int) (22 * dp));
+
+        GradientDrawable sheetBg = new GradientDrawable(
+                GradientDrawable.Orientation.TL_BR,
+                new int[]{0xFF171429, 0xFF0B0A14, 0xFF131020});
+        sheetBg.setCornerRadius(28f * dp);
+        sheetBg.setStroke((int) (1.2f * dp), 0x44E6BC5C);
+        root.setBackground(sheetBg);
 
         TextView tvTitle = new TextView(ctx);
         tvTitle.setText(title);
-        tvTitle.setTextColor(0xFFE6C27A);
-        tvTitle.setTextSize(18f);
+        tvTitle.setTextColor(0xFFF5E3B3);
+        tvTitle.setTextSize(20f);
         tvTitle.setGravity(Gravity.CENTER);
+        tvTitle.setLetterSpacing(0.03f);
         root.addView(tvTitle);
 
-        // Golden Breathing Halo Circle
-        int haloSize = (int) (116 * dp);
+        // Dual Concentric Breathing Halo
+        int boxSize = (int) (152 * dp);
+        FrameLayout haloBox = new FrameLayout(ctx);
+        LinearLayout.LayoutParams boxLp = new LinearLayout.LayoutParams(boxSize, boxSize);
+        boxLp.topMargin = (int) (18 * dp);
+        boxLp.bottomMargin = (int) (16 * dp);
+        root.addView(haloBox, boxLp);
+
+        View outerRing = new View(ctx);
+        GradientDrawable outerGd = new GradientDrawable();
+        outerGd.setShape(GradientDrawable.OVAL);
+        outerGd.setColor(0x22E6BC5C);
+        outerGd.setStroke((int) (1.2f * dp), 0x55E6BC5C);
+        outerRing.setBackground(outerGd);
+        FrameLayout.LayoutParams outerLp = new FrameLayout.LayoutParams((int) (136 * dp), (int) (136 * dp), Gravity.CENTER);
+        haloBox.addView(outerRing, outerLp);
+
         TextView halo = new TextView(ctx);
         halo.setGravity(Gravity.CENTER);
-        halo.setTextColor(0xFF0E1016);
-        halo.setTextSize(14f);
+        halo.setTextColor(0xFF0E0C18);
+        halo.setTextSize(13.5f);
         halo.setText(R.string.peace_breathe_in);
-        GradientDrawable gd = new GradientDrawable();
-        gd.setShape(GradientDrawable.OVAL);
-        gd.setColor(0xFFE6C27A);
-        halo.setBackground(gd);
-        LinearLayout.LayoutParams haloLp = new LinearLayout.LayoutParams(haloSize, haloSize);
-        haloLp.topMargin = (int) (20 * dp);
-        haloLp.bottomMargin = (int) (18 * dp);
-        root.addView(halo, haloLp);
+        GradientDrawable innerGd = new GradientDrawable(
+                GradientDrawable.Orientation.TL_BR,
+                new int[]{0xFFF5E3B3, 0xFFE6BC5C});
+        innerGd.setShape(GradientDrawable.OVAL);
+        halo.setBackground(innerGd);
+        FrameLayout.LayoutParams innerLp = new FrameLayout.LayoutParams((int) (104 * dp), (int) (104 * dp), Gravity.CENTER);
+        haloBox.addView(halo, innerLp);
 
         TextView tvVerse = new TextView(ctx);
         tvVerse.setText(verse);
-        tvVerse.setTextColor(0xFFF3F4F6);
+        tvVerse.setTextColor(0xFFF7F3FF);
         tvVerse.setTextSize(15f);
         tvVerse.setGravity(Gravity.CENTER);
         tvVerse.setLineSpacing(4f * dp, 1.0f);
@@ -75,12 +100,48 @@ public final class PeaceSanctuaryDialog {
         if (prayerText != null && !prayerText.isEmpty()) {
             TextView tvPrayer = new TextView(ctx);
             tvPrayer.setText(prayerText);
-            tvPrayer.setTextColor(0xB3E2E8F0);
+            tvPrayer.setTextColor(0xFFA199BD);
             tvPrayer.setTextSize(13.5f);
             tvPrayer.setGravity(Gravity.CENTER);
             tvPrayer.setPadding(0, (int) (12 * dp), 0, 0);
             root.addView(tvPrayer);
         }
+
+        // Custom Luxury Action Pill Row
+        LinearLayout actions = new LinearLayout(ctx);
+        actions.setOrientation(LinearLayout.HORIZONTAL);
+        LinearLayout.LayoutParams actLp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        actLp.topMargin = (int) (22 * dp);
+        root.addView(actions, actLp);
+
+        TextView btnListen = new TextView(ctx);
+        btnListen.setText(R.string.peace_listen_audio);
+        btnListen.setGravity(Gravity.CENTER);
+        btnListen.setTextSize(13.5f);
+        btnListen.setTextColor(0xFF0E0C18);
+        GradientDrawable listenBg = new GradientDrawable(
+                GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xFFF5E3B3, 0xFFE6BC5C});
+        listenBg.setCornerRadius(22f * dp);
+        btnListen.setBackground(listenBg);
+        LinearLayout.LayoutParams btnLp1 = new LinearLayout.LayoutParams(0, (int) (44 * dp), 1f);
+        btnLp1.setMarginEnd((int) (8 * dp));
+        actions.addView(btnListen, btnLp1);
+        MotionKit.pressable(btnListen);
+
+        TextView btnAmen = new TextView(ctx);
+        btnAmen.setText(R.string.peace_amen_close);
+        btnAmen.setGravity(Gravity.CENTER);
+        btnAmen.setTextSize(13.5f);
+        btnAmen.setTextColor(0xFFF7F3FF);
+        GradientDrawable amenBg = new GradientDrawable();
+        amenBg.setColor(0x18FFFFFF);
+        amenBg.setStroke((int) dp, 0x33FFFFFF);
+        amenBg.setCornerRadius(22f * dp);
+        btnAmen.setBackground(amenBg);
+        LinearLayout.LayoutParams btnLp2 = new LinearLayout.LayoutParams(0, (int) (44 * dp), 1f);
+        actions.addView(btnAmen, btnLp2);
+        MotionKit.pressable(btnAmen);
 
         final Handler handler = new Handler(Looper.getMainLooper());
         final boolean[] alive = {true};
@@ -90,12 +151,18 @@ public final class PeaceSanctuaryDialog {
         cycle[0] = () -> {
             if (!alive[0]) return;
             halo.setText(R.string.peace_breathe_in);
-            ObjectAnimator inhale = ObjectAnimator.ofPropertyValuesHolder(halo,
-                    PropertyValuesHolder.ofFloat(View.SCALE_X, 0.78f, 1.12f),
-                    PropertyValuesHolder.ofFloat(View.SCALE_Y, 0.78f, 1.12f));
-            inhale.setDuration(4000);
-            inhale.setInterpolator(new AccelerateDecelerateInterpolator());
-            inhale.addListener(new AnimatorListenerAdapter() {
+            ObjectAnimator inInner = ObjectAnimator.ofPropertyValuesHolder(halo,
+                    PropertyValuesHolder.ofFloat(View.SCALE_X, 0.80f, 1.10f),
+                    PropertyValuesHolder.ofFloat(View.SCALE_Y, 0.80f, 1.10f));
+            ObjectAnimator inOuter = ObjectAnimator.ofPropertyValuesHolder(outerRing,
+                    PropertyValuesHolder.ofFloat(View.SCALE_X, 0.78f, 1.14f),
+                    PropertyValuesHolder.ofFloat(View.SCALE_Y, 0.78f, 1.14f),
+                    PropertyValuesHolder.ofFloat(View.ALPHA, 0.35f, 0.95f));
+            inInner.setDuration(4000);
+            inOuter.setDuration(4000);
+            inInner.setInterpolator(new AccelerateDecelerateInterpolator());
+            inOuter.setInterpolator(new AccelerateDecelerateInterpolator());
+            inInner.addListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
                     if (!alive[0]) return;
@@ -103,51 +170,60 @@ public final class PeaceSanctuaryDialog {
                     handler.postDelayed(() -> {
                         if (!alive[0]) return;
                         halo.setText(R.string.peace_breathe_out);
-                        ObjectAnimator exhale = ObjectAnimator.ofPropertyValuesHolder(halo,
-                                PropertyValuesHolder.ofFloat(View.SCALE_X, 1.12f, 0.78f),
-                                PropertyValuesHolder.ofFloat(View.SCALE_Y, 1.12f, 0.78f));
-                        exhale.setDuration(5500);
-                        exhale.setInterpolator(new AccelerateDecelerateInterpolator());
-                        exhale.addListener(new AnimatorListenerAdapter() {
+                        ObjectAnimator outInner = ObjectAnimator.ofPropertyValuesHolder(halo,
+                                PropertyValuesHolder.ofFloat(View.SCALE_X, 1.10f, 0.80f),
+                                PropertyValuesHolder.ofFloat(View.SCALE_Y, 1.10f, 0.80f));
+                        ObjectAnimator outOuter = ObjectAnimator.ofPropertyValuesHolder(outerRing,
+                                PropertyValuesHolder.ofFloat(View.SCALE_X, 1.14f, 0.78f),
+                                PropertyValuesHolder.ofFloat(View.SCALE_Y, 1.14f, 0.78f),
+                                PropertyValuesHolder.ofFloat(View.ALPHA, 0.95f, 0.35f));
+                        outInner.setDuration(5500);
+                        outOuter.setDuration(5500);
+                        outInner.setInterpolator(new AccelerateDecelerateInterpolator());
+                        outOuter.setInterpolator(new AccelerateDecelerateInterpolator());
+                        outInner.addListener(new AnimatorListenerAdapter() {
                             @Override
                             public void onAnimationEnd(Animator animation) {
-                                if (alive[0]) handler.postDelayed(cycle[0], 600);
+                                if (alive[0]) handler.postDelayed(cycle[0], 500);
                             }
                         });
-                        exhale.start();
+                        outInner.start();
+                        outOuter.start();
                     }, 3500);
                 }
             });
-            inhale.start();
+            inInner.start();
+            inOuter.start();
         };
 
-        AlertDialog dialog = new AlertDialog.Builder(ctx)
-                .setView(root)
-                .setPositiveButton(R.string.peace_listen_audio, null)
-                .setNegativeButton(R.string.peace_amen_close, null)
-                .create();
+        AlertDialog dialog = new AlertDialog.Builder(ctx).setView(root).create();
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        }
+
+        btnAmen.setOnClickListener(v -> dialog.dismiss());
+        btnListen.setOnClickListener(v -> {
+            String speakText = verse + ". " + (prayerText != null ? prayerText : "");
+            if (ttsHolder[0] == null) {
+                ttsHolder[0] = new TextToSpeech(ctx.getApplicationContext(), status -> {
+                    if (status == TextToSpeech.SUCCESS && alive[0] && ttsHolder[0] != null) {
+                        ttsHolder[0].setLanguage(Locale.getDefault());
+                        ttsHolder[0].setSpeechRate(0.84f);
+                        ttsHolder[0].speak(speakText, TextToSpeech.QUEUE_FLUSH, null, "sanctus_peace");
+                    }
+                });
+            } else {
+                if (ttsHolder[0].isSpeaking()) {
+                    ttsHolder[0].stop();
+                } else {
+                    ttsHolder[0].speak(speakText, TextToSpeech.QUEUE_FLUSH, null, "sanctus_peace");
+                }
+            }
+        });
 
         dialog.setOnShowListener(d -> {
             handler.post(cycle[0]);
             SanctusApplication.getInstance().getSettingsRepository().recordPrayerActivityToday();
-            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
-                String speakText = verse + ". " + (prayerText != null ? prayerText : "");
-                if (ttsHolder[0] == null) {
-                    ttsHolder[0] = new TextToSpeech(ctx.getApplicationContext(), status -> {
-                        if (status == TextToSpeech.SUCCESS && alive[0] && ttsHolder[0] != null) {
-                            ttsHolder[0].setLanguage(Locale.getDefault());
-                            ttsHolder[0].setSpeechRate(0.84f);
-                            ttsHolder[0].speak(speakText, TextToSpeech.QUEUE_FLUSH, null, "sanctus_peace");
-                        }
-                    });
-                } else {
-                    if (ttsHolder[0].isSpeaking()) {
-                        ttsHolder[0].stop();
-                    } else {
-                        ttsHolder[0].speak(speakText, TextToSpeech.QUEUE_FLUSH, null, "sanctus_peace");
-                    }
-                }
-            });
         });
 
         dialog.setOnDismissListener(d -> {

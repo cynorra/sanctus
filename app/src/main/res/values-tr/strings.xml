@@ -284,6 +284,12 @@
     <string name="sanctuary_btn_peace">🕯 Huzur Anı</string>
     <string name="sanctuary_btn_journal">📖 Günlüğüm</string>
     <string name="sanctuary_btn_plans">✨ Planlar</string>
+    <string name="sanctuary_tile_peace">Huzur Anı</string>
+    <string name="sanctuary_tile_peace_sub">Nefes &amp; ayet</string>
+    <string name="sanctuary_tile_journal">Günlüğüm</string>
+    <string name="sanctuary_tile_journal_sub">Dua niyetlerim</string>
+    <string name="sanctuary_tile_plans">Planlar</string>
+    <string name="sanctuary_tile_plans_sub">7 &amp; 9 günlük</string>
 
     <string name="mood_peace_title">Huzur Anı</string>
     <string name="mood_peace_verse">“Size esenlik bırakıyorum, size kendi esenliğimi veriyorum. Yüreğiniz sıkılmasın ve korkmasın.” — Yuhanna 14:27</string>
